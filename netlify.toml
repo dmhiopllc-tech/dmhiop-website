@@ -1,0 +1,154 @@
+# Netlify Configuration for dmhiop.com
+
+[build]
+  publish = "."
+  
+[build.environment]
+  NODE_VERSION = "18"
+
+# Headers for SEO and Security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# Cache control for static assets
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/favicons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML files should not be cached aggressively
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Redirect rules for trailing slashes and clean URLs
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/medical-detox-assistance"
+  to = "/medical-detox-assistance.html"
+  status = 200
+
+[[redirects]]
+  from = "/medical-detox-assistance/"
+  to = "/medical-detox-assistance.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/contact-us.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact-us/"
+  to = "/contact-us.html"
+  status = 200
+
+[[redirects]]
+  from = "/faq"
+  to = "/faq.html"
+  status = 200
+
+[[redirects]]
+  from = "/faq/"
+  to = "/faq.html"
+  status = 200
+
+[[redirects]]
+  from = "/team"
+  to = "/team.html"
+  status = 200
+
+[[redirects]]
+  from = "/team/"
+  to = "/team.html"
+  status = 200
+
+[[redirects]]
+  from = "/reliable-substance-abuse-treatments"
+  to = "/reliable-substance-abuse-treatments.html"
+  status = 200
+
+[[redirects]]
+  from = "/reliable-substance-abuse-treatments/"
+  to = "/reliable-substance-abuse-treatments.html"
+  status = 200
+
+[[redirects]]
+  from = "/iop-benefits"
+  to = "/iop-benefits.html"
+  status = 200
+
+[[redirects]]
+  from = "/iop-benefits/"
+  to = "/iop-benefits.html"
+  status = 200
+
+[[redirects]]
+  from = "/mat"
+  to = "/mat.html"
+  status = 200
+
+[[redirects]]
+  from = "/mat/"
+  to = "/mat.html"
+  status = 200
+
+[[redirects]]
+  from = "/reviews"
+  to = "/reviews.html"
+  status = 200
+
+[[redirects]]
+  from = "/reviews/"
+  to = "/reviews.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/"
+  to = "/blog.html"
+  status = 200
+
+# Force HTTPS and www to non-www
+[[redirects]]
+  from = "http://dmhiop.com/*"
+  to = "https://dmhiop.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.dmhiop.com/*"
+  to = "https://dmhiop.com/:splat"
+  status = 301
+  force = true
