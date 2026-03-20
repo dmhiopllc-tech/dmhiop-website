@@ -727,12 +727,24 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #62f5e7 0%, #815956 100%);
+            background: linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7)), url('/images/sandia-banner-medium.jpg') center center / cover no-repeat;
             color: #fff;
-            padding: 4rem 2rem;
-            border-radius: 10px;
+            padding: 6rem 2rem;
             margin-bottom: 3rem;
             text-align: center;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 2rem;
+                min-height: 250px;
+                background: linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7)), url('/images/sandia-banner-mobile.jpg') center center / cover no-repeat;
+            }
         }
 
         .hero h1 {
@@ -1325,7 +1337,7 @@
         <section class="map-section">
             <h2>Find Us on the Map</h2>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104656.87674147827!2d-106.74498879999999!3d35.252177999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220addd309837b%3A0xc0d3f8057f36a7ef!2sRio%20Rancho%2C%20NM!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.3807676863977!2d-106.67294847621429!3d35.24254547264485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220c8c3e6e3ba1%3A0x3a7f8e0f8c3e6e3b!2s3301%20Southern%20Blvd%20SE%20%23105%2C%20Rio%20Rancho%2C%20NM%2087124!5e0!3m2!1sen!2sus!4v1710951234567!5m2!1sen!2sus" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade"
@@ -1380,6 +1392,11 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
+            <!-- Footer Logo -->
+            <div style="text-align: center; width: 100%; margin-bottom: 2rem;">
+                <img src="/__static/dmh-logo.png" alt="Desert Mountain Healing IOP Logo" style="width: 120px; height: auto;">
+            </div>
+            
             <div class="footer-section">
                 <h3>About DMHIOP</h3>
                 <p>Desert Mountain Healing IOP is a leading provider of intensive outpatient programs for mental health and substance abuse treatment in Rio Rancho, NM.</p>
