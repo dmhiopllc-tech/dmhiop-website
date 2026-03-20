@@ -164,10 +164,23 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #62f5e7 0%, #815956 100%);
+            background: linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7)), url('/images/sandia-banner-medium.jpg') center center / cover no-repeat;
             color: #fff;
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
             text-align: center;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 2rem;
+                min-height: 250px;
+                background: linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7)), url('/images/sandia-banner-mobile.jpg') center center / cover no-repeat;
+            }
         }
         
         .hero h1 {
@@ -565,6 +578,11 @@
     <!-- Footer -->
     <footer>
         <div class="footer-container">
+            <!-- Footer Logo -->
+            <div style="text-align: center; width: 100%; margin-bottom: 2rem;">
+                <img src="/__static/dmh-logo.png" alt="Desert Mountain Healing IOP Logo" style="width: 120px; height: auto;">
+            </div>
+            
             <div class="footer-section">
                 <h3>Contact Us</h3>
                 <p><strong>Address:</strong><br>3301 Southern Blvd SE, Suite 105<br>Rio Rancho, NM 87124</p>
