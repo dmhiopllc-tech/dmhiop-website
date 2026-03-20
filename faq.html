@@ -173,6 +173,40 @@
         }
 
         /* Main Content */
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7)), url('/images/sandia-banner-medium.jpg') center center / cover no-repeat;
+            color: #fff;
+            padding: 6rem 2rem;
+            text-align: center;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 2rem;
+                min-height: 250px;
+                background: linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7)), url('/images/sandia-banner-mobile.jpg') center center / cover no-repeat;
+            }
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
         main {
             max-width: 900px;
             margin: 3rem auto;
@@ -580,9 +614,14 @@
         </nav>
     </header>
 
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Frequently Asked Questions</h1>
+        <p>Get answers to common questions about our intensive outpatient program in Rio Rancho, NM</p>
+    </section>
+
     <!-- Main Content -->
     <main>
-        <h1 class="page-title">Intensive Outpatient Program FAQs</h1>
         <p class="page-intro">If you have questions about our addiction treatment options, explore our FAQs to learn how our intensive outpatient program can support your recovery journey in Rio Rancho, NM.</p>
 
         <div class="faq-container">
@@ -729,6 +768,11 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
+            <!-- Footer Logo -->
+            <div style="text-align: center; width: 100%; margin-bottom: 2rem;">
+                <img src="/__static/dmh-logo.png" alt="Desert Mountain Healing IOP Logo" style="width: 120px; height: auto;">
+            </div>
+            
             <div class="footer-section">
                 <h3>About DMHIOP</h3>
                 <p>Desert Mountain Healing IOP is a leading provider of intensive outpatient programs for mental health and substance abuse treatment in Rio Rancho, NM.</p>
