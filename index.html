@@ -247,10 +247,23 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #2d5f8d 0%, #4a7da8 100%);
+            background: linear-gradient(rgba(45, 95, 141, 0.7), rgba(74, 125, 168, 0.7)), url('/images/sandia-hero-large.jpg') center center / cover no-repeat;
             color: #fff;
             text-align: center;
-            padding: 100px 20px;
+            padding: 150px 20px;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 20px;
+                min-height: 400px;
+                background: linear-gradient(rgba(45, 95, 141, 0.7), rgba(74, 125, 168, 0.7)), url('/images/sandia-banner-mobile.jpg') center center / cover no-repeat;
+            }
         }
         
         .hero h1 {
@@ -395,13 +408,15 @@
                 "description": "Desert Mountain Healing IOP provides intensive outpatient programs for substance abuse and mental health treatment in Rio Rancho, New Mexico.",
                 "address": {
                     "@type": "PostalAddress",
+                    "streetAddress": "3301 Southern Blvd SE, Suite 105",
                     "addressLocality": "Rio Rancho",
                     "addressRegion": "NM",
+                    "postalCode": "87124",
                     "addressCountry": "US"
                 },
                 "contactPoint": {
                     "@type": "ContactPoint",
-                    "telephone": "+1-505-XXX-XXXX",
+                    "telephone": "+1-505-270-0840",
                     "contactType": "customer service",
                     "areaServed": "US-NM",
                     "availableLanguage": ["English", "Spanish"]
@@ -418,8 +433,10 @@
                 "medicalSpecialty": ["Psychiatry", "Addiction Medicine", "Behavioral Health"],
                 "address": {
                     "@type": "PostalAddress",
+                    "streetAddress": "3301 Southern Blvd SE, Suite 105",
                     "addressLocality": "Rio Rancho",
                     "addressRegion": "NM",
+                    "postalCode": "87124",
                     "addressCountry": "US"
                 },
                 "hasOfferCatalog": {
@@ -496,7 +513,7 @@
                         "Friday"
                     ],
                     "opens": "08:00",
-                    "closes": "17:00"
+                    "closes": "20:00"
                 }
             }
         ]
@@ -524,7 +541,7 @@
                     <a href="/reviews/">Reviews</a>
                     <a href="/contact-us/">Contact Us</a>
                     <a href="/blog/">Blog</a>
-                    <a href="http://myrecoverynm.org" class="cta-button" rel="external noopener" target="_blank">Patient Portal</a>
+                    <a href="http://myrecoverynm.org" class="cta-button" rel="external noopener" target="_blank" title="Recovery NM - Resources for Uninsured Clients">Recovery NM</a>
                 </nav>
             </div>
         </header>
@@ -656,10 +673,15 @@
         <!-- Footer -->
         <footer role="contentinfo">
             <div style="max-width: 1200px; margin: 0 auto;">
+                <!-- Footer Logo -->
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <img src="/__static/dmh-logo.png" alt="Desert Mountain Healing IOP Logo" style="width: 120px; height: auto; margin-bottom: 1rem;">
+                </div>
                 <p style="margin-bottom: 1rem;"><strong>Desert Mountain Healing IOP</strong></p>
-                <p>Rio Rancho, New Mexico</p>
-                <p>Phone: <a href="tel:+1505XXXXXXX">(505) XXX-XXXX</a></p>
-                <p>Email: <a href="mailto:info@dmhiop.com">info@dmhiop.com</a></p>
+                <p><strong>Address:</strong> 3301 Southern Blvd SE, Suite 105<br>Rio Rancho, NM 87124</p>
+                <p><strong>Phone:</strong> <a href="tel:+15052700840">(505) 270-0840</a></p>
+                <p><strong>Email:</strong> <a href="mailto:sean_roberts@dmhiop.com">sean_roberts@dmhiop.com</a></p>
+                <p><strong>Hours:</strong> Monday-Friday, 8:00 AM - 8:00 PM</p>
                 
                 <nav aria-label="Footer navigation" style="margin: 2rem 0;">
                     <a href="/team/" style="margin: 0 1rem;">Our Team</a>
