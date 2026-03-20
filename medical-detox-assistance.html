@@ -181,11 +181,24 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(98, 245, 231, 0.9), rgba(129, 89, 86, 0.8)), url('/__static/17e3f94aa1398102560df0f2b4fb1723/interior-kv-2') center/cover;
+            background: linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7)), url('/images/sandia-banner-medium.jpg') center center / cover no-repeat;
             color: #fff;
             text-align: center;
             padding: 100px 20px 80px;
             position: relative;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px;
+                min-height: 250px;
+                background: linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7)), url('/images/sandia-banner-mobile.jpg') center center / cover no-repeat;
+            }
         }
         
         .hero::before {
@@ -549,7 +562,7 @@
                         "name": "Is medical detox safe?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes, medical detox at DMHIOP is very safe. Our medical professionals provide 24/7 monitoring, manage withdrawal symptoms with appropriate medications, and ensure your safety throughout the entire process. Medical supervision significantly reduces risks associated with withdrawal."
+                            "text": "Yes, medical detox at DMHIOP is very safe. Our medical professionals provide regular monitoring during scheduled outpatient visits, manage withdrawal symptoms with appropriate medications, and coordinate with emergency services if needed. Our outpatient approach allows you to detox safely while maintaining your daily responsibilities."
                         }
                     }
                 ]
@@ -611,7 +624,7 @@
             
             <p>Unlike attempting to detox alone—which can be dangerous or even life-threatening—medically supervised detox provides:</p>
             <ul style="margin-left: 2rem; line-height: 2;">
-                <li><strong>24/7 medical monitoring</strong> to ensure safety</li>
+                <li><strong>Regular outpatient monitoring</strong> by medical professionals</li>
                 <li><strong>Medication management</strong> to ease withdrawal symptoms</li>
                 <li><strong>Emotional support</strong> from trained counselors</li>
                 <li><strong>Preparation for ongoing treatment</strong> through our IOP program</li>
@@ -704,7 +717,7 @@
             <article itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin: 2rem 0;">
                 <h3 itemprop="name">Is medical detox safe?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Yes, medical detox at DMHIOP is very safe. Our medical professionals provide 24/7 monitoring, manage withdrawal symptoms with appropriate medications, and ensure your safety throughout the entire process. Medical supervision significantly reduces risks associated with withdrawal.</p>
+                    <p itemprop="text">Yes, medical detox at DMHIOP is very safe. Our medical professionals provide regular monitoring during scheduled outpatient visits, manage withdrawal symptoms with appropriate medications, and coordinate with emergency services if needed. Our outpatient approach allows you to detox safely while maintaining your daily responsibilities.</p>
                 </div>
             </article>
             
@@ -771,7 +784,7 @@
             
             <div class="footer-section">
                 <a href="/">
-                    <img src="/__static/production-webdotcom-7/117/1680117/7dmWKOvW/51ec88be9c2d45ef929c71bcb8f7a2ab" alt="Desert Mountain Healing IOP Logo" style="max-height: 200px; width: auto;">
+                    <img src="/__static/dmh-logo.png" alt="Desert Mountain Healing IOP Logo" style="max-height: 200px; width: auto;">
                 </a>
             </div>
             
