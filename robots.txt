@@ -1,0 +1,61 @@
+# Robots.txt for Desert Mountain Healing IOP
+# https://dmhiop.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Allow all main pages
+Allow: /team/
+Allow: /iop-benefits/
+Allow: /reliable-substance-abuse-treatments/
+Allow: /mat/
+Allow: /medical-detox-assistance/
+Allow: /faq/
+Allow: /reviews/
+Allow: /contact-us/
+Allow: /blog/
+
+# Block client portal and admin pages from search engines
+Disallow: /admin-portal.html
+Disallow: /portal-login.html
+Disallow: /auth-login.html
+Disallow: /auth-signup.html
+Disallow: /staff-dashboard.html
+Disallow: /provider-dashboard.html
+Disallow: /tablet-checkin.html
+Disallow: /index.html
+Disallow: /goals.html
+Disallow: /meeting-guide.html
+Disallow: /achievements.html
+Disallow: /journal-history.html
+Disallow: /progress-tracker.html
+Disallow: /my-literature.html
+Disallow: /appointments.html
+Disallow: /community.html
+Disallow: /notification-settings.html
+Disallow: /sobriety-calculator.html
+Disallow: /daily-affirmations.html
+Disallow: /relapse-prevention.html
+Disallow: /features-hub.html
+
+# Block backup/test files
+Disallow: /*ZZZZZ*
+Disallow: /*-FIXED-*
+Disallow: /*-backup*
+Disallow: /*-old*
+Disallow: /*-test*
+Disallow: /UPLOAD-*
+Disallow: /LIVE-*
+
+# Block development files
+Disallow: /*.md$
+Disallow: /*.sql$
+Disallow: /README.md
+Disallow: /netlify.toml
+Disallow: /_redirects
+
+# Sitemap location
+Sitemap: https://dmhiop.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
