@@ -132,13 +132,10 @@
     }
     </script>
     
-    <link rel="stylesheet" href="/bundle/publish/0.72.5/publish.css">
-    <link rel="stylesheet" href="/styles/40366ed9-1cfb-4167-920c-2a4b34462afc.css?v=1764004340000">
-    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts-cdn.edit.site/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -159,7 +156,7 @@
         }
         
         body {
-            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
             overflow-x: hidden;
@@ -167,37 +164,30 @@
         
         /* Header Styles */
         header {
-            background: var(--white);
-            box-shadow: var(--shadow);
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            width: 100%;
         }
         
         .header-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
         
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 0.75rem;
             text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-        
-        .logo:hover {
-            opacity: 0.8;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
         
         .logo img {
@@ -206,112 +196,88 @@
             object-fit: contain;
         }
         
+        .logo span {
+            color: #815956;
+        }
+        
         nav {
             display: flex;
-            gap: 1.5rem;
             align-items: center;
-            flex-wrap: wrap;
+            gap: 1.5rem;
         }
         
         nav a {
+            color: #333;
             text-decoration: none;
-            color: var(--text-dark);
             font-weight: 500;
-            transition: var(--transition);
-            padding: 0.5rem 0;
-            position: relative;
+            transition: color 0.3s;
             white-space: nowrap;
         }
         
-        nav a:not(.cta-button):hover {
-            color: var(--primary-color);
+        nav a:hover {
+            color: #62f5e7;
         }
         
-        nav a:not(.cta-button)::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--secondary-color);
-            transition: var(--transition);
-        }
-        
-        nav a:not(.cta-button):hover::after {
-            width: 100%;
-        }
-        
-        .cta-button {
-            background: linear-gradient(135deg, var(--primary-color), #9d6b68);
-            color: var(--white) !important;
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
+        nav a.cta-button {
+            background: #62f5e7;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(129, 89, 86, 0.3);
-            transition: var(--transition);
         }
         
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(129, 89, 86, 0.4);
+        nav a.cta-button:hover {
+            background: #815956;
+            color: #fff;
         }
         
         /* Hero Section */
         .hero {
-            position: relative;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7)), url('/sandia-banner-medium.jpg') center center / cover no-repeat;
+            color: #fff;
+            padding: 6rem 2rem;
             text-align: center;
-            color: var(--white);
-            padding: 4rem 2rem;
-            overflow: hidden;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('/sandia-hero-large.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: -2;
-        }
-        
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(129, 89, 86, 0.85), rgba(98, 245, 231, 0.3));
-            z-index: -1;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            z-index: 1;
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 2rem;
+                min-height: 250px;
+                background: linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7)), url('/sandia-banner-mobile.jpg') center center / cover no-repeat;
+            }
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            line-height: 1.2;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
         
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .hero .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #815956;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        .hero .cta-button:hover {
+            background: #62f5e7;
+            color: #fff;
         }
         
         /* Main Content */
@@ -461,7 +427,7 @@
         
         .cta-section .cta-button {
             background: var(--white);
-            color: var(--primary-color) !important;
+            color: var(--primary-color);
             font-size: 1.1rem;
             padding: 1rem 2.5rem;
         }
@@ -533,16 +499,12 @@
         
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .hero::before {
-                background-image: url('/sandia-banner-mobile.jpg');
-            }
-            
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             h2 {
@@ -550,37 +512,14 @@
             }
             
             nav {
-                width: 100%;
-                justify-content: center;
                 gap: 1rem;
                 font-size: 0.9rem;
-            }
-            
-            .header-container {
-                justify-content: center;
-                gap: 1rem;
             }
             
             .services-grid,
             .testimonial-grid,
             .why-choose-list {
                 grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            nav {
-                gap: 0.5rem;
-                font-size: 0.85rem;
-            }
-            
-            nav a {
-                padding: 0.4rem 0;
-            }
-            
-            .cta-button {
-                padding: 0.6rem 1rem;
-                font-size: 0.85rem;
             }
         }
     </style>
@@ -594,8 +533,7 @@
             </a>
             <nav role="navigation" aria-label="Main navigation">
                 <a href="/">Home</a>
-                <a href="/team/">Our Provider Team</a>
-                <a href="/team/#staff">Our Staff</a>
+                <a href="/team/">Our Team</a>
                 <a href="/iop-benefits/">IOP Benefits</a>
                 <a href="/reliable-substance-abuse-treatments/">Services</a>
                 <a href="/mat/">MAT</a>
@@ -604,7 +542,6 @@
                 <a href="/contact-us/">Contact Us</a>
                 <a href="/blog/">Blog</a>
                 <a href="/client-app/">Client App</a>
-                <a href="/client-portal/">Client Portal</a>
                 <a href="http://myrecoverynm.org" class="cta-button" rel="external noopener" target="_blank" title="Recovery NM - Resources for Uninsured Clients">Recovery NM</a>
             </nav>
         </div>
@@ -722,7 +659,7 @@
                 <p>Yes! Our intensive outpatient program is designed to accommodate work, school, and family commitments with flexible scheduling options.</p>
             </div>
             <p style="text-align: center; margin-top: 2rem;">
-                <a href="/faq/" class="cta-button">View All FAQs</a>
+                <a href="/faq/" class="cta-button" style="display: inline-block; background: #62f5e7; color: #fff; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600;">View All FAQs</a>
             </p>
         </section>
     </main>
@@ -745,7 +682,7 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <a href="/">Home</a>
-                <a href="/team/">Our Provider Team</a>
+                <a href="/team/">Our Team</a>
                 <a href="/iop-benefits/">IOP Benefits</a>
                 <a href="/reliable-substance-abuse-treatments/">Services</a>
                 <a href="/mat/">MAT Program</a>
