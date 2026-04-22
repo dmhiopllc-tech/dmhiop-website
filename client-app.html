@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Own Today App | Desert Mountain Healing IOP | Rio Rancho, NM</title>
+    <meta name="description" content="Support your recovery journey 24/7 with Own Today - the Desert Mountain Healing IOP client app. Track progress, journal entries, meeting attendance, meditation, and connect with your community. Available to enrolled clients.">
+    <meta name="keywords" content="Own Today app, IOP client app, addiction recovery app Rio Rancho, substance abuse treatment app, recovery tracking app, mental health app New Mexico, outpatient treatment technology, sobriety app">
+    <meta name="author" content="Desert Mountain Healing IOP">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dmhiop.com/client-app/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dmhiop.com/client-app/">
+    <meta property="og:title" content="Own Today App | Desert Mountain Healing IOP">
+    <meta property="og:description" content="Support your recovery journey 24/7 with Own Today - our comprehensive client engagement app. Track progress, connect with community, and access recovery tools anytime.">
+    <meta property="og:image" content="https://dmhiop.com/__static/team-social-card.jpg">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/favicon-180x180.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/bundle/publish/0.72.5/publish.css">
+    <link rel="stylesheet" href="/styles/40366ed9-1cfb-4167-920c-2a4b34462afc.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Own Today - Desert Mountain Healing IOP",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "iOS, Android, Windows, Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "provider": {
+        "@type": "MedicalOrganization",
+        "name": "Desert Mountain Healing IOP",
+        "url": "https://dmhiop.com",
+        "telephone": "+15052700840",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3301 Southern Blvd SE, Suite 105",
+          "addressLocality": "Rio Rancho",
+          "addressRegion": "NM",
+          "postalCode": "87124"
+        }
+      },
+      "description": "Own Today is a comprehensive recovery support app featuring progress tracking, journaling, meeting attendance, meditation, community connection, and 24/7 support for clients in intensive outpatient treatment.",
+      "featureList": [
+        "Progress tracking with streak counters and points system",
+        "Meeting attendance check-ins",
+        "Private journaling with reflection prompts",
+        "Goal setting and achievement tracking",
+        "Guided meditation sessions",
+        "24/7 AI support chat",
+        "Sobriety calculator and milestones",
+        "Literature library with recovery resources",
+        "Community connection features",
+        "Rewards system for engagement",
+        "Appointment scheduling and reminders",
+        "Daily affirmations and motivation"
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #fff;
+        }
+        
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        .logo span {
+            color: #815956;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #62f5e7;
+        }
+        
+        .hero-app {
+            background: linear-gradient(135deg, #815956 0%, #62f5e7 100%);
+            color: #fff;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-app h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero-app p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #815956;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(98, 245, 231, 0.2);
+            border-color: #62f5e7;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: #62f5e7;
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .platforms {
+            background: #f5f5f5;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 12px;
+        }
+        
+        .platform-icons {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .platform-item {
+            text-align: center;
+        }
+        
+        .platform-item i {
+            font-size: 4rem;
+            color: #815956;
+            margin-bottom: 0.5rem;
+        }
+        
+        .platform-item p {
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #62f5e7 0%, #815956 100%);
+            color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin: 4rem 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #815956;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+        }
+        
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .benefit-item .check {
+            color: #62f5e7;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .benefit-item p {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 3rem 2rem 1rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: #62f5e7;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #62f5e7;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #555;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-app h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-app p {
+                font-size: 1.1rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .platform-icons {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" width="50" height="50">
+                <span>Desert Mountain Healing IOP</span>
+            </a>
+            
+            <nav role="navigation">
+                <a href="/">Home</a>
+                <a href="/team/">Our Team</a>
+                <a href="/reliable-substance-abuse-treatments/">Services</a>
+                <a href="/contact-us/">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-app">
+        <div class="badge">🎯 For Enrolled Clients Only</div>
+        <h1>Own Today - Your Recovery Journey, Always With You</h1>
+        <p>Track progress, connect with your community, and access support tools 24/7 from any device</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Features Section -->
+        <h2 class="section-title">Everything You Need to Support Your Recovery</h2>
+        <p class="section-subtitle">Own Today provides powerful tools to help you stay engaged, motivated, and connected throughout your treatment journey.</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Progress Tracking</h3>
+                <p>Track your daily streaks, meeting attendance, and earn points for every positive action. Watch your momentum build day by day!</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">✍️</div>
+                <h3>Private Journaling</h3>
+                <p>Your story matters. Write freely in your secure journal to reflect on your journey and track your emotional growth over time.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Goal Setting</h3>
+                <p>Set meaningful goals and celebrate each achievement. Break down big dreams into actionable steps and track your progress.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🧘</div>
+                <h3>Guided Meditation</h3>
+                <p>Access guided meditation sessions anytime for stress relief, mindfulness, and inner peace. Find your calm when you need it most.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>24/7 AI Support</h3>
+                <p>Never feel alone. Our AI support chat is available around the clock when you need someone to talk to or guidance in a moment of need.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3>Rewards System</h3>
+                <p>Earn points for every positive action and redeem them for meaningful rewards. Celebrate your wins and stay motivated!</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Appointment Management</h3>
+                <p>Never miss a session. Manage your therapy appointments, check-ins, and important dates all in one place.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Community Connection</h3>
+                <p>Connect with others on the same journey. Share experiences, offer support, and build meaningful relationships in recovery.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎉</div>
+                <h3>Sobriety Calculator</h3>
+                <p>Count every victory! Track your sobriety milestones and celebrate each day of progress on your recovery journey.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Literature Library</h3>
+                <p>Access recovery resources, daily meditations, and inspirational readings. Knowledge is power on your healing path.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💫</div>
+                <h3>Daily Affirmations</h3>
+                <p>Start each day with positive affirmations designed to inspire, encourage, and motivate you toward continued growth.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Relapse Prevention</h3>
+                <p>Access proven tools and strategies to help you stay strong when things get tough. Build your resilience toolkit.</p>
+            </div>
+        </div>
+
+        <!-- Why Use The App Section -->
+        <section style="margin: 5rem 0;">
+            <h2 class="section-title">Why Clients Love Our App</h2>
+            <p class="section-subtitle">Real benefits that make a real difference in your recovery</p>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <span class="check">✓</span>
+                    <p><strong>Stay Accountable:</strong> Daily check-ins and streak tracking keep you engaged and motivated</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="check">✓</span>
+                    <p><strong>Access Anywhere:</strong> Available on iOS, Android, Windows, and web - recovery support wherever you are</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="check">✓</span>
+                    <p><strong>Track Your Growth:</strong> Visual progress insights show how far you've come on your journey</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="check">✓</span>
+                    <p><strong>Always Supported:</strong> 24/7 AI support chat means help is always just a tap away</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="check">✓</span>
+                    <p><strong>Feel Connected:</strong> Community features help you build relationships and feel less alone</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="check">✓</span>
+                    <p><strong>Stay Organized:</strong> All your appointments, goals, and resources in one secure place</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platforms Section -->
+        <div class="platforms">
+            <h2 class="section-title">Available on All Your Devices</h2>
+            <p class="section-subtitle">Access your recovery tools from any device, anytime</p>
+            
+            <div class="platform-icons">
+                <div class="platform-item">
+                    <div style="font-size: 4rem;">📱</div>
+                    <p>iOS</p>
+                </div>
+                <div class="platform-item">
+                    <div style="font-size: 4rem;">🤖</div>
+                    <p>Android</p>
+                </div>
+                <div class="platform-item">
+                    <div style="font-size: 4rem;">💻</div>
+                    <p>Windows</p>
+                </div>
+                <div class="platform-item">
+                    <div style="font-size: 4rem;">🌐</div>
+                    <p>Web Browser</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Ready to Access Your App?</h2>
+            <p>Download instructions and support resources are available in your secure client portal</p>
+            <a href="/client-portal/" class="cta-button">Access Client Portal →</a>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.9;">
+                ✨ Available exclusively to enrolled clients of Desert Mountain Healing IOP
+            </p>
+        </div>
+
+        <!-- Enrollment Info -->
+        <section style="text-align: center; padding: 3rem 2rem; background: #f9f9f9; border-radius: 12px; margin-top: 3rem;">
+            <h3 style="color: #815956; font-size: 1.8rem; margin-bottom: 1rem;">Not Yet Enrolled?</h3>
+            <p style="color: #666; font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem;">
+                Join our intensive outpatient program and get access to Own Today - all the tools you need for successful recovery.
+            </p>
+            <a href="/contact-us/" style="display: inline-block; background: #815956; color: #fff; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+                Contact Us to Learn More
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div style="text-align: center; width: 100%; margin-bottom: 2rem;">
+                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" style="width: 120px; height: auto;">
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong><br>3301 Southern Blvd SE, Suite 105<br>Rio Rancho, NM 87124</p>
+                <p><strong>Phone:</strong> <a href="tel:5052700840">(505) 270-0840</a></p>
+                <p><strong>Email:</strong> <a href="mailto:sean_roberts@dmhiop.com">sean_roberts@dmhiop.com</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/team/">Our Team</a></li>
+                    <li><a href="/iop-benefits/">IOP Benefits</a></li>
+                    <li><a href="/reliable-substance-abuse-treatments/">Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>For Clients</h3>
+                <ul>
+                    <li><a href="/client-app/">Client App Info</a></li>
+                    <li><a href="/client-portal/">Client Portal Login</a></li>
+                    <li><a href="/contact-us/">Contact Us</a></li>
+                    <li><a href="/faq/">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2022 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
