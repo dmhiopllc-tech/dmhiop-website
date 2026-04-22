@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Client Portal | Desert Mountain Healing IOP</title>
+    <meta name="description" content="Secure client portal for Desert Mountain Healing IOP enrolled clients.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/favicon-32x32.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #815956 0%, #62f5e7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .portal-container {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 3rem;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        h1 {
+            color: #815956;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        .lock-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Login Form */
+        #loginForm {
+            margin-top: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            color: #555;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        input[type="password"] {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #62f5e7;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #62f5e7 0%, #815956 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(98, 245, 231, 0.4);
+        }
+        
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        /* Portal Content (hidden initially) */
+        #portalContent {
+            display: none;
+        }
+        
+        .welcome-header {
+            background: linear-gradient(135deg, #815956 0%, #62f5e7 100%);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .welcome-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .platform-section {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .platform-section h3 {
+            color: #815956;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .download-link {
+            display: block;
+            background: #62f5e7;
+            color: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .download-link:hover {
+            background: #815956;
+            transform: translateX(5px);
+        }
+        
+        .download-link i {
+            margin-right: 0.5rem;
+        }
+        
+        .info-box {
+            background: #e8f8ff;
+            border-left: 4px solid #62f5e7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: left;
+        }
+        
+        .info-box h4 {
+            color: #815956;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-box p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .support-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #eee;
+        }
+        
+        .support-section h3 {
+            color: #815956;
+            margin-bottom: 1rem;
+        }
+        
+        .support-section p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .support-section a {
+            color: #62f5e7;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .support-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .logout-btn {
+            background: #eee;
+            color: #666;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: background 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background: #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            .portal-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portal-container">
+        <!-- Login Screen -->
+        <div id="loginScreen">
+            <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP" class="logo">
+            <div class="lock-icon">🔒</div>
+            <h1>Client Portal</h1>
+            <p class="subtitle">Enter your access code to download the app</p>
+            
+            <form id="loginForm" onsubmit="checkPassword(event)">
+                <div class="form-group">
+                    <label for="password">Access Code</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Enter your access code"
+                        autocomplete="off"
+                        required
+                    >
+                </div>
+                
+                <button type="submit" class="submit-btn">Access Portal</button>
+                
+                <div id="errorMessage" class="error-message">
+                    ❌ Incorrect access code. Please try again or contact our office at (505) 270-0840.
+                </div>
+            </form>
+            
+            <div class="info-box" style="margin-top: 2rem;">
+                <h4>📞 Need Your Access Code?</h4>
+                <p>Your access code was provided during enrollment. If you need assistance, please contact our office at <strong>(505) 270-0840</strong> or email <strong>sean_roberts@dmhiop.com</strong></p>
+            </div>
+        </div>
+        
+        <!-- Portal Content (shown after successful login) -->
+        <div id="portalContent">
+            <div class="welcome-header">
+                <h2>🎉 Welcome to Your Portal!</h2>
+                <p>Download Own Today and start your recovery journey</p>
+            </div>
+            
+            <!-- Web Access -->
+            <div class="platform-section">
+                <h3>🌐 Access Via Web Browser</h3>
+                <p style="color: #666; margin-bottom: 1rem;">Use Own Today directly in your browser - no download needed!</p>
+                <a href="https://appdmhiop.com" target="_blank" class="download-link">
+                    Open Own Today Web App →
+                </a>
+            </div>
+            
+            <!-- Mobile Downloads -->
+            <div class="platform-section">
+                <h3>📱 Mobile Devices</h3>
+                <p style="color: #666; margin-bottom: 1rem;">Download Own Today for your phone or tablet:</p>
+                <a href="https://appdmhiop.com" target="_blank" class="download-link">
+                    📱 Download Own Today for iOS (iPhone/iPad)
+                </a>
+                <a href="https://appdmhiop.com" target="_blank" class="download-link">
+                    🤖 Download Own Today for Android
+                </a>
+            </div>
+            
+            <!-- Desktop Download -->
+            <div class="platform-section">
+                <h3>💻 Windows Desktop</h3>
+                <p style="color: #666; margin-bottom: 1rem;">Install Own Today desktop version for Windows:</p>
+                <a href="https://appdmhiop.com" target="_blank" class="download-link">
+                    💻 Download Own Today for Windows
+                </a>
+            </div>
+            
+            <!-- Getting Started -->
+            <div class="info-box">
+                <h4>🚀 Getting Started</h4>
+                <p><strong>Step 1:</strong> Click the download link for your device above<br>
+                <strong>Step 2:</strong> Install the app on your device<br>
+                <strong>Step 3:</strong> Log in with the credentials provided by your counselor<br>
+                <strong>Step 4:</strong> Start tracking your recovery journey!</p>
+            </div>
+            
+            <!-- Support Section -->
+            <div class="support-section">
+                <h3>💬 Need Help?</h3>
+                <p>If you have any questions about downloading or using the app:</p>
+                <p><strong>Phone:</strong> <a href="tel:5052700840">(505) 270-0840</a><br>
+                <strong>Email:</strong> <a href="mailto:sean_roberts@dmhiop.com">sean_roberts@dmhiop.com</a></p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
+                    Office Hours: Monday-Friday, 8:00 AM - 8:00 PM
+                </p>
+            </div>
+            
+            <button class="logout-btn" onclick="logout()">← Back to Login</button>
+        </div>
+    </div>
+    
+    <script>
+        // Password configuration - CHANGE THIS PASSWORD AS NEEDED
+        const PORTAL_PASSWORD = "DMH2024Recovery!";
+        
+        function checkPassword(event) {
+            event.preventDefault();
+            
+            const passwordInput = document.getElementById('password');
+            const errorMessage = document.getElementById('errorMessage');
+            const enteredPassword = passwordInput.value;
+            
+            if (enteredPassword === PORTAL_PASSWORD) {
+                // Correct password - show portal content
+                document.getElementById('loginScreen').style.display = 'none';
+                document.getElementById('portalContent').style.display = 'block';
+                errorMessage.style.display = 'none';
+                
+                // Store login state (optional - for session persistence)
+                sessionStorage.setItem('portalAccess', 'granted');
+            } else {
+                // Wrong password - show error
+                errorMessage.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+                
+                // Shake animation
+                passwordInput.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    passwordInput.style.animation = '';
+                }, 500);
+            }
+        }
+        
+        function logout() {
+            document.getElementById('loginScreen').style.display = 'block';
+            document.getElementById('portalContent').style.display = 'none';
+            document.getElementById('password').value = '';
+            sessionStorage.removeItem('portalAccess');
+        }
+        
+        // Check if already logged in (optional session persistence)
+        window.addEventListener('DOMContentLoaded', function() {
+            if (sessionStorage.getItem('portalAccess') === 'granted') {
+                document.getElementById('loginScreen').style.display = 'none';
+                document.getElementById('portalContent').style.display = 'block';
+            }
+        });
+        
+        // Add shake animation for wrong password
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-10px); }
+                75% { transform: translateX(10px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
