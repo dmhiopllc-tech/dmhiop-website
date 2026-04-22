@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
+    <!-- Core Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- Primary Meta Tags -->
@@ -10,16 +11,91 @@
     <meta name="description" content="Secure client portal for Desert Mountain Healing IOP enrolled clients.">
     <meta name="robots" content="noindex, nofollow">
     
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="_TnpGPzwNs1lrB0S3-akruzJJclrcZM9jcajXBbz3Ak">
+    
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/favicon-180x180.png">
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/bundle/publish/0.72.5/publish.css">
+    <link id="global_styles" rel="stylesheet" href="/styles/40366ed9-1cfb-4167-920c-2a4b34462afc.css?v=1764004340000">
     
     <style>
+        /* Font Face Declarations */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url('https://fonts-cdn.edit.site/open-sans/normal/300.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://fonts-cdn.edit.site/open-sans/normal/400.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('https://fonts-cdn.edit.site/open-sans/normal/600.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('https://fonts-cdn.edit.site/open-sans/normal/700.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url('https://fonts-cdn.edit.site/open-sans/normal/800.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: italic;
+            font-weight: 300;
+            font-display: swap;
+            src: url('https://fonts-cdn.edit.site/open-sans/italic/300.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://fonts-cdn.edit.site/open-sans/italic/400.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: italic;
+            font-weight: 600;
+            font-display: swap;
+            src: url('https://fonts-cdn.edit.site/open-sans/italic/600.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: italic;
+            font-weight: 700;
+            font-display: swap;
+            src: url('https://fonts-cdn.edit.site/open-sans/italic/700.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: italic;
+            font-weight: 800;
+            font-display: swap;
+            src: url('https://fonts-cdn.edit.site/open-sans/italic/800.woff2') format('woff2');
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -27,20 +103,90 @@
         }
         
         body {
-            font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, #815956 0%, #62f5e7 100%);
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
             min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        .logo span {
+            color: #815956;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #62f5e7;
+        }
+        
+        .cta-button {
+            background: #815956;
+            color: #fff !important;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        
+        /* Main Portal Wrapper */
+        .portal-wrapper {
+            background: linear-gradient(135deg, #815956 0%, #62f5e7 100%);
+            min-height: calc(100vh - 200px);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 4rem 2rem;
         }
         
         .portal-container {
             background: #fff;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
             padding: 3rem;
             text-align: center;
@@ -246,7 +392,63 @@
             background: #ddd;
         }
         
+        /* Footer Styles */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 3rem 2rem 1rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: #62f5e7;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #62f5e7;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #555;
+            font-size: 0.9rem;
+        }
+        
         @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
             .portal-container {
                 padding: 2rem 1.5rem;
             }
@@ -258,7 +460,33 @@
     </style>
 </head>
 <body>
-    <div class="portal-container">
+    <!-- Header -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="/" class="logo" aria-label="Desert Mountain Healing IOP Home">
+                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" width="50" height="50">
+                <span>Desert Mountain Healing IOP</span>
+            </a>
+            
+            <nav role="navigation" aria-label="Main navigation">
+                <a href="/">Home</a>
+                <a href="/team/">Our Provider Team</a>
+                <a href="/team/#staff">Our Staff</a>
+                <a href="/iop-benefits/">IOP Benefits</a>
+                <a href="/reliable-substance-abuse-treatments/">Services</a>
+                <a href="/mat/">MAT</a>
+                <a href="/faq/">FAQ</a>
+                <a href="/reviews/">Reviews</a>
+                <a href="/contact-us/">Contact Us</a>
+                <a href="/blog/">Blog</a>
+                <a href="http://myrecoverynm.org" class="cta-button" rel="external noopener" target="_blank" title="Recovery NM - Resources for Uninsured Clients">Recovery NM</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Portal Content Wrapper -->
+    <div class="portal-wrapper">
+        <div class="portal-container">
         <!-- Login Screen -->
         <div id="loginScreen">
             <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP" class="logo">
@@ -351,6 +579,55 @@
             <button class="logout-btn" onclick="logout()">← Back to Login</button>
         </div>
     </div>
+    <!-- End Portal Wrapper -->
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div style="text-align: center; width: 100%; margin-bottom: 2rem;">
+                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" style="width: 120px; height: auto;">
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong><br>3301 Southern Blvd SE, Suite 105<br>Rio Rancho, NM 87124</p>
+                <p><strong>Phone:</strong> <a href="tel:5052700840">(505) 270-0840</a></p>
+                <p><strong>Email:</strong> <a href="mailto:sean_roberts@dmhiop.com">sean_roberts@dmhiop.com</a></p>
+                <p style="margin-top: 1rem;"><strong>Office Hours:</strong><br>Monday - Friday: 8:00 AM - 8:00 PM<br>Saturday - Sunday: Closed</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/team/">Our Provider Team</a></li>
+                    <li><a href="/team/#staff">Our Staff</a></li>
+                    <li><a href="/iop-benefits/">IOP Benefits</a></li>
+                    <li><a href="/mat/">MAT</a></li>
+                    <li><a href="/faq/">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Client Links</h3>
+                <ul>
+                    <li><a href="/client-app/">Own Today App Info</a></li>
+                    <li><a href="/client-portal/">Client Portal</a></li>
+                    <li><a href="/reviews/">Client Reviews</a></li>
+                    <li><a href="/contact-us/">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Service Area</h3>
+                <p>We serve Rio Rancho, Albuquerque, Bernalillo, Corrales, and surrounding communities in New Mexico. Our intensive outpatient program provides flexible scheduling to fit your life while delivering comprehensive addiction treatment.</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2022 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
+        </div>
+    </footer>
     
     <script>
         // Password configuration - CHANGE THIS PASSWORD AS NEEDED
