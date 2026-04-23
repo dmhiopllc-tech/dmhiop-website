@@ -1,97 +1,375 @@
-# Robots.txt for Desert Mountain Healing IOP
-# https://dmhiop.com/robots.txt
+# Desert Mountain Healing IOP - Website Documentation
 
-User-agent: *
-Allow: /
+## 🏥 Project Overview
 
-# Allow all main public pages
-Allow: /team/
-Allow: /iop-benefits/
-Allow: /reliable-substance-abuse-treatments/
-Allow: /mat/
-Allow: /medical-detox-assistance/
-Allow: /faq/
-Allow: /reviews/
-Allow: /contact-us/
-Allow: /blog/
-Allow: /client-app/
+**Desert Mountain Healing IOP** is a comprehensive website for an Intensive Outpatient Program (IOP) providing substance abuse treatment and mental health services in Rio Rancho, New Mexico.
 
-# Block client portal and admin pages from search engines
-Disallow: /admin-portal.html
-Disallow: /portal-login.html
-Disallow: /auth-login.html
-Disallow: /auth-signup.html
-Disallow: /staff-dashboard.html
-Disallow: /provider-dashboard.html
-Disallow: /tablet-checkin.html
-Disallow: /admin-dashboard.html
-Disallow: /employee-dashboard.html
-Disallow: /timeclock/
-Disallow: /admin/
+- **Website URL**: https://dmhiop.com/
+- **Project Type**: Static marketing website with integrated client portal
+- **Last Updated**: April 23, 2026
 
-# Block client app internal pages
-Disallow: /index.html
-Disallow: /goals.html
-Disallow: /meeting-guide.html
-Disallow: /achievements.html
-Disallow: /journal.html
-Disallow: /journal-history.html
-Disallow: /progress-tracker.html
-Disallow: /my-literature.html
-Disallow: /literature-library.html
-Disallow: /appointments.html
-Disallow: /community.html
-Disallow: /notification-settings.html
-Disallow: /sobriety-calculator.html
-Disallow: /daily-affirmations.html
-Disallow: /relapse-prevention.html
-Disallow: /features-hub.html
-Disallow: /rewards-store.html
-Disallow: /meditation.html
-Disallow: /leaderboard.html
-Disallow: /support-chatbot.html
-Disallow: /activity-feed.html
-Disallow: /alumni-portal.html
+---
 
-# Block backup/test/development files
-Disallow: /*ZZZZZ*
-Disallow: /*-FIXED*
-Disallow: /*-FINAL*
-Disallow: /*-COMPLETE*
-Disallow: /*-backup*
-Disallow: /*-old*
-Disallow: /*-test*
-Disallow: /*-copy*
-Disallow: /UPLOAD-*
-Disallow: /LIVE-*
-Disallow: /AAA-*
-Disallow: /AAAA-*
+## 📋 Table of Contents
 
-# Block development and configuration files
-Disallow: /*.md$
-Disallow: /*.sql$
-Disallow: /*.json$
-Disallow: /README.md
-Disallow: /netlify.toml
-Disallow: /_redirects
-Disallow: /staticwebapp.config.json
-Disallow: /manifest.json
-Disallow: /service-worker.js
-Disallow: /pwa-service-worker.js
+1. [Website Structure](#website-structure)
+2. [Completed Features](#completed-features)
+3. [Page Inventory](#page-inventory)
+4. [Navigation Menu](#navigation-menu)
+5. [SEO Configuration](#seo-configuration)
+6. [Design System](#design-system)
+7. [Deployment Guide](#deployment-guide)
+8. [Future Enhancements](#future-enhancements)
 
-# Block folders
-Disallow: /js/
-Disallow: /css/
-Disallow: /scripts/
-Disallow: /supabase/
-Disallow: /SQL/
-Disallow: /__static/
-Disallow: /DEPLOY-PACKAGE/
-Disallow: /GITHUB-UPLOAD/
-Disallow: /READY-TO-UPLOAD/
+---
 
-# Sitemap location
-Sitemap: https://dmhiop.com/sitemap.xml
+## 🗂️ Website Structure
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
+### Public Marketing Pages (11 pages)
+
+All pages feature:
+- ✅ Consistent header with logo and navigation
+- ✅ Sandia Mountains hero banner with gradient overlay
+- ✅ Responsive mobile-friendly design
+- ✅ SEO-optimized meta tags and structured data
+- ✅ Professional footer with contact information
+
+### Page List
+
+| Page | URL | Priority | Description |
+|------|-----|----------|-------------|
+| **Home** | `/` | 1.0 | Main landing page with services overview |
+| **Our Team** | `/team/` | 0.9 | Provider profiles and staff information |
+| **IOP Benefits** | `/iop-benefits/` | 0.9 | Benefits of intensive outpatient treatment |
+| **Services** | `/reliable-substance-abuse-treatments/` | 0.9 | Treatment services and staff overview |
+| **MAT** | `/mat/` | 0.9 | Medication-Assisted Treatment program |
+| **Medical Detox** | `/medical-detox-assistance/` | 0.8 | Medical detox assistance information |
+| **FAQ** | `/faq/` | 0.8 | Frequently asked questions |
+| **Reviews** | `/reviews/` | 0.8 | Client testimonials and reviews |
+| **Contact Us** | `/contact-us/` | 0.9 | Contact form and location information |
+| **Blog** | `/blog/` | 0.7 | Recovery resources and insights |
+| **Client App** | `/client-app/` | 0.8 | Own Today app information page |
+
+---
+
+## ✅ Completed Features
+
+### Design & Branding
+- ✅ Professional logo with Desert Mountain Healing IOP branding
+- ✅ Consistent color scheme (Teal #62f5e7, Brown #815956)
+- ✅ Sandia Mountains hero banner on all pages
+- ✅ Responsive layout for mobile, tablet, and desktop
+- ✅ Clean, modern typography using Open Sans and Mukta fonts
+
+### Navigation
+- ✅ Unified navigation menu across all pages
+- ✅ **Navigation Order**: Home → Our Team → IOP Benefits → Services → MAT → FAQ → Reviews → Contact Us → Blog → Client App → Recovery NM
+- ✅ External link to Recovery NM (myrecoverynm.org) for uninsured resources
+- ✅ Mobile-responsive navigation
+
+### SEO Optimization
+- ✅ Complete meta tags (title, description, keywords)
+- ✅ Open Graph tags for social media sharing
+- ✅ Twitter Card tags
+- ✅ Structured data (JSON-LD) for search engines
+- ✅ XML sitemap with all 11 pages
+- ✅ Comprehensive robots.txt file
+- ✅ Geo-targeting tags for Rio Rancho, NM
+- ✅ Voice search optimization
+
+### Content
+- ✅ Provider team profiles with credentials
+- ✅ Administrative staff information
+- ✅ Treatment program descriptions
+- ✅ Client testimonials and reviews
+- ✅ Recovery blog with 10+ articles
+- ✅ Contact information and hours
+- ✅ Service area coverage (Rio Rancho, Albuquerque, Sandoval County)
+
+---
+
+## 📄 Page Inventory
+
+### Final Copy-Paste Files (Ready to Deploy)
+
+These files have the **correct header, navigation, and hero banner**:
+
+1. `index-FINAL-COPY-PASTE.html` → Homepage
+2. `team-FINAL-COPY-PASTE.html` → Our Team page
+3. `iop-benefits-FINAL-COPY-PASTE.html` → IOP Benefits page
+4. `reliable-substance-abuse-treatments-FINAL-COPY-PASTE.html` → Services page
+5. `mat-FINAL-COPY-PASTE.html` → MAT program page
+6. `faq-FINAL-COPY-PASTE.html` → FAQ page
+7. `reviews-FINAL-COPY-PASTE.html` → Reviews page
+8. `contact-us-FINAL-COPY-PASTE.html` → Contact Us page
+9. `blog-FINAL-COPY-PASTE.html` → Blog page
+10. `client-app-FINAL-COPY-PASTE.html` → Client App page
+11. `medical-detox-assistance.html` → Medical Detox page (already correct)
+
+### Additional Files
+
+- `sitemap-UPDATED.xml` → XML sitemap for search engines
+- `robots-UPDATED.txt` → robots.txt for SEO crawling control
+- `README.md` → This documentation file
+
+---
+
+## 🧭 Navigation Menu
+
+### Current Navigation Structure
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  🏠 Home → 👥 Our Team → 📋 IOP Benefits → 🏥 Services →        │
+│  💊 MAT → ❓ FAQ → ⭐ Reviews → 📞 Contact Us →                 │
+│  📝 Blog → 📱 Client App → 🔗 Recovery NM                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Navigation Notes
+
+- ❌ **Removed**: "Our Provider Team" (changed to "Our Team")
+- ❌ **Removed**: "Our Staff" as separate link (now covered under Services)
+- ❌ **Removed**: "Client Portal" link (internal use only)
+- ✅ **External Link**: Recovery NM button links to myrecoverynm.org (resources for uninsured clients)
+
+---
+
+## 🎨 Design System
+
+### Color Palette
+
+```css
+Primary Teal:   #62f5e7  /* Buttons, accents, hovers */
+Primary Brown:  #815956  /* Logo text, headings */
+Background:     #fff     /* White background */
+Text Dark:      #333     /* Main text */
+Text Light:     #555     /* Secondary text */
+```
+
+### Typography
+
+- **Primary Font**: Open Sans (body text, 300-800 weights)
+- **Secondary Font**: Mukta (headings, 200-800 weights)
+- **Logo Font Size**: 1.1rem
+- **Heading Sizes**: h1 (2.5rem), h2 (2rem), h3 (1.5rem)
+
+### Hero Banner
+
+- **Background Image**: Sandia Mountains (`/sandia-banner-medium.jpg` for desktop, `/sandia-banner-mobile.jpg` for mobile)
+- **Gradient Overlay**: `linear-gradient(rgba(98, 245, 231, 0.7), rgba(129, 89, 86, 0.7))`
+- **Height**: 350px desktop, 250px mobile
+- **Text Color**: White (#fff)
+
+### Logo
+
+- **Image**: `/dmh-logo (1).png`
+- **Size**: 50px × 50px
+- **Text**: "Desert Mountain Healing IOP" in brown (#815956)
+- **Layout**: Flexbox with 0.75rem gap
+
+---
+
+## 🔍 SEO Configuration
+
+### Sitemap (sitemap.xml)
+
+- **Location**: `https://dmhiop.com/sitemap.xml`
+- **Format**: XML
+- **Pages**: 11 public pages
+- **Update Frequency**: Homepage/Reviews (weekly), Others (monthly)
+- **Last Modified**: April 23, 2026
+
+### Robots.txt
+
+- **Location**: `https://dmhiop.com/robots.txt`
+- **Strategy**:
+  - ✅ **Allow**: All 11 public marketing pages
+  - ❌ **Block**: Client portal, admin pages, internal app pages
+  - ❌ **Block**: Development files, backups, configuration files
+  - ❌ **Block**: Folders: /js/, /css/, /scripts/, /SQL/, /__static/
+- **Crawl Delay**: 1 second (respectful crawling)
+
+### Structured Data (JSON-LD)
+
+Each page includes:
+- Organization schema with contact information
+- Medical Organization schema
+- BreadcrumbList for navigation
+- WebPage schema with descriptions
+- Local Business schema with geo-coordinates
+- Provider Person schemas (team page)
+- Review aggregate ratings (reviews page)
+
+### Meta Tags
+
+All pages include:
+- Title (50-60 characters)
+- Description (150-160 characters)
+- Keywords (targeted local and service keywords)
+- Open Graph tags (Facebook, LinkedIn)
+- Twitter Card tags
+- Geo-targeting (Rio Rancho, NM coordinates)
+- Canonical URLs
+- Voice search optimization tags
+
+---
+
+## 🚀 Deployment Guide
+
+### Upload Instructions
+
+1. **Download these files** from the Files panel:
+   - All 10 `*-FINAL-COPY-PASTE.html` files
+   - `medical-detox-assistance.html`
+   - `sitemap-UPDATED.xml`
+   - `robots-UPDATED.txt`
+   - `README.md`
+
+2. **Rename files** before uploading:
+   - `index-FINAL-COPY-PASTE.html` → `index.html` (homepage)
+   - `team-FINAL-COPY-PASTE.html` → Upload to `/team/index.html`
+   - `iop-benefits-FINAL-COPY-PASTE.html` → Upload to `/iop-benefits/index.html`
+   - `reliable-substance-abuse-treatments-FINAL-COPY-PASTE.html` → Upload to `/reliable-substance-abuse-treatments/index.html`
+   - `mat-FINAL-COPY-PASTE.html` → Upload to `/mat/index.html`
+   - `faq-FINAL-COPY-PASTE.html` → Upload to `/faq/index.html`
+   - `reviews-FINAL-COPY-PASTE.html` → Upload to `/reviews/index.html`
+   - `contact-us-FINAL-COPY-PASTE.html` → Upload to `/contact-us/index.html`
+   - `blog-FINAL-COPY-PASTE.html` → Upload to `/blog/index.html`
+   - `client-app-FINAL-COPY-PASTE.html` → Upload to `/client-app/index.html`
+   - `medical-detox-assistance.html` → Upload to `/medical-detox-assistance/index.html`
+   - `sitemap-UPDATED.xml` → `sitemap.xml` (root)
+   - `robots-UPDATED.txt` → `robots.txt` (root)
+   - `README.md` → `README.md` (root, optional)
+
+3. **Verify deployment**:
+   - Check all 11 pages load correctly
+   - Verify navigation works on all pages
+   - Test mobile responsiveness
+   - Confirm hero banners display properly
+   - Test contact form submission
+
+### File Structure
+
+```
+/
+├── index.html                                    (Homepage)
+├── sitemap.xml                                   (SEO sitemap)
+├── robots.txt                                    (SEO robots file)
+├── README.md                                     (Documentation)
+├── dmh-logo (1).png                              (Logo image)
+├── sandia-banner-medium.jpg                      (Hero banner desktop)
+├── sandia-banner-mobile.jpg                      (Hero banner mobile)
+├── /team/
+│   └── index.html                                (Our Team page)
+├── /iop-benefits/
+│   └── index.html                                (IOP Benefits page)
+├── /reliable-substance-abuse-treatments/
+│   └── index.html                                (Services page)
+├── /mat/
+│   └── index.html                                (MAT page)
+├── /medical-detox-assistance/
+│   └── index.html                                (Medical Detox page)
+├── /faq/
+│   └── index.html                                (FAQ page)
+├── /reviews/
+│   └── index.html                                (Reviews page)
+├── /contact-us/
+│   └── index.html                                (Contact page)
+├── /blog/
+│   └── index.html                                (Blog page)
+└── /client-app/
+    └── index.html                                (Client App page)
+```
+
+---
+
+## 🎯 Future Enhancements
+
+### Recommended Next Steps
+
+1. **Add Photos**:
+   - Professional team photos for providers
+   - Office/facility photos
+   - Stock images for blog posts
+
+2. **Content Updates**:
+   - Add more blog articles (SEO benefit)
+   - Update testimonials regularly
+   - Add video content
+
+3. **SEO Enhancements**:
+   - Google Business Profile optimization
+   - Local directory listings
+   - Backlink building campaign
+   - Review generation strategy
+
+4. **Analytics & Tracking**:
+   - Google Analytics 4 setup
+   - Google Search Console verification
+   - Conversion tracking for contact form
+   - Phone call tracking
+
+5. **Accessibility**:
+   - WCAG 2.1 AA compliance audit
+   - Alt text for all images
+   - Keyboard navigation testing
+   - Screen reader compatibility
+
+6. **Performance**:
+   - Image optimization (WebP format)
+   - Lazy loading for images
+   - CDN implementation
+   - Caching strategy
+
+---
+
+## 📞 Contact Information
+
+**Desert Mountain Healing IOP**
+
+- **Address**: 3301 Southern Blvd SE, Suite 105, Rio Rancho, NM 87124
+- **Phone**: (505) 270-0840
+- **Email**: sean_roberts@dmhiop.com
+- **Website**: https://dmhiop.com/
+- **Service Area**: Rio Rancho, Albuquerque, Sandoval County, New Mexico
+
+---
+
+## 📝 Technical Notes
+
+### Browser Support
+- Chrome, Firefox, Safari, Edge (latest versions)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+- Responsive breakpoints: 768px (tablet), 1024px (desktop)
+
+### Dependencies
+- Google Fonts (Open Sans, Mukta)
+- No JavaScript frameworks required
+- Pure HTML/CSS implementation
+- Self-hosted logo and hero images
+
+### Maintenance
+- Update sitemap when adding new pages
+- Update lastmod dates in sitemap quarterly
+- Review robots.txt when structure changes
+- Keep README.md current with changes
+
+---
+
+## ✅ Project Status: COMPLETE
+
+All 11 pages have been standardized with:
+- ✅ Consistent header and navigation
+- ✅ Unified hero banner design
+- ✅ Proper SEO optimization
+- ✅ Mobile-responsive layout
+- ✅ Professional footer
+- ✅ Updated sitemap and robots.txt
+
+**Ready for deployment!** 🚀
+
+---
+
+*Last Updated: April 23, 2026*
+*Version: 2.0*
