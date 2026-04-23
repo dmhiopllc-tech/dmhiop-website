@@ -4,7 +4,7 @@
 User-agent: *
 Allow: /
 
-# Allow all main pages
+# Allow all main public pages
 Allow: /team/
 Allow: /iop-benefits/
 Allow: /reliable-substance-abuse-treatments/
@@ -14,6 +14,7 @@ Allow: /faq/
 Allow: /reviews/
 Allow: /contact-us/
 Allow: /blog/
+Allow: /client-app/
 
 # Block client portal and admin pages from search engines
 Disallow: /admin-portal.html
@@ -23,13 +24,21 @@ Disallow: /auth-signup.html
 Disallow: /staff-dashboard.html
 Disallow: /provider-dashboard.html
 Disallow: /tablet-checkin.html
+Disallow: /admin-dashboard.html
+Disallow: /employee-dashboard.html
+Disallow: /timeclock/
+Disallow: /admin/
+
+# Block client app internal pages
 Disallow: /index.html
 Disallow: /goals.html
 Disallow: /meeting-guide.html
 Disallow: /achievements.html
+Disallow: /journal.html
 Disallow: /journal-history.html
 Disallow: /progress-tracker.html
 Disallow: /my-literature.html
+Disallow: /literature-library.html
 Disallow: /appointments.html
 Disallow: /community.html
 Disallow: /notification-settings.html
@@ -37,22 +46,49 @@ Disallow: /sobriety-calculator.html
 Disallow: /daily-affirmations.html
 Disallow: /relapse-prevention.html
 Disallow: /features-hub.html
+Disallow: /rewards-store.html
+Disallow: /meditation.html
+Disallow: /leaderboard.html
+Disallow: /support-chatbot.html
+Disallow: /activity-feed.html
+Disallow: /alumni-portal.html
 
-# Block backup/test files
+# Block backup/test/development files
 Disallow: /*ZZZZZ*
-Disallow: /*-FIXED-*
+Disallow: /*-FIXED*
+Disallow: /*-FINAL*
+Disallow: /*-COMPLETE*
 Disallow: /*-backup*
 Disallow: /*-old*
 Disallow: /*-test*
+Disallow: /*-copy*
 Disallow: /UPLOAD-*
 Disallow: /LIVE-*
+Disallow: /AAA-*
+Disallow: /AAAA-*
 
-# Block development files
+# Block development and configuration files
 Disallow: /*.md$
 Disallow: /*.sql$
+Disallow: /*.json$
 Disallow: /README.md
 Disallow: /netlify.toml
 Disallow: /_redirects
+Disallow: /staticwebapp.config.json
+Disallow: /manifest.json
+Disallow: /service-worker.js
+Disallow: /pwa-service-worker.js
+
+# Block folders
+Disallow: /js/
+Disallow: /css/
+Disallow: /scripts/
+Disallow: /supabase/
+Disallow: /SQL/
+Disallow: /__static/
+Disallow: /DEPLOY-PACKAGE/
+Disallow: /GITHUB-UPLOAD/
+Disallow: /READY-TO-UPLOAD/
 
 # Sitemap location
 Sitemap: https://dmhiop.com/sitemap.xml
