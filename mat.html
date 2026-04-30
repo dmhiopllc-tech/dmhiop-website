@@ -214,8 +214,15 @@
         }
 
         .logo img {
-            height: 50px;
-            width: 50px;
+            height: 100px;
+            width: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .logo img {
+                height: 60px;
+                width: 60px;
+            }
         }
 
         .logo-text {
@@ -552,7 +559,7 @@
     <header>
         <div class="header-container">
             <a href="/" class="logo">
-                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" width="50" height="50">
+                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" width="100" height="100">
                 <span class="logo-text">Desert Mountain Healing IOP</span>
             </a>
             <nav role="navigation" aria-label="Main navigation">
@@ -566,7 +573,9 @@
                 <a href="/contact-us/">Contact Us</a>
                 <a href="/blog/">Blog</a>
                 <a href="/client-app/">Client App</a>
-                <a href="http://myrecoverynm.org" class="cta-button" rel="external noopener" target="_blank" title="Recovery NM - Resources for Uninsured Clients">Recovery NM</a>
+                <a href="http://myrecoverynm.org" rel="external noopener" target="_blank" title="Recovery NM - Resources for Uninsured Clients">
+                    <img src="/recovery_logo.png" alt="Recovery NM Logo" width="120" height="auto" style="vertical-align: middle;">
+                </a>
             </nav>
         </div>
     </header>
