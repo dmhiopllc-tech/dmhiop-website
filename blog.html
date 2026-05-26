@@ -66,26 +66,34 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
         
         .logo img {
-            height: 50px;
-            width: auto;
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
         }
         
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #62f5e7;
+        @media (max-width: 768px) {
+            .logo img {
+                width: 60px;
+                height: 60px;
+            }
         }
         
-        nav ul {
+        .logo span {
+            color: #815956;
+        }
+        
+        nav {
             display: flex;
-            list-style: none;
-            gap: 2rem;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.5rem;
         }
         
         nav a {
@@ -93,6 +101,7 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
+            white-space: nowrap;
         }
         
         nav a:hover {
@@ -312,25 +321,24 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="/" class="logo">
-                <img src="/dmh-logo.png" alt="Desert Mountain Healing IOP Logo">
-                <span class="logo-text">Desert Mountain Healing IOP</span>
+            <a href="/" class="logo" aria-label="Desert Mountain Healing IOP - Home">
+                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" width="100" height="100">
+                <span>Desert Mountain Healing IOP</span>
             </a>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/team/">Our Provider Team</a></li>
-                    <li><a href="/reliable-substance-abuse-treatments/">Our Staff</a></li>
-                    <li><a href="/iop-benefits/">IOP Benefits</a></li>
-                    <li><a href="/services/">Services</a></li>
-                    <li><a href="/mat/">MAT</a></li>
-                    <li><a href="/faq/">FAQ</a></li>
-                    <li><a href="/reviews/">Reviews</a></li>
-                    <li><a href="/contact-us/">Contact Us</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/client-app/">Client App</a></li>
-                    <li><a href="/client-portal/">Client Portal</a></li>
-                </ul>
+            <nav role="navigation" aria-label="Main navigation">
+                <a href="/">Home</a>
+                <a href="/team/">Our Team</a>
+                <a href="/iop-benefits/">IOP Benefits</a>
+                <a href="/reliable-substance-abuse-treatments/">Services</a>
+                <a href="/mat/">MAT</a>
+                <a href="/faq/">FAQ</a>
+                <a href="/reviews/">Reviews</a>
+                <a href="/contact-us/">Contact Us</a>
+                <a href="/blog/">Blog</a>
+                <a href="/client-app/">Client App</a>
+                <a href="http://myrecoverynm.org" rel="external noopener" target="_blank" title="Recovery NM - Resources for Uninsured Clients">
+                    <img src="/recovery_logo.png" alt="Recovery NM Logo" width="120" height="auto" style="vertical-align: middle;">
+                </a>
             </nav>
         </div>
     </header>
