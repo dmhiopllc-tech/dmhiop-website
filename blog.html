@@ -64,10 +64,21 @@
         }
         
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-text {
             font-size: 1.5rem;
             font-weight: 700;
             color: #62f5e7;
-            text-decoration: none;
         }
         
         nav ul {
@@ -301,7 +312,10 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="/" class="logo">Desert Mountain Healing IOP</a>
+            <a href="/" class="logo">
+                <img src="/dmh-logo.png" alt="Desert Mountain Healing IOP Logo">
+                <span class="logo-text">Desert Mountain Healing IOP</span>
+            </a>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
