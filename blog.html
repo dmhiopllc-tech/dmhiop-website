@@ -139,29 +139,16 @@
         }
         
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #62f5e7;
             text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            font-size: 1.1rem;
         }
         
-        .logo img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-        }
-        
-        .logo span {
-            color: #815956;
-        }
-        
-        nav {
+        nav ul {
             display: flex;
-            align-items: center;
-            gap: 1.5rem;
+            list-style: none;
+            gap: 2rem;
         }
         
         nav a {
@@ -169,26 +156,10 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
-            white-space: nowrap;
         }
         
         nav a:hover {
             color: #62f5e7;
-        }
-
-        .recovery-logo {
-            display: inline-block;
-            transition: opacity 0.3s;
-        }
-
-        .recovery-logo:hover {
-            opacity: 0.8;
-        }
-
-        .recovery-logo img {
-            height: 40px;
-            width: auto;
-            display: block;
         }
         
         /* Hero Section */
@@ -205,15 +176,6 @@
         }
         
         @media (max-width: 768px) {
-            .logo img {
-                width: 60px;
-                height: 60px;
-            }
-
-            .recovery-logo img {
-                height: 30px;
-            }
-
             .hero {
                 padding: 4rem 2rem;
                 min-height: 250px;
@@ -438,25 +400,22 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="/" class="logo">
-                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo">
-                <span>Desert Mountain Healing IOP</span>
-            </a>
-            
-            <nav role="navigation" aria-label="Main navigation">
-                <a href="/">Home</a>
-                <a href="/team/">Our Team</a>
-                <a href="/iop-benefits/">IOP Benefits</a>
-                <a href="/reliable-substance-abuse-treatments/">Services</a>
-                <a href="/mat/">MAT</a>
-                <a href="/faq/">FAQ</a>
-                <a href="/reviews/">Reviews</a>
-                <a href="/contact-us/">Contact Us</a>
-                <a href="/blog/">Blog</a>
-                <a href="/client-app/">Client App</a>
-                <a href="http://myrecoverynm.org" class="recovery-logo" rel="external noopener" target="_blank" title="Recovery NM - Resources for Uninsured Clients">
-                    <img src="/recovery_logo.png" alt="Recovery NM">
-                </a>
+            <a href="/" class="logo">Desert Mountain Healing IOP</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/team/">Our Provider Team</a></li>
+                    <li><a href="/reliable-substance-abuse-treatments/">Our Staff</a></li>
+                    <li><a href="/iop-benefits/">IOP Benefits</a></li>
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/mat/">MAT</a></li>
+                    <li><a href="/faq/">FAQ</a></li>
+                    <li><a href="/reviews/">Reviews</a></li>
+                    <li><a href="/contact-us/">Contact Us</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/client-app/">Client App</a></li>
+                    <li><a href="/client-portal/">Client Portal</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -471,6 +430,136 @@
     <main class="container">
         <!-- Blog Grid -->
         <div class="blog-grid">
+            <!-- NEW SEO BLOG POSTS - JANUARY 2024 UPDATE -->
+            
+            <!-- Blog Post - NEW #1 -->
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <div class="blog-icon">📝</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">15 Jan 2024</span>
+                        <span class="blog-author">Desert Mountain Healing Team</span>
+                    </div>
+                    <h2><a href="blog-first-week-iop.html" style="color: #815956; text-decoration: none;">What to Expect During Your First Week of IOP in Rio Rancho</a></h2>
+                    <p>Nervous about starting IOP? Get a detailed day-by-day guide of your first week, including intake, group therapy, and what to bring.</p>
+                    <a href="blog-first-week-iop.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post - NEW #2 -->
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <div class="blog-icon">⚖️</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">16 Jan 2024</span>
+                        <span class="blog-author">Desert Mountain Healing Team</span>
+                    </div>
+                    <h2><a href="blog-iop-vs-residential.html" style="color: #815956; text-decoration: none;">IOP vs Residential Treatment: Which is Right for You?</a></h2>
+                    <p>Compare intensive outpatient and residential treatment. Learn the costs, benefits, and when each level of care is most appropriate.</p>
+                    <a href="blog-iop-vs-residential.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post - NEW #3 -->
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <div class="blog-icon">💰</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">16 Jan 2024</span>
+                        <span class="blog-author">Desert Mountain Healing Team</span>
+                    </div>
+                    <h2><a href="blog-iop-cost-insurance.html" style="color: #815956; text-decoration: none;">How Much Does IOP Cost in New Mexico? Insurance & Payment Guide</a></h2>
+                    <p>Complete breakdown of IOP costs, insurance coverage, Medicaid options, and payment plans for affordable addiction treatment.</p>
+                    <a href="blog-iop-cost-insurance.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post - NEW #4 -->
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <div class="blog-icon">⚠️</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">15 Jan 2024</span>
+                        <span class="blog-author">Desert Mountain Healing Team</span>
+                    </div>
+                    <h2><a href="blog-signs-need-iop.html" style="color: #815956; text-decoration: none;">10 Signs You or a Loved One Needs Intensive Outpatient Treatment</a></h2>
+                    <p>Recognize the warning signs that indicate it's time for professional help. Learn when IOP is the right level of care.</p>
+                    <a href="blog-signs-need-iop.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post - NEW #5 -->
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <div class="blog-icon">🧠</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">16 Jan 2024</span>
+                        <span class="blog-author">Desert Mountain Healing Team</span>
+                    </div>
+                    <h2><a href="blog-evidence-based-therapies.html" style="color: #815956; text-decoration: none;">Evidence-Based Therapies Used in Our Rio Rancho IOP Program</a></h2>
+                    <p>Learn about CBT, DBT, motivational interviewing, trauma-informed care, and MAT—the proven therapies that create lasting recovery.</p>
+                    <a href="blog-evidence-based-therapies.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post - NEW #6 -->
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <div class="blog-icon">👨‍💼</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">17 Jan 2024</span>
+                        <span class="blog-author">Desert Mountain Healing Team</span>
+                    </div>
+                    <h2><a href="blog-balancing-work-family-iop.html" style="color: #815956; text-decoration: none;">Balancing Work, Family, and IOP: A Practical Guide</a></h2>
+                    <p>Practical strategies for managing your career, family responsibilities, and intensive outpatient treatment simultaneously.</p>
+                    <a href="blog-balancing-work-family-iop.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post - NEW #7 -->
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <div class="blog-icon">🩺</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">18 Jan 2024</span>
+                        <span class="blog-author">Desert Mountain Healing Team</span>
+                    </div>
+                    <h2><a href="blog-dual-diagnosis-iop.html" style="color: #815956; text-decoration: none;">IOP for Dual Diagnosis: Treating Mental Health and Addiction Together</a></h2>
+                    <p>Why integrated treatment for co-occurring disorders produces better outcomes. Learn about our dual diagnosis expertise.</p>
+                    <a href="blog-dual-diagnosis-iop.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post - NEW #8 -->
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <div class="blog-icon">🌟</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">19 Jan 2024</span>
+                        <span class="blog-author">Desert Mountain Healing Team</span>
+                    </div>
+                    <h2><a href="blog-life-after-iop.html" style="color: #815956; text-decoration: none;">Life After IOP: Maintaining Your Recovery in Rio Rancho</a></h2>
+                    <p>Essential strategies for long-term sobriety after completing IOP. Aftercare, relapse prevention, and building a fulfilling life in recovery.</p>
+                    <a href="blog-life-after-iop.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post - NEW #9 -->
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <div class="blog-icon">🏆</div>
+                    <div class="blog-meta">
+                        <span class="blog-date">20 Jan 2024</span>
+                        <span class="blog-author">Desert Mountain Healing Team</span>
+                    </div>
+                    <h2><a href="blog-why-choose-dmh-iop.html" style="color: #815956; text-decoration: none;">Why Choose Desert Mountain Healing IOP in Rio Rancho, NM?</a></h2>
+                    <p>10 reasons that make our program stand out: evidence-based care, dual diagnosis expertise, flexible scheduling, and compassionate support.</p>
+                    <a href="blog-why-choose-dmh-iop.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Read More →</a>
+                </div>
+            </article>
+
+            <!-- END NEW SEO BLOG POSTS -->
+
             <!-- Blog Post 1 -->
             <article class="blog-card">
                 <div class="blog-card-content">
