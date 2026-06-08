@@ -218,10 +218,22 @@
         
         <div class="error-message" id="errorMessage"></div>
         
-        <form id="reviewForm">
+        <form id="reviewForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key - REPLACE WITH YOUR OWN -->
+            <input type="hidden" name="access_key" value="74d38f74-e326-4c28-b365-4deaa24c0f67">
+            
+            <!-- Redirect URLs based on rating (we'll handle this with JavaScript) -->
+            <input type="hidden" name="redirect" value="https://dmhiop.com/review-thank-you.html">
+            
+            <!-- Email subject -->
+            <input type="hidden" name="subject" value="New Review Submission - Desert Mountain Healing IOP">
+            
+            <!-- Hidden field for rating -->
+            <input type="hidden" id="rating" name="rating" required>
+            
             <div class="form-group">
                 <label for="clientName">Your Name</label>
-                <input type="text" id="clientName" name="clientName" required>
+                <input type="text" id="clientName" name="name" required>
             </div>
             
             <div class="form-group">
@@ -244,12 +256,11 @@
                     <span class="star" data-rating="5">★</span>
                 </div>
                 <div class="rating-text" id="ratingText"></div>
-                <input type="hidden" id="rating" name="rating" required>
             </div>
             
             <div class="form-group">
                 <label for="reviewText">Tell us about your experience</label>
-                <textarea id="reviewText" name="reviewText" required placeholder="Share your thoughts..."></textarea>
+                <textarea id="reviewText" name="message" required placeholder="Share your thoughts..."></textarea>
             </div>
             
             <button type="submit" class="submit-btn" id="submitBtn">Submit Feedback</button>
@@ -328,39 +339,28 @@
             submitBtn.textContent = 'Submitting...';
             errorMessage.style.display = 'none';
             
-            // Collect form data
-            const formData = {
-                client_name: document.getElementById('clientName').value.trim(),
-                email: document.getElementById('email').value.trim(),
-                phone: document.getElementById('phone').value.trim(),
-                rating: selectedRating,
-                review_text: document.getElementById('reviewText').value.trim(),
-                redirected_to_google: selectedRating === 5,
-                status: selectedRating === 5 ? 'posted_to_google' : 'pending',
-                submitted_date: new Date().toISOString()
-            };
-            
             try {
-                // Save to database
-                const response = await fetch('/tables/reviews', {
+                // Submit form to Web3Forms
+                const formData = new FormData(form);
+                
+                const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
+                    body: formData
                 });
                 
-                if (!response.ok) {
-                    throw new Error('Failed to submit review');
-                }
+                const data = await response.json();
                 
-                // Redirect based on rating
-                if (selectedRating === 5) {
-                    // 5-star review - redirect to thank you page with Google link
-                    window.location.href = '/review-thank-you.html?rating=5';
+                if (data.success) {
+                    // Redirect based on rating
+                    if (selectedRating === 5) {
+                        // 5-star review - redirect to thank you page with Google link
+                        window.location.href = '/review-thank-you.html?rating=5';
+                    } else {
+                        // 1-4 star review - redirect to feedback thank you page
+                        window.location.href = '/review-thank-you.html?rating=' + selectedRating;
+                    }
                 } else {
-                    // 1-4 star review - redirect to feedback thank you page
-                    window.location.href = '/review-thank-you.html?rating=' + selectedRating;
+                    throw new Error('Form submission failed');
                 }
                 
             } catch (error) {
