@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews Dashboard | Desert Mountain Healing IOP</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #815956 0%, #62f5e7 100%);
+            color: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stat-card h3 {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        .stat-card .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #815956;
+        }
+        
+        .stat-card .stat-label {
+            color: #999;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        
+        .filters {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .filters label {
+            font-weight: 600;
+            color: #815956;
+        }
+        
+        .filters select {
+            padding: 0.5rem 1rem;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Open Sans', sans-serif;
+            cursor: pointer;
+        }
+        
+        .reviews-container {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .review-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #ddd;
+        }
+        
+        .review-card.rating-5 {
+            border-left-color: #4caf50;
+        }
+        
+        .review-card.rating-4 {
+            border-left-color: #8bc34a;
+        }
+        
+        .review-card.rating-3 {
+            border-left-color: #ffc107;
+        }
+        
+        .review-card.rating-2 {
+            border-left-color: #ff9800;
+        }
+        
+        .review-card.rating-1 {
+            border-left-color: #f44336;
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .reviewer-info h3 {
+            color: #815956;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .reviewer-contact {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .review-meta {
+            text-align: right;
+        }
+        
+        .stars {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .review-date {
+            color: #999;
+            font-size: 0.85rem;
+        }
+        
+        .review-text {
+            color: #555;
+            line-height: 1.8;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .review-footer {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .status-badge {
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .status-badge.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-badge.addressed {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+        
+        .status-badge.posted_to_google {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-badge.resolved {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+        
+        .action-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .action-btn.addressed {
+            background: #62f5e7;
+            color: #fff;
+        }
+        
+        .action-btn.resolved {
+            background: #815956;
+            color: #fff;
+        }
+        
+        .no-reviews {
+            text-align: center;
+            padding: 3rem;
+            color: #999;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: #815956;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .review-header {
+                flex-direction: column;
+            }
+            
+            .review-meta {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>📊 Reviews Dashboard</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Stats Section -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Reviews</h3>
+                <div class="stat-value" id="totalReviews">-</div>
+                <div class="stat-label">All time</div>
+            </div>
+            <div class="stat-card">
+                <h3>Average Rating</h3>
+                <div class="stat-value" id="avgRating">-</div>
+                <div class="stat-label">Out of 5 stars</div>
+            </div>
+            <div class="stat-card">
+                <h3>5-Star Reviews</h3>
+                <div class="stat-value" id="fiveStarCount">-</div>
+                <div class="stat-label">Posted to Google</div>
+            </div>
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <div class="stat-value" id="pendingCount">-</div>
+                <div class="stat-label">Need attention</div>
+            </div>
+        </div>
+        
+        <!-- Filters -->
+        <div class="filters">
+            <label for="filterRating">Filter by Rating:</label>
+            <select id="filterRating">
+                <option value="all">All Ratings</option>
+                <option value="5">⭐⭐⭐⭐⭐ (5 stars)</option>
+                <option value="4">⭐⭐⭐⭐ (4 stars)</option>
+                <option value="3">⭐⭐⭐ (3 stars)</option>
+                <option value="2">⭐⭐ (2 stars)</option>
+                <option value="1">⭐ (1 star)</option>
+            </select>
+            
+            <label for="filterStatus">Filter by Status:</label>
+            <select id="filterStatus">
+                <option value="all">All Status</option>
+                <option value="pending">Pending</option>
+                <option value="addressed">Addressed</option>
+                <option value="posted_to_google">Posted to Google</option>
+                <option value="resolved">Resolved</option>
+            </select>
+        </div>
+        
+        <!-- Loading State -->
+        <div class="loading" id="loadingState">Loading reviews...</div>
+        
+        <!-- Reviews Container -->
+        <div class="reviews-container" id="reviewsContainer"></div>
+        
+        <!-- No Reviews State -->
+        <div class="no-reviews" id="noReviewsState" style="display: none;">
+            <p>No reviews found matching your filters.</p>
+        </div>
+    </div>
+
+    <script>
+        let allReviews = [];
+        
+        // Load reviews on page load
+        document.addEventListener('DOMContentLoaded', loadReviews);
+        
+        // Filter event listeners
+        document.getElementById('filterRating').addEventListener('change', filterReviews);
+        document.getElementById('filterStatus').addEventListener('change', filterReviews);
+        
+        async function loadReviews() {
+            try {
+                const response = await fetch('/tables/reviews?limit=1000&sort=-submitted_date');
+                const data = await response.json();
+                
+                allReviews = data.data || [];
+                
+                updateStats(allReviews);
+                displayReviews(allReviews);
+                
+                document.getElementById('loadingState').style.display = 'none';
+                
+            } catch (error) {
+                console.error('Error loading reviews:', error);
+                document.getElementById('loadingState').innerHTML = '<p style="color: #f44336;">Error loading reviews. Please refresh the page.</p>';
+            }
+        }
+        
+        function updateStats(reviews) {
+            const total = reviews.length;
+            const fiveStarCount = reviews.filter(r => r.rating === 5).length;
+            const pendingCount = reviews.filter(r => r.status === 'pending').length;
+            
+            let totalRating = 0;
+            reviews.forEach(r => totalRating += r.rating);
+            const avgRating = total > 0 ? (totalRating / total).toFixed(1) : 0;
+            
+            document.getElementById('totalReviews').textContent = total;
+            document.getElementById('avgRating').textContent = avgRating;
+            document.getElementById('fiveStarCount').textContent = fiveStarCount;
+            document.getElementById('pendingCount').textContent = pendingCount;
+        }
+        
+        function displayReviews(reviews) {
+            const container = document.getElementById('reviewsContainer');
+            const noReviewsState = document.getElementById('noReviewsState');
+            
+            if (reviews.length === 0) {
+                container.innerHTML = '';
+                noReviewsState.style.display = 'block';
+                return;
+            }
+            
+            noReviewsState.style.display = 'none';
+            
+            container.innerHTML = reviews.map(review => {
+                const stars = '⭐'.repeat(review.rating);
+                const date = new Date(review.submitted_date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+                
+                return `
+                    <div class="review-card rating-${review.rating}">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h3>${escapeHtml(review.client_name)}</h3>
+                                <div class="reviewer-contact">
+                                    ${review.email ? `📧 ${escapeHtml(review.email)}` : ''}
+                                    ${review.email && review.phone ? ' | ' : ''}
+                                    ${review.phone ? `📞 ${escapeHtml(review.phone)}` : ''}
+                                </div>
+                            </div>
+                            <div class="review-meta">
+                                <div class="stars">${stars}</div>
+                                <div class="review-date">${date}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="review-text">
+                            ${escapeHtml(review.review_text)}
+                        </div>
+                        
+                        <div class="review-footer">
+                            <span class="status-badge ${review.status}">${formatStatus(review.status)}</span>
+                            ${review.rating === 5 ? '<span style="color: #4caf50; font-weight: 600;">✓ Redirected to Google</span>' : ''}
+                            ${review.rating < 5 && review.status === 'pending' ? `
+                                <button class="action-btn addressed" onclick="updateReviewStatus('${review.id}', 'addressed')">Mark as Addressed</button>
+                            ` : ''}
+                            ${review.status === 'addressed' ? `
+                                <button class="action-btn resolved" onclick="updateReviewStatus('${review.id}', 'resolved')">Mark as Resolved</button>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function filterReviews() {
+            const ratingFilter = document.getElementById('filterRating').value;
+            const statusFilter = document.getElementById('filterStatus').value;
+            
+            let filtered = allReviews;
+            
+            if (ratingFilter !== 'all') {
+                filtered = filtered.filter(r => r.rating === parseInt(ratingFilter));
+            }
+            
+            if (statusFilter !== 'all') {
+                filtered = filtered.filter(r => r.status === statusFilter);
+            }
+            
+            displayReviews(filtered);
+        }
+        
+        async function updateReviewStatus(reviewId, newStatus) {
+            try {
+                const response = await fetch(`/tables/reviews/${reviewId}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ status: newStatus })
+                });
+                
+                if (response.ok) {
+                    // Reload reviews to reflect changes
+                    await loadReviews();
+                    filterReviews();
+                } else {
+                    alert('Failed to update review status');
+                }
+            } catch (error) {
+                console.error('Error updating review:', error);
+                alert('Error updating review status');
+            }
+        }
+        
+        function formatStatus(status) {
+            return status.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
