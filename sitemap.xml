@@ -4,137 +4,143 @@
     <!-- Main Pages -->
     <url>
         <loc>https://dmhiop.com/</loc>
-        <lastmod>2024-01-20</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/iop-benefits.html</loc>
-        <lastmod>2024-01-20</lastmod>
+        <loc>https://dmhiop.com/iop-benefits/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/mat.html</loc>
-        <lastmod>2024-01-20</lastmod>
+        <loc>https://dmhiop.com/mat/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/team.html</loc>
-        <lastmod>2024-01-20</lastmod>
+        <loc>https://dmhiop.com/reliable-substance-abuse-treatments/</loc>
+        <lastmod>2026-06-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://dmhiop.com/medical-detox-assistance/</loc>
+        <lastmod>2026-06-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://dmhiop.com/contact-us/</loc>
+        <lastmod>2026-06-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://dmhiop.com/team/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/reliable-substance-abuse-treatments.html</loc>
-        <lastmod>2024-01-20</lastmod>
+        <loc>https://dmhiop.com/faq/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/medical-detox-assistance.html</loc>
-        <lastmod>2024-01-20</lastmod>
-        <changefreq>monthly</changefreq>
+        <loc>https://dmhiop.com/reviews/</loc>
+        <lastmod>2026-06-19</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/faq.html</loc>
-        <lastmod>2024-01-20</lastmod>
+        <loc>https://dmhiop.com/blog/</loc>
+        <lastmod>2026-06-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://dmhiop.com/client-app/</loc>
+        <lastmod>2026-06-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Blog Articles -->
+    <url>
+        <loc>https://dmhiop.com/blog-first-week-iop/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/reviews.html</loc>
-        <lastmod>2024-01-20</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://dmhiop.com/blog-iop-vs-residential/</loc>
+        <lastmod>2026-06-19</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/contact-us.html</loc>
-        <lastmod>2024-01-20</lastmod>
+        <loc>https://dmhiop.com/blog-iop-cost-insurance/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/blog.html</loc>
-        <lastmod>2024-01-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- NEW SEO-Optimized Blog Articles (January 2024) -->
-    
-    <url>
-        <loc>https://dmhiop.com/blog-first-week-iop.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <loc>https://dmhiop.com/blog-signs-need-iop/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/blog-iop-vs-residential.html</loc>
-        <lastmod>2024-01-16</lastmod>
+        <loc>https://dmhiop.com/blog-evidence-based-therapies/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/blog-iop-cost-insurance.html</loc>
-        <lastmod>2024-01-16</lastmod>
+        <loc>https://dmhiop.com/blog-balancing-work-family-iop/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/blog-signs-need-iop.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <loc>https://dmhiop.com/blog-dual-diagnosis-iop/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/blog-evidence-based-therapies.html</loc>
-        <lastmod>2024-01-16</lastmod>
+        <loc>https://dmhiop.com/blog-life-after-iop/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://dmhiop.com/blog-balancing-work-family-iop.html</loc>
-        <lastmod>2024-01-17</lastmod>
+        <loc>https://dmhiop.com/blog-why-choose-dmh-iop/</loc>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://dmhiop.com/blog-dual-diagnosis-iop.html</loc>
-        <lastmod>2024-01-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://dmhiop.com/blog-life-after-iop.html</loc>
-        <lastmod>2024-01-19</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://dmhiop.com/blog-why-choose-dmh-iop.html</loc>
-        <lastmod>2024-01-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     
 </urlset>
