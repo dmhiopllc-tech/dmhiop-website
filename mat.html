@@ -61,7 +61,29 @@
     <link rel="stylesheet" href="/bundle/publish/0.72.5/publish.css">
     <link rel="stylesheet" href="/styles/40366ed9-1cfb-4167-920c-2a4b34462afc.css">
     
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) - FIXED FOR GOOGLE -->
+    <!-- Medical Web Page Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Medication-Assisted Treatment (MAT) Services",
+      "description": "Evidence-based MAT program information and treatment options for opioid and alcohol use disorders",
+      "url": "https://dmhiop.com/mat/",
+      "about": {
+        "@type": "MedicalTherapy",
+        "name": "Medication-Assisted Treatment (MAT)"
+      },
+      "specialty": "Addiction Medicine",
+      "medicalAudience": {
+        "@type": "Patient",
+        "requiredMinAge": 18,
+        "healthCondition": ["Opioid Use Disorder", "Alcohol Use Disorder"]
+      }
+    }
+    </script>
+    
+    <!-- Medical Therapy Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -92,28 +114,29 @@
       "medicationUsed": [
         {
           "@type": "Drug",
-          "name": "Buprenorphine (Suboxone)",
+          "name": "Buprenorphine (Suboxone®)",
           "description": "Reduces opioid cravings and withdrawal symptoms"
         },
         {
           "@type": "Drug",
-          "name": "SUBLOCADE",
+          "name": "SUBLOCADE®",
           "description": "Manages opioid cravings and withdrawal symptoms"
         },
         {
           "@type": "Drug",
-          "name": "Brixadi",
+          "name": "Brixadi®",
           "description": "Blocks euphoric effects of opioids"
         },
         {
           "@type": "Drug",
-          "name": "VIVITROL",
+          "name": "VIVITROL®",
           "description": "Injectable medicine for alcohol dependence"
         }
       ]
     }
     </script>
     
+    <!-- Service Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -150,6 +173,7 @@
     }
     </script>
     
+    <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -641,18 +665,18 @@
                 </div>
                 
                 <div class="medication-card">
-                    <h3>SUBLOCADE</h3>
+                    <h3>SUBLOCADE®</h3>
                     <p>Similar to Buprenorphine, it helps manage opioid cravings and withdrawal symptoms, fostering a stable recovery environment.</p>
                 </div>
                 
                 <div class="medication-card">
-                    <h3>Brixadi</h3>
+                    <h3>Brixadi®</h3>
                     <p>It blocks the euphoric effects of opioids, thereby decreasing the risk of relapse.</p>
                 </div>
                 
                 <div class="medication-card">
-                    <h3>VIVITROL</h3>
-                    <p>An injectable medicine specifically used to treat alcohol dependence. It is crucial to abstain from drinking before beginning VIVITROL treatment.</p>
+                    <h3>VIVITROL®</h3>
+                    <p>An injectable medicine specifically used to treat alcohol dependence. It is crucial to abstain from drinking before beginning VIVITROL® treatment.</p>
                 </div>
             </div>
         </section>
