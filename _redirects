@@ -48,5 +48,5 @@
 # Homepage stays as-is
 /                                          /index.html                                    200
 
-# Fallback for any other pages (keep at bottom)
-/*                                         /index.html                                    200
+# Fallback catch-all REMOVED - was preventing redirects from working
+# /*                                         /index.html                                    200
