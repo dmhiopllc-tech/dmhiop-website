@@ -44,7 +44,10 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Redirect rules for trailing slashes and clean URLs
+# Redirect rules - CHANGED TO 301 for SEO
+# 301 = Permanent redirect (tells Google these are the same page)
+# 200 = Rewrite (makes Google think they're different pages - duplicate content!)
+
 [[redirects]]
   from = "/"
   to = "/index.html"
@@ -53,92 +56,183 @@
 [[redirects]]
   from = "/medical-detox-assistance"
   to = "/medical-detox-assistance.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/medical-detox-assistance/"
   to = "/medical-detox-assistance.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/contact-us"
   to = "/contact-us.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/contact-us/"
   to = "/contact-us.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/faq"
   to = "/faq.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/faq/"
   to = "/faq.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/team"
   to = "/team.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/team/"
   to = "/team.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/reliable-substance-abuse-treatments"
   to = "/reliable-substance-abuse-treatments.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/reliable-substance-abuse-treatments/"
   to = "/reliable-substance-abuse-treatments.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/iop-benefits"
   to = "/iop-benefits.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/iop-benefits/"
   to = "/iop-benefits.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/mat"
   to = "/mat.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/mat/"
   to = "/mat.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/reviews"
   to = "/reviews.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/reviews/"
   to = "/reviews.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/blog"
   to = "/blog.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/blog/"
   to = "/blog.html"
-  status = 200
+  status = 301
+
+# Blog post redirects
+[[redirects]]
+  from = "/blog-first-week-iop"
+  to = "/blog-first-week-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-first-week-iop/"
+  to = "/blog-first-week-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-iop-vs-residential"
+  to = "/blog-iop-vs-residential.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-iop-vs-residential/"
+  to = "/blog-iop-vs-residential.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-iop-cost-insurance"
+  to = "/blog-iop-cost-insurance.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-iop-cost-insurance/"
+  to = "/blog-iop-cost-insurance.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-signs-need-iop"
+  to = "/blog-signs-need-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-signs-need-iop/"
+  to = "/blog-signs-need-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-evidence-based-therapies"
+  to = "/blog-evidence-based-therapies.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-evidence-based-therapies/"
+  to = "/blog-evidence-based-therapies.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-balancing-work-family-iop"
+  to = "/blog-balancing-work-family-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-balancing-work-family-iop/"
+  to = "/blog-balancing-work-family-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-dual-diagnosis-iop"
+  to = "/blog-dual-diagnosis-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-dual-diagnosis-iop/"
+  to = "/blog-dual-diagnosis-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-life-after-iop"
+  to = "/blog-life-after-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-life-after-iop/"
+  to = "/blog-life-after-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-why-choose-dmh-iop"
+  to = "/blog-why-choose-dmh-iop.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-why-choose-dmh-iop/"
+  to = "/blog-why-choose-dmh-iop.html"
+  status = 301
 
 # Force HTTPS and www to non-www
 [[redirects]]
