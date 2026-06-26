@@ -1,26 +1,52 @@
 # Netlify Redirects for Desert Mountain Healing IOP
-# Clean URLs without .html extension
+# Redirect clean URLs to .html versions (301 = permanent redirect)
 
-# Main pages
+# Main pages - redirect trailing slash to .html
+/medical-detox-assistance/                 /medical-detox-assistance.html                 301
+/contact-us/                               /contact-us.html                               301
+/faq/                                      /faq.html                                      301
+/team/                                     /team.html                                     301
+/reliable-substance-abuse-treatments/      /reliable-substance-abuse-treatments.html      301
+/iop-benefits/                             /iop-benefits.html                             301
+/mat/                                      /mat.html                                      301
+/reviews/                                  /reviews.html                                  301
+/blog/                                     /blog.html                                     301
+
+# Main pages - redirect no-extension version to .html
+/medical-detox-assistance                  /medical-detox-assistance.html                 301
+/contact-us                                /contact-us.html                               301
+/faq                                       /faq.html                                      301
+/team                                      /team.html                                     301
+/reliable-substance-abuse-treatments       /reliable-substance-abuse-treatments.html      301
+/iop-benefits                              /iop-benefits.html                             301
+/mat                                       /mat.html                                      301
+/reviews                                   /reviews.html                                  301
+/blog                                      /blog.html                                     301
+
+# Blog posts - redirect trailing slash to .html
+/blog-first-week-iop/                      /blog-first-week-iop.html                      301
+/blog-iop-vs-residential/                  /blog-iop-vs-residential.html                  301
+/blog-iop-cost-insurance/                  /blog-iop-cost-insurance.html                  301
+/blog-signs-need-iop/                      /blog-signs-need-iop.html                      301
+/blog-evidence-based-therapies/            /blog-evidence-based-therapies.html            301
+/blog-balancing-work-family-iop/           /blog-balancing-work-family-iop.html           301
+/blog-dual-diagnosis-iop/                  /blog-dual-diagnosis-iop.html                  301
+/blog-life-after-iop/                      /blog-life-after-iop.html                      301
+/blog-why-choose-dmh-iop/                  /blog-why-choose-dmh-iop.html                  301
+
+# Blog posts - redirect no-extension version to .html
+/blog-first-week-iop                       /blog-first-week-iop.html                      301
+/blog-iop-vs-residential                   /blog-iop-vs-residential.html                  301
+/blog-iop-cost-insurance                   /blog-iop-cost-insurance.html                  301
+/blog-signs-need-iop                       /blog-signs-need-iop.html                      301
+/blog-evidence-based-therapies             /blog-evidence-based-therapies.html            301
+/blog-balancing-work-family-iop            /blog-balancing-work-family-iop.html           301
+/blog-dual-diagnosis-iop                   /blog-dual-diagnosis-iop.html                  301
+/blog-life-after-iop                       /blog-life-after-iop.html                      301
+/blog-why-choose-dmh-iop                   /blog-why-choose-dmh-iop.html                  301
+
+# Homepage stays as-is
 /                                          /index.html                                    200
-/medical-detox-assistance                  /medical-detox-assistance.html                 200
-/medical-detox-assistance/                 /medical-detox-assistance.html                 200
-/contact-us                                /contact-us.html                               200
-/contact-us/                               /contact-us.html                               200
-/faq                                       /faq.html                                      200
-/faq/                                      /faq.html                                      200
-/team                                      /team.html                                     200
-/team/                                     /team.html                                     200
-/reliable-substance-abuse-treatments       /reliable-substance-abuse-treatments.html      200
-/reliable-substance-abuse-treatments/      /reliable-substance-abuse-treatments.html      200
-/iop-benefits                              /iop-benefits.html                             200
-/iop-benefits/                             /iop-benefits.html                             200
-/mat                                       /mat.html                                      200
-/mat/                                      /mat.html                                      200
-/reviews                                   /reviews.html                                  200
-/reviews/                                  /reviews.html                                  200
-/blog                                      /blog.html                                     200
-/blog/                                     /blog.html                                     200
 
-# Fallback for SPA behavior (if needed)
+# Fallback for any other pages (keep at bottom)
 /*                                         /index.html                                    200
