@@ -1,4 +1,4 @@
-# SEO Fix - Updated June 26, 2026
+ SEO Fix - Updated June 26, 2026
 # Netlify Configuration for dmhiop.com
 
 [build]
@@ -235,9 +235,16 @@
   to = "/blog-why-choose-dmh-iop.html"
   status = 301
 
-# Force HTTPS and www to non-www
+# Force HTTPS and remove www (ALL VARIATIONS)
+# This catches http://dmhiop.com, http://www.dmhiop.com, and https://www.dmhiop.com
 [[redirects]]
   from = "http://dmhiop.com/*"
+  to = "https://dmhiop.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.dmhiop.com/*"
   to = "https://dmhiop.com/:splat"
   status = 301
   force = true
