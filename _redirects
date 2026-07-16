@@ -1,4 +1,8 @@
 # Netlify Redirects for Desert Mountain Healing IOP
+# Force HTTPS and remove www (prevent redirect chains)
+http://dmhiop.com/*                        https://dmhiop.com/:splat                      301!
+https://www.dmhiop.com/*                   https://dmhiop.com/:splat                      301!
+
 # Redirect clean URLs to .html versions (301 = permanent redirect)
 
 # Main pages - redirect trailing slash to .html
@@ -17,7 +21,7 @@
 /contact-us                                /contact-us.html                               301
 /faq                                       /faq.html                                      301
 /team                                      /team.html                                     301
-/reliable-substance-abuse-treatments       /reliable-substance-abuse-treatments.html      301
+/reliable-substance-abuse-services       /reliable-substance-abuse-treatments.html      301
 /iop-benefits                              /iop-benefits.html                             301
 /mat                                       /mat.html                                      301
 /reviews                                   /reviews.html                                  301
