@@ -251,7 +251,7 @@
       min-height:530px;
       background:
         linear-gradient(135deg,rgba(6,55,67,.08),rgba(27,163,189,.12)),
-        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/iop-group-session.png") center / cover no-repeat;
+        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/group-circle-session.png") center / cover no-repeat;
     }
     .benefit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
     .benefit{
@@ -306,7 +306,7 @@
       color:#fff;text-align:center;
       background:
         linear-gradient(rgba(6,55,67,.9),rgba(6,55,67,.92)),
-        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/iop-group-session.png") center / cover no-repeat;
+        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/group-classroom-session.png") center / cover no-repeat;
     }
     .quote-section blockquote{
       max-width:900px;margin:0 auto;
@@ -315,6 +315,66 @@
     }
     .quote-section span{color:#8be6ef}
 
+    .facility-showcase{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:2rem;
+      align-items:stretch;
+    }
+    .facility-card{
+      position:relative;
+      overflow:hidden;
+      min-height:420px;
+      border-radius:28px;
+      background:#fff;
+      box-shadow:var(--shadow-md);
+    }
+    .facility-card img{
+      width:100%;
+      height:100%;
+      min-height:420px;
+      object-fit:cover;
+    }
+    .facility-overlay{
+      position:absolute;
+      left:0;right:0;bottom:0;
+      padding:28px;
+      color:#fff;
+      background:linear-gradient(transparent,rgba(6,55,67,.94));
+    }
+    .facility-overlay h3{color:#fff;margin-bottom:.4rem}
+    .facility-overlay p{margin:0;color:rgba(255,255,255,.82)}
+    .facility-copy{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:38px;
+      border:1px solid rgba(6,55,67,.09);
+      border-radius:28px;
+      background:linear-gradient(145deg,#fff,var(--teal-050));
+      box-shadow:var(--shadow-sm);
+    }
+    .facility-copy p{color:var(--muted)}
+    .facility-points{
+      display:grid;
+      gap:.85rem;
+      margin:1rem 0 1.5rem;
+      padding:0;
+      list-style:none;
+    }
+    .facility-points li{
+      position:relative;
+      padding-left:1.5rem;
+      color:var(--teal-900);
+      font-weight:700;
+    }
+    .facility-points li::before{
+      position:absolute;
+      left:0;
+      content:"✓";
+      color:var(--gold);
+      font-weight:900;
+    }
     .faq-list{max-width:900px;margin:0 auto;display:grid;gap:.85rem}
     .faq-item{overflow:hidden;border:1px solid rgba(6,55,67,.1);border-radius:16px;background:#fff}
     .faq-question{
@@ -358,7 +418,7 @@
       }
       .site-nav.open{display:flex}
       .menu-toggle{display:inline-grid;place-items:center}
-      .hero-grid,.why-layout{grid-template-columns:1fr}
+      .hero-grid,.why-layout,.facility-showcase{grid-template-columns:1fr}
       .hero-media{max-width:760px}
       .journey{grid-template-columns:repeat(4,1fr);gap:2rem 1rem}
       .journey::before{display:none}
@@ -500,6 +560,39 @@
             <article class="benefit"><div class="benefit-icon">◉</div><h3>Evidence-Based Care</h3><p>Structured treatment includes proven approaches designed to support lasting behavioral change.</p></article>
             <article class="benefit"><div class="benefit-icon">↗</div><h3>Relapse Prevention</h3><p>Build coping skills, recognize warning signs, and create a practical plan for maintaining recovery.</p></article>
             <article class="benefit"><div class="benefit-icon">▣</div><h3>Recovery Portal</h3><p>Stay engaged between sessions with daily check-ins, goals, journaling, resources, and meeting support.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">A welcoming place to recover</span>
+          <h2>See Where Treatment Happens</h2>
+          <p>Our Rio Rancho facility is designed to feel professional, comfortable, and supportive from the moment you arrive.</p>
+        </div>
+
+        <div class="facility-showcase">
+          <div class="facility-card reveal">
+            <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/frount-desk.png" alt="Front desk and reception area at Desert Mountain Healing IOP in Rio Rancho" loading="lazy">
+            <div class="facility-overlay">
+              <h3>A Comfortable First Step</h3>
+              <p>Our reception area provides a calm, welcoming place to ask questions, complete intake, and meet your care team.</p>
+            </div>
+          </div>
+
+          <div class="facility-copy reveal">
+            <span class="eyebrow">Real care in a real setting</span>
+            <h2>Built for Connection, Structure, and Support</h2>
+            <p>Clients attend treatment in spaces designed for group participation, education, individual support, and coordinated medical and clinical care.</p>
+            <ul class="facility-points">
+              <li>Comfortable group rooms for discussion and skills practice</li>
+              <li>Dedicated space for structured classes and recovery education</li>
+              <li>Private areas for assessments and individual appointments</li>
+              <li>On-site access to clinical, medical, and case management support</li>
+            </ul>
+            <a class="btn btn-primary" href="/contact-us/">Schedule a Visit or Assessment</a>
           </div>
         </div>
       </div>
