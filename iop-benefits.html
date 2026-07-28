@@ -21,6 +21,47 @@
   <meta name="twitter:image" content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/facility-exterior.png">
 
   <meta name="theme-color" content="#0d7485">
+  <meta name="author" content="Desert Mountain Healing IOP">
+  <meta name="geo.region" content="US-NM">
+  <meta name="geo.placename" content="Rio Rancho">
+  <meta name="geo.position" content="35.233154;-106.666221">
+  <meta name="ICBM" content="35.233154, -106.666221">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"MedicalWebPage",
+        "@id":"https://dmhiop.com/iop-benefits/#webpage",
+        "url":"https://dmhiop.com/iop-benefits/",
+        "name":"Intensive Outpatient Program in Rio Rancho, New Mexico",
+        "description":"Structured morning and evening intensive outpatient addiction treatment serving Rio Rancho and Albuquerque.",
+        "about":{"@id":"https://dmhiop.com/iop-benefits/#service"},
+        "publisher":{"@id":"https://dmhiop.com/#organization"}
+      },
+      {
+        "@type":"MedicalTherapy",
+        "@id":"https://dmhiop.com/iop-benefits/#service",
+        "name":"Intensive Outpatient Program",
+        "alternateName":"IOP",
+        "description":"Evidence-based outpatient substance use treatment with group counseling, individual support, relapse prevention, case management, medical coordination, and continuing care.",
+        "provider":{"@id":"https://dmhiop.com/#organization"},
+        "areaServed":[{"@type":"City","name":"Rio Rancho"},{"@type":"City","name":"Albuquerque"}]
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"What is an intensive outpatient program?","acceptedAnswer":{"@type":"Answer","text":"An intensive outpatient program provides structured addiction treatment several days each week while allowing clients to continue living at home."}},
+          {"@type":"Question","name":"When are IOP groups offered?","acceptedAnswer":{"@type":"Answer","text":"Desert Mountain Healing offers morning IOP Monday through Friday from 9:00 AM to 12:00 PM and evening IOP Monday through Friday from 5:00 PM to 8:00 PM."}},
+          {"@type":"Question","name":"Can I work while attending IOP?","acceptedAnswer":{"@type":"Answer","text":"Many clients continue working, attending school, or caring for family while participating. Morning and evening schedules provide added flexibility."}},
+          {"@type":"Question","name":"Does IOP include individual counseling?","acceptedAnswer":{"@type":"Answer","text":"Individual counseling and other services are provided according to each client's treatment plan and clinical needs."}},
+          {"@type":"Question","name":"How do I know whether IOP is right for me?","acceptedAnswer":{"@type":"Answer","text":"A comprehensive assessment helps determine the most appropriate level of care based on substance use, medical needs, mental health, safety, support, and recovery environment."}}
+        ]
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -450,6 +491,56 @@
       .reveal{opacity:1;transform:none;transition:none}
       .btn{transition:none}
     }
+
+
+    .intro-band{padding:38px 0;background:#fff}
+    .intro-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;overflow:hidden;border:1px solid var(--line);border-radius:22px;background:var(--line);box-shadow:var(--shadow-sm)}
+    .intro-item{padding:28px 22px;background:#fff;text-align:center}
+    .intro-item strong{display:block;color:var(--teal-950);font-family:"Merriweather",Georgia,serif;font-size:1.08rem}
+    .intro-item span{color:var(--muted);font-size:.94rem}
+
+    .curriculum-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .curriculum-card{padding:24px;border:1px solid rgba(6,55,67,.09);border-radius:18px;background:#fff;box-shadow:var(--shadow-sm)}
+    .curriculum-card h3{font-family:"Source Sans 3",sans-serif;font-size:1.08rem;margin-bottom:.35rem}
+    .curriculum-card p{color:var(--muted);font-size:.94rem;margin:0}
+    .curriculum-card::before{display:grid;place-items:center;width:42px;height:42px;margin-bottom:.9rem;border-radius:13px;color:#fff;background:linear-gradient(145deg,var(--teal-500),var(--teal-800));content:"✓";font-weight:900}
+
+    .support-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    .support-panel{padding:38px;border-radius:28px;background:linear-gradient(145deg,var(--teal-950),var(--teal-800));color:#fff;box-shadow:var(--shadow-md)}
+    .support-panel h2,.support-panel h3{color:#fff}
+    .support-panel p{color:rgba(255,255,255,.82)}
+    .support-list{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1.5rem 0 1.8rem}
+    .support-list div{padding:.9rem 1rem;border:1px solid rgba(255,255,255,.13);border-radius:14px;background:rgba(255,255,255,.07);font-weight:700}
+    .support-list div::before{margin-right:.45rem;color:#89e6ef;content:"✓"}
+    .support-copy p{color:var(--muted);font-size:1.05rem}
+    .support-cards{display:grid;gap:1rem;margin-top:1.4rem}
+    .support-card{display:grid;grid-template-columns:48px 1fr;gap:1rem;padding:20px;border:1px solid rgba(6,55,67,.09);border-radius:18px;background:#fff;box-shadow:var(--shadow-sm)}
+    .support-card span{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;color:var(--teal-700);background:var(--teal-100);font-weight:900}
+    .support-card h3{font-family:"Source Sans 3",sans-serif;font-size:1.1rem;margin-bottom:.25rem}
+    .support-card p{font-size:.94rem;margin:0}
+
+    .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+    .audience-card{padding:30px;border-radius:22px;background:#fff;box-shadow:var(--shadow-sm);border-top:5px solid var(--teal-500)}
+    .audience-card:nth-child(2){border-top-color:var(--gold)}
+    .audience-card:nth-child(3){border-top-color:var(--teal-800)}
+    .audience-card p{color:var(--muted)}
+
+    .mini-cta{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;margin-top:44px;padding:34px;border-radius:24px;background:linear-gradient(135deg,var(--teal-100),#fff,var(--gold-soft));box-shadow:var(--shadow-sm)}
+    .mini-cta p{color:var(--muted);margin:0}
+
+    @media(max-width:1080px){
+      .intro-grid{grid-template-columns:repeat(2,1fr)}
+      .curriculum-grid{grid-template-columns:repeat(2,1fr)}
+      .support-layout{grid-template-columns:1fr}
+      .audience-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:760px){
+      .intro-grid,.curriculum-grid{grid-template-columns:1fr}
+      .support-list{grid-template-columns:1fr}
+      .mini-cta{grid-template-columns:1fr}
+      .mini-cta .btn{width:100%}
+    }
+
   </style>
 </head>
 
@@ -487,113 +578,137 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" aria-labelledby="iop-title">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <span class="eyebrow">Intensive outpatient treatment in Rio Rancho</span>
-          <h1>Recovery That <span>Fits Your Life.</span></h1>
+          <span class="eyebrow">Intensive outpatient addiction treatment in Rio Rancho</span>
+          <h1 id="iop-title">Structured Recovery. <span>Real-Life Flexibility.</span></h1>
           <p class="hero-lead">
-            Our intensive outpatient program provides structured, evidence-based addiction treatment
-            while allowing you to continue living at home, working, caring for your family, and building a healthier future.
+            Desert Mountain Healing IOP provides compassionate, evidence-based treatment while you continue living at home, working, caring for family, and rebuilding your life. Our program was founded by people in recovery who understand that asking for help takes courage—and that lasting recovery needs support both inside and outside the treatment room.
           </p>
-
           <div class="hero-actions">
             <a class="btn btn-warm" href="/insurance-verification">Verify Insurance</a>
             <a class="btn btn-primary" href="/contact-us/">Schedule an Assessment</a>
             <a class="btn btn-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
           </div>
-
           <div class="hero-trust">
-            <span>AM and PM programs</span>
+            <span>Morning and evening IOP</span>
             <span>Monday through Friday</span>
-            <span>Medical and clinical support</span>
+            <span>Serving Rio Rancho and Albuquerque</span>
           </div>
         </div>
-
         <div class="hero-media reveal">
-          <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/facility-exterior.png" alt="Exterior of Desert Mountain Healing IOP in Rio Rancho, New Mexico">
-          <div class="hero-badge">
-            <strong>Two Daily Options</strong>
-            <small>AM: 9 AM–12 PM<br>PM: 5 PM–8 PM</small>
-          </div>
+          <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/facility-exterior.png" alt="Desert Mountain Healing IOP treatment center in Rio Rancho, New Mexico">
+          <div class="hero-badge"><strong>Two Daily Options</strong><small>Morning: 9 AM–12 PM<br>Evening: 5 PM–8 PM</small></div>
         </div>
+      </div>
+    </section>
+
+    <section class="intro-band" aria-label="IOP program highlights">
+      <div class="container intro-grid reveal">
+        <div class="intro-item"><strong>Live at Home</strong><span>Receive structured care without residential placement.</span></div>
+        <div class="intro-item"><strong>Clinical + Medical Support</strong><span>Coordinated counseling, MAT, and medication services.</span></div>
+        <div class="intro-item"><strong>Flexible Scheduling</strong><span>Morning and evening programs support real-life responsibilities.</span></div>
+        <div class="intro-item"><strong>Long-Term Connection</strong><span>OP, case management, and portal support continue after IOP.</span></div>
       </div>
     </section>
 
     <section class="section section-soft">
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">A clear path forward</span>
-          <h2>Your Journey With DMHIOP</h2>
-          <p>We help make each step understandable, from the first phone call through graduation and continuing support.</p>
-        </div>
-
+        <div class="section-heading reveal"><span class="eyebrow">A clear path forward</span><h2>Your Recovery Journey With DMHIOP</h2><p>You do not need to know every answer before you call. Our team explains each step and helps you move forward at a manageable pace.</p></div>
         <div class="journey reveal">
-          <article class="journey-step"><div class="journey-number">1</div><h3>Call Us</h3><p>Talk with someone who will listen and explain your options.</p></article>
-          <article class="journey-step"><div class="journey-number">2</div><h3>Assessment</h3><p>Complete a comprehensive assessment to identify your needs.</p></article>
-          <article class="journey-step"><div class="journey-number">3</div><h3>Meet Your Counselor</h3><p>Connect with the team members supporting your care.</p></article>
-          <article class="journey-step"><div class="journey-number">4</div><h3>Create Your Plan</h3><p>Build an individualized treatment plan around your goals.</p></article>
-          <article class="journey-step"><div class="journey-number">5</div><h3>Begin IOP</h3><p>Participate in structured group and individual services.</p></article>
-          <article class="journey-step"><div class="journey-number">6</div><h3>Continue Growing</h3><p>Practice new skills and strengthen recovery supports.</p></article>
-          <article class="journey-step"><div class="journey-number">7</div><h3>Graduate</h3><p>Recognize your progress and prepare for the next level of care.</p></article>
-          <article class="journey-step"><div class="journey-number">8</div><h3>Stay Connected</h3><p>Continue with outpatient, alumni, and recovery portal support.</p></article>
+          <article class="journey-step"><div class="journey-number">1</div><h3>Start the Conversation</h3><p>Call, ask questions, and tell us what is happening. You will be treated with dignity and respect.</p></article>
+          <article class="journey-step"><div class="journey-number">2</div><h3>Review Coverage</h3><p>We help check insurance benefits and discuss available payment or scholarship options.</p></article>
+          <article class="journey-step"><div class="journey-number">3</div><h3>Complete an Assessment</h3><p>A comprehensive assessment identifies needs, strengths, risks, and the most appropriate level of care.</p></article>
+          <article class="journey-step"><div class="journey-number">4</div><h3>Build Your Plan</h3><p>Your treatment plan reflects your goals, recovery needs, health, responsibilities, and support system.</p></article>
+          <article class="journey-step"><div class="journey-number">5</div><h3>Meet Your Team</h3><p>Connect with counselors, medical providers, peer staff, and case management support.</p></article>
+          <article class="journey-step"><div class="journey-number">6</div><h3>Begin IOP</h3><p>Participate in structured groups, individual services, skill building, and recovery planning.</p></article>
+          <article class="journey-step"><div class="journey-number">7</div><h3>Practice New Skills</h3><p>Apply what you learn at home, work, and in relationships while receiving ongoing support.</p></article>
+          <article class="journey-step"><div class="journey-number">8</div><h3>Step Down, Not Away</h3><p>Transition to outpatient and continuing care while remaining connected to your recovery community.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container why-layout">
-        <div class="why-photo reveal" role="img" aria-label="Desert Mountain Healing intensive outpatient group session"></div>
+      <div class="container">
+        <div class="section-heading reveal"><span class="eyebrow">Why people choose Desert Mountain Healing</span><h2>More Than a Group Program</h2><p>Our IOP combines clinical care, medical coordination, practical support, and daily recovery tools to help clients build stability in every area of life.</p></div>
+        <div class="difference-grid">
+          <article class="card reveal"><div class="icon">♥</div><h3>Compassionate, Experienced Team</h3><p>Licensed counselors, medical providers, peer staff, and case managers work together around your needs.</p></article>
+          <article class="card reveal"><div class="icon">◷</div><h3>Morning and Evening Options</h3><p>Choose a schedule designed to work around employment, school, parenting, transportation, and other responsibilities.</p></article>
+          <article class="card reveal"><div class="icon">✚</div><h3>Medical Support</h3><p>Medication-assisted treatment, medication management, and outpatient detox assistance may be coordinated when clinically appropriate.</p></article>
+          <article class="card reveal"><div class="icon">◉</div><h3>Evidence-Based Treatment</h3><p>Our program uses structured, research-informed approaches including relapse prevention, cognitive and behavioral skill building, and the Matrix Model.</p></article>
+          <article class="card reveal"><div class="icon">◇</div><h3>Individualized Treatment Planning</h3><p>Your care plan is based on your assessment, goals, strengths, health needs, and recovery environment—not a one-size-fits-all checklist.</p></article>
+          <article class="card reveal"><div class="icon">↗</div><h3>Relapse Prevention</h3><p>Learn to recognize triggers and warning signs, manage cravings, strengthen coping skills, and create a practical prevention plan.</p></article>
+          <article class="card reveal"><div class="icon">▣</div><h3>Your Recovery Portal</h3><p>Use daily check-ins, journaling, goals, meeting tools, resources, and progress tracking between treatment sessions.</p></article>
+          <article class="card reveal"><div class="icon">⌂</div><h3>Case Management</h3><p>Get support connecting with employment, transportation, medical care, benefits, community resources, and other recovery needs.</p></article>
+          <article class="card reveal"><div class="icon">☑</div><h3>Court and Probation Coordination</h3><p>With proper releases, our team can coordinate attendance and progress information with approved justice-system partners.</p></article>
+          <article class="card reveal"><div class="icon">∞</div><h3>Continuing Care</h3><p>Recovery does not end at IOP graduation. Clients can step down to outpatient services and remain connected.</p></article>
+          <article class="card reveal"><div class="icon">✦</div><h3>Recovery NM Access Support</h3><p>Eligible uninsured or underinsured New Mexico residents may have scholarship opportunities through Recovery NM.</p></article>
+          <article class="card reveal"><div class="icon">●</div><h3>A Local Recovery Community</h3><p>Receive care close to home in Rio Rancho while connecting with resources throughout the Albuquerque metro area.</p></article>
+        </div>
+      </div>
+    </section>
 
-        <div class="reveal">
-          <span class="eyebrow">Structured care with real-life flexibility</span>
-          <h2>Why Choose Our IOP?</h2>
-          <p style="color:var(--muted);font-size:1.08rem">
-            Our program combines accountability, education, counseling, medical support, and practical recovery tools
-            without requiring clients to leave their homes, jobs, or families.
-          </p>
-
-          <div class="benefit-grid">
-            <article class="benefit"><div class="benefit-icon">◷</div><h3>Morning and Evening Programs</h3><p>Choose the program time that best fits your work, family, and transportation needs.</p></article>
-            <article class="benefit"><div class="benefit-icon">✚</div><h3>Medical Support</h3><p>MAT, medication management, and outpatient detox assistance may be included when appropriate.</p></article>
-            <article class="benefit"><div class="benefit-icon">♥</div><h3>Experienced Treatment Team</h3><p>Receive compassionate support from counselors, medical providers, peers, and case management staff.</p></article>
-            <article class="benefit"><div class="benefit-icon">◉</div><h3>Evidence-Based Care</h3><p>Structured treatment includes proven approaches designed to support lasting behavioral change.</p></article>
-            <article class="benefit"><div class="benefit-icon">↗</div><h3>Relapse Prevention</h3><p>Build coping skills, recognize warning signs, and create a practical plan for maintaining recovery.</p></article>
-            <article class="benefit"><div class="benefit-icon">▣</div><h3>Recovery Portal</h3><p>Stay engaged between sessions with daily check-ins, goals, journaling, resources, and meeting support.</p></article>
-          </div>
+    <section class="section section-gray">
+      <div class="container">
+        <div class="section-heading reveal"><span class="eyebrow">Skills for life beyond treatment</span><h2>What You Will Work On in IOP</h2><p>Treatment addresses substance use while also helping clients strengthen the emotional, physical, relational, and practical foundations of recovery.</p></div>
+        <div class="curriculum-grid">
+          <article class="curriculum-card reveal"><h3>Understanding Addiction</h3><p>Recognize patterns, consequences, triggers, and the ways substance use affects the brain, body, and behavior.</p></article>
+          <article class="curriculum-card reveal"><h3>Cravings and Triggers</h3><p>Develop strategies for managing urges, high-risk situations, and early warning signs.</p></article>
+          <article class="curriculum-card reveal"><h3>Emotional Intelligence</h3><p>Identify emotions, communicate needs, and respond rather than react.</p></article>
+          <article class="curriculum-card reveal"><h3>Distress Tolerance</h3><p>Practice healthy ways to get through difficult moments without returning to substance use.</p></article>
+          <article class="curriculum-card reveal"><h3>Reframing Thoughts</h3><p>Challenge negative self-talk, unhelpful beliefs, and thinking patterns that can undermine recovery.</p></article>
+          <article class="curriculum-card reveal"><h3>Confidence and Self-Worth</h3><p>Rebuild trust in yourself through responsibility, consistency, healthy boundaries, and achievable goals.</p></article>
+          <article class="curriculum-card reveal"><h3>Healthy Relationships</h3><p>Improve communication, recognize unhealthy dynamics, make amends when appropriate, and build sober support.</p></article>
+          <article class="curriculum-card reveal"><h3>Acceptance and Letting Go</h3><p>Learn the difference between acceptance and approval while focusing energy on what you can change.</p></article>
+          <article class="curriculum-card reveal"><h3>Purpose and Meaning</h3><p>Explore values, strengths, interests, and goals that make recovery worth protecting.</p></article>
+          <article class="curriculum-card reveal"><h3>Nutrition and Wellness</h3><p>Understand how sleep, food, movement, medical care, and stress management support mental health and recovery.</p></article>
+          <article class="curriculum-card reveal"><h3>Personal Responsibility</h3><p>Take ownership of choices while replacing shame with honesty, accountability, and constructive action.</p></article>
+          <article class="curriculum-card reveal"><h3>Long-Term Recovery Planning</h3><p>Create a realistic plan for meetings, support, routines, goals, warning signs, and continued care.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section section-soft">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">A welcoming place to recover</span>
-          <h2>See Where Treatment Happens</h2>
-          <p>Our Rio Rancho facility is designed to feel professional, comfortable, and supportive from the moment you arrive.</p>
+      <div class="container support-layout">
+        <div class="support-panel reveal">
+          <span class="eyebrow" style="color:#bceef3">Beyond the treatment room</span>
+          <h2>Recovery Support That Continues Every Day</h2>
+          <p>Your progress is strengthened by what happens between appointments. Our connected supports help you stay engaged, organized, and accountable as you practice recovery in daily life.</p>
+          <div class="support-list"><div>Daily check-ins</div><div>Private journal</div><div>Goals and progress</div><div>Meeting finder</div><div>Recovery resources</div><div>Rewards and milestones</div><div>Appointments</div><div>Alumni connection</div></div>
+          <a class="btn btn-warm" href="/client-app/">Explore Your Recovery Portal</a>
         </div>
+        <div class="support-copy reveal">
+          <span class="eyebrow">Practical help for real-life recovery</span>
+          <h2>Support for the Life You Are Rebuilding</h2>
+          <p>Recovery can uncover needs that were ignored during active substance use. Our team helps clients address barriers that can make stability harder to maintain.</p>
+          <div class="support-cards">
+            <article class="support-card"><span>1</span><div><h3>Case Management</h3><p>Help connecting with employment, benefits, transportation, healthcare, identification, education, and community resources.</p></div></article>
+            <article class="support-card"><span>2</span><div><h3>Recovery NM Scholarships</h3><p>Recovery NM may help eligible New Mexico residents access treatment when insurance or finances are a barrier.</p></div></article>
+            <article class="support-card"><span>3</span><div><h3>Coordinated Continuing Care</h3><p>Step down from IOP to outpatient services while keeping recovery goals, supports, and accountability in place.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal"><span class="eyebrow">Who may benefit</span><h2>Is Intensive Outpatient Treatment Right for You?</h2><p>IOP may be appropriate when someone needs more structure than standard outpatient care but does not require 24-hour residential treatment. The right level of care is determined through assessment.</p></div>
+        <div class="audience-grid">
+          <article class="audience-card reveal"><h3>You Need Structure and Accountability</h3><p>You may benefit from frequent treatment, recovery education, drug testing, clinical support, and a consistent weekly routine.</p></article>
+          <article class="audience-card reveal"><h3>You Need to Keep Daily Responsibilities</h3><p>IOP can allow many people to continue living at home, working, attending school, parenting, and participating in family life.</p></article>
+          <article class="audience-card reveal"><h3>You Are Stepping Down From Higher Care</h3><p>IOP can provide a structured transition after detox, residential treatment, hospitalization, or another higher level of care.</p></article>
+        </div>
+        <div class="mini-cta reveal"><div><h3>Unsure which level of care is appropriate?</h3><p>A confidential assessment can help identify the safest and most useful next step.</p></div><a class="btn btn-primary" href="/contact-us/">Schedule an Assessment</a></div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal"><span class="eyebrow">A welcoming place to recover</span><h2>See Where Treatment Happens</h2><p>Our Rio Rancho facility is designed to feel professional, comfortable, and supportive from the moment you arrive.</p></div>
         <div class="facility-showcase">
-          <div class="facility-card reveal">
-            <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/frount-desk.png" alt="Front desk and reception area at Desert Mountain Healing IOP in Rio Rancho" loading="lazy">
-            <div class="facility-overlay">
-              <h3>A Comfortable First Step</h3>
-              <p>Our reception area provides a calm, welcoming place to ask questions, complete intake, and meet your care team.</p>
-            </div>
-          </div>
-
-          <div class="facility-copy reveal">
-            <span class="eyebrow">Real care in a real setting</span>
-            <h2>Built for Connection, Structure, and Support</h2>
-            <p>Clients attend treatment in spaces designed for group participation, education, individual support, and coordinated medical and clinical care.</p>
-            <ul class="facility-points">
-              <li>Comfortable group rooms for discussion and skills practice</li>
-              <li>Dedicated space for structured classes and recovery education</li>
-              <li>Private areas for assessments and individual appointments</li>
-              <li>On-site access to clinical, medical, and case management support</li>
-            </ul>
-            <a class="btn btn-primary" href="/contact-us/">Schedule a Visit or Assessment</a>
-          </div>
+          <div class="facility-card reveal"><img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/frount-desk.png" alt="Front desk and reception area at Desert Mountain Healing IOP in Rio Rancho" loading="lazy"><div class="facility-overlay"><h3>A Comfortable First Step</h3><p>A calm, welcoming place to ask questions, complete intake, and meet your care team.</p></div></div>
+          <div class="facility-copy reveal"><span class="eyebrow">Real care in a real setting</span><h2>Built for Connection, Structure, and Support</h2><p>Clients attend treatment in spaces designed for group participation, education, private conversations, and coordinated medical and clinical care.</p><ul class="facility-points"><li>Comfortable group rooms for discussion and skills practice</li><li>Dedicated space for structured classes and recovery education</li><li>Private areas for assessments and individual appointments</li><li>On-site access to clinical, medical, peer, and case management support</li></ul><a class="btn btn-primary" href="/contact-us/">Schedule a Visit or Assessment</a></div>
         </div>
       </div>
     </section>
@@ -601,106 +716,45 @@
     <section class="section section-gray">
       <div class="container">
         <div class="schedule-wrap reveal">
-          <div class="schedule-heading">
-            <div>
-              <span class="eyebrow" style="color:#bceef3">Program schedule</span>
-              <h2>Choose the Time That Works for You</h2>
-              <p>Both IOP schedules are offered Monday through Friday.</p>
-            </div>
-            <a class="btn btn-warm" href="/contact-us/">Schedule an Assessment</a>
+          <div class="schedule-heading"><div><span class="eyebrow" style="color:#bceef3">Program schedule</span><h2>Choose the Time That Works for You</h2><p>Morning and evening IOP are offered Monday through Friday.</p></div><a class="btn btn-warm" href="/contact-us/">Schedule an Assessment</a></div>
+          <div class="schedule-grid" aria-label="Intensive outpatient program weekly schedule">
+            <div class="schedule-cell head">Program</div><div class="schedule-cell head">Monday</div><div class="schedule-cell head">Tuesday</div><div class="schedule-cell head">Wednesday</div><div class="schedule-cell head">Thursday</div><div class="schedule-cell head">Friday</div>
+            <div class="schedule-cell time"><strong>Morning IOP</strong><span>9:00 AM–12:00 PM</span></div><div class="schedule-cell"><span class="check">✓</span>9 AM–12 PM</div><div class="schedule-cell"><span class="check">✓</span>9 AM–12 PM</div><div class="schedule-cell"><span class="check">✓</span>9 AM–12 PM</div><div class="schedule-cell"><span class="check">✓</span>9 AM–12 PM</div><div class="schedule-cell"><span class="check">✓</span>9 AM–12 PM</div>
+            <div class="schedule-cell time pm-time"><strong>Evening IOP</strong><span>5:00 PM–8:00 PM</span></div><div class="schedule-cell pm"><span class="check">✓</span>5 PM–8 PM</div><div class="schedule-cell pm"><span class="check">✓</span>5 PM–8 PM</div><div class="schedule-cell pm"><span class="check">✓</span>5 PM–8 PM</div><div class="schedule-cell pm"><span class="check">✓</span>5 PM–8 PM</div><div class="schedule-cell pm"><span class="check">✓</span>5 PM–8 PM</div>
           </div>
-
-          <div class="schedule-grid" aria-label="IOP program schedule">
-            <div class="schedule-cell head">Program</div>
-            <div class="schedule-cell head">Monday</div>
-            <div class="schedule-cell head">Tuesday</div>
-            <div class="schedule-cell head">Wednesday</div>
-            <div class="schedule-cell head">Thursday</div>
-            <div class="schedule-cell head">Friday</div>
-
-            <div class="schedule-cell time">
-              <strong>AM IOP</strong>
-              <span>9:00 AM–12:00 PM</span>
-            </div>
-            <div class="schedule-cell"><span class="check">✓</span>9 AM–12 PM</div>
-            <div class="schedule-cell"><span class="check">✓</span>9 AM–12 PM</div>
-            <div class="schedule-cell"><span class="check">✓</span>9 AM–12 PM</div>
-            <div class="schedule-cell"><span class="check">✓</span>9 AM–12 PM</div>
-            <div class="schedule-cell"><span class="check">✓</span>9 AM–12 PM</div>
-
-            <div class="schedule-cell time pm-time">
-              <strong>PM IOP</strong>
-              <span>5:00 PM–8:00 PM</span>
-            </div>
-            <div class="schedule-cell pm"><span class="check">✓</span>5 PM–8 PM</div>
-            <div class="schedule-cell pm"><span class="check">✓</span>5 PM–8 PM</div>
-            <div class="schedule-cell pm"><span class="check">✓</span>5 PM–8 PM</div>
-            <div class="schedule-cell pm"><span class="check">✓</span>5 PM–8 PM</div>
-            <div class="schedule-cell pm"><span class="check">✓</span>5 PM–8 PM</div>
-          </div>
-
-          <div class="schedule-note">
-            Program content and individual appointments are based on each client's treatment plan and clinical needs.
-          </div>
+          <div class="schedule-note">Individual counseling, case management, medical appointments, and other services are scheduled according to each client's treatment plan and clinical needs. Program details may change; please call to confirm current availability.</div>
         </div>
       </div>
     </section>
 
-    <section class="section quote-section">
-      <div class="container reveal">
-        <blockquote>
-          Recovery is not about putting your life on hold.
-          <span>It is about learning how to live it again.</span>
-        </blockquote>
-      </div>
-    </section>
+    <section class="section quote-section"><div class="container reveal"><blockquote>Recovery is not about putting your life on hold. <span>It is about learning how to live it again.</span></blockquote></div></section>
 
     <section class="section">
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Common questions about IOP</span>
-          <h2>What to Expect</h2>
-          <p>Understanding the program before you begin can make taking the first step feel more manageable.</p>
-        </div>
-
+        <div class="section-heading reveal"><span class="eyebrow">Common questions about intensive outpatient treatment</span><h2>What to Expect</h2><p>Understanding the program before you begin can make taking the first step feel more manageable.</p></div>
         <div class="faq-list">
-          <article class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false"><span>What is an intensive outpatient program?</span><span>+</span></button>
-            <div class="faq-answer">An intensive outpatient program provides structured addiction treatment several days each week while allowing clients to continue living at home.</div>
-          </article>
-          <article class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false"><span>When are your IOP groups offered?</span><span>+</span></button>
-            <div class="faq-answer">Our AM IOP is offered Monday through Friday from 9:00 AM to 12:00 PM. Our PM IOP is offered Monday through Friday from 5:00 PM to 8:00 PM.</div>
-          </article>
-          <article class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false"><span>Can I continue working while attending IOP?</span><span>+</span></button>
-            <div class="faq-answer">Many clients continue working, attending school, or caring for family while participating. Morning and evening program options can provide additional flexibility.</div>
-          </article>
-          <article class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false"><span>Does IOP include individual counseling?</span><span>+</span></button>
-            <div class="faq-answer">Individual services are based on the client's treatment plan, clinical needs, and level-of-care requirements.</div>
-          </article>
-          <article class="faq-item reveal">
-            <button class="faq-question" aria-expanded="false"><span>How do I know whether IOP is right for me?</span><span>+</span></button>
-            <div class="faq-answer">A comprehensive assessment helps determine the most appropriate level of care based on substance use, medical needs, mental health, safety, support, and recovery environment.</div>
-          </article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>What is an intensive outpatient program?</span><span>+</span></button><div class="faq-answer">An intensive outpatient program provides structured substance use treatment several days each week while allowing clients to continue living at home. It offers more support and frequency than standard outpatient care without requiring overnight residence.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>When are your IOP groups offered?</span><span>+</span></button><div class="faq-answer">Morning IOP is offered Monday through Friday from 9:00 AM to 12:00 PM. Evening IOP is offered Monday through Friday from 5:00 PM to 8:00 PM. Call to confirm current availability.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>Can I continue working while attending IOP?</span><span>+</span></button><div class="faq-answer">Many clients continue working, attending school, parenting, or caring for family while participating. Morning and evening schedules can provide added flexibility.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>How long does IOP last?</span><span>+</span></button><div class="faq-answer">Length of participation depends on clinical needs, progress, attendance, treatment goals, insurance authorization, and recommendations from the treatment team. Your plan is reviewed throughout care.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>What happens during a typical IOP day?</span><span>+</span></button><div class="faq-answer">A typical day may include check-in, recovery education, group counseling, relapse-prevention work, coping-skills practice, discussion, and planning for how to apply skills outside treatment.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>Does IOP include individual counseling?</span><span>+</span></button><div class="faq-answer">Individual counseling and other one-on-one services are provided according to each client's treatment plan, clinical needs, and level-of-care requirements.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>Are medication-assisted treatment and medication management available?</span><span>+</span></button><div class="faq-answer">Medical services may include medication-assisted treatment, medication management, and outpatient detox assistance when clinically appropriate and recommended by a qualified provider.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>Do you help with transportation, employment, benefits, or other needs?</span><span>+</span></button><div class="faq-answer">Case management can help clients identify barriers and connect with appropriate community resources, including employment, benefits, transportation, healthcare, identification, and education support.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>Can you work with probation, treatment court, or other referral sources?</span><span>+</span></button><div class="faq-answer">With appropriate written authorization, our team can coordinate relevant treatment information with approved referral partners, courts, probation officers, or other providers.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>What is Your Recovery Portal?</span><span>+</span></button><div class="faq-answer">Your Recovery Portal is a client engagement tool that may include daily check-ins, journaling, goals, meeting information, recovery resources, appointments, progress tracking, and other supports between sessions.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>What happens after I complete IOP?</span><span>+</span></button><div class="faq-answer">Clients may step down to outpatient services and continuing care based on clinical recommendations. The goal is to reduce intensity gradually while maintaining connection, accountability, and support.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>Do you accept insurance?</span><span>+</span></button><div class="faq-answer">Coverage varies by plan and service. Our team can help verify benefits and explain what information is available before admission.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>What if I do not have insurance or cannot afford treatment?</span><span>+</span></button><div class="faq-answer">Ask our team about payment options and possible Recovery NM scholarship assistance for eligible uninsured or underinsured New Mexico residents. Funding is not guaranteed and depends on eligibility and availability.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>How quickly can I begin?</span><span>+</span></button><div class="faq-answer">Timing depends on assessment availability, clinical appropriateness, insurance verification, and current program capacity. Calling is the fastest way to learn the next available step.</div></article>
+          <article class="faq-item reveal"><button class="faq-question" aria-expanded="false"><span>How do I know whether IOP is right for me?</span><span>+</span></button><div class="faq-answer">A comprehensive assessment helps determine the most appropriate level of care based on substance use, withdrawal risk, medical needs, mental health, safety, support, motivation, and recovery environment.</div></article>
         </div>
-
         <p style="text-align:center;margin-top:2rem"><a class="btn btn-secondary" href="/faq/">View All FAQs</a></p>
       </div>
     </section>
 
     <section class="final-cta">
-      <div class="container reveal">
-        <span class="eyebrow">A first step does not have to be taken alone</span>
-        <h2>Ready to Begin Your Recovery Journey?</h2>
-        <p>Call Desert Mountain Healing to ask questions, verify insurance, and schedule your assessment.</p>
-        <div class="final-actions">
-          <a class="btn btn-warm" href="tel:+15052700840">Call (505) 270-0840</a>
-          <a class="btn btn-primary" href="/insurance-verification">Verify Insurance</a>
-          <a class="btn btn-secondary" href="/contact-us/">Contact Our Team</a>
-        </div>
-      </div>
+      <div class="container reveal"><span class="eyebrow">Recovery begins with one conversation</span><h2>You Do Not Have to Figure This Out Alone.</h2><p>Call Desert Mountain Healing to ask questions, verify insurance, discuss treatment options, and schedule a confidential assessment.</p><div class="final-actions"><a class="btn btn-warm" href="tel:+15052700840">Call (505) 270-0840</a><a class="btn btn-primary" href="/insurance-verification">Verify Insurance</a><a class="btn btn-secondary" href="/contact-us/">Contact Our Team</a></div></div>
     </section>
   </main>
 
