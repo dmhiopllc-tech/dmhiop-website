@@ -4,24 +4,24 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-<title>Addiction Treatment Services in Rio Rancho &amp; Albuquerque | DMHIOP</title>
-<meta content="Explore coordinated outpatient addiction treatment at Desert Mountain Healing IOP in Rio Rancho, including IOP, medication-assisted treatment, outpatient medical detox assistance, counseling, case management, peer support, and an exclusive client app." name="description"/>
-<meta content="addiction treatment services Rio Rancho, Albuquerque IOP, medication assisted treatment New Mexico, outpatient medical detox assistance, substance abuse counseling, case management, recovery app" name="keywords"/>
+<title>IOP Benefits: Structured Outpatient Addiction Treatment | DMHIOP</title>
+<meta content="Discover the benefits of Intensive Outpatient Program (IOP) treatment at Desert Mountain Healing IOP in Rio Rancho. Structured recovery support with morning and evening programs that let you maintain work, family, and daily responsibilities while building lasting sobriety." name="description"/>
+<meta content="IOP benefits, intensive outpatient program Rio Rancho, outpatient addiction treatment Albuquerque, IOP vs residential, flexible addiction treatment, structured outpatient recovery" name="keywords"/>
 <meta content="Desert Mountain Healing IOP" name="author"/>
-<link href="https://dmhiop.com/reliable-substance-abuse-treatments/" rel="canonical"/>
+<link href="https://dmhiop.com/iop-benefits.html" rel="canonical"/>
 
-<meta content="Addiction Treatment Services | Desert Mountain Healing IOP" property="og:title"/>
-<meta content="IOP, MAT, outpatient medical detox assistance, counseling, case management, recovery support, and an exclusive app for DMHIOP clients." property="og:description"/>
+<meta content="IOP Benefits | Desert Mountain Healing IOP" property="og:title"/>
+<meta content="Structured outpatient addiction treatment with morning and evening programs. Continue work and family responsibilities while building lasting recovery." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://dmhiop.com/reliable-substance-abuse-treatments/" property="og:url"/>
-<meta content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sandias-hero.png" property="og:image"/>
+<meta content="https://dmhiop.com/iop-benefits.html" property="og:url"/>
+<meta content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/iop-hero.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <meta content="Desert Mountain Healing IOP" property="og:site_name"/>
 
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Addiction Treatment Services | Desert Mountain Healing IOP" name="twitter:title"/>
-<meta content="Explore coordinated outpatient addiction treatment and recovery support serving Rio Rancho and Albuquerque." name="twitter:description"/>
-<meta content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sandias-hero.png" name="twitter:image"/>
+<meta content="IOP Benefits | Desert Mountain Healing IOP" name="twitter:title"/>
+<meta content="Structured outpatient addiction treatment with morning and evening programs serving Rio Rancho and Albuquerque." name="twitter:description"/>
+<meta content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/iop-hero.png" name="twitter:image"/>
 
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -36,9 +36,12 @@
 
 <style>
 :root{
-    --turquoise:#1ba3bd;
-    --turquoise-dark:#117d91;
-    --turquoise-light:#a7e3eb;
+    --teal-deep:#063743;
+    --teal:#1ba3bd;
+    --teal-dark:#117d91;
+    --teal-light:#a7e3eb;
+    --gold:#ef8b22;
+    --gold-dark:#d4710a;
     --sand:#f3eadf;
     --sand-dark:#d8c4ae;
     --earth:#805d4f;
@@ -64,20 +67,41 @@ body{
     overflow-x:hidden;
 }
 img{max-width:100%;display:block}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 
+/* ===== TOPBAR ===== */
+.topbar{
+    background:linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
+    color:white;
+    padding:.75rem 2rem;
+    text-align:center;
+}
+.topbar-inner{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:.5rem;
+    font-weight:700;
+    font-size:.92rem;
+}
+.topbar-inner::before{content:"🌅";font-size:1.1rem}
+
+/* ===== HEADER ===== */
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.96);
+    background:rgba(255,255,255,.97);
     backdrop-filter:blur(14px);
     border-bottom:1px solid var(--line);
+    box-shadow:0 2px 12px rgba(6,55,67,.06);
 }
 .header-container{
     max-width:1400px;
     margin:auto;
-    padding:.85rem 2rem;
+    padding:1rem 2rem;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -93,117 +117,175 @@ header{
     color:var(--earth-dark);
     min-width:max-content;
 }
-.logo img{width:78px;height:78px;object-fit:contain}
+.logo img{width:70px;height:70px;object-fit:contain}
 .header-right{
     flex:1;
     display:flex;
-    flex-direction:column;
-    align-items:flex-end;
-    gap:.7rem;
-}
-.header-actions,.primary-nav{
-    display:flex;
     align-items:center;
     justify-content:flex-end;
-    gap:.85rem;
-    flex-wrap:wrap;
+    gap:2rem;
 }
-.primary-nav a{
-    text-decoration:none;
-    font-size:.94rem;
+
+/* ===== NAVIGATION WITH DROPDOWNS ===== */
+.primary-nav{
+    display:flex;
+    align-items:center;
+    gap:1.5rem;
+}
+.nav-item{position:relative}
+.nav-link,.nav-button{
+    display:block;
+    padding:.6rem .2rem;
+    font-size:.95rem;
     font-weight:700;
     color:var(--ink);
-    padding:.35rem 0;
     border-bottom:2px solid transparent;
+    transition:var(--transition);
+    background:none;
+    border:none;
+    cursor:pointer;
 }
-.primary-nav a:hover,
-.primary-nav a[aria-current="page"]{
-    color:var(--turquoise-dark);
-    border-color:var(--turquoise);
+.nav-link:hover,
+.nav-button:hover,
+.nav-link[aria-current="page"]{
+    color:var(--teal-dark);
+    border-color:var(--teal);
 }
-.header-actions a{
-    min-height:40px;
-    display:inline-flex;
+.nav-button{
+    display:flex;
     align-items:center;
-    justify-content:center;
-    padding:.55rem .9rem;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:800;
-    font-size:.88rem;
+    gap:.3rem;
 }
-.insurance-link{
-    background:var(--turquoise);
+.nav-button::after{
+    content:"▾";
+    font-size:.75rem;
+    transition:transform .3s ease;
+}
+.nav-item:hover .nav-button::after{transform:rotate(180deg)}
+.dropdown{
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%);
+    min-width:220px;
+    margin-top:.5rem;
+    padding:.5rem 0;
+    background:white;
+    border:1px solid var(--line);
+    border-radius:16px;
+    box-shadow:var(--shadow-lg);
+    opacity:0;
+    visibility:hidden;
+    transition:var(--transition);
+}
+.nav-item:hover .dropdown{
+    opacity:1;
+    visibility:visible;
+}
+.dropdown a{
+    display:block;
+    padding:.7rem 1.2rem;
+    color:var(--text);
+    font-size:.92rem;
+    transition:var(--transition);
+}
+.dropdown a:hover{
+    background:var(--mist);
+    color:var(--teal-dark);
+}
+
+.header-cta{
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+}
+.btn-header-primary{
+    padding:.65rem 1.2rem;
+    border-radius:999px;
+    background:var(--teal);
+    color:white;
+    font-weight:800;
+    font-size:.92rem;
+    transition:var(--transition);
+}
+.btn-header-primary:hover{
+    background:var(--teal-dark);
+    transform:translateY(-2px);
+}
+.btn-header-secondary{
+    padding:.65rem 1.2rem;
+    border-radius:999px;
+    border:2px solid var(--gold);
+    color:var(--gold-dark);
+    font-weight:800;
+    font-size:.92rem;
+    transition:var(--transition);
+}
+.btn-header-secondary:hover{
+    background:var(--gold);
     color:white;
 }
-.insurance-link:hover{background:var(--turquoise-dark)}
-.header-feature-link{
-    border:1px solid var(--earth);
-    color:var(--earth);
-    background:white;
-}
-.header-feature-link:hover{background:var(--earth);color:white}
-.recovery-link{
-    border:1px solid var(--line);
-    background:white;
-    color:var(--earth);
-    gap:.45rem;
-}
-.recovery-link img{width:95px;max-height:32px;object-fit:contain}
 
+/* ===== HERO ===== */
 .hero{
-    min-height:680px;
+    min-height:650px;
     position:relative;
     display:flex;
     align-items:center;
     background:
-      linear-gradient(90deg,rgba(10,34,42,.84) 0%,rgba(10,34,42,.66) 40%,rgba(10,34,42,.18) 72%,rgba(10,34,42,.03) 100%),
-      url('https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sandias-hero.png') center center/cover no-repeat;
+      linear-gradient(90deg,rgba(6,55,67,.92) 0%,rgba(6,55,67,.75) 38%,rgba(6,55,67,.22) 68%,rgba(6,55,67,.05) 100%),
+      url('https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/iop-hero.png') center center/cover no-repeat;
     color:white;
 }
 .hero::after{
     content:"";
     position:absolute;
     inset:auto 0 0;
-    height:180px;
-    background:linear-gradient(to top,rgba(0,0,0,.25),transparent);
+    height:160px;
+    background:linear-gradient(to top,rgba(0,0,0,.20),transparent);
 }
-.hero-inner{
+.container{
     width:min(1400px,100%);
     margin:auto;
-    padding:7rem 2rem 6rem;
+    padding:0 2rem;
+}
+.hero-inner{
     position:relative;
     z-index:2;
+    padding:8rem 0 7rem;
 }
-.hero-content{max-width:760px}
+.hero-copy{max-width:760px}
 .eyebrow{
     display:inline-flex;
     align-items:center;
     gap:.55rem;
-    padding:.5rem .85rem;
+    padding:.55rem .95rem;
     border:1px solid rgba(255,255,255,.35);
     border-radius:999px;
     background:rgba(255,255,255,.12);
     backdrop-filter:blur(12px);
-    font-size:.78rem;
+    font-size:.8rem;
     text-transform:uppercase;
-    letter-spacing:.13em;
+    letter-spacing:.12em;
     font-weight:800;
-    margin-bottom:1.3rem;
+    margin-bottom:1.5rem;
 }
 .hero h1{
     font-family:'Merriweather',serif;
-    font-size:clamp(2.8rem,6vw,5.4rem);
-    line-height:1.05;
-    letter-spacing:-.035em;
+    font-size:clamp(2.8rem,5.5vw,5rem);
+    line-height:1.08;
+    letter-spacing:-.03em;
     margin-bottom:1.5rem;
     text-shadow:0 4px 24px rgba(0,0,0,.28);
 }
-.hero p{
-    max-width:700px;
-    font-size:clamp(1.05rem,1.7vw,1.28rem);
+.hero h1 span{
+    color:var(--gold);
+}
+.hero-lead{
+    font-size:clamp(1.08rem,1.6vw,1.25rem);
     color:rgba(255,255,255,.92);
     margin-bottom:2rem;
+    line-height:1.6;
 }
 .hero-actions{
     display:flex;
@@ -214,1115 +296,543 @@ header{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    min-height:52px;
-    padding:.9rem 1.35rem;
+    min-height:54px;
+    padding:.95rem 1.5rem;
     border-radius:999px;
-    text-decoration:none;
     font-weight:800;
+    font-size:.98rem;
     transition:var(--transition);
 }
+.btn-warm{
+    background:var(--gold);
+    color:white;
+    box-shadow:0 12px 28px rgba(239,139,34,.35);
+}
+.btn-warm:hover{
+    background:var(--gold-dark);
+    transform:translateY(-2px);
+}
 .btn-primary{
-    background:var(--turquoise);
+    background:var(--teal);
     color:white;
     box-shadow:0 12px 28px rgba(27,163,189,.35);
 }
-.btn-primary:hover{background:var(--turquoise-dark);transform:translateY(-2px)}
+.btn-primary:hover{
+    background:var(--teal-dark);
+    transform:translateY(-2px);
+}
 .btn-secondary{
     background:rgba(255,255,255,.14);
     color:white;
     border:1px solid rgba(255,255,255,.42);
     backdrop-filter:blur(10px);
 }
-.btn-secondary:hover{background:white;color:var(--ink)}
+.btn-secondary:hover{
+    background:white;
+    color:var(--ink);
+}
 
-.trust-bar{
-    position:relative;
-    z-index:3;
-    width:min(1180px,calc(100% - 2rem));
-    margin:-55px auto 0;
+/* ===== HERO CONTACT CARDS ===== */
+.hero-contact{
+    position:absolute;
+    right:2rem;
+    top:50%;
+    transform:translateY(-50%);
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    background:rgba(255,255,255,.94);
+    gap:1rem;
+    width:280px;
+}
+.hero-contact-item{
+    padding:1.2rem 1.3rem;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(14px);
     border:1px solid rgba(255,255,255,.6);
-    border-radius:22px;
+    border-radius:20px;
     box-shadow:var(--shadow-lg);
-    backdrop-filter:blur(18px);
-    overflow:hidden;
+    color:var(--ink);
+    transition:var(--transition);
 }
-.trust-item{
-    padding:1.3rem 1.25rem;
-    text-align:center;
-    border-right:1px solid var(--line);
+.hero-contact-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 30px 80px rgba(18,56,66,.22);
 }
-.trust-item:last-child{border-right:0}
-.trust-item strong{
+.hero-contact-item strong{
     display:block;
     color:var(--earth-dark);
-    font-size:1rem;
-    margin-bottom:.15rem;
+    font-size:1.05rem;
+    margin-bottom:.3rem;
 }
-.trust-item span{font-size:.88rem;color:var(--text)}
+.hero-contact-item small{
+    display:block;
+    color:var(--teal-dark);
+    font-size:.92rem;
+    font-weight:700;
+}
+.hero-contact-item a{
+    color:var(--teal-dark);
+    font-weight:700;
+}
 
+/* ===== MAIN SECTIONS ===== */
 main{overflow:hidden}
-.section{
-    padding:6.5rem 2rem;
+.section{padding:6.5rem 2rem}
+.section-soft{background:linear-gradient(180deg,var(--mist),white)}
+.section-sand{background:var(--sand)}
+.section-dark{
+    background:linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
+    color:white;
 }
-.section-inner{
-    width:min(1200px,100%);
-    margin:auto;
-}
+
 .section-head{
-    max-width:860px;
-    margin:0 auto 3.5rem;
+    max-width:900px;
+    margin:0 auto 4rem;
     text-align:center;
 }
 .section-kicker{
-    color:var(--turquoise-dark);
+    color:var(--teal-dark);
     text-transform:uppercase;
-    letter-spacing:.13em;
-    font-size:.78rem;
+    letter-spacing:.12em;
+    font-size:.82rem;
     font-weight:800;
-    margin-bottom:.75rem;
+    margin-bottom:.8rem;
 }
 h2{
     font-family:'Merriweather',serif;
-    font-size:clamp(2.15rem,4vw,3.6rem);
+    font-size:clamp(2.2rem,4vw,3.8rem);
     line-height:1.14;
     color:var(--earth-dark);
-    margin-bottom:1rem;
+    margin-bottom:1.2rem;
 }
 .section-head p{
     color:var(--text);
-    font-size:1.08rem;
+    font-size:1.1rem;
+    line-height:1.7;
 }
-.intro-grid{
-    display:grid;
-    grid-template-columns:1.05fr .95fr;
-    gap:4rem;
-    align-items:center;
-}
-.intro-copy p{
-    color:var(--text);
-    font-size:1.07rem;
-    margin-bottom:1rem;
-}
-.intro-image{
-    position:relative;
-}
-.intro-image img{
-    width:100%;
-    height:520px;
-    object-fit:cover;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow-lg);
-}
-.intro-badge{
-    position:absolute;
-    left:-35px;
-    bottom:35px;
-    max-width:260px;
-    padding:1.25rem;
-    border-radius:18px;
-    background:rgba(255,255,255,.94);
-    box-shadow:var(--shadow-lg);
-    border:1px solid rgba(255,255,255,.8);
-}
-.intro-badge strong{
-    display:block;
-    color:var(--turquoise-dark);
-    font-family:'Merriweather',serif;
-    margin-bottom:.3rem;
-}
-.intro-badge span{font-size:.92rem;color:var(--text)}
 
-.major-services{
-    background:linear-gradient(180deg,var(--mist),#fff);
-}
-.service-feature{
+/* ===== SPLIT LAYOUTS ===== */
+.split{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:0;
-    border-radius:var(--radius);
-    overflow:hidden;
-    background:white;
-    box-shadow:var(--shadow-lg);
-    margin-bottom:2rem;
-    border:1px solid var(--line);
+    gap:4.5rem;
+    align-items:center;
 }
-.service-feature.reverse .service-media{order:2}
-.service-feature.reverse .service-copy{order:1}
-.service-media{
-    min-height:430px;
+.reveal{animation:fadeInUp .8s ease forwards}
+@keyframes fadeInUp{
+    from{opacity:0;transform:translateY(30px)}
+    to{opacity:1;transform:translateY(0)}
 }
-.service-media img{
-    width:100%;
-    height:100%;
-    min-height:430px;
-    object-fit:cover;
+.reveal p{
+    color:var(--text);
+    font-size:1.05rem;
+    margin-bottom:1rem;
+    line-height:1.7;
 }
-.service-copy{
-    padding:3.3rem;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-.service-number{
-    width:48px;height:48px;
-    display:grid;place-items:center;
-    border-radius:50%;
-    background:var(--turquoise-light);
-    color:var(--turquoise-dark);
-    font-weight:900;
-    margin-bottom:1.2rem;
-}
-.service-copy h3{
+.reveal h3{
     font-family:'Merriweather',serif;
     color:var(--earth-dark);
-    font-size:2rem;
-    line-height:1.2;
-    margin-bottom:.9rem;
+    font-size:1.8rem;
+    margin:1.5rem 0 .8rem;
 }
-.service-copy p{
-    color:var(--text);
-    margin-bottom:1.35rem;
-}
-.text-link{
-    color:var(--turquoise-dark);
-    text-decoration:none;
-    font-weight:900;
-}
-.text-link:hover{color:var(--earth)}
 
-.support-grid{
+/* ===== GLASS CARD ===== */
+.glass-card{
+    padding:2.2rem;
+    border-radius:var(--radius);
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,.6);
+    box-shadow:var(--shadow-lg);
+}
+.glass-card h3{
+    color:var(--earth-dark);
+    font-size:1.6rem;
+    margin-bottom:.8rem;
+}
+.glass-card p{
+    color:var(--text);
+    line-height:1.7;
+}
+
+/* ===== QUOTE BLOCK ===== */
+.quote{
+    padding:1.5rem 1.8rem;
+    margin:1.5rem 0;
+    border-left:4px solid var(--gold);
+    border-radius:0 16px 16px 0;
+    background:rgba(239,139,34,.08);
+    color:var(--ink);
+    font-style:italic;
+    line-height:1.75;
+}
+
+/* ===== BENEFIT CARDS ===== */
+.benefit-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:1.25rem;
+    gap:1.5rem;
 }
-.support-card{
-    padding:1.8rem;
-    border:1px solid var(--line);
-    border-radius:20px;
+.benefit-card{
+    padding:2rem 1.8rem;
+    border-radius:22px;
     background:white;
+    border:1px solid var(--line);
     box-shadow:var(--shadow-sm);
     transition:var(--transition);
 }
-.support-card:hover{
+.benefit-card:hover{
     transform:translateY(-6px);
     box-shadow:var(--shadow-lg);
 }
-.support-icon{
-    width:46px;height:46px;
-    display:grid;place-items:center;
-    border-radius:14px;
-    background:linear-gradient(135deg,var(--turquoise-light),#e9f8fa);
-    color:var(--turquoise-dark);
-    font-weight:900;
-    margin-bottom:1rem;
-}
-.support-card h3{
-    color:var(--earth-dark);
-    font-size:1.15rem;
-    margin-bottom:.55rem;
-}
-.support-card p{
-    color:var(--text);
-    font-size:.95rem;
-}
-.support-card a{
-    display:inline-block;
-    margin-top:1rem;
-    color:var(--turquoise-dark);
-    font-weight:800;
-    text-decoration:none;
-}
-
-.app-section{
-    background:linear-gradient(135deg,#0d6676,#143d48);
-    color:white;
-}
-.app-grid{
-    display:grid;
-    grid-template-columns:.95fr 1.05fr;
-    gap:4rem;
-    align-items:center;
-}
-.app-image{
-    position:relative;
-}
-.app-image img{
-    width:100%;
-    border-radius:28px;
-    box-shadow:0 30px 80px rgba(0,0,0,.28);
-}
-.app-copy h2{color:white}
-.app-copy p{color:rgba(255,255,255,.84);margin-bottom:1rem}
-.app-points{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:.9rem;
-    margin:1.6rem 0 2rem;
-}
-.app-point{
-    padding:1rem;
-    border-radius:14px;
-    background:rgba(255,255,255,.09);
-    border:1px solid rgba(255,255,255,.15);
-}
-.app-point strong{display:block;margin-bottom:.25rem}
-.app-point span{font-size:.9rem;color:rgba(255,255,255,.75)}
-
-.facility-section{
-    background:var(--sand);
-}
-.facility-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:3rem;
-    align-items:center;
-}
-.facility-copy p{color:var(--text);margin-bottom:1rem}
-.facility-gallery{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:1rem;
-}
-.facility-gallery img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-    border-radius:20px;
-    box-shadow:var(--shadow-sm);
-}
-.facility-gallery img:first-child{
-    grid-row:span 2;
-    height:496px;
-}
-
-.difference{
-    background:white;
-}
-.difference-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:1.25rem;
-}
-.difference-item{
-    padding:1.75rem;
-    border-radius:20px;
-    background:var(--mist);
-    border:1px solid var(--line);
-}
-.difference-item .check{
-    width:38px;height:38px;
-    display:grid;place-items:center;
-    border-radius:50%;
-    background:var(--turquoise);
-    color:white;
-    font-weight:900;
-    margin-bottom:1rem;
-}
-.difference-item h3{
-    color:var(--earth-dark);
-    margin-bottom:.45rem;
-}
-.difference-item p{color:var(--text);font-size:.95rem}
-
-.insurance{
-    padding-top:1rem;
-}
-.insurance-card{
-    width:min(1150px,calc(100% - 4rem));
-    margin:auto;
-    padding:4rem;
-    border-radius:28px;
-    background:
-      linear-gradient(120deg,rgba(86,60,52,.95),rgba(128,93,79,.88)),
-      url('https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/frount-desk.png') center/cover no-repeat;
-    color:white;
-    box-shadow:var(--shadow-lg);
-}
-.insurance-card h2{color:white;max-width:720px}
-.insurance-card p{max-width:760px;color:rgba(255,255,255,.86);margin-bottom:1.5rem}
-.insurance-actions{display:flex;flex-wrap:wrap;gap:1rem}
-
-.faq{
-    background:var(--mist);
-}
-.faq-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:1rem;
-}
-.faq-item{
-    padding:1.5rem;
-    border-radius:18px;
-    background:white;
-    border:1px solid var(--line);
-    box-shadow:var(--shadow-sm);
-}
-.faq-item h3{
-    color:var(--earth-dark);
-    font-size:1.05rem;
-    margin-bottom:.55rem;
-}
-.faq-item p{color:var(--text);font-size:.95rem}
-
-footer{
-    background:#102c34;
-    color:white;
-    padding:4rem 2rem 1.5rem;
-}
-.footer-content{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.2fr .8fr .9fr 1fr;
-    gap:2.5rem;
-}
-.footer-section h3{
-    color:var(--turquoise-light);
-    margin-bottom:1rem;
-}
-.footer-section p,
-.footer-section a{
-    color:rgba(255,255,255,.78);
-    text-decoration:none;
-    margin-bottom:.55rem;
-}
-.footer-section a:hover{color:white}
-.footer-links{list-style:none}
-.footer-bottom{
-    max-width:1200px;
-    margin:2.5rem auto 0;
-    padding-top:1.5rem;
-    border-top:1px solid rgba(255,255,255,.12);
-    text-align:center;
-    color:rgba(255,255,255,.55);
-}
-
-@media(max-width:1100px){
-    .header-container{flex-direction:column;align-items:stretch}
-    .logo{justify-content:center}
-    .header-right,.header-actions,.primary-nav{align-items:center;justify-content:center}
-    .trust-bar{grid-template-columns:repeat(2,1fr)}
-    .trust-item:nth-child(2){border-right:0}
-    .trust-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
-    .intro-grid,.app-grid,.facility-grid{grid-template-columns:1fr}
-    .service-feature{grid-template-columns:1fr}
-    .service-feature.reverse .service-media,
-    .service-feature.reverse .service-copy{order:initial}
-    .support-grid,.difference-grid{grid-template-columns:repeat(2,1fr)}
-    .footer-content{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:720px){
-    .header-container{padding:.7rem 1rem}
-    .logo img{width:60px;height:60px}
-    .logo span{font-size:.92rem}
-    .hero{
-        min-height:610px;
-        background:
-          linear-gradient(180deg,rgba(10,34,42,.50),rgba(10,34,42,.83)),
-          url('https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sandias-hero.png') 66% center/cover no-repeat;
-    }
-    .hero-inner{padding:6rem 1.2rem 5rem}
-    .hero-actions,.insurance-actions{flex-direction:column;align-items:stretch}
-    .btn{width:100%}
-    .trust-bar{margin-top:-30px;grid-template-columns:1fr}
-    .trust-item{border-right:0;border-bottom:1px solid var(--line)}
-    .trust-item:last-child{border-bottom:0}
-    .section{padding:4.5rem 1.2rem}
-    .intro-image img{height:360px}
-    .intro-badge{position:static;margin-top:1rem;max-width:none}
-    .service-copy{padding:2rem 1.35rem}
-    .service-media,.service-media img{min-height:300px}
-    .support-grid,.difference-grid,.faq-grid,.app-points{grid-template-columns:1fr}
-    .facility-gallery{grid-template-columns:1fr}
-    .facility-gallery img:first-child{grid-row:auto;height:260px}
-    .facility-gallery img{height:240px}
-    .insurance-card{width:calc(100% - 2rem);padding:2.2rem 1.35rem}
-    .footer-content{grid-template-columns:1fr}
-}
-
-/* ===== SERVICES PAGE PREMIUM EXPANSION ===== */
-.skip-link{
-    position:absolute;
-    left:-9999px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-}
-.skip-link:focus{
-    left:1rem;
-    top:1rem;
-    width:auto;
-    height:auto;
-    padding:.8rem 1rem;
-    border-radius:10px;
-    background:var(--ink);
-    color:white;
-    z-index:2000;
-}
-.hero-proof{
-    display:flex;
-    flex-wrap:wrap;
-    gap:.75rem;
-    margin-top:1.6rem;
-}
-.hero-proof span{
-    display:inline-flex;
-    align-items:center;
-    gap:.45rem;
-    padding:.5rem .8rem;
-    border-radius:999px;
-    border:1px solid rgba(255,255,255,.28);
-    background:rgba(255,255,255,.10);
-    color:rgba(255,255,255,.92);
-    font-weight:700;
-    font-size:.84rem;
-    backdrop-filter:blur(10px);
-}
-.hero-proof span::before{
-    content:"✓";
-    width:20px;
-    height:20px;
+.benefit-icon{
+    width:56px;
+    height:56px;
     display:grid;
     place-items:center;
-    border-radius:50%;
-    background:var(--turquoise);
-    color:white;
-    font-size:.72rem;
-    font-weight:900;
+    border-radius:16px;
+    background:linear-gradient(135deg,var(--teal-light),#e9f8fa);
+    color:var(--teal-dark);
+    font-size:1.5rem;
+    margin-bottom:1.2rem;
 }
-.pathway-section{
-    position:relative;
-    background:
-      radial-gradient(circle at 15% 20%,rgba(167,227,235,.34),transparent 28%),
-      linear-gradient(180deg,#fff,var(--mist));
+.benefit-card h3{
+    color:var(--earth-dark);
+    font-size:1.3rem;
+    margin-bottom:.7rem;
 }
-.pathway-wrap{
-    display:grid;
-    grid-template-columns:.9fr 1.1fr;
-    gap:4rem;
-    align-items:center;
-}
-.pathway-copy p{
+.benefit-card p{
     color:var(--text);
-    margin-bottom:1rem;
+    font-size:.98rem;
+    line-height:1.65;
 }
-.pathway-note{
-    margin-top:1.4rem;
-    padding:1.1rem 1.2rem;
-    border-left:4px solid var(--turquoise);
-    border-radius:0 14px 14px 0;
-    background:white;
-    box-shadow:var(--shadow-sm);
-    color:var(--text);
-}
-.pathway-graphic{
-    padding:1.1rem;
-    border-radius:28px;
-    background:white;
-    border:1px solid var(--line);
+
+/* ===== COMPARISON TABLE ===== */
+.comparison-table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    border-radius:var(--radius);
+    overflow:hidden;
     box-shadow:var(--shadow-lg);
 }
-.pathway-graphic svg{
-    width:100%;
-    height:auto;
+.comparison-table thead{
+    background:linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
+    color:white;
 }
-.team-section{
-    background:linear-gradient(135deg,#fff,var(--sand));
+.comparison-table th{
+    padding:1.3rem 1.5rem;
+    text-align:left;
+    font-weight:800;
+    font-size:1.05rem;
 }
-.team-grid{
+.comparison-table tbody tr{
+    background:white;
+    border-bottom:1px solid var(--line);
+}
+.comparison-table tbody tr:last-child{border-bottom:0}
+.comparison-table td{
+    padding:1.2rem 1.5rem;
+    color:var(--text);
+}
+.comparison-table td:first-child{
+    font-weight:700;
+    color:var(--ink);
+}
+.check-yes{
+    color:var(--teal);
+    font-weight:900;
+    font-size:1.2rem;
+}
+.check-no{
+    color:#ccc;
+    font-weight:400;
+}
+
+/* ===== SCHEDULE CARDS ===== */
+.schedule-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:1rem;
+    grid-template-columns:1fr 1fr;
+    gap:2rem;
 }
-.team-card{
-    padding:1.55rem 1.2rem;
-    text-align:center;
-    border-radius:20px;
-    background:rgba(255,255,255,.86);
-    border:1px solid rgba(128,93,79,.14);
+.schedule-card{
+    padding:2.5rem;
+    border-radius:var(--radius);
+    background:white;
+    border:2px solid var(--line);
     box-shadow:var(--shadow-sm);
     transition:var(--transition);
 }
-.team-card:hover{
-    transform:translateY(-5px);
+.schedule-card:hover{
+    border-color:var(--teal);
     box-shadow:var(--shadow-lg);
 }
-.team-symbol{
-    width:64px;
-    height:64px;
-    margin:0 auto 1rem;
-    display:grid;
-    place-items:center;
-    border-radius:20px;
-    background:linear-gradient(135deg,var(--turquoise),var(--turquoise-dark));
-    color:white;
+.schedule-icon{
+    font-size:2.5rem;
+    margin-bottom:1rem;
+}
+.schedule-card h3{
     font-family:'Merriweather',serif;
-    font-weight:900;
-    font-size:1.05rem;
-    box-shadow:0 12px 26px rgba(27,163,189,.24);
-}
-.team-card h3{
     color:var(--earth-dark);
-    font-size:1rem;
-    margin-bottom:.45rem;
+    font-size:1.8rem;
+    margin-bottom:.8rem;
 }
-.team-card p{
+.schedule-card p{
     color:var(--text);
-    font-size:.89rem;
+    margin-bottom:1.2rem;
 }
-.service-feature .service-copy ul{
+.schedule-card ul{
     list-style:none;
-    margin:0 0 1.35rem;
-    display:grid;
-    gap:.55rem;
+    margin:0;
 }
-.service-feature .service-copy li{
+.schedule-card li{
+    padding:.6rem 0;
+    padding-left:1.8rem;
     position:relative;
-    padding-left:1.65rem;
     color:var(--text);
 }
-.service-feature .service-copy li::before{
+.schedule-card li::before{
     content:"✓";
     position:absolute;
     left:0;
-    top:.04rem;
-    color:var(--turquoise-dark);
+    color:var(--teal);
     font-weight:900;
 }
-.scholarship-section{
-    background:
-      linear-gradient(120deg,rgba(11,84,98,.96),rgba(18,54,64,.96)),
-      url('https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sandias-hero.png') center/cover no-repeat;
-    color:white;
-}
-.scholarship-grid{
-    display:grid;
-    grid-template-columns:1fr .85fr;
-    gap:4rem;
+
+/* ===== TEXT LINK ===== */
+.text-link{
+    display:inline-flex;
     align-items:center;
+    gap:.4rem;
+    color:var(--teal-dark);
+    font-weight:800;
+    margin-top:1rem;
+    transition:var(--transition);
 }
-.scholarship-copy h2{color:white}
-.scholarship-copy p{
-    color:rgba(255,255,255,.84);
-    margin-bottom:1rem;
+.text-link:hover{
+    color:var(--gold-dark);
+    gap:.7rem;
 }
-.scholarship-panel{
-    padding:2rem;
-    border-radius:24px;
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.18);
-    backdrop-filter:blur(14px);
-}
-.scholarship-panel img{
-    max-width:250px;
-    max-height:92px;
-    object-fit:contain;
-    margin-bottom:1rem;
-    filter:drop-shadow(0 5px 16px rgba(0,0,0,.18));
-}
-.scholarship-panel h3{
-    font-family:'Merriweather',serif;
-    font-size:1.45rem;
-    margin-bottom:.7rem;
-}
-.scholarship-panel p{
-    color:rgba(255,255,255,.8);
-    margin-bottom:1.2rem;
-}
-.outcomes-strip{
-    width:min(1200px,calc(100% - 4rem));
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:1px;
-    overflow:hidden;
-    border:1px solid var(--line);
-    border-radius:24px;
-    background:var(--line);
-    box-shadow:var(--shadow-lg);
-}
-.outcome{
-    min-height:150px;
-    padding:1.3rem .9rem;
-    background:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
-}
-.outcome strong{
-    color:var(--earth-dark);
-    font-size:.95rem;
-    margin-bottom:.3rem;
-}
-.outcome span{
-    color:var(--text);
-    font-size:.82rem;
-}
-.outcome-icon{
-    width:42px;
-    height:42px;
-    margin:0 auto .75rem;
-    display:grid;
-    place-items:center;
-    border-radius:14px;
-    background:var(--turquoise-light);
-    color:var(--turquoise-dark);
-    font-weight:900;
-}
-.app-browser{
-    border-radius:28px;
-    overflow:hidden;
-    background:#eaf5f7;
-    box-shadow:0 30px 80px rgba(0,0,0,.28);
-    border:1px solid rgba(255,255,255,.2);
-}
-.browser-bar{
-    height:42px;
-    display:flex;
-    align-items:center;
-    gap:.5rem;
-    padding:0 1rem;
-    background:#fff;
-}
-.browser-bar i{
-    width:10px;
-    height:10px;
-    border-radius:50%;
-    background:#c7d7da;
-}
-.portal-screen{
-    padding:1.2rem;
-    display:grid;
-    grid-template-columns:.38fr 1fr;
-    gap:1rem;
-}
-.portal-nav{
-    padding:1rem;
-    border-radius:18px;
-    background:#143d48;
-    color:white;
-}
-.portal-brand{
-    font-family:'Merriweather',serif;
-    font-weight:900;
-    margin-bottom:1.2rem;
-}
-.portal-nav span{
-    display:block;
-    padding:.65rem .7rem;
-    margin-bottom:.45rem;
-    border-radius:10px;
-    color:rgba(255,255,255,.76);
-    font-size:.82rem;
-}
-.portal-nav span.active{
-    color:white;
-    background:rgba(167,227,235,.16);
-}
-.portal-main{
-    display:grid;
-    gap:1rem;
-}
-.portal-welcome{
-    padding:1.2rem;
-    border-radius:18px;
-    background:linear-gradient(135deg,var(--turquoise),var(--turquoise-dark));
-    color:white;
-}
-.portal-welcome strong{
-    display:block;
-    font-family:'Merriweather',serif;
-    font-size:1.25rem;
-}
-.portal-cards{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:1rem;
-}
-.portal-card{
-    min-height:110px;
-    padding:1rem;
-    border-radius:16px;
-    background:white;
-    color:var(--ink);
-    box-shadow:0 8px 20px rgba(18,56,66,.08);
-}
-.portal-card strong{
-    display:block;
-    color:var(--earth-dark);
-    margin-bottom:.25rem;
-}
-.portal-card span{
-    color:var(--text);
-    font-size:.82rem;
-}
-.portal-progress{
-    height:8px;
-    margin-top:.8rem;
-    border-radius:999px;
-    background:#e2eef0;
-    overflow:hidden;
-}
-.portal-progress i{
-    display:block;
-    width:72%;
-    height:100%;
-    background:var(--turquoise);
-    border-radius:inherit;
-}
-.final-cta{
+
+/* ===== PRE-FOOTER CTA ===== */
+.pre-footer-cta{
     padding:5.5rem 2rem;
-    background:linear-gradient(135deg,var(--sand),#fff);
+    background:linear-gradient(135deg,var(--sand),white);
 }
-.final-cta-card{
-    width:min(1100px,100%);
+.cta-card{
+    max-width:1100px;
     margin:auto;
-    padding:3.5rem;
+    padding:4rem 3.5rem;
     text-align:center;
     border-radius:30px;
     background:white;
     border:1px solid var(--line);
     box-shadow:var(--shadow-lg);
 }
-.final-cta-card h2{max-width:800px;margin-left:auto;margin-right:auto}
-.final-cta-card p{
-    max-width:760px;
-    margin:0 auto 1.5rem;
-    color:var(--text);
+.cta-card h2{
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
 }
-.final-actions{
+.cta-card p{
+    max-width:720px;
+    margin:0 auto 2rem;
+    color:var(--text);
+    font-size:1.08rem;
+}
+.cta-actions{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:1rem;
 }
-.btn-outline{
-    border:1px solid var(--earth);
-    color:var(--earth);
-    background:white;
-}
-.btn-outline:hover{
-    background:var(--earth);
-    color:white;
-    transform:translateY(-2px);
-}
-@media(max-width:1100px){
-    .pathway-wrap,.scholarship-grid{grid-template-columns:1fr}
-    .team-grid{grid-template-columns:repeat(3,1fr)}
-    .outcomes-strip{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:720px){
-    .hero-proof{display:grid}
-    .pathway-graphic{padding:.45rem}
-    .team-grid,.outcomes-strip{grid-template-columns:1fr}
-    .outcomes-strip{width:calc(100% - 2rem)}
-    .portal-screen{grid-template-columns:1fr}
-    .portal-nav{display:none}
-    .portal-cards{grid-template-columns:1fr}
-    .final-cta-card{padding:2.3rem 1.2rem}
-}
 
-
-/* ===== REAL RECOVERY PORTAL PREVIEW ===== */
-.portal-showcase{
-    display:grid;
-    grid-template-columns:.72fr 1.28fr;
-    gap:2.6rem;
-    align-items:center;
-}
-.portal-copy h2{color:white}
-.portal-copy p{color:rgba(255,255,255,.84)}
-.portal-feature-list{
-    list-style:none;
-    display:grid;
-    gap:.75rem;
-    margin:1.3rem 0 1.6rem;
-}
-.portal-feature-list li{
-    position:relative;
-    padding-left:1.7rem;
-    color:rgba(255,255,255,.92);
-}
-.portal-feature-list li::before{
-    content:"✓";
-    position:absolute;
-    left:0;
-    top:0;
-    color:#FBBF24;
-    font-weight:900;
-}
-.real-portal-shell{
-    overflow:hidden;
-    border-radius:28px;
-    background:linear-gradient(135deg,#FFF7ED 0%,#FED7AA 100%);
-    border:1px solid rgba(255,255,255,.28);
-    box-shadow:0 30px 80px rgba(0,0,0,.30);
-}
-.real-portal-topbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:1rem;
-    padding:.95rem 1.1rem;
-    background:rgba(255,255,255,.96);
-    border-bottom:3px solid #D97706;
-}
-.real-portal-brand{
-    display:flex;
-    align-items:center;
-    gap:.75rem;
-    min-width:0;
-}
-.real-portal-brand img{
-    width:50px;
-    height:50px;
-    object-fit:contain;
-}
-.real-portal-brand strong{
-    display:block;
-    color:#92400E;
-    font-family:'Open Sans',sans-serif;
-    font-size:1rem;
-}
-.real-portal-brand span{
-    display:block;
-    color:#D97706;
-    font-size:.74rem;
-    font-weight:700;
-}
-.real-portal-badges{
-    display:flex;
-    gap:.55rem;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-}
-.real-badge{
-    display:flex;
-    align-items:center;
-    gap:.35rem;
-    padding:.55rem .8rem;
-    border-radius:999px;
+/* ===== FOOTER ===== */
+footer{
+    background:var(--teal-deep);
     color:white;
-    font-size:.74rem;
+    padding:5rem 2rem 2rem;
+}
+.footer-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr 1fr;
+    gap:3rem;
+    margin-bottom:3rem;
+}
+.footer-brand img{
+    max-width:140px;
+    margin-bottom:1.2rem;
+}
+.footer-brand p{
+    color:rgba(255,255,255,.75);
+    line-height:1.7;
+    margin-bottom:.8rem;
+}
+.footer-section h4{
+    color:var(--gold);
+    font-size:1.05rem;
+    margin-bottom:1.2rem;
     font-weight:800;
-    white-space:nowrap;
-    box-shadow:0 5px 14px rgba(217,119,6,.18);
 }
-.real-badge.streak{background:linear-gradient(135deg,#EF4444,#F59E0B)}
-.real-badge.points{background:linear-gradient(135deg,#D97706,#FBBF24)}
-.real-portal-body{
-    display:grid;
-    grid-template-columns:168px 1fr;
-    min-height:540px;
+.footer-links{
+    list-style:none;
 }
-.real-portal-sidebar{
-    padding:1rem;
-    background:rgba(255,255,255,.94);
-    border-right:1px solid rgba(217,119,6,.12);
+.footer-links li{
+    margin-bottom:.6rem;
 }
-.real-portal-sidebar .nav-item{
-    display:flex;
-    align-items:center;
-    gap:.7rem;
-    padding:.7rem .75rem;
-    margin-bottom:.45rem;
-    border-radius:12px;
-    color:#6B7280;
-    font-size:.78rem;
+.footer-links a{
+    color:rgba(255,255,255,.8);
+    transition:var(--transition);
+}
+.footer-links a:hover{
+    color:white;
+    padding-left:.3rem;
+}
+.footer-contact p{
+    color:rgba(255,255,255,.8);
+    margin-bottom:.8rem;
+}
+.footer-contact a{
+    color:var(--teal-light);
     font-weight:700;
 }
-.real-portal-sidebar .nav-item.active{
-    color:white;
-    background:linear-gradient(135deg,#D97706,#F59E0B);
-    box-shadow:0 6px 16px rgba(217,119,6,.22);
+
+.footer-sitemap{
+    max-width:1400px;
+    margin:auto;
+    padding:2.5rem 0;
+    border-top:1px solid rgba(255,255,255,.15);
 }
-.real-portal-sidebar .nav-icon{
-    width:24px;
-    text-align:center;
-    color:#D97706;
-    font-weight:900;
-}
-.real-portal-sidebar .active .nav-icon{color:white}
-.real-portal-main{
-    padding:1rem;
-    background:
-      radial-gradient(circle at 85% 10%,rgba(251,191,36,.24),transparent 26%),
-      linear-gradient(135deg,#FFF7ED 0%,#FFE4CC 100%);
-}
-.real-welcome{
-    position:relative;
-    overflow:hidden;
-    padding:1.15rem 1.2rem;
+.footer-sitemap h4{
+    color:var(--gold);
+    font-size:.95rem;
     margin-bottom:1rem;
-    border-radius:18px;
-    background:rgba(255,255,255,.96);
-    border:2px solid rgba(217,119,6,.14);
-    box-shadow:0 8px 22px rgba(217,119,6,.12);
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.08em;
 }
-.real-welcome::after{
-    content:"🌅";
-    position:absolute;
-    right:14px;
-    top:4px;
-    font-size:4.4rem;
-    opacity:.16;
-}
-.real-welcome strong{
-    display:block;
-    position:relative;
-    z-index:1;
-    color:#92400E;
-    font-size:1.18rem;
-}
-.real-welcome span{
-    position:relative;
-    z-index:1;
-    color:#78716C;
-    font-size:.78rem;
-}
-.real-stats{
+.sitemap-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:.7rem;
-    margin-bottom:1rem;
+    gap:2rem;
 }
-.real-stat{
-    padding:.8rem .65rem;
-    text-align:center;
-    border-radius:16px;
-    background:rgba(255,255,255,.96);
-    border:1px solid rgba(217,119,6,.10);
-    box-shadow:0 5px 14px rgba(0,0,0,.06);
+.sitemap-section ul{
+    list-style:none;
 }
-.real-stat .icon{
-    display:block;
-    font-size:1.25rem;
-    margin-bottom:.2rem;
+.sitemap-section li{
+    margin-bottom:.5rem;
 }
-.real-stat strong{
-    display:block;
-    color:#D97706;
-    font-size:1.15rem;
-    line-height:1;
+.sitemap-section a{
+    color:rgba(255,255,255,.75);
+    font-size:.92rem;
+    transition:var(--transition);
 }
-.real-stat span{
-    display:block;
-    margin-top:.25rem;
-    color:#78716C;
-    font-size:.65rem;
-    font-weight:700;
-}
-.real-momentum{
-    padding:.9rem 1rem;
-    margin-bottom:1rem;
-    border-radius:16px;
-    background:rgba(255,255,255,.96);
-    box-shadow:0 6px 16px rgba(0,0,0,.06);
-}
-.real-momentum-head{
-    display:flex;
-    justify-content:space-between;
-    gap:1rem;
-    align-items:center;
-    margin-bottom:.7rem;
-}
-.real-momentum-head strong{
-    color:#92400E;
-    font-size:.82rem;
-}
-.real-momentum-head span{
-    color:#D97706;
-    font-size:.7rem;
-    font-weight:800;
-}
-.real-days{
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:.4rem;
-}
-.real-day{
-    text-align:center;
-    font-size:.6rem;
-    color:#78716C;
-}
-.real-day i{
-    width:28px;
-    height:28px;
-    margin:0 auto .25rem;
-    display:grid;
-    place-items:center;
-    border-radius:50%;
-    background:linear-gradient(135deg,#D97706,#FBBF24);
+.sitemap-section a:hover{
     color:white;
-    font-style:normal;
-    font-size:.72rem;
-}
-.real-tools-title{
-    margin-bottom:.65rem;
-    color:#92400E;
-    font-size:.9rem;
-    font-weight:800;
-}
-.real-tools{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:.7rem;
-}
-.real-tool{
-    min-height:94px;
-    padding:.85rem .6rem;
-    text-align:center;
-    border-radius:15px;
-    background:rgba(255,255,255,.96);
-    border:1px solid rgba(217,119,6,.10);
-    box-shadow:0 5px 14px rgba(0,0,0,.06);
-}
-.real-tool .tool-icon{
-    width:36px;
-    height:36px;
-    margin:0 auto .45rem;
-    display:grid;
-    place-items:center;
-    border-radius:12px;
-    background:linear-gradient(135deg,#D97706,#FBBF24);
-    color:white;
-    font-size:1rem;
-}
-.real-tool strong{
-    display:block;
-    color:#92400E;
-    font-size:.72rem;
-}
-.real-tool span{
-    display:block;
-    margin-top:.2rem;
-    color:#78716C;
-    font-size:.58rem;
-    line-height:1.35;
-}
-.portal-caption{
-    margin-top:.8rem;
-    text-align:center;
-    color:rgba(255,255,255,.66);
-    font-size:.74rem;
-}
-@media(max-width:1050px){
-    .portal-showcase{grid-template-columns:1fr}
-}
-@media(max-width:760px){
-    .real-portal-topbar{align-items:flex-start}
-    .real-portal-badges{display:none}
-    .real-portal-body{grid-template-columns:1fr;min-height:0}
-    .real-portal-sidebar{display:none}
-    .real-stats{grid-template-columns:repeat(2,1fr)}
-    .real-tools{grid-template-columns:repeat(2,1fr)}
 }
 
+.footer-trust{
+    max-width:1400px;
+    margin:auto;
+    padding:2rem 0;
+    border-top:1px solid rgba(255,255,255,.15);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:2rem;
+}
+.trust-badges{
+    display:flex;
+    gap:1.5rem;
+}
+.trust-badge{
+    padding:.6rem 1.2rem;
+    border-radius:12px;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.2);
+    color:rgba(255,255,255,.85);
+    font-size:.85rem;
+    font-weight:700;
+}
+.footer-legal{
+    display:flex;
+    gap:1.5rem;
+}
+.footer-legal a{
+    color:rgba(255,255,255,.7);
+    font-size:.88rem;
+}
+.footer-legal a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    max-width:1400px;
+    margin:auto;
+    padding-top:2rem;
+    border-top:1px solid rgba(255,255,255,.15);
+    text-align:center;
+    color:rgba(255,255,255,.6);
+    font-size:.9rem;
+}
+.footer-emergency{
+    max-width:1400px;
+    margin:auto;
+    padding:2rem 0;
+    border-top:1px solid rgba(255,255,255,.15);
+    text-align:center;
+}
+.footer-emergency p{
+    color:rgba(255,255,255,.7);
+    margin-bottom:.5rem;
+}
+.footer-emergency strong{
+    color:var(--gold);
+    font-size:1.1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1080px){
+    .hero-contact{
+        position:static;
+        transform:none;
+        width:100%;
+        max-width:600px;
+        margin:3rem auto 0;
+        grid-template-columns:repeat(2,1fr);
+    }
+    .split{grid-template-columns:1fr;gap:3rem}
+    .benefit-grid{grid-template-columns:repeat(2,1fr)}
+    .footer-grid{grid-template-columns:repeat(2,1fr)}
+    .sitemap-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:900px){
+    .header-container{flex-direction:column;gap:1.5rem}
+    .header-right{width:100%;flex-direction:column;gap:1.5rem}
+    .primary-nav{width:100%;justify-content:center;flex-wrap:wrap;gap:1rem}
+    .header-cta{width:100%;justify-content:center}
+    .schedule-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:760px){
+    .topbar{padding:.6rem 1rem;font-size:.85rem}
+    .header-container{padding:.8rem 1rem}
+    .logo img{width:56px;height:56px}
+    .hero{min-height:580px}
+    .hero-inner{padding:5rem 0 4rem}
+    .hero-contact{grid-template-columns:1fr}
+    .section{padding:4.5rem 1.2rem}
+    .benefit-grid{grid-template-columns:1fr}
+    .comparison-table{font-size:.85rem}
+    .comparison-table th,
+    .comparison-table td{padding:.9rem .8rem}
+    .cta-card{padding:2.5rem 1.5rem}
+    .footer-grid{grid-template-columns:1fr}
+    .sitemap-grid{grid-template-columns:1fr}
+    .footer-trust{flex-direction:column;text-align:center}
+    .trust-badges,.footer-legal{flex-direction:column;align-items:center}
+}
 </style>
 
 <script type="application/ld+json">
@@ -1346,67 +856,31 @@ footer{
       }
     },
     {
-      "@type":"Service",
-      "@id":"https://dmhiop.com/reliable-substance-abuse-treatments/#service",
-      "name":"Outpatient Addiction Treatment Services",
-      "serviceType":[
-        "Intensive Outpatient Program",
-        "Medication-Assisted Treatment",
-        "Outpatient Medical Detox Assistance",
-        "Substance Use Counseling",
-        "Case Management"
-      ],
+      "@type":"MedicalTherapy",
+      "@id":"https://dmhiop.com/iop-benefits.html#service",
+      "name":"Intensive Outpatient Program (IOP)",
+      "description":"Structured outpatient addiction treatment with morning and evening programs that allow clients to maintain work, family, and daily responsibilities while building lasting recovery.",
       "provider":{"@id":"https://dmhiop.com/#organization"},
       "areaServed":[
         {"@type":"City","name":"Rio Rancho"},
         {"@type":"City","name":"Albuquerque"}
-      ],
-      "url":"https://dmhiop.com/reliable-substance-abuse-treatments/"
+      ]
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://dmhiop.com/iop-benefits.html",
+      "url":"https://dmhiop.com/iop-benefits.html",
+      "name":"IOP Benefits: Structured Outpatient Addiction Treatment",
+      "description":"Discover the benefits of Intensive Outpatient Program (IOP) treatment at Desert Mountain Healing IOP in Rio Rancho.",
+      "provider":{"@id":"https://dmhiop.com/#organization"}
     },
     {
       "@type":"BreadcrumbList",
       "itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://dmhiop.com/"},
-        {"@type":"ListItem","position":2,"name":"Services","item":"https://dmhiop.com/reliable-substance-abuse-treatments/"}
+        {"@type":"ListItem","position":2,"name":"IOP Benefits","item":"https://dmhiop.com/iop-benefits.html"}
       ]
     }
-    ,
-    {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {
-          "@type":"Question",
-          "name":"Can I continue working while attending treatment?",
-          "acceptedAnswer":{"@type":"Answer","text":"Many clients continue working, attending school, or caring for family while participating in outpatient treatment. Morning and evening options can make scheduling more manageable."}
-        },
-        {
-          "@type":"Question",
-          "name":"How do I know which services I need?",
-          "acceptedAnswer":{"@type":"Answer","text":"The recommended combination of services is based on an individualized assessment of clinical needs, health, goals, schedule, current risks, and available support."}
-        },
-        {
-          "@type":"Question",
-          "name":"Do you offer medication-assisted treatment?",
-          "acceptedAnswer":{"@type":"Answer","text":"Yes. When clinically appropriate, medication may be combined with counseling, structured outpatient care, case management, and continued recovery support."}
-        },
-        {
-          "@type":"Question",
-          "name":"Can you verify my insurance before I begin?",
-          "acceptedAnswer":{"@type":"Answer","text":"Yes. The team can review available benefits and explain likely next steps. Insurance verification does not guarantee payment or authorization."}
-        },
-        {
-          "@type":"Question",
-          "name":"Is outpatient detox assistance safe for everyone?",
-          "acceptedAnswer":{"@type":"Answer","text":"No. Suitability depends on substance use, withdrawal risk, medical history, home support, and other factors. Some people require inpatient or hospital-based withdrawal management."}
-        },
-        {
-          "@type":"Question",
-          "name":"What happens after IOP?",
-          "acceptedAnswer":{"@type":"Answer","text":"Clients may step down to outpatient groups, individual counseling, medication follow-up, case management, peer support, and a continuing-care plan based on progress and need."}
-        }
-      ]
-    }
-
   ]
 }
 </script>
@@ -1414,506 +888,483 @@ footer{
 
 <body>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="topbar">
+<div class="topbar-inner">Hope. Healing. Recovery. Every Day.</div>
+</div>
+
 <header>
 <div class="header-container">
-<a aria-label="Desert Mountain Healing IOP - Home" class="logo" href="/">
-<img alt="Desert Mountain Healing IOP Logo" src="/dmh-logo (1).png"/>
+<a class="logo" href="/index.html" aria-label="Desert Mountain Healing IOP - Home">
+<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
 <span>Desert Mountain Healing IOP</span>
 </a>
 
 <div class="header-right">
-<div aria-label="Client and insurance links" class="header-actions">
-<a class="insurance-link" href="/insurance-verification">Check Insurance</a>
-<a class="header-feature-link" href="/client-app/">Client App</a>
-<a class="recovery-link" href="https://myrecoverynm.org" rel="external noopener" target="_blank">
-<img alt="Recovery NM Logo" src="/recovery_logo.png"/>
-<span>Recovery NM</span>
-</a>
+<nav class="primary-nav" aria-label="Main navigation">
+<a class="nav-link" href="/index.html">Home</a>
+
+<div class="nav-item">
+<button class="nav-button" aria-haspopup="true" aria-expanded="false">Treatment</button>
+<div class="dropdown">
+<a href="/iop-benefits.html">IOP Benefits</a>
+<a href="/mat.html">Medication-Assisted Treatment</a>
+<a href="/medical-detox-assistance.html">Medical Detox Assistance</a>
+<a href="/reliable-substance-abuse-treatments.html">All Services</a>
+</div>
 </div>
 
-<nav aria-label="Main navigation" class="primary-nav">
-<a href="/">Home</a>
-<a href="/team/">Our Team</a>
-<a href="/iop-benefits/">IOP Benefits</a>
-<a aria-current="page" href="/reliable-substance-abuse-treatments/">Services</a>
-<a href="/mat/">MAT</a>
-<a href="/faq/">FAQ</a>
-<a href="/reviews/">Reviews</a>
-<a href="/contact-us/">Contact Us</a>
-<a href="/blog/">Blog</a>
+<div class="nav-item">
+<button class="nav-button" aria-haspopup="true" aria-expanded="false">About Us</button>
+<div class="dropdown">
+<a href="/team.html">Our Team</a>
+<a href="/reviews.html">Client Reviews</a>
+<a href="/faq.html">FAQ</a>
+<a href="/blog.html">Blog</a>
+</div>
+</div>
+
+<div class="nav-item">
+<button class="nav-button" aria-haspopup="true" aria-expanded="false">Client Resources</button>
+<div class="dropdown">
+<a href="/client-app.html">Recovery Portal</a>
+<a href="/insurance-verification.html">Insurance Verification</a>
+<a href="/contact-us.html">Contact Us</a>
+</div>
+</div>
 </nav>
+
+<div class="header-cta">
+<a class="btn-header-primary" href="/insurance-verification.html">Verify Insurance</a>
+<a class="btn-header-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
+</div>
 </div>
 </div>
 </header>
 
 <section class="hero">
+<div class="container">
 <div class="hero-inner">
-<div class="hero-content">
-<div class="eyebrow">One team. One plan. Real support.</div>
-<h1>Everything You Need for Recovery—Connected in One Place</h1>
-<p>Desert Mountain Healing IOP combines structured outpatient treatment, medical support, counseling, case management, peer connection, and everyday recovery tools around one individualized plan.</p>
+<div class="hero-copy">
+<span class="eyebrow">Intensive Outpatient Program</span>
+<h1>Build Lasting Recovery While <span>Living Your Life</span></h1>
+<p class="hero-lead">Desert Mountain Healing IOP provides structured addiction treatment with morning and evening programs—so you can continue working, caring for family, and maintaining daily responsibilities while developing the skills, support, and foundation for long-term sobriety.</p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="/insurance-verification">Verify Insurance &amp; Get Started</a>
+<a class="btn btn-warm" href="/insurance-verification.html">Verify Insurance</a>
+<a class="btn btn-primary" href="/contact-us.html">Talk With Our Team</a>
 <a class="btn btn-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
 </div>
-<div class="hero-proof" aria-label="Treatment highlights">
-<span>Morning and evening programs</span>
-<span>Medical and clinical coordination</span>
-<span>Serving Rio Rancho and Albuquerque</span>
+</div>
+
+<div class="hero-contact">
+<div class="hero-contact-item">
+<strong>Call Anytime</strong>
+<small><a href="tel:+15052700840">(505) 270-0840</a></small>
+</div>
+<div class="hero-contact-item">
+<strong>Get Started</strong>
+<small><a href="/insurance-verification.html">Verify Insurance</a></small>
+</div>
+<div class="hero-contact-item">
+<strong>Schedule Options</strong>
+<small>Morning & Evening Programs</small>
+</div>
+<div class="hero-contact-item">
+<strong>Location</strong>
+<small>Rio Rancho, NM</small>
+</div>
 </div>
 </div>
 </div>
 </section>
 
-<div class="trust-bar" aria-label="Program highlights">
-<div class="trust-item"><strong>IOP &amp; OP Services</strong><span>Structure that steps down with progress</span></div>
-<div class="trust-item"><strong>MAT &amp; Medical Support</strong><span>When clinically appropriate</span></div>
-<div class="trust-item"><strong>Case Management</strong><span>Help with real-life recovery barriers</span></div>
-<div class="trust-item"><strong>Recovery Portal</strong><span>Support between scheduled sessions</span></div>
+<main>
+
+<section class="section section-soft">
+<div class="container split">
+<div class="reveal">
+<span class="eyebrow">Why IOP works</span>
+<h2>Recovery That Fits Into Your Life—Not the Other Way Around</h2>
+<p>Intensive Outpatient Programs are designed for people who need structured treatment but cannot pause their entire lives to attend residential rehab.</p>
+<p>IOP allows you to receive counseling, participate in group therapy, develop coping skills, and build a recovery plan—all while staying at home, continuing employment, caring for children, attending school, or managing other responsibilities.</p>
+<p>At Desert Mountain Healing IOP, we believe recovery should be accessible, practical, and built around real life. That's why we offer both morning and evening programs, so clients can find a schedule that works for their situation.</p>
+<div class="quote">"We created this program because we believe everyone deserves a chance at recovery—regardless of their work schedule, family obligations, or life circumstances. Treatment should meet people where they are, not force them to abandon everything to get help."</div>
 </div>
 
-<main id="main-content">
-<section class="section">
-<div class="section-inner intro-grid">
-<div class="intro-copy">
-<p class="section-kicker">Comprehensive outpatient care</p>
-<h2>Recovery Is Stronger When Every Part of Treatment Works Together</h2>
-<p>Addiction can affect physical health, emotional well-being, relationships, work, housing, finances, and daily stability. Effective treatment should address more than one part of that experience.</p>
-<p>At Desert Mountain Healing IOP, clients receive coordinated support from a team that understands recovery personally and professionally. Services are selected according to each client’s assessment, health needs, responsibilities, and goals.</p>
-<p>Clients can begin developing coping skills, receiving counseling, addressing practical barriers, and building a long-term recovery plan from the beginning of care.</p>
-<a class="text-link" href="/contact-us/">Talk with our team about the right starting point →</a>
-</div>
-<div class="intro-image">
-<img alt="Welcoming reception area at Desert Mountain Healing IOP" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/frount-desk.png"/>
-<div class="intro-badge">
-<strong>Built by people who understand recovery</strong>
-<span>DMHIOP was founded by people in long-term recovery who wanted treatment to feel practical, respectful, and connected.</span>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section pathway-section">
-<div class="section-inner pathway-wrap">
-<div class="pathway-copy">
-<p class="section-kicker">Your recovery pathway</p>
-<h2>A Clear Plan from the First Call Forward</h2>
-<p>No two people enter treatment with the same needs. Some require medical stabilization, some need structured group treatment, and others need help rebuilding routines, employment, relationships, or community support.</p>
-<p>Our team identifies the safest and most useful starting point, then adjusts the plan as the client progresses.</p>
-<div class="pathway-note"><strong>Important:</strong> This pathway is flexible. Services are recommended according to individualized medical and clinical assessment—not a one-size-fits-all sequence.</div>
-</div>
-
-<div class="pathway-graphic" role="img" aria-label="Illustrated recovery pathway from assessment to long-term recovery">
-<svg viewBox="0 0 760 610" xmlns="http://www.w3.org/2000/svg">
-<defs>
-  <linearGradient id="road" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#1ba3bd"/>
-    <stop offset="1" stop-color="#117d91"/>
-  </linearGradient>
-  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#123842" flood-opacity=".16"/>
-  </filter>
-</defs>
-<rect x="16" y="16" width="728" height="578" rx="28" fill="#f5fafb"/>
-<path d="M95 500 C 170 430, 175 335, 280 330 S 405 245, 475 220 S 575 160, 660 95" fill="none" stroke="url(#road)" stroke-width="30" stroke-linecap="round" opacity=".20"/>
-<path d="M95 500 C 170 430, 175 335, 280 330 S 405 245, 475 220 S 575 160, 660 95" fill="none" stroke="url(#road)" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 14"/>
-<g font-family="Open Sans, sans-serif" filter="url(#shadow)">
-  <g transform="translate(45 450)">
-    <rect width="180" height="84" rx="18" fill="#fff"/>
-    <circle cx="26" cy="26" r="16" fill="#a7e3eb"/><text x="26" y="31" text-anchor="middle" font-weight="800" fill="#117d91">1</text>
-    <text x="52" y="29" font-size="15" font-weight="800" fill="#563c34">Assessment</text>
-    <text x="24" y="57" font-size="12" fill="#42565d">Needs, safety, goals and next steps</text>
-  </g>
-  <g transform="translate(122 340)">
-    <rect width="190" height="84" rx="18" fill="#fff"/>
-    <circle cx="26" cy="26" r="16" fill="#a7e3eb"/><text x="26" y="31" text-anchor="middle" font-weight="800" fill="#117d91">2</text>
-    <text x="52" y="29" font-size="15" font-weight="800" fill="#563c34">Medical Support</text>
-    <text x="24" y="57" font-size="12" fill="#42565d">Evaluation, MAT or detox assistance</text>
-  </g>
-  <g transform="translate(270 270)">
-    <rect width="190" height="84" rx="18" fill="#fff"/>
-    <circle cx="26" cy="26" r="16" fill="#a7e3eb"/><text x="26" y="31" text-anchor="middle" font-weight="800" fill="#117d91">3</text>
-    <text x="52" y="29" font-size="15" font-weight="800" fill="#563c34">IOP Treatment</text>
-    <text x="24" y="57" font-size="12" fill="#42565d">Groups, counseling and skill-building</text>
-  </g>
-  <g transform="translate(410 185)">
-    <rect width="190" height="84" rx="18" fill="#fff"/>
-    <circle cx="26" cy="26" r="16" fill="#a7e3eb"/><text x="26" y="31" text-anchor="middle" font-weight="800" fill="#117d91">4</text>
-    <text x="52" y="29" font-size="15" font-weight="800" fill="#563c34">Daily Support</text>
-    <text x="24" y="57" font-size="12" fill="#42565d">Portal, case management and community</text>
-  </g>
-  <g transform="translate(535 62)">
-    <rect width="180" height="96" rx="18" fill="#fff"/>
-    <circle cx="26" cy="26" r="16" fill="#a7e3eb"/><text x="26" y="31" text-anchor="middle" font-weight="800" fill="#117d91">5</text>
-    <text x="52" y="29" font-size="15" font-weight="800" fill="#563c34">Continuing Care</text>
-    <text x="24" y="57" font-size="12" fill="#42565d">OP, relapse prevention and</text>
-    <text x="24" y="74" font-size="12" fill="#42565d">long-term recovery planning</text>
-  </g>
-</g>
-<g transform="translate(540 410)">
-  <path d="M0 74 L46 25 L84 58 L122 5 L186 74 Z" fill="#d8c4ae"/>
-  <path d="M0 74 L46 25 L84 58 L122 5 L186 74" fill="none" stroke="#805d4f" stroke-width="4"/>
-  <circle cx="164" cy="17" r="13" fill="#1ba3bd"/>
-  <path d="M164 -8v12M164 30v12M139 17h12M177 17h12M146 0l8 8M174 26l8 8M182 0l-8 8M154 26l-8 8" stroke="#1ba3bd" stroke-width="4" stroke-linecap="round"/>
-</g>
-</svg>
-</div>
-</div>
-</section>
-
-<section class="section major-services">
-<div class="section-inner">
-<div class="section-head">
-<p class="section-kicker">Core treatment services</p>
-<h2>Clinical and Medical Care for Every Stage of Recovery</h2>
-<p>Each service is designed to work as part of one coordinated plan, with recommendations based on individual needs and clinical appropriateness.</p>
-</div>
-
-<article class="service-feature">
-<div class="service-media">
-<img alt="Adults participating in a supportive outpatient recovery group" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/group-circle-session.png"/>
-</div>
-<div class="service-copy">
-<div class="service-number">01</div>
-<h3>Intensive Outpatient Program</h3>
-<p>IOP provides a structured level of treatment while allowing clients to continue living at home and remain connected to family, work, school, or other responsibilities.</p>
-<ul>
-<li>Morning and evening programming Monday through Friday</li>
-<li>Group counseling and recovery education</li>
-<li>Individual counseling and treatment planning</li>
-<li>Relapse prevention, coping skills, and life skills</li>
-<li>Ongoing assessment and step-down planning</li>
-</ul>
-<a class="text-link" href="/iop-benefits/">Explore IOP benefits →</a>
-</div>
-</article>
-
-<article class="service-feature reverse">
-<div class="service-media">
-<img alt="Medication-assisted treatment services at Desert Mountain Healing IOP" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/mat-hero.png"/>
-</div>
-<div class="service-copy">
-<div class="service-number">02</div>
-<h3>Medication-Assisted Treatment</h3>
-<p>Medication may be combined with counseling and behavioral health services to support recovery from opioid or alcohol use disorders when clinically appropriate.</p>
-<ul>
-<li>Medical evaluation and medication management</li>
-<li>Coordination with counseling and IOP services</li>
-<li>Education about medication, recovery, and safety</li>
-<li>Regular follow-up based on clinical need</li>
-<li>Whole-person support rather than medication alone</li>
-</ul>
-<a class="text-link" href="/mat/">Learn about MAT →</a>
-</div>
-</article>
-
-<article class="service-feature">
-<div class="service-media">
-<img alt="Outpatient medical detox assistance and clinical support" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/medical-detox-hero.png"/>
-</div>
-<div class="service-copy">
-<div class="service-number">03</div>
-<h3>Outpatient Medical Detox Assistance</h3>
-<p>Some clients may be appropriate for outpatient medical support while managing withdrawal and beginning recovery services. Safety and appropriateness are determined through medical and clinical assessment.</p>
-<ul>
-<li>Nurse Practitioner assessment</li>
-<li>Withdrawal-symptom monitoring and support</li>
-<li>Connection to counseling and recovery planning</li>
-<li>Referral to a higher level of care when needed</li>
-<li>Individualized follow-up and safety planning</li>
-</ul>
-<a class="text-link" href="/medical-detox-assistance/">Learn about detox assistance →</a>
-</div>
-</article>
-</div>
-</section>
-
-<section class="section team-section">
-<div class="section-inner">
-<div class="section-head">
-<p class="section-kicker">You do not recover alone</p>
-<h2>Your Treatment Team Works Together</h2>
-<p>Recovery becomes more manageable when clients know who is helping, why each role matters, and how the team communicates around one treatment plan.</p>
-</div>
-<div class="team-grid">
-<article class="team-card"><div class="team-symbol">TH</div><h3>Therapist</h3><p>Supports emotional health, coping skills, relationships, insight, and recovery goals.</p></article>
-<article class="team-card"><div class="team-symbol">NP</div><h3>Nurse Practitioner</h3><p>Provides medical assessment, medication support, monitoring, and clinical coordination.</p></article>
-<article class="team-card"><div class="team-symbol">CM</div><h3>Case Manager</h3><p>Helps address employment, benefits, transportation, legal needs, housing, and healthcare.</p></article>
-<article class="team-card"><div class="team-symbol">PS</div><h3>Peer Support</h3><p>Offers recovery-focused encouragement, accountability, resources, and healthy connection.</p></article>
-<article class="team-card"><div class="team-symbol">YOU</div><h3>The Client</h3><p>Sets goals, practices new skills, communicates needs, and takes an active role in recovery.</p></article>
+<div class="glass-card reveal">
+<h3>Recovery begins with hope</h3>
+<p>Desert Mountain Healing IOP was founded by Sean Roberts and Gary Gamboa—two people in long-term recovery who wanted treatment to feel more compassionate, more practical, and more connected to real life.</p>
+<p>They built this program on the belief that <strong>lasting recovery comes from treating the whole person—not just the addiction.</strong></p>
+<p>Whether you're seeking help for the first time or returning after a relapse, you will be welcomed without judgment and supported every step of the way.</p>
+<p style="margin-bottom:0"><strong>Recovery begins with hope, grows through connection, and succeeds through compassionate care.</strong></p>
 </div>
 </div>
 </section>
 
 <section class="section">
-<div class="section-inner">
+<div class="container">
 <div class="section-head">
-<p class="section-kicker">Additional recovery support</p>
-<h2>More Than a Single Appointment or Group</h2>
-<p>Clinical treatment is strengthened by practical support, healthy relationships, continued education, and tools that help recovery carry into everyday life.</p>
+<p class="section-kicker">What makes IOP different</p>
+<h2>The Benefits of Intensive Outpatient Treatment</h2>
+<p>IOP provides structure, accountability, clinical support, and recovery education—while allowing you to remain connected to your life, family, and community.</p>
 </div>
 
-<div class="support-grid">
-<article class="support-card"><div class="support-icon">1:1</div><h3>Individual Counseling</h3><p>Address triggers, coping skills, emotional health, relationships, personal goals, and barriers to sustained recovery.</p><a href="/contact-us/">Ask about counseling →</a></article>
-<article class="support-card"><div class="support-icon">GRP</div><h3>Group Therapy &amp; Education</h3><p>Develop communication, accountability, insight, coping strategies, and peer connection in a supportive setting.</p><a href="/iop-benefits/">Explore IOP groups →</a></article>
-<article class="support-card"><div class="support-icon">CM</div><h3>Case Management</h3><p>Receive help addressing employment, benefits, transportation, healthcare, legal obligations, housing, and practical needs.</p><a href="/contact-us/">Ask about case management →</a></article>
-<article class="support-card"><div class="support-icon">RP</div><h3>Relapse Prevention</h3><p>Recognize warning signs, understand triggers, strengthen coping strategies, and prepare for high-risk situations.</p><a href="/iop-benefits/">Explore relapse prevention →</a></article>
-<article class="support-card"><div class="support-icon">FAM</div><h3>Family &amp; Recovery Support</h3><p>When appropriate, families can receive education and support to improve communication and develop healthier boundaries.</p><a href="/contact-us/">Ask about family support →</a></article>
-<article class="support-card"><div class="support-icon">CC</div><h3>Continuing Care</h3><p>Step down from intensive services with continued outpatient groups, individual support, and long-term recovery planning.</p><a href="/contact-us/">Plan continuing care →</a></article>
+<div class="benefit-grid">
+<div class="benefit-card">
+<div class="benefit-icon">🏠</div>
+<h3>Stay Home, Stay Connected</h3>
+<p>You remain in your own home, surrounded by family and support systems, rather than being separated for weeks or months in residential treatment.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">💼</div>
+<h3>Continue Working or School</h3>
+<p>Morning and evening programs allow you to maintain employment, attend classes, or fulfill other daily obligations while receiving structured treatment.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">👨‍👩‍👧</div>
+<h3>Care for Your Family</h3>
+<p>IOP lets parents continue caring for children, partners maintain household responsibilities, and families stay together during treatment.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🎯</div>
+<h3>Structured Treatment Schedule</h3>
+<p>Regular group counseling, individual therapy, relapse prevention education, and recovery planning provide accountability and clinical support.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🤝</div>
+<h3>Peer Support & Connection</h3>
+<p>Group therapy creates meaningful connections with others in recovery, reducing isolation and building a healthy support network.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">💰</div>
+<h3>More Affordable Than Residential</h3>
+<p>Outpatient treatment is typically more cost-effective than residential programs, and many insurance plans provide coverage for IOP services.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🧠</div>
+<h3>Real-World Skill Building</h3>
+<p>You practice coping strategies, trigger management, and relapse prevention in your actual environment—where recovery happens.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🔄</div>
+<h3>Flexible Step-Down Approach</h3>
+<p>As you progress, treatment can step down from IOP to outpatient counseling, medication management, and continuing care—maintaining support as independence grows.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🌟</div>
+<h3>Whole-Person Care</h3>
+<p>Treatment addresses mental health, physical health, relationships, employment, housing, and other factors that impact long-term recovery.</p>
+</div>
 </div>
 </div>
 </section>
 
+<section class="section section-sand">
+<div class="container">
+<div class="section-head">
+<p class="section-kicker">IOP vs. Other Treatment Levels</p>
+<h2>Understanding Your Treatment Options</h2>
+<p>Every person's situation is different. The right level of care depends on medical needs, substance use history, withdrawal risk, home support, and personal circumstances.</p>
+</div>
 
-<section class="section app-section">
-<div class="section-inner portal-showcase">
-<div class="portal-copy">
-<p class="section-kicker" style="color:#FBBF24;">Exclusive to DMHIOP clients</p>
-<h2>Your Recovery Journey Continues Between Sessions</h2>
-<p>The DMHIOP Recovery Portal gives clients one place to track progress, build healthy habits, stay connected, and use recovery tools throughout the week.</p>
-<ul class="portal-feature-list">
-<li>Daily encouragement and personalized check-ins</li>
-<li>Meeting attendance, journaling, goals, and progress tracking</li>
-<li>Recovery literature, meditation, relapse-prevention tools, and affirmations</li>
-<li>Points, achievements, milestones, and meaningful rewards</li>
-<li>Appointments, community support, and continued engagement after treatment</li>
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Treatment Feature</th>
+<th>Residential/Inpatient</th>
+<th>Intensive Outpatient (IOP)</th>
+<th>Standard Outpatient</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Live at Home</td>
+<td><span class="check-no">✗</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Continue Work/School</td>
+<td><span class="check-no">✗</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Stay With Family</td>
+<td><span class="check-no">✗</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Structured Daily Schedule</td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-no">✗</span></td>
+</tr>
+<tr>
+<td>Group Therapy</td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Individual Counseling</td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Relapse Prevention Education</td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Medical Detox Available</td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓ (Outpatient)</span></td>
+<td><span class="check-no">✗</span></td>
+</tr>
+<tr>
+<td>Typical Cost Level</td>
+<td>Highest</td>
+<td>Moderate</td>
+<td>Lowest</td>
+</tr>
+<tr>
+<td>Best For</td>
+<td>High medical risk, unstable environment</td>
+<td>Stable home, need structure, can manage daily life</td>
+<td>Continuing care, stable recovery, lower intensity needs</td>
+</tr>
+</tbody>
+</table>
+
+<div class="quote" style="margin-top:2rem">
+<strong>Important:</strong> The right level of care is determined through clinical assessment. Our team will help you understand which option is safest and most appropriate for your situation.
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-head">
+<p class="section-kicker">Morning & Evening Options</p>
+<h2>Choose a Schedule That Works for Your Life</h2>
+<p>We understand that everyone's situation is different. That's why we offer both morning and evening IOP programs.</p>
+</div>
+
+<div class="schedule-grid">
+<div class="schedule-card">
+<div class="schedule-icon">🌅</div>
+<h3>Morning Program</h3>
+<p>Ideal for clients who work evenings, have afternoon commitments, or prefer daytime structure.</p>
+<ul>
+<li>Monday through Friday</li>
+<li>Morning group sessions</li>
+<li>Individual counseling as scheduled</li>
+<li>Leaves afternoons and evenings free</li>
+<li>Great for second-shift workers</li>
 </ul>
-<a class="btn btn-primary" href="/client-app/">Explore the Recovery Portal</a>
 </div>
 
-<div>
-<div class="real-portal-shell" aria-label="Static preview of the Desert Mountain Healing IOP Recovery Portal">
-<div class="real-portal-topbar">
-<div class="real-portal-brand">
-<img src="https://i.imgur.com/zj3gqGG.png" alt="Desert Mountain Healing IOP portal logo"/>
-<div>
-<strong>Your Recovery Journey</strong>
-<span>DMHIOP Recovery Portal</span>
-</div>
-</div>
-<div class="real-portal-badges">
-<div class="real-badge streak">🔥 14-Day Streak</div>
-<div class="real-badge points">⭐ 640 Points</div>
+<div class="schedule-card">
+<div class="schedule-icon">🌆</div>
+<h3>Evening Program</h3>
+<p>Perfect for clients who work or attend school during the day and need treatment after hours.</p>
+<ul>
+<li>Monday through Friday</li>
+<li>Evening group sessions</li>
+<li>Individual counseling as scheduled</li>
+<li>Work or attend school during the day</li>
+<li>Great for first-shift workers and students</li>
+</ul>
 </div>
 </div>
 
-<div class="real-portal-body">
-<aside class="real-portal-sidebar" aria-hidden="true">
-<div class="nav-item active"><span class="nav-icon">⌂</span>Dashboard</div>
-<div class="nav-item"><span class="nav-icon">✓</span>Check-In</div>
-<div class="nav-item"><span class="nav-icon">◎</span>Goals</div>
-<div class="nav-item"><span class="nav-icon">✎</span>Journal</div>
-<div class="nav-item"><span class="nav-icon">⌖</span>Meetings</div>
-<div class="nav-item"><span class="nav-icon">▤</span>Resources</div>
-<div class="nav-item"><span class="nav-icon">↗</span>Progress</div>
-<div class="nav-item"><span class="nav-icon">★</span>Rewards</div>
-<div class="nav-item"><span class="nav-icon">☺</span>Profile</div>
-</aside>
-
-<div class="real-portal-main">
-<div class="real-welcome">
-<strong>Good Morning, Sean! 💛</strong>
-<span>You're doing amazing. Keep going—every step counts.</span>
-</div>
-
-<div class="real-stats">
-<div class="real-stat"><span class="icon">🏠</span><strong>15</strong><span>Meetings Attended</span></div>
-<div class="real-stat"><span class="icon">📖</span><strong>8</strong><span>Journal Entries</span></div>
-<div class="real-stat"><span class="icon">🎯</span><strong>3</strong><span>Goals Achieved</span></div>
-<div class="real-stat"><span class="icon">🏆</span><strong>640</strong><span>Total Points</span></div>
-</div>
-
-<div class="real-momentum">
-<div class="real-momentum-head">
-<strong>🔥 Your Momentum</strong>
-<span>Two-week warrior</span>
-</div>
-<div class="real-days">
-<div class="real-day"><i>✓</i>Mon</div>
-<div class="real-day"><i>✓</i>Tue</div>
-<div class="real-day"><i>✓</i>Wed</div>
-<div class="real-day"><i>✓</i>Thu</div>
-<div class="real-day"><i>✓</i>Fri</div>
-<div class="real-day"><i>✓</i>Sat</div>
-<div class="real-day"><i>★</i>Sun</div>
-</div>
-</div>
-
-<div class="real-tools-title">🌟 Your Recovery Tools</div>
-<div class="real-tools">
-<div class="real-tool"><div class="tool-icon">🏠</div><strong>Meeting Guide</strong><span>Find support and check in</span></div>
-<div class="real-tool"><div class="tool-icon">✎</div><strong>Journal</strong><span>Reflect and share your story</span></div>
-<div class="real-tool"><div class="tool-icon">◎</div><strong>Goals</strong><span>Set intentions and track progress</span></div>
-<div class="real-tool"><div class="tool-icon">🧘</div><strong>Meditation</strong><span>Find calm and practice mindfulness</span></div>
-<div class="real-tool"><div class="tool-icon">🎁</div><strong>Rewards</strong><span>Celebrate engagement and wins</span></div>
-<div class="real-tool"><div class="tool-icon">💬</div><strong>Support</strong><span>Access encouragement and resources</span></div>
-</div>
-</div>
-</div>
-</div>
-<div class="portal-caption">Static preview based on the actual DMHIOP Recovery Portal dashboard.</div>
+<div class="quote" style="margin-top:2rem">
+Both programs provide the same high-quality clinical care, group therapy, individual counseling, relapse prevention education, and recovery planning. The only difference is the time of day sessions are held.
 </div>
 </div>
 </section>
 
-
-<section class="section facility-section">
-<div class="section-inner facility-grid">
-<div class="facility-copy">
-<p class="section-kicker">A real place for real recovery</p>
-<h2>See Where Treatment Happens</h2>
-<p>Our Rio Rancho facility is designed to feel professional, comfortable, and welcoming. Clients have space for group discussion, education, individual counseling, medical care, and practical recovery planning.</p>
-<p>These are real images from Desert Mountain Healing IOP so prospective clients and families can see the environment before taking the next step.</p>
-<a class="text-link" href="/contact-us/">Schedule a conversation with our team →</a>
+<section class="section section-dark">
+<div class="container split">
+<div class="reveal">
+<span class="eyebrow" style="color:var(--gold)">What to expect</span>
+<h2 style="color:white">What Does IOP Treatment Include?</h2>
+<p style="color:rgba(255,255,255,.88)">Intensive Outpatient Programs at Desert Mountain Healing IOP combine clinical treatment, peer support, skill-building, and practical recovery planning.</p>
+<p style="color:rgba(255,255,255,.88)"><strong style="color:white">Group Counseling:</strong> Participate in structured group therapy sessions focused on recovery education, relapse prevention, coping skills, communication, accountability, and peer connection.</p>
+<p style="color:rgba(255,255,255,.88)"><strong style="color:white">Individual Therapy:</strong> Work one-on-one with a counselor to address personal triggers, mental health concerns, relationships, trauma, goals, and individualized treatment planning.</p>
+<p style="color:rgba(255,255,255,.88)"><strong style="color:white">Relapse Prevention:</strong> Learn to recognize warning signs, manage triggers, develop healthy coping strategies, and prepare for high-risk situations.</p>
+<p style="color:rgba(255,255,255,.88)"><strong style="color:white">Life Skills & Recovery Planning:</strong> Build practical skills for daily life, employment, relationships, communication, stress management, and long-term recovery.</p>
 </div>
-<div class="facility-gallery">
-<img alt="Circle-style therapy room at Desert Mountain Healing IOP" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/group-circle-session.png"/>
-<img alt="Classroom group room at Desert Mountain Healing IOP" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/group-classroom-session.png"/>
-<img alt="Front desk and reception at Desert Mountain Healing IOP" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/frount-desk.png"/>
+
+<div class="glass-card reveal">
+<h3>Beyond the Sessions</h3>
+<p>Treatment doesn't end when group is over. Clients have access to:</p>
+<ul style="list-style:none;padding:0">
+<li style="padding:.5rem 0;padding-left:1.8rem;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Case management for practical needs</li>
+<li style="padding:.5rem 0;padding-left:1.8rem;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Medical support when appropriate</li>
+<li style="padding:.5rem 0;padding-left:1.8rem;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Exclusive Recovery Portal for daily engagement</li>
+<li style="padding:.5rem 0;padding-left:1.8rem;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Peer support and community connection</li>
+<li style="padding:.5rem 0;padding-left:1.8rem;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Continuing care and step-down planning</li>
+</ul>
+<p style="margin-top:1rem;margin-bottom:0"><strong>Recovery is about more than just attending sessions. It's about building a new life.</strong></p>
 </div>
 </div>
 </section>
 
-<section class="section difference">
-<div class="section-inner">
-<div class="section-head">
-<p class="section-kicker">The DMHIOP difference</p>
-<h2>Care Designed Around the Whole Person</h2>
-<p>Our program connects clinical treatment, medical support, practical assistance, recovery technology, and continuing care in one coordinated setting.</p>
+<section class="section section-soft">
+<div class="container split">
+<div class="reveal">
+<span class="eyebrow">Treatment that respects your dignity</span>
+<h2>Founded by People Who Understand Recovery</h2>
+<p>Desert Mountain Healing IOP was created by Sean Roberts and Gary Gamboa because they believed addiction treatment could be delivered with greater compassion, integrity, accountability, and hope.</p>
+<p>After experiencing recovery firsthand, they recognized that lasting recovery requires more than simply treating addiction. It requires hope, accountability, evidence-based care, and a treatment team that truly sees the person behind the diagnosis.</p>
+<p>That belief became the foundation of Desert Mountain Healing IOP.</p>
+<div class="quote">Today, every client who walks through our doors is treated as an individual—not a number. We believe recovery is possible for everyone, and our mission is to provide compassionate, evidence-based treatment that empowers people to rebuild their lives.</div>
 </div>
-<div class="difference-grid">
-<div class="difference-item"><div class="check">✓</div><h3>Coordinated Care</h3><p>Medical and behavioral health services are organized around an individualized treatment plan.</p></div>
-<div class="difference-item"><div class="check">✓</div><h3>Recovery Starts on Day One</h3><p>Clients begin counseling, recovery planning, and supportive services from the beginning of care.</p></div>
-<div class="difference-item"><div class="check">✓</div><h3>Flexible Programming</h3><p>Morning and evening options help clients balance recovery with work, school, and family responsibilities.</p></div>
-<div class="difference-item"><div class="check">✓</div><h3>Practical Case Management</h3><p>Our team helps address real-life barriers that can interfere with treatment and long-term stability.</p></div>
-<div class="difference-item"><div class="check">✓</div><h3>Exclusive Recovery Portal</h3><p>Custom technology extends engagement, goals, resources, and recovery activities beyond sessions.</p></div>
-<div class="difference-item"><div class="check">✓</div><h3>Continuing Care</h3><p>Treatment can step down gradually so clients continue receiving support as independence grows.</p></div>
+
+<div class="glass-card reveal">
+<h3>You Will Be Welcomed Here</h3>
+<p>Whether you're seeking help for the first time or returning after a relapse, you will be welcomed without judgment.</p>
+<p>Our team understands the courage it takes to ask for help. We know that recovery isn't linear, that setbacks happen, and that what matters most is taking the next right step forward.</p>
+<p style="margin-bottom:0"><strong>Recovery begins with hope, grows through connection, and succeeds through compassionate care.</strong></p>
 </div>
 </div>
 </section>
 
-<section class="section scholarship-section">
-<div class="section-inner scholarship-grid">
-<div class="scholarship-copy">
-<p class="section-kicker" style="color:#a7e3eb;">Recovery NM</p>
-<h2>Financial Barriers Should Not Decide Who Gets a Chance at Recovery</h2>
-<p>Recovery NM is a public charity created to help New Mexico residents access substance use treatment when insurance or personal finances do not cover the full cost.</p>
-<p>Scholarship availability depends on funding, eligibility, program requirements, and treatment-center participation. Recovery NM is separate from insurance verification and does not guarantee funding.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="https://myrecoverynm.org" rel="external noopener" target="_blank">Visit Recovery NM</a>
-<a class="btn btn-secondary" href="/contact-us/">Ask About Options</a>
-</div>
-</div>
-<div class="scholarship-panel">
-<img alt="Recovery NM Logo" src="/recovery_logo.png"/>
-<h3>Everyone deserves an opportunity to recover.</h3>
-<p>Community donations and partnerships help create treatment scholarships for uninsured and underinsured New Mexico residents.</p>
-<a class="text-link" style="color:#a7e3eb;" href="https://myrecoverynm.org" rel="external noopener" target="_blank">Learn how Recovery NM helps →</a>
-</div>
-</div>
-</section>
-
-<section class="section" aria-label="Program strengths">
-<div class="section-head">
-<p class="section-kicker">Treatment built for real life</p>
-<h2>Support That Continues Beyond One Service</h2>
-</div>
-<div class="outcomes-strip">
-<div class="outcome"><div class="outcome-icon">AM</div><strong>Morning Programs</strong><span>Options for clients who need daytime structure.</span></div>
-<div class="outcome"><div class="outcome-icon">PM</div><strong>Evening Programs</strong><span>Support for work, school, or family schedules.</span></div>
-<div class="outcome"><div class="outcome-icon">MD</div><strong>Medical Support</strong><span>Evaluation and medication services when appropriate.</span></div>
-<div class="outcome"><div class="outcome-icon">CM</div><strong>Case Management</strong><span>Help with practical barriers to stability.</span></div>
-<div class="outcome"><div class="outcome-icon">APP</div><strong>Recovery Portal</strong><span>Engagement and resources between sessions.</span></div>
-<div class="outcome"><div class="outcome-icon">OP</div><strong>Continuing Care</strong><span>Step-down support for long-term progress.</span></div>
-</div>
-</section>
-
-<section class="insurance">
-<div class="insurance-card">
-<p class="section-kicker" style="color:#a7e3eb;">Insurance and admissions</p>
-<h2>Let Us Help You Understand the Next Step</h2>
-<p>We work with a range of insurance plans and can review your benefits before admission. Coverage depends on the specific plan, eligibility, authorization requirements, deductibles, copayments, and medical-necessity criteria. Verification of benefits is not a guarantee of payment.</p>
-<div class="insurance-actions">
-<a class="btn btn-primary" href="/insurance-verification">Check Insurance</a>
+<section class="pre-footer-cta">
+<div class="cta-card">
+<p class="section-kicker">Take the first step</p>
+<h2>You Don't Have to Wait to Start Recovery</h2>
+<p>Speak with our team about IOP benefits, scheduling options, insurance verification, and how we can support you or someone you care about. Recovery is possible, and help is available today.</p>
+<div class="cta-actions">
+<a class="btn btn-warm" href="/insurance-verification.html">Verify Insurance</a>
+<a class="btn btn-primary" href="/contact-us.html">Contact Our Team</a>
 <a class="btn btn-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
-<a class="btn btn-secondary" href="/contact-us/">Contact Us</a>
 </div>
 </div>
 </section>
 
-<section class="section faq">
-<div class="section-inner">
-<div class="section-head">
-<p class="section-kicker">Common questions</p>
-<h2>Getting Started with Treatment</h2>
-</div>
-<div class="faq-grid">
-<article class="faq-item"><h3>Can I continue working while attending treatment?</h3><p>Many clients continue working, attending school, or caring for family while participating in outpatient treatment. Morning and evening options can make scheduling more manageable.</p></article>
-<article class="faq-item"><h3>How do I know which services I need?</h3><p>The recommended combination of services is based on an individualized assessment of clinical needs, health, goals, schedule, current risks, and available support.</p></article>
-<article class="faq-item"><h3>Do you offer medication-assisted treatment?</h3><p>Yes. When clinically appropriate, medication may be combined with counseling, structured outpatient care, case management, and continued recovery support.</p></article>
-<article class="faq-item"><h3>Can you verify my insurance before I begin?</h3><p>Yes. Our team can review available benefits and explain likely next steps. Insurance verification does not guarantee payment or authorization.</p></article>
-<article class="faq-item"><h3>Is outpatient detox assistance safe for everyone?</h3><p>No. Suitability depends on substance use, withdrawal risk, medical history, home support, and other factors. Some people require inpatient or hospital-based withdrawal management.</p></article>
-<article class="faq-item"><h3>What happens after IOP?</h3><p>Clients may step down to outpatient groups, individual counseling, medication follow-up, case management, peer support, and a continuing-care plan based on progress and need.</p></article>
-</div>
-</div>
-</section>
-
-<section class="final-cta">
-<div class="final-cta-card">
-<p class="section-kicker">A new day can begin here</p>
-<h2>You Do Not Have to Figure Out Recovery by Yourself</h2>
-<p>Speak with the Desert Mountain Healing IOP team about assessment, treatment options, scheduling, insurance verification, and the safest next step for you or someone you care about.</p>
-<div class="final-actions">
-<a class="btn btn-primary" href="/insurance-verification">Verify Insurance</a>
-<a class="btn btn-outline" href="/contact-us/">Contact Our Team</a>
-<a class="btn btn-outline" href="tel:+15052700840">Call (505) 270-0840</a>
-</div>
-</div>
-</section>
 </main>
 
 <footer>
-<div class="footer-content">
+<div class="footer-grid">
+<div class="footer-brand">
+<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
+<p>Compassionate, evidence-based outpatient addiction treatment serving Rio Rancho and Albuquerque, New Mexico.</p>
+<p><strong>Hope. Healing. Recovery. Every Day.</strong></p>
+</div>
+
 <div class="footer-section">
-<img alt="Desert Mountain Healing IOP Logo" src="/dmh-logo (1).png" style="max-width:150px;margin-bottom:1rem;"/>
-<h3>Contact Us</h3>
+<h4>Contact</h4>
+<div class="footer-contact">
+<p><strong>Phone:</strong><br/><a href="tel:+15052700840">(505) 270-0840</a></p>
 <p><strong>Address:</strong><br/>3301 Southern Blvd SE, Suite 105<br/>Rio Rancho, NM 87124</p>
-<p><strong>Phone:</strong> <a href="tel:+15052700840">(505) 270-0840</a></p>
-<p><strong>Email:</strong> <a href="mailto:sean_roberts@dmhiop.com">Email Us</a></p>
+<p><strong>Hours:</strong><br/>Mon-Fri: 8:00 AM - 8:00 PM<br/>Sat: By appointment</p>
+</div>
 </div>
 
 <div class="footer-section">
-<h3>Office Hours</h3>
-<p><strong>Monday-Friday:</strong><br/>8:00 AM-8:00 PM</p>
-<p><strong>Saturday:</strong><br/>8:00 AM-3:00 PM by appointment</p>
-<p><strong>Sunday:</strong><br/>Closed</p>
-</div>
-
-<div class="footer-section">
-<h3>Quick Links</h3>
+<h4>Quick Links</h4>
 <ul class="footer-links">
-<li><a href="/">Home</a></li>
-<li><a href="/team/">Our Team</a></li>
-<li><a href="/iop-benefits/">IOP Benefits</a></li>
-<li><a href="/reliable-substance-abuse-treatments/">Services</a></li>
-<li><a href="/mat/">Medication-Assisted Treatment</a></li>
-<li><a href="/medical-detox-assistance/">Medical Detox Assistance</a></li>
-<li><a href="/client-app/">Client App</a></li>
-<li><a href="/insurance-verification">Check Insurance Coverage</a></li>
+<li><a href="/index.html">Home</a></li>
+<li><a href="/iop-benefits.html">IOP Benefits</a></li>
+<li><a href="/mat.html">Medication-Assisted Treatment</a></li>
+<li><a href="/reliable-substance-abuse-treatments.html">All Services</a></li>
+<li><a href="/team.html">Our Team</a></li>
+<li><a href="/reviews.html">Reviews</a></li>
 </ul>
 </div>
 
 <div class="footer-section">
-<h3>Service Area</h3>
-<p><strong>Rio Rancho &amp; Albuquerque Metro</strong></p>
-<p>We provide compassionate outpatient addiction and mental health treatment for adults in Rio Rancho, Albuquerque, and surrounding New Mexico communities.</p>
+<h4>Resources</h4>
+<ul class="footer-links">
+<li><a href="/insurance-verification.html">Insurance Verification</a></li>
+<li><a href="/client-app.html">Recovery Portal</a></li>
+<li><a href="/faq.html">FAQ</a></li>
+<li><a href="/blog.html">Blog</a></li>
+<li><a href="/contact-us.html">Contact Us</a></li>
+<li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM</a></li>
+</ul>
 </div>
 </div>
 
+<div class="footer-sitemap">
+<h4>Complete Site Directory</h4>
+<div class="sitemap-grid">
+<div class="sitemap-section">
+<strong style="color:var(--teal-light);display:block;margin-bottom:.7rem">Treatment Programs</strong>
+<ul>
+<li><a href="/iop-benefits.html">IOP Benefits</a></li>
+<li><a href="/mat.html">Medication-Assisted Treatment</a></li>
+<li><a href="/medical-detox-assistance.html">Medical Detox Assistance</a></li>
+<li><a href="/reliable-substance-abuse-treatments.html">All Services</a></li>
+</ul>
+</div>
+
+<div class="sitemap-section">
+<strong style="color:var(--teal-light);display:block;margin-bottom:.7rem">About Us</strong>
+<ul>
+<li><a href="/team.html">Our Team</a></li>
+<li><a href="/reviews.html">Client Reviews</a></li>
+<li><a href="/faq.html">Frequently Asked Questions</a></li>
+<li><a href="/blog.html">Recovery Blog</a></li>
+</ul>
+</div>
+
+<div class="sitemap-section">
+<strong style="color:var(--teal-light);display:block;margin-bottom:.7rem">Client Resources</strong>
+<ul>
+<li><a href="/insurance-verification.html">Insurance Verification</a></li>
+<li><a href="/client-app.html">Recovery Portal</a></li>
+<li><a href="/contact-us.html">Contact Us</a></li>
+<li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM Scholarships</a></li>
+</ul>
+</div>
+
+<div class="sitemap-section">
+<strong style="color:var(--teal-light);display:block;margin-bottom:.7rem">Service Area</strong>
+<ul>
+<li><a href="/index.html">Rio Rancho Treatment</a></li>
+<li><a href="/index.html">Albuquerque IOP</a></li>
+<li><a href="/index.html">New Mexico Recovery</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="footer-trust">
+<div class="trust-badges">
+<div class="trust-badge">🏥 Licensed Treatment Provider</div>
+<div class="trust-badge">✓ Insurance Accepted</div>
+<div class="trust-badge">🌟 Experienced Team</div>
+</div>
+<div class="footer-legal">
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms-of-service.html">Terms of Service</a>
+<a href="/hipaa-notice.html">HIPAA Notice</a>
+</div>
+</div>
+
+<div class="footer-emergency">
+<p><strong>Crisis Support Available 24/7</strong></p>
+<p>If you or someone you know is in crisis, call <strong>988</strong> (Suicide & Crisis Lifeline) or <strong>911</strong> for immediate help.</p>
+</div>
+
 <div class="footer-bottom">
-<p>© 2026 Desert Mountain Healing IOP. All rights reserved.</p>
+<p>© 2026 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
 </div>
 </footer>
+
 </body>
 </html>
