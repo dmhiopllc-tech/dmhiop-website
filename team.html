@@ -14,11 +14,11 @@
 <meta content="addiction treatment team Rio Rancho, IOP therapists, recovery counselors, addiction medicine, behavioral health staff, New Mexico treatment professionals" name="keywords"/>
 <meta content="Desert Mountain Healing IOP" name="author"/>
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-<link href="https://dmhiop.com/team.html" rel="canonical"/>
+<link href="https://dmhiop.com/team/" rel="canonical"/>
 <meta content="Our Compassionate Treatment Team | Desert Mountain Healing IOP" property="og:title"/>
 <meta content="Meet our expert team of addiction treatment professionals who understand recovery personally." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://dmhiop.com/team.html" property="og:url"/>
+<meta content="https://dmhiop.com/team/" property="og:url"/>
 <meta content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/team-hero.jpg" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <meta content="Desert Mountain Healing IOP" property="og:site_name"/>
@@ -49,35 +49,7 @@
     "addressCountry": "US"
   },
   "telephone": "+1-505-270-0840",
-  "medicalSpecialty": "Addiction Medicine",
-  "employee": [
-    {
-      "@type": "Person",
-      "name": "Sean Roberts",
-      "jobTitle": "Co-Founder & Operations Director",
-      "url": "https://dmhiop.com/sean-roberts.html"
-    },
-    {
-      "@type": "Person",
-      "name": "Gary Gamboa",
-      "jobTitle": "Co-Founder & Program Director",
-      "url": "https://dmhiop.com/gary-gamboa.html"
-    },
-    {
-      "@type": "Person",
-      "name": "Robert Galligan",
-      "jobTitle": "Clinical Director",
-      "credentials": "M.Ed., LPCC, LADAC",
-      "url": "https://dmhiop.com/bob-galligan.html"
-    },
-    {
-      "@type": "Person",
-      "name": "Jennifer Barela",
-      "jobTitle": "Psychiatric Nurse Practitioner",
-      "credentials": "CNP",
-      "url": "https://dmhiop.com/jennifer-barela.html"
-    }
-  ]
+  "medicalSpecialty": "Addiction Medicine"
 }
 </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -148,268 +120,137 @@
       color:var(--teal-700);
       font-size:.82rem;
       font-weight:800;
-      letter-spacing:.06em;
+      letter-spacing:.14em;
       text-transform:uppercase;
     }
-    .eyebrow:before{
-      content:"";
-      width:34px;
-      height:2px;
-      background:currentColor;
+    .eyebrow::before{
+      width:34px;height:3px;border-radius:99px;background:var(--gold);content:"";
     }
-
+    .section-heading{max-width:790px;margin:0 auto 48px;text-align:center}
+    .section-heading p{color:var(--muted);font-size:1.12rem}
     .btn{
+      min-height:52px;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:.5rem;
-      min-height:56px;
-      padding:0 2rem;
-      border:none;
-      border-radius:52px;
-      font-size:.88rem;
-      font-weight:800;
-      letter-spacing:.015em;
-      text-align:center;
+      gap:.55rem;
+      padding:0 1.45rem;
+      border:1px solid transparent;
+      border-radius:999px;
       text-decoration:none;
-      cursor:pointer;
-      transition:all .22s cubic-bezier(.25,1,.35,1);
+      font-weight:800;
+      transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
     }
+    .btn:hover{transform:translateY(-2px)}
     .btn-primary{
       color:#fff;
-      background:
-        radial-gradient(circle at 45% 35%,var(--teal-600),transparent 72%),
-        linear-gradient(135deg,var(--teal-700),var(--teal-900));
-      box-shadow:0 6px 18px rgba(6,55,67,.3);
-    }
-    .btn-primary:hover{
-      box-shadow:0 10px 34px rgba(6,55,67,.45);
-      transform:translateY(-2px);
+      background:linear-gradient(135deg,var(--teal-700),var(--teal-500));
+      box-shadow:0 14px 34px rgba(27,163,189,.28);
     }
     .btn-secondary{
       color:var(--teal-950);
       background:#fff;
-      border:2px solid var(--teal-500);
+      border-color:rgba(6,55,67,.14);
+      box-shadow:var(--shadow-sm);
     }
-    .btn-secondary:hover{
-      background:var(--teal-050);
-    }
-    .btn-warm{
-      color:#fff;
-      background:
-        radial-gradient(circle at 50% 45%,#ffa850,transparent 65%),
-        linear-gradient(135deg,var(--gold),#d87419);
-      box-shadow:0 6px 18px rgba(239,139,34,.34);
-    }
-    .btn-warm:hover{
-      box-shadow:0 10px 32px rgba(239,139,34,.5);
-      transform:translateY(-2px);
-    }
-
-    /* =========================================================
-       HEADER & NAVIGATION
-    ========================================================= */
-    .topbar{
-      padding:.7rem 0;
-      color:#fff;
-      background:linear-gradient(135deg,var(--teal-950),var(--teal-800));
-      font-size:.78rem;
-      font-weight:700;
-    }
+    .btn-warm{color:#fff;background:var(--gold);box-shadow:0 12px 28px rgba(239,139,34,.3)}
+    .topbar{color:#fff;background:var(--teal-950);font-size:.9rem}
     .topbar-inner{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:.7rem;
-    }
-    .topbar-actions{
-      display:flex;
-      gap:1.2rem;
-    }
-    .topbar a{
-      color:inherit;
-      text-decoration:none;
-    }
-    .topbar a:hover{
-      color:var(--gold);
-    }
-
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:98;
-      background:#fff;
-      box-shadow:0 2px 18px rgba(6,55,67,.08);
-    }
-    .nav-wrap{
+      min-height:42px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      min-height:96px;
-      gap:1.2rem;
-    }
-    .brand img{
-      width:225px;
-      height:auto;
-    }
-
-    .menu-toggle{
-      display:none;
-      min-width:52px;
-      min-height:52px;
-      padding:.5rem;
-      border:2px solid var(--teal-500);
-      border-radius:12px;
-      color:var(--teal-700);
-      background:#fff;
-      font-size:1.4rem;
-      font-weight:700;
-      cursor:pointer;
-    }
-
-    .site-nav{
-      display:flex;
-      align-items:center;
       gap:1rem;
     }
-    .site-nav>a{
-      padding:1rem;
-      color:var(--ink);
-      font-size:.82rem;
-      font-weight:700;
-      text-decoration:none;
-      transition:color .2s;
+    .topbar a{font-weight:700;text-decoration:none}
+    .topbar-actions{display:flex;align-items:center;gap:1rem}
+    .site-header{
+      position:sticky;top:0;z-index:100;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(6,55,67,.08);
+      backdrop-filter:blur(14px);
     }
-    .site-nav>a:hover,.site-nav>a.active{
-      color:var(--teal-700);
-    }
-
-    .nav-dropdown{
-      position:relative;
-    }
-    .nav-dropdown-toggle{
+    .nav-wrap{
+      min-height:88px;
       display:flex;
       align-items:center;
-      gap:.35rem;
-      padding:1rem;
-      border:none;
-      color:var(--ink);
-      background:transparent;
+      justify-content:space-between;
+      gap:1.25rem;
+    }
+    .brand{display:flex;align-items:center;text-decoration:none}
+    .brand img{width:230px;max-height:72px;object-fit:contain;object-position:left center}
+    .site-nav{display:flex;align-items:center;gap:1.05rem}
+    .site-nav a{
+      color:var(--teal-950);
       font-size:.82rem;
-      font-weight:700;
-      cursor:pointer;
-      transition:color .2s;
-    }
-    .nav-dropdown-toggle:hover{
-      color:var(--teal-700);
-    }
-    .dropdown-arrow{
-      font-size:.68rem;
-      transition:transform .25s;
-    }
-    .nav-dropdown.open .dropdown-arrow{
-      transform:rotate(180deg);
-    }
-
-    .nav-dropdown-menu{
-      display:none;
-      grid-template-columns:1fr;
-      gap:.25rem;
-      margin-top:.5rem;
-    }
-    .nav-dropdown-menu a{
-      padding:1rem 1.1rem;
-      border-radius:12px;
-      color:var(--ink);
-      font-size:.82rem;
-      font-weight:700;
+      font-weight:800;
+      letter-spacing:.035em;
       text-decoration:none;
-      transition:all .2s;
+      text-transform:uppercase;
     }
-    .nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{
-      color:var(--teal-700);
-      background:var(--teal-050);
+    .site-nav a:not(.btn):hover{color:var(--teal-500)}
+    .menu-toggle{
+      display:none;width:46px;height:46px;border:0;border-radius:12px;
+      color:#fff;background:var(--teal-700);cursor:pointer;font-size:1.35rem;
     }
 
-    /* =========================================================
-       HERO SECTION
-    ========================================================= */
     .hero{
       position:relative;
-      min-height:520px;
-      display:flex;
-      align-items:center;
-      padding:86px 0;
+      min-height:720px;
+      isolation:isolate;
+      overflow:hidden;
       color:#fff;
       background:
-        linear-gradient(135deg,rgba(6,55,67,.92),rgba(11,95,110,.88)),
-        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/team-hero.jpg") center / cover no-repeat;
+        linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%),
+        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
+    }
+    .hero::after{
+      position:absolute;inset:auto 0 0;height:170px;z-index:-1;content:"";
+      background:linear-gradient(to top,rgba(4,32,39,.65),transparent);
     }
     .hero-inner{
+      min-height:720px;
       display:grid;
-      grid-template-columns:1.3fr .7fr;
-      gap:3rem;
+      grid-template-rows:1fr auto;
       align-items:center;
+      padding:78px 0 30px;
     }
-    .hero h1{
-      color:#fff;
-    }
-    .hero .eyebrow{
-      color:var(--gold);
-    }
+    .hero-copy{max-width:700px}
+    .hero h1{color:#fff}
+    .hero h1 span{color:#86e6ef}
+    .hero .eyebrow{color:#bceef3}
+    .hero .eyebrow::before{background:#ffb35c}
     .hero-lead{
-      margin-bottom:1.8rem;
-      color:rgba(255,255,255,.9);
-      font-size:1.15rem;
+      max-width:650px;
+      color:rgba(255,255,255,.88);
+      font-size:clamp(1.08rem,1.6vw,1.3rem);
     }
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.85rem;
-    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1.7rem}
     .hero-trust{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.9rem 1.3rem;
-      margin-top:1.7rem;
-      color:rgba(255,255,255,.85);
-      font-size:.82rem;
-      font-weight:700;
+      display:flex;flex-wrap:wrap;gap:.8rem 1.5rem;
+      margin-top:1.6rem;color:#e7fbfd;font-weight:700;font-size:.94rem;
     }
-    .hero-trust span:before{
-      content:"✓";
-      margin-right:.4rem;
-      color:var(--gold);
-    }
-
+    .hero-trust span::before{margin-right:.45rem;content:"✓";color:#ffb35c}
     .hero-contact{
       display:grid;
+      grid-template-columns:1.45fr 1fr 1.2fr;
       gap:1rem;
     }
     .hero-contact-item{
-      padding:1.2rem 1.4rem;
-      border-radius:var(--radius);
-      background:rgba(255,255,255,.1);
-      backdrop-filter:blur(8px);
+      padding:1rem 1.15rem;
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:16px;
+      background:rgba(5,50,61,.52);
+      backdrop-filter:blur(9px);
     }
-    .hero-contact-item strong{
-      display:block;
-      margin-bottom:.2rem;
-      color:#fff;
-      font-size:.95rem;
-    }
-    .hero-contact-item small{
-      color:rgba(255,255,255,.8);
-      font-size:.82rem;
-    }
+    .hero-contact-item strong{display:block}
+    .hero-contact-item small{color:rgba(255,255,255,.78)}
 
-    /* =========================================================
-       TEAM GRID
-    ========================================================= */
+    /* Team-specific styles */
     .team-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:2.5rem;
+      gap:2rem;
     }
     .team-card{
       border-radius:var(--radius);
@@ -456,9 +297,6 @@
       line-height:1.7;
     }
 
-    /* =========================================================
-       FOUNDING STORY SECTION
-    ========================================================= */
     .founding-story{
       padding:2.5rem;
       border-left:4px solid var(--gold);
@@ -489,77 +327,249 @@
       text-align:center;
     }
 
-    /* =========================================================
-       FOOTER COMPONENTS (Sitemap + Legal)
-    ========================================================= */
-    .footer-signature{
-      margin:30px 0 0;
-      color:#bceef3;
-      font-family:"Merriweather",Georgia,serif;
-      font-size:1.1rem;
-      text-align:center;
-    }
-    .footer-legal{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:.5rem .9rem;
-      margin-top:.7rem;
-    }
-    .footer-legal a{color:rgba(255,255,255,.72)}
-    .footer-legal a:hover{color:#fff}
-    .footer-sitemap{
-      padding:78px 0 46px;
-      background:linear-gradient(135deg,var(--teal-950),var(--teal-800));
+    .final-cta{
+      padding:80px 0;
       color:#fff;
+      text-align:center;
+      background:
+        linear-gradient(rgba(6,55,67,.9),rgba(6,55,67,.94)),
+        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center 55% / cover no-repeat;
     }
-    .footer-sitemap-heading{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:1.2rem;
-      margin-bottom:2rem;
+    .final-cta h2{color:#fff}
+    .final-cta p{
+      max-width:690px;margin:0 auto 1.5rem;
+      color:rgba(255,255,255,.82);font-size:1.12rem;
     }
-    .footer-sitemap h2{color:#fff}
-    .footer-sitemap p{
-      max-width:480px;
-      color:rgba(255,255,255,.78);
-    }
-    .footer-sitemap-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:2rem;
-      padding:32px;
-      border-radius:22px;
-      background:rgba(255,255,255,.04);
-    }
-    .footer-sitemap-column h3{
-      margin-bottom:1.1rem;
-      color:var(--gold);
+    .final-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:.85rem}
+
+    footer{padding:58px 0 24px;color:rgba(255,255,255,.8);background:#042f39}
+    .footer-grid{display:grid;grid-template-columns:1.25fr .8fr 1fr .9fr;gap:2.5rem}
+    .footer-logo{width:220px;padding:8px;border-radius:10px;background:#fff}
+    footer h3{
+      color:#fff;
+      font-family:"Source Sans 3",sans-serif;
       font-size:.95rem;
-      letter-spacing:.05em;
+      letter-spacing:.08em;
       text-transform:uppercase;
     }
-    .footer-sitemap-grid a{
-      display:block;
-      margin:.48rem 0;
-      color:rgba(255,255,255,.82);
-      text-decoration:none;
+    footer a{color:rgba(255,255,255,.8);text-decoration:none}
+    footer a:hover{color:#fff}
+    .footer-links{display:grid;gap:.5rem}
+    .footer-bottom{
+      margin-top:36px;padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.12);
+      font-size:.85rem;text-align:center;
     }
-    .footer-sitemap-grid a:hover{color:#fff}
+
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.visible{opacity:1;transform:none}
 
     @media(max-width:1080px){
-      .footer-sitemap-grid{grid-template-columns:repeat(2,1fr)}
-      .hero-inner{grid-template-columns:1fr}
+      .site-nav{
+        position:absolute;top:88px;left:0;right:0;
+        display:none;align-items:stretch;padding:22px;
+        background:#fff;box-shadow:var(--shadow-md);flex-direction:column;
+      }
+      .site-nav.open{display:flex}
+      .menu-toggle{display:inline-grid;place-items:center}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+      .hero-contact{grid-template-columns:1fr}
     }
+
     @media(max-width:760px){
-      .footer-sitemap-heading{display:block}
-      .footer-sitemap-heading p{margin-top:.25rem}
-      .footer-sitemap-grid{grid-template-columns:1fr;padding:22px}
+      .container{width:min(100% - 26px,var(--max))}
+      .section{padding:72px 0}
+      .topbar-inner{justify-content:center}
+      .topbar-inner>span{display:none}
+      .brand img{width:190px}
+      .hero{
+        min-height:760px;
+        background:
+          linear-gradient(180deg,rgba(4,32,39,.86) 0%,rgba(4,32,39,.65) 58%,rgba(4,32,39,.45) 100%),
+          url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") 62% center / cover no-repeat;
+      }
+      .hero-inner{min-height:760px;padding-top:48px}
+      .hero-actions{flex-direction:column}
+      .hero-actions .btn{width:100%}
+      .hero-contact{grid-template-columns:1fr}
       .team-grid{grid-template-columns:1fr}
-      .hero{padding:64px 0}
+      .footer-grid{grid-template-columns:1fr}
     }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .reveal{opacity:1;transform:none;transition:none}
+      .btn,.team-card{transition:none}
+    }
+  </style>
+<style>
+/* ===== MASTER V2: Visible dropdown navigation and complete footer directory ===== */
+.site-nav{position:relative}
+.site-nav a.active,
+.site-nav a[aria-current="page"]{color:var(--teal-500)}
+
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.nav-dropdown-toggle{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  padding:0;
+  border:0;
+  color:var(--teal-950);
+  background:transparent;
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:.035em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.dropdown-arrow{
+  color:var(--teal-500);
+  font-size:.58rem;
+  transition:transform .18s ease;
+}
+.nav-dropdown.open .dropdown-arrow{transform:rotate(180deg)}
+.nav-dropdown-toggle:hover,
+.nav-dropdown.open>.nav-dropdown-toggle{color:var(--teal-500)}
+
+.nav-dropdown-menu{
+  position:absolute;
+  top:calc(100% + 20px);
+  left:50%;
+  z-index:120;
+  min-width:270px;
+  display:none;
+  padding:12px;
+  border:1px solid rgba(6,55,67,.09);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:var(--shadow-md);
+  transform:translateX(-50%);
+}
+.nav-dropdown.open>.nav-dropdown-menu,
+.nav-dropdown:focus-within>.nav-dropdown-menu{display:grid}
+
+.nav-dropdown-menu a{
+  display:block;
+  padding:.8rem .9rem;
+  border-radius:11px;
+  font-size:.86rem;
+  letter-spacing:0;
+  text-transform:none;
+}
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a.active{
+  color:var(--teal-700)!important;
+  background:var(--teal-050);
+}
+
+.btn-secondary{
+  color:var(--teal-700)!important;
+  background:#fff!important;
+  border-color:var(--teal-500)!important;
+}
+.btn-secondary:hover,
+.btn-secondary:focus{
+  color:#fff!important;
+  background:var(--teal-700)!important;
+  border-color:var(--teal-700)!important;
+}
+
+@media(min-width:1081px){
+  .nav-dropdown:hover>.nav-dropdown-menu{display:grid}
+  .nav-dropdown-menu{
+    top:calc(100% + 10px);
+    left:0;
+    min-width:290px;
+    transform:none;
+  }
+  .nav-dropdown-menu::before{
+    position:absolute;
+    top:-10px;
+    left:0;
+    width:100%;
+    height:12px;
+    content:"";
+  }
+}
+
+.footer-sitemap{
+  margin-top:46px;
+  padding-top:34px;
+  border-top:1px solid rgba(255,255,255,.16);
+}
+.footer-sitemap-heading{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:1rem;
+  margin-bottom:22px;
+}
+.footer-sitemap-heading h3{
+  margin:0;
+  color:#fff;
+  font-family:"Merriweather",Georgia,serif;
+  font-size:1.4rem;
+  letter-spacing:0;
+  text-transform:none;
+}
+.footer-sitemap-heading p{margin:0;color:rgba(255,255,255,.62)}
+.footer-sitemap-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  padding:28px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;
+  background:rgba(255,255,255,.055);
+}
+.footer-sitemap-grid h4{
+  margin:0 0 .8rem;
+  color:#86e6ef;
+  font-family:"Source Sans 3",Arial,sans-serif;
+  font-size:.9rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.footer-sitemap-grid a{
+  display:block;
+  margin:.48rem 0;
+  color:rgba(255,255,255,.82);
+  text-decoration:none;
+}
+.footer-sitemap-grid a:hover{color:#fff}
+
+@media(max-width:1080px){
+  .footer-sitemap-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-dropdown{display:block;width:100%}
+  .nav-dropdown-toggle{
+    width:100%;
+    justify-content:space-between;
+    padding:.7rem 0;
+  }
+  .nav-dropdown-menu{
+    position:static;
+    min-width:0;
+    display:none;
+    margin:.25rem 0 .6rem;
+    padding:.35rem 0 .35rem .8rem;
+    border:0;
+    border-left:3px solid var(--teal-100);
+    border-radius:0;
+    box-shadow:none;
+    transform:none;
+  }
+  .nav-dropdown.open>.nav-dropdown-menu{display:grid}
+  .nav-dropdown:focus-within>.nav-dropdown-menu{display:none}
+  .nav-dropdown.open:focus-within>.nav-dropdown-menu{display:grid}
+}
+@media(max-width:760px){
+  .footer-sitemap-heading{display:block}
+  .footer-sitemap-heading p{margin-top:.25rem}
+  .footer-sitemap-grid{grid-template-columns:1fr;padding:22px}
+  .topbar-actions .btn{min-height:38px;padding:0 .9rem}
+}
 </style>
 <style>
 /* =========================================================
@@ -642,62 +652,56 @@
 }
 
 @media (max-width:900px){
-  .menu-toggle{
-    display:inline-flex!important;
-  }
-
   .site-nav{
-    position:fixed;
-    top:0;
+    position:absolute;
+    top:88px;
     left:0;
     right:0;
-    bottom:0;
-    z-index:999;
     display:none;
-    flex-direction:column;
     align-items:stretch;
-    gap:0;
-    padding:78px 20px 20px;
+    padding:22px;
     background:#fff;
     box-shadow:var(--shadow-md);
-    overflow-y:auto;
+    flex-direction:column;
   }
 
-  .site-nav.active{
-    display:flex!important;
-  }
-
-  .site-nav>a{
-    width:100%;
-    min-height:58px;
+  .site-nav.open{
     display:flex;
-    align-items:center;
-    padding:1.2rem;
-    border-bottom:1px solid var(--line);
+  }
+
+  .menu-toggle{
+    display:inline-grid;
+    place-items:center;
   }
 
   .nav-dropdown{
+    display:block;
     width:100%;
-    border-bottom:1px solid var(--line);
   }
 
   .nav-dropdown-toggle{
     width:100%;
-    min-height:58px;
     justify-content:space-between;
-    padding:1.2rem;
+    padding:.7rem 0;
   }
 
   .nav-dropdown-menu{
-    margin:0 0 0 1.2rem;
-    padding:.5rem 0 1rem;
+    position:static;
+    min-width:0;
+    display:none;
+    margin:.25rem 0 .6rem;
+    padding:.35rem 0 .35rem .8rem;
+    border:0;
+    border-left:3px solid var(--teal-100);
+    border-radius:0;
+    box-shadow:none;
+    transform:none;
   }
 
   .nav-dropdown.open>.nav-dropdown-menu{
     display:grid;
   }
 
-  .nav-dropdown:hover>.nav-dropdown-menu,
   .nav-dropdown:focus-within>.nav-dropdown-menu{
     display:none;
   }
@@ -707,6 +711,7 @@
   }
 }
 </style>
+
 
 <style>
 /* =========================================================
@@ -853,32 +858,32 @@
 <div class="nav-dropdown">
 <button aria-expanded="false" class="nav-dropdown-toggle" type="button">Treatment <span aria-hidden="true" class="dropdown-arrow">▼</span></button>
 <div class="nav-dropdown-menu">
-<a data-route="/iop-benefits.html" href="/iop-benefits.html">Intensive Outpatient Program</a>
-<a data-route="/reliable-substance-abuse-treatments.html" href="/reliable-substance-abuse-treatments.html">Programs &amp; Services</a>
-<a data-route="/services.html" href="/services.html">Additional Services</a>
-<a data-route="/mat.html" href="/mat.html">Medication-Assisted Treatment</a>
-<a data-route="/medical-detox-assistance.html" href="/medical-detox-assistance.html">Medical Detox Assistance</a>
+<a data-route="/iop-benefits/" href="/iop-benefits/">Intensive Outpatient Program</a>
+<a data-route="/reliable-substance-abuse-treatments/" href="/reliable-substance-abuse-treatments/">Programs &amp; Services</a>
+<a data-route="/services/" href="/services/">Additional Services</a>
+<a data-route="/mat/" href="/mat/">Medication-Assisted Treatment</a>
+<a data-route="/medical-detox-assistance/" href="/medical-detox-assistance/">Medical Detox Assistance</a>
 </div>
 </div>
 <div class="nav-dropdown">
 <button aria-expanded="false" class="nav-dropdown-toggle" type="button">About Us <span aria-hidden="true" class="dropdown-arrow">▼</span></button>
 <div class="nav-dropdown-menu">
-<a aria-current="page" class="active" data-route="/team.html" href="/team.html">Our Team</a>
-<a data-route="/reviews.html" href="/reviews.html">Reviews</a>
-<a data-route="/blog.html" href="/blog.html">Blog</a>
-<a data-route="/faq.html" href="/faq.html">Frequently Asked Questions</a>
-<a data-route="/contact-us.html" href="/contact-us.html">Contact Us</a>
+<a aria-current="page" class="active" data-route="/team/" href="/team/">Our Team</a>
+<a data-route="/reviews/" href="/reviews/">Reviews</a>
+<a data-route="/blog/" href="/blog/">Blog</a>
+<a data-route="/faq/" href="/faq/">Frequently Asked Questions</a>
+<a data-route="/contact-us/" href="/contact-us/">Contact Us</a>
 </div>
 </div>
 <div class="nav-dropdown">
 <button aria-expanded="false" class="nav-dropdown-toggle" type="button">Client Resources <span aria-hidden="true" class="dropdown-arrow">▼</span></button>
 <div class="nav-dropdown-menu">
-<a data-route="/client-app.html" href="/client-app.html">Recovery Portal</a>
-<a data-route="/client-portal.html" href="/client-portal.html">Client Login</a>
+<a data-route="/client-app/" href="/client-app/">Recovery Portal</a>
+<a data-route="/client-portal/" href="/client-portal/">Client Login</a>
 <a href="https://myrecoverynm.org" rel="noopener external" target="_blank">Recovery NM</a>
 </div>
 </div>
-<a class="btn btn-warm" data-route="/insurance-verification.html" href="/insurance-verification.html">Verify Insurance</a>
+<a class="btn btn-warm" data-route="/insurance-verification" href="/insurance-verification">Verify Insurance</a>
 </nav>
 </div>
 </header>
@@ -888,14 +893,14 @@
 ========================================================== -->
 
 <section class="hero">
-  <div class="container hero-inner">
+  <div class="hero-inner container">
     <div class="hero-copy">
       <span class="eyebrow">Meet our compassionate treatment team</span>
       <h1>Treatment from People Who <span>Understand Recovery.</span></h1>
       <p class="hero-lead">Our staff includes licensed therapists, medical providers, and recovery specialists who understand addiction personally. We treat you with the dignity, respect, and hope you deserve.</p>
       <div class="hero-actions">
-        <a class="btn btn-warm" href="/insurance-verification.html">Verify Insurance</a>
-        <a class="btn btn-primary" href="/contact-us.html">Talk With Our Team</a>
+        <a class="btn btn-warm" href="/insurance-verification">Verify Insurance</a>
+        <a class="btn btn-primary" href="/contact-us/">Talk With Our Team</a>
         <a class="btn btn-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
       </div>
       <div class="hero-trust">
@@ -926,9 +931,11 @@
 ========================================================== -->
 <section class="section section-soft">
   <div class="container">
-    <span class="eyebrow">Our story</span>
-    <h2>Founded by People Who Understand Recovery</h2>
-    <p style="max-width:880px;margin-bottom:2.5rem;color:var(--muted);font-size:1.1rem">Desert Mountain Healing IOP was created by two men who walked the path of recovery themselves—and built a treatment center that reflects the compassion, respect, and hope they wished they'd experienced.</p>
+    <div class="section-heading">
+      <span class="eyebrow">Our story</span>
+      <h2>Founded by People Who Understand Recovery</h2>
+      <p>Desert Mountain Healing IOP was created by two men who walked the path of recovery themselves—and built a treatment center that reflects the compassion, respect, and hope they wished they'd experienced.</p>
+    </div>
     
     <div class="founding-story">
       <h3>Our Story</h3>
@@ -956,137 +963,139 @@
 ========================================================== -->
 <section class="section">
   <div class="container">
-    <span class="eyebrow">Our expert treatment team</span>
-    <h2>Meet the Team</h2>
+    <div class="section-heading">
+      <span class="eyebrow">Our expert treatment team</span>
+      <h2>Meet the Team</h2>
+    </div>
     
     <div class="team-grid">
       
       <!-- Sean Roberts -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/sean-roberts.jpg" alt="Sean Roberts - Co-Founder & Operations Director" class="team-photo">
         <div class="team-info">
           <h3>Sean Roberts</h3>
           <span class="team-title">Co-Founder & Operations Director</span>
           <p class="team-bio-preview">For Sean Roberts, recovery is more than a profession—it's a lifelong calling. In recovery since 1987, Sean built Desert Mountain Healing IOP on the belief that treatment must honor the dignity of every individual seeking help.</p>
-          <a href="/sean-roberts.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/sean-roberts/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
       <!-- Gary Gamboa -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/gary-gamboa.jpg" alt="Gary Gamboa - Co-Founder & Program Director" class="team-photo">
         <div class="team-info">
           <h3>Gary Gamboa</h3>
           <span class="team-title">Co-Founder & Program Director</span>
           <p class="team-bio-preview">Gary Gamboa understands recovery from both sides—as someone who found freedom from addiction in 2015 and as a dedicated treatment professional committed to helping others discover the same hope and healing he experienced.</p>
-          <a href="/gary-gamboa.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/gary-gamboa/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
       <!-- Bob Galligan -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/bob-galligan.jpg" alt="Robert Galligan - Clinical Director" class="team-photo">
         <div class="team-info">
           <h3>Robert "Bob" Galligan</h3>
           <span class="team-credentials">M.Ed., LPCC, LADAC</span>
           <span class="team-title">Clinical Director</span>
           <p class="team-bio-preview">Bob Galligan brings decades of experience in addiction treatment and behavioral health. As Clinical Director, he ensures every client receives evidence-based, compassionate care tailored to their unique recovery journey.</p>
-          <a href="/bob-galligan.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/bob-galligan/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
       <!-- Jennifer Barela -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/jennifer-barela.jpg" alt="Jennifer Barela - Psychiatric Nurse Practitioner" class="team-photo">
         <div class="team-info">
           <h3>Jennifer Barela</h3>
           <span class="team-credentials">CNP</span>
           <span class="team-title">Psychiatric Nurse Practitioner</span>
           <p class="team-bio-preview">Jennifer Barela specializes in Medication-Assisted Treatment (MAT), helping clients manage withdrawal symptoms and cravings while addressing co-occurring mental health conditions with compassion and clinical expertise.</p>
-          <a href="/jennifer-barela.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/jennifer-barela/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
       <!-- Regina Largent -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/regina-largent.jpg" alt="Regina Largent - Primary Therapist" class="team-photo">
         <div class="team-info">
           <h3>Regina Largent</h3>
           <span class="team-credentials">LSAA</span>
           <span class="team-title">Primary Therapist</span>
           <p class="team-bio-preview">Currently completing her Master's degree at Grand Canyon University, Regina is dedicated to helping individuals overcome substance use disorders through compassionate, evidence-based counseling and relapse prevention strategies.</p>
-          <a href="/regina-largent.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/regina-largent/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
       <!-- Christina Blea -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/christina-blea.jpeg" alt="Christina Blea - Primary Therapist" class="team-photo">
         <div class="team-info">
           <h3>Christina Blea</h3>
           <span class="team-credentials">LCSW</span>
           <span class="team-title">Primary Therapist</span>
           <p class="team-bio-preview">As a Licensed Clinical Social Worker, Christina specializes in trauma-informed care and helps clients heal from past experiences while building healthier coping strategies and stronger relationships.</p>
-          <a href="/christina-blea.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/christina-blea/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
       <!-- Alicia Chavez -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/alicia-chavez.png" alt="Alicia Chavez - Primary Therapist" class="team-photo">
         <div class="team-info">
           <h3>Alicia Chavez</h3>
           <span class="team-credentials">LSAA</span>
           <span class="team-title">Primary Therapist</span>
           <p class="team-bio-preview">Alicia earned her Associate Degree from UNM and is pursuing her Bachelor's degree. She creates a safe, judgment-free environment where clients feel comfortable sharing their experiences and working toward recovery.</p>
-          <a href="/alicia-chavez.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/alicia-chavez/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
       <!-- Nicole Clay -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/nicole-clay.png" alt="Nicole Clay - Primary Therapist" class="team-photo">
         <div class="team-info">
           <h3>Nicole Clay</h3>
           <span class="team-credentials">LSAA</span>
           <span class="team-title">Primary Therapist</span>
           <p class="team-bio-preview">Nicole is completing her degree (expected 2027) and plans to pursue her Master's in Clinical Counseling. She believes every individual has the strength to create lasting change when provided with support and guidance.</p>
-          <a href="/nicole-clay.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/nicole-clay/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
       <!-- Michelle Martin -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/michelle-martin.jpg" alt="Michelle Martin - Primary Therapist & Peer Support" class="team-photo">
         <div class="team-info">
           <h3>Michelle Martin</h3>
           <span class="team-credentials">CPSW, CCSS, LSAA</span>
           <span class="team-title">Primary Therapist & Certified Peer Support Specialist</span>
           <p class="team-bio-preview">As a Certified Peer Support Worker and therapist in recovery herself, Michelle brings unique insight and authenticity to her work, helping clients recognize their strengths and build sustainable recovery plans.</p>
-          <a href="/michelle-martin.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/michelle-martin/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
       <!-- Illiana Craig -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/illiana-craig.jpg" alt="Illiana Craig - Primary Therapist" class="team-photo">
         <div class="team-info">
           <h3>Illiana Craig</h3>
           <span class="team-credentials">LSAA</span>
           <span class="team-title">Primary Therapist</span>
           <p class="team-bio-preview">Illiana is dedicated to helping individuals overcome substance use disorders and build healthier lives. She earned her Associate Degree from UNM and is currently pursuing her Bachelor's degree.</p>
-          <a href="/illiana-craig.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/illiana-craig/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
       <!-- Tatiana Schnierow -->
-      <article class="team-card">
+      <article class="team-card reveal">
         <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/tatiana-schnierow.jpg" alt="Tatiana Schnierow - Office Manager" class="team-photo">
         <div class="team-info">
           <h3>Tatiana Schnierow</h3>
           <span class="team-title">Office Manager</span>
           <p class="team-bio-preview">In recovery herself and part of the team since the beginning, Tatiana ensures every client receives a warm welcome and seamless support throughout their treatment journey. She coordinates admissions, insurance, and daily operations.</p>
-          <a href="/tatiana-schnierow.html" class="btn btn-secondary">Read Full Bio</a>
+          <a href="/tatiana-schnierow/" class="btn btn-secondary">Read Full Bio</a>
         </div>
       </article>
 
@@ -1099,7 +1108,8 @@
 ========================================================== -->
 <section class="section section-dark">
   <div class="container" style="text-align:center">
-    <h2>Treatment From People Who Understand</h2>
+    <span class="eyebrow">Staff who understand</span>
+    <h2>Treatment From People Who Get It</h2>
     <p style="max-width:880px;margin:0 auto 2.5rem;font-size:1.15rem">Many of our staff members are in recovery themselves. We don't just understand addiction from textbooks—we understand it from lived experience. That's why we treat every client with the compassion, respect, and hope we know recovery requires.</p>
     
     <div class="footer-trust">
@@ -1123,128 +1133,213 @@
   </div>
 </section>
 
+<!-- PAGE-SPECIFIC CONTENT END -->
+</main>
+
 <!-- =========================================================
-     PRE-FOOTER CTA
+     UNIVERSAL PRE-FOOTER CALL TO ACTION
 ========================================================== -->
-<section class="prefooter-cta">
-<div class="container">
-<h2>Ready to Start Your Recovery Journey?</h2>
-<p>Our compassionate team is here to help you take the first step toward lasting recovery. Call now for a confidential consultation.</p>
-<div class="prefooter-actions">
-<a class="btn btn-warm" href="tel:+15052700840">Call (505) 270-0840</a>
-<a class="btn btn-primary" href="/insurance-verification.html">Verify Insurance</a>
-<a class="btn btn-secondary" href="/contact-us.html">Contact Us</a>
-</div>
-
-<div class="footer-privacy">
-<h3>Your Privacy Matters</h3>
-<p>All consultations are completely confidential and HIPAA-compliant. We understand that seeking help is a private decision, and we respect your privacy at every step of your recovery journey.</p>
-<div class="footer-privacy-links">
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/notice-of-privacy-practices.html">Notice of Privacy Practices</a>
-<a href="/patient-rights.html">Patient Rights</a>
-</div>
-</div>
-
-<div class="footer-emergency">
-<strong>If you are experiencing a medical or psychiatric emergency, call 911 or go to your nearest emergency room immediately.</strong>
-<p>For mental health crisis support, call or text 988 (Suicide &amp; Crisis Lifeline).</p>
-</div>
-</div>
+<section class="prefooter-cta" aria-labelledby="prefooterCtaHeading">
+  <div class="container">
+    <span class="eyebrow" style="color:#bceef3">A hopeful next step</span>
+    <h2 id="prefooterCtaHeading">Ready to Begin Your Recovery?</h2>
+    <p>You do not have to face addiction alone. Whether you are seeking help for yourself or someone you love, our caring team is here to answer your questions, verify your insurance, and help you take the first step toward lasting recovery.</p>
+    <div class="prefooter-actions">
+      <a class="btn btn-warm" href="/insurance-verification">Verify Insurance</a>
+      <a class="btn btn-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
+    </div>
+  </div>
 </section>
 
-<!-- =========================================================
-     FOOTER SITEMAP
-========================================================== -->
-<footer class="footer-sitemap">
-<div class="container">
+<footer>
+<div class="container footer-grid">
+<div>
+<img alt="Desert Mountain Healing IOP" class="footer-logo" src="/dmh-logo (1).png"/>
+<p>Compassionate, coordinated addiction treatment in Rio Rancho, serving the greater Albuquerque metropolitan area.</p>
+<p>
+<strong>Office Hours</strong><br/>
+        Monday-Friday: 8 AM-8 PM
+      </p>
+</div>
+<div>
+<h3>Treatment</h3>
+<div class="footer-links">
+<a href="/iop-benefits/">Intensive Outpatient Program</a>
+<a href="/reliable-substance-abuse-treatments/">Programs &amp; Services</a>
+<a href="/mat/">Medication-Assisted Treatment</a>
+<a href="/medical-detox-assistance/">Medical Detox Assistance</a>
+<a href="/services/">Additional Services</a></div>
+</div>
+<div>
+<h3>Explore</h3>
+<div class="footer-links">
+<a href="/team/">Our Team</a>
+<a href="/reviews/">Reviews</a>
+<a href="/blog/">Blog</a>
+<a href="/faq/">Frequently Asked Questions</a>
+<a href="/client-app/">Recovery Portal</a>
+<a href="/client-portal/">Client Login</a>
+</div>
+</div>
+<div>
+<h3>Contact &amp; Access</h3>
+<div class="footer-links">
+<a href="/contact-us/">Contact Us</a>
+<a href="/insurance-verification">Verify Insurance</a>
+<a href="tel:+15052700840">(505) 270-0840</a>
+<a href="mailto:sean_roberts@dmhiop.com">sean_roberts@dmhiop.com</a>
+<a href="https://myrecoverynm.org" rel="noopener external" target="_blank">Recovery NM</a>
+</div>
+<p>3301 Southern Blvd SE, Suite 105<br/>Rio Rancho, NM 87124</p>
+</div>
+</div>
+<div class="container footer-sitemap">
 <div class="footer-sitemap-heading">
-<div>
-<h2>Desert Mountain Healing IOP</h2>
-<p>Evidence-based outpatient addiction treatment in Rio Rancho, New Mexico.</p>
+<h3>Complete Website Directory</h3>
+<p>All pages and resources</p>
 </div>
-<div>
-<a class="btn btn-warm" href="tel:+15052700840">Call (505) 270-0840</a>
-</div>
-</div>
-
 <div class="footer-sitemap-grid">
-<div class="footer-sitemap-column">
-<h3>Treatment Programs</h3>
-<a href="/iop-benefits.html">Intensive Outpatient Program (IOP)</a>
-<a href="/reliable-substance-abuse-treatments.html">Programs &amp; Services</a>
-<a href="/mat.html">Medication-Assisted Treatment (MAT)</a>
-<a href="/medical-detox-assistance.html">Medical Detox Assistance</a>
-<a href="/services.html">Additional Services</a>
+<div>
+<h4>Main Pages</h4>
+<a href="/">Home</a>
+<a href="/contact-us/">Contact Us</a>
+<a href="/insurance-verification">Verify Insurance</a>
+</div>
+<div>
+<h4>Treatment Programs</h4>
+<a href="/iop-benefits/">Intensive Outpatient Program</a>
+<a href="/reliable-substance-abuse-treatments/">Programs &amp; Services</a>
+<a href="/services/">Additional Services</a>
+<a href="/mat/">Medication-Assisted Treatment</a>
+<a href="/medical-detox-assistance/">Medical Detox Assistance</a>
+</div>
+<div>
+<h4>About Desert Mountain</h4>
+<a href="/team/">Our Team</a>
+<a href="/reviews/">Reviews</a>
+<a href="/blog/">Blog</a>
+<a href="/faq/">Frequently Asked Questions</a>
+</div>
+<div>
+<h4>Client Resources</h4>
+<a href="/client-app/">Recovery Portal</a>
+<a href="/client-portal/">Client Login</a>
+<a href="https://myrecoverynm.org" rel="noopener external" target="_blank">Recovery NM</a>
+</div>
+</div>
+</div>
+<!-- =========================================================
+     PRIVACY, TRUST, EMERGENCY, AND LEGAL INFORMATION
+========================================================== -->
+<div class="container">
+  <section class="footer-privacy" aria-labelledby="privacyHeading">
+    <h3 id="privacyHeading">🔒 Your Privacy Matters</h3>
+    <p>Your privacy is important to us. Information submitted through this website—including admissions inquiries, insurance verification requests, and contact forms—is handled in accordance with applicable privacy and security requirements. We are committed to protecting the confidentiality of every person who reaches out for help.</p>
+    <div class="footer-privacy-links" aria-label="Privacy and legal resources">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/notice-of-privacy-practices/">HIPAA Notice of Privacy Practices</a>
+      <a href="/accessibility/">Accessibility Statement</a>
+      <a href="/terms-of-use/">Terms of Use</a>
+      <a href="/sitemap/">Sitemap</a>
+    </div>
+  </section>
+
+  <section class="footer-trust" aria-label="Why people choose Desert Mountain Healing IOP">
+    <div class="footer-trust-item"><span class="footer-trust-icon" aria-hidden="true">🛡️</span><span>Confidential Care</span></div>
+    <div class="footer-trust-item"><span class="footer-trust-icon" aria-hidden="true">⭐</span><span>Evidence-Based Treatment</span></div>
+    <div class="footer-trust-item"><span class="footer-trust-icon" aria-hidden="true">❤️</span><span>Compassionate, Individualized Care</span></div>
+    <div class="footer-trust-item"><span class="footer-trust-icon" aria-hidden="true">📍</span><span>Serving Rio Rancho &amp; Albuquerque</span></div>
+  </section>
+
+  <section class="footer-emergency" aria-labelledby="emergencyHeading">
+    <p><strong id="emergencyHeading">Emergency Information:</strong> If you are experiencing a medical emergency or are in immediate danger, call 911. If you are experiencing a mental health or suicide crisis, call or text 988.</p>
+  </section>
+
+  <p class="footer-signature">Recovery Begins with One Step. Let Us Walk It With You.</p>
+
+  <div class="footer-bottom">
+    © 2026 Desert Mountain Healing IOP. All rights reserved.
+    <div class="footer-legal">
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/notice-of-privacy-practices/">HIPAA Notice</a>
+      <a href="/accessibility/">Accessibility</a>
+      <a href="/terms-of-use/">Terms of Use</a>
+      <a href="/sitemap/">Sitemap</a>
+    </div>
+  </div>
 </div>
 
-<div class="footer-sitemap-column">
-<h3>About Us</h3>
-<a href="/team.html">Our Team</a>
-<a href="/reviews.html">Client Reviews &amp; Testimonials</a>
-<a href="/faq.html">Frequently Asked Questions</a>
-<a href="/blog.html">Recovery Blog</a>
-<a href="/contact-us.html">Contact Us</a>
-</div>
-
-<div class="footer-sitemap-column">
-<h3>Client Resources</h3>
-<a href="/client-app.html">Client Recovery Portal</a>
-<a href="/client-portal.html">Existing Client Login</a>
-<a href="/insurance-verification.html">Insurance Verification</a>
-<a href="https://myrecoverynm.org" rel="noopener external" target="_blank">Recovery NM ↗</a>
-</div>
-
-<div class="footer-sitemap-column">
-<h3>Contact Information</h3>
-<p style="color:rgba(255,255,255,.82);margin:.48rem 0"><strong style="color:#fff">Phone:</strong> (505) 270-0840</p>
-<p style="color:rgba(255,255,255,.82);margin:.48rem 0"><strong style="color:#fff">Address:</strong><br/>3301 Southern Blvd SE, Suite 105<br/>Rio Rancho, NM 87124</p>
-<p style="color:rgba(255,255,255,.82);margin:.48rem 0"><strong style="color:#fff">Email:</strong><br/>sean_roberts@dmhiop.com</p>
-</div>
-</div>
-
-<p class="footer-signature">Treatment built on dignity, compassion, respect, hope, and accountability.</p>
-
-<div class="footer-legal">
-<span>&copy; 2025 Desert Mountain Healing IOP. All rights reserved.</span>
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/notice-of-privacy-practices.html">HIPAA Notice</a>
-<a href="/terms-of-service.html">Terms of Service</a>
-<a href="/accessibility.html">Accessibility</a>
-</div>
-</div>
 </footer>
-
-</main>
 <script>
-// Mobile menu toggle
-const menuToggle=document.getElementById('menuToggle');
-const siteNav=document.getElementById('siteNav');
-if(menuToggle&&siteNav){
-  menuToggle.addEventListener('click',()=>{
-    const isOpen=siteNav.classList.toggle('active');
-    menuToggle.setAttribute('aria-expanded',isOpen);
-    menuToggle.setAttribute('aria-label',isOpen?'Close navigation':'Open navigation');
-  });
-}
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menuToggle');
+  const siteNav = document.getElementById('siteNav');
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
 
-// Dropdown toggles
-document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle=>{
-  toggle.addEventListener('click',e=>{
-    e.stopPropagation();
-    const dropdown=toggle.closest('.nav-dropdown');
-    const isOpen=dropdown.classList.toggle('open');
-    toggle.setAttribute('aria-expanded',isOpen);
+  document.querySelectorAll('[data-route]').forEach(function (link) {
+    const route = (link.getAttribute('data-route') || '').replace(/\/+$/, '') || '/';
+    if (route === currentPath) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+      const parentDropdown = link.closest('.nav-dropdown');
+      if (parentDropdown) {
+        parentDropdown.querySelector('.nav-dropdown-toggle').classList.add('active');
+      }
+    }
   });
-});
 
-// Close dropdowns when clicking outside
-document.addEventListener('click',()=>{
-  document.querySelectorAll('.nav-dropdown.open').forEach(dropdown=>{
-    dropdown.classList.remove('open');
-    dropdown.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded','false');
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', function () {
+      const open = siteNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.textContent = open ? '✕' : '☰';
+    });
+  }
+
+  dropdowns.forEach(function (dropdown) {
+    const button = dropdown.querySelector('.nav-dropdown-toggle');
+    if (!button) return;
+
+    button.addEventListener('click', function (event) {
+      event.stopPropagation();
+      const willOpen = !dropdown.classList.contains('open');
+
+      dropdowns.forEach(function (item) {
+        item.classList.remove('open');
+        const itemButton = item.querySelector('.nav-dropdown-toggle');
+        if (itemButton) itemButton.setAttribute('aria-expanded', 'false');
+      });
+
+      if (willOpen) {
+        dropdown.classList.add('open');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
   });
+
+  document.addEventListener('click', function () {
+    dropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove('open');
+      const button = dropdown.querySelector('.nav-dropdown-toggle');
+      if (button) button.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const revealItems = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealItems.forEach(function (item) { observer.observe(item); });
+  } else {
+    revealItems.forEach(function (item) { item.classList.add('visible'); });
+  }
 });
-</script>
-</body>
+</script></body>
 </html>
