@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<!-- =========================================================
+     DMHIOP WEBSITE FRAMEWORK v4
+     Desert Mountain Healing IOP
+     Robert "Bob" Galligan Bio Page
+========================================================= -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Robert "Bob" Galligan, M.Ed., LPCC, LADAC - Clinical Director | Desert Mountain Healing IOP</title>
+<meta content="Meet Robert 'Bob' Galligan, Clinical Director at Desert Mountain Healing IOP. Harvard-educated with M.Ed., LPCC, LADAC credentials and over 30 years of experience in addiction treatment and behavioral health." name="description"/>
+<meta content="Bob Galligan DMHIOP, clinical director, Harvard education, LPCC, LADAC, addiction treatment, behavioral health" name="keywords"/>
+<meta content="Desert Mountain Healing IOP" name="author"/>
+<link href="https://dmhiop.com/bob-galligan/" rel="canonical"/>
+<meta content="#0d7485" name="theme-color"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Robert Galligan",
+  "jobTitle": "Clinical Director",
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Desert Mountain Healing IOP"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Harvard University"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Source+Sans+3:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+<style>
+    :root{
+      --teal-950:#063743;
+      --teal-900:#084754;
+      --teal-800:#0b5f6e;
+      --teal-700:#0d7485;
+      --teal-600:#1493a8;
+      --teal-500:#1ba3bd;
+      --teal-100:#dff4f7;
+      --teal-050:#f2fbfc;
+      --gold:#ef8b22;
+      --gold-soft:#fff0dc;
+      --ink:#173139;
+      --muted:#60747b;
+      --line:#dce8ea;
+      --surface:#ffffff;
+      --soft:#f7fafb;
+      --shadow-sm:0 10px 30px rgba(6,55,67,.08);
+      --shadow-md:0 22px 60px rgba(6,55,67,.16);
+      --radius:22px;
+      --max:1220px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:#fff;
+      font-family:"Source Sans 3",Arial,sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    h1,h2,h3,h4{
+      margin:0 0 .85rem;
+      color:var(--teal-950);
+      font-family:"Merriweather",Georgia,serif;
+      line-height:1.15;
+    }
+    h1{font-size:clamp(3rem,6vw,5.8rem);letter-spacing:-.045em}
+    h2{font-size:clamp(2.15rem,4.2vw,3.7rem);letter-spacing:-.035em}
+    h3{font-size:1.35rem}
+    p{margin:0 0 1rem;color:var(--muted)}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .section{padding:96px 0}
+    .section-soft{background:var(--teal-050)}
+    .section-gray{background:var(--soft)}
+    
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      margin-bottom:1rem;
+      color:var(--teal-700);
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      width:34px;height:3px;border-radius:99px;background:var(--gold);content:"";
+    }
+    
+    .btn{
+      min-height:52px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.55rem;
+      padding:0 1.45rem;
+      border:1px solid transparent;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      transition:transform .18s ease,box-shadow .18s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--teal-700),var(--teal-500));
+      box-shadow:0 14px 34px rgba(27,163,189,.28);
+    }
+    .btn-secondary{
+      color:var(--teal-950);
+      background:#fff;
+      border-color:rgba(6,55,67,.14);
+      box-shadow:var(--shadow-sm);
+    }
+    .btn-warm{color:#fff;background:var(--gold);box-shadow:0 12px 28px rgba(239,139,34,.3)}
+    
+    .topbar{color:#fff;background:var(--teal-950);font-size:.9rem}
+    .topbar-inner{
+      min-height:42px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .topbar a{font-weight:700;text-decoration:none}
+    .topbar-actions{display:flex;align-items:center;gap:1rem}
+    
+    .site-header{
+      position:sticky;top:0;z-index:100;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(6,55,67,.08);
+      backdrop-filter:blur(14px);
+    }
+    .nav-wrap{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .brand img{height:auto;width:180px}
+    .menu-toggle{
+      min-width:46px;min-height:46px;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:0;
+      border:none;
+      background:none;
+      color:var(--teal-950);
+      font-size:1.55rem;
+      cursor:pointer;
+    }
+    .site-nav{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+    }
+    .site-nav>a{
+      padding:.65rem 0;
+      color:var(--teal-950);
+      font-weight:700;
+      font-size:.875rem;
+    }
+    .site-nav>a:hover{color:var(--teal-500)}
+    .nav-dropdown{position:relative}
+    .nav-dropdown-toggle{
+      min-height:44px;
+      display:flex;
+      width:100%;
+      align-items:center;
+      justify-content:space-between;
+      gap:.4rem;
+      padding:0;
+      border:none;
+      background:none;
+      color:var(--teal-950);
+      font-weight:700;
+      font-size:.875rem;
+      cursor:pointer;
+    }
+    .nav-dropdown-menu{
+      display:none;
+      grid-template-columns:1fr;
+      gap:0;
+      margin-top:12px;
+      padding:8px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+      box-shadow:var(--shadow-md);
+    }
+    .nav-dropdown-menu a{
+      padding:.9rem 1rem;
+      border-radius:12px;
+      color:var(--muted);
+      font-weight:700;
+      font-size:.875rem;
+    }
+    .nav-dropdown-menu a:hover{background:var(--teal-050);color:var(--teal-700)}
+    .nav-dropdown-menu a.active{background:var(--teal-050);color:var(--teal-700)}
+    
+    /* Bio Hero */
+    .bio-hero{
+      padding:80px 0;
+      background:linear-gradient(135deg,var(--teal-950),var(--teal-800));
+      color:#fff;
+    }
+    .bio-hero-inner{
+      display:grid;
+      grid-template-columns:400px 1fr;
+      gap:64px;
+      align-items:center;
+    }
+    .bio-photo-wrap{position:relative}
+    .bio-photo-wrap::before{
+      position:absolute;inset:-16px 16px 16px -16px;content:"";
+      border-radius:28px;
+      background:linear-gradient(145deg,rgba(27,163,189,.4),rgba(239,139,34,.3));
+    }
+    .bio-photo{
+      position:relative;
+      width:100%;
+      height:480px;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:26px;
+    }
+    .bio-hero h1{color:#fff;margin-bottom:1.2rem}
+    .bio-role{
+      display:inline-block;
+      margin-bottom:1rem;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(239,139,34,.2);
+      color:var(--gold);
+      font-size:.85rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .bio-lead{
+      font-size:1.25rem;
+      line-height:1.6;
+      color:rgba(255,255,255,.9);
+      margin-bottom:2rem;
+    }
+    .bio-stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:1.5rem;
+      margin-top:2.5rem;
+    }
+    .bio-stat-item{
+      padding:1.25rem;
+      border-radius:18px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .bio-stat-label{
+      font-size:.8rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--gold);
+      margin-bottom:.5rem;
+    }
+    .bio-stat-value{
+      font-size:1.1rem;
+      font-weight:700;
+      color:#fff;
+    }
+    
+    /* Content Sections */
+    .bio-content{max-width:900px;margin:0 auto}
+    .bio-content h2{margin-bottom:1.5rem}
+    .bio-content h3{color:var(--teal-700);margin-top:2rem;margin-bottom:1rem}
+    .bio-content ul{
+      margin:1.5rem 0;
+      padding:0;
+      list-style:none;
+    }
+    .bio-content ul li{
+      position:relative;
+      padding-left:2rem;
+      margin-bottom:1rem;
+      color:var(--muted);
+    }
+    .bio-content ul li::before{
+      position:absolute;
+      left:0;
+      content:"✓";
+      color:var(--gold);
+      font-weight:900;
+    }
+    .bio-content blockquote{
+      margin:2.5rem 0;
+      padding:2rem 2.5rem;
+      border-left:4px solid var(--gold);
+      border-radius:12px;
+      background:var(--gold-soft);
+      font-family:"Merriweather",Georgia,serif;
+      font-size:1.25rem;
+      font-style:italic;
+      line-height:1.6;
+      color:var(--teal-950);
+    }
+    .bio-content blockquote p{color:inherit;margin:0}
+    
+    /* Back Button */
+    .back-section{
+      padding:48px 0;
+      text-align:center;
+      background:var(--soft);
+    }
+    
+    /* Prefooter CTA */
+    .prefooter-cta{
+      padding:86px 0;
+      color:#fff;
+      background:linear-gradient(135deg,var(--teal-950),var(--teal-700));
+      text-align:center;
+    }
+    .prefooter-cta .eyebrow{color:var(--gold)}
+    .prefooter-cta h2{color:#fff;margin-bottom:1.2rem}
+    .prefooter-cta p{
+      max-width:720px;
+      margin:0 auto 2rem;
+      color:rgba(255,255,255,.88);
+      font-size:1.15rem;
+    }
+    .prefooter-actions{
+      display:flex;
+      gap:1rem;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    
+    /* Footer */
+    footer{
+      padding:54px 0 28px;
+      color:rgba(255,255,255,.78);
+      background:var(--teal-950);
+    }
+    footer h3,footer h4{color:#fff}
+    footer a{text-decoration:none}
+    footer a:hover{color:#fff}
+    
+    .footer-sitemap{
+      margin-top:46px;
+      padding-top:34px;
+      border-top:1px solid rgba(255,255,255,.16);
+    }
+    .footer-sitemap-heading{margin-bottom:22px}
+    .footer-sitemap-heading h3{
+      margin:0;
+      font-size:1.4rem;
+    }
+    .footer-sitemap-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:30px;
+      padding:28px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:22px;
+      background:rgba(255,255,255,.055);
+    }
+    .footer-sitemap-grid h4{
+      margin:0 0 .8rem;
+      color:#86e6ef;
+      font-family:"Source Sans 3",Arial,sans-serif;
+      font-size:.9rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .footer-sitemap-grid a{
+      display:block;
+      margin:.48rem 0;
+      color:rgba(255,255,255,.82);
+    }
+    
+    .footer-privacy{
+      margin-top:32px;
+      padding-top:28px;
+      border-top:1px solid rgba(255,255,255,.16);
+    }
+    .footer-privacy h3{
+      margin-bottom:.6rem;
+      font-size:1.15rem;
+    }
+    .footer-privacy p{
+      max-width:980px;
+      margin:0;
+      color:rgba(255,255,255,.78);
+    }
+    .footer-privacy-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.7rem 1.15rem;
+      margin-top:1rem;
+    }
+    .footer-privacy-links a{
+      color:#86e6ef;
+      font-weight:700;
+    }
+    
+    .footer-trust{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1rem;
+      margin-top:28px;
+    }
+    .footer-trust-item{
+      min-height:112px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:.75rem;
+      padding:1rem;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      background:rgba(255,255,255,.045);
+      text-align:center;
+      font-weight:800;
+    }
+    
+    .footer-emergency{
+      margin-top:28px;
+      padding:20px 22px;
+      border-left:4px solid var(--gold);
+      border-radius:12px;
+      background:rgba(239,139,34,.09);
+    }
+    .footer-emergency strong{color:#fff}
+    .footer-emergency p{
+      margin:0;
+      color:rgba(255,255,255,.80);
+    }
+    
+    .footer-signature{
+      margin:30px 0 0;
+      color:#bceef3;
+      font-family:"Merriweather",Georgia,serif;
+      font-size:1.1rem;
+      text-align:center;
+    }
+    
+    .footer-legal{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:.5rem .9rem;
+      margin-top:.7rem;
+    }
+    .footer-legal a{color:rgba(255,255,255,.72)}
+    
+    /* Responsive */
+    @media(max-width:1080px){
+      .bio-hero-inner{grid-template-columns:1fr;gap:40px}
+      .bio-photo{height:400px}
+      .footer-sitemap-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-trust{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:760px){
+      .bio-hero{padding:60px 0}
+      .bio-stats{grid-template-columns:1fr}
+      .section{padding:64px 0}
+      .prefooter-cta{padding:64px 0}
+      .prefooter-actions{flex-direction:column}
+      .prefooter-actions .btn{width:100%}
+      .footer-sitemap-grid{grid-template-columns:1fr;padding:22px}
+      .footer-trust{grid-template-columns:1fr}
+      .menu-toggle{display:flex}
+      .site-nav{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:min(340px,85vw);
+        height:100vh;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:28px 22px;
+        background:#fff;
+        box-shadow:var(--shadow-md);
+        transition:right .3s ease;
+        overflow-y:auto;
+      }
+      .site-nav.open{right:0}
+      .site-nav>a{padding:.85rem 0;border-bottom:1px solid var(--line)}
+      .nav-dropdown{border-bottom:1px solid var(--line)}
+      .nav-dropdown-menu{position:static;border:none;box-shadow:none;margin-top:0;padding:0 0 .85rem 1.2rem}
+      .nav-dropdown.open .nav-dropdown-menu{display:grid}
+    }
+    
+    /* Desktop nav hover */
+    @media(min-width:901px){
+      .nav-wrap{min-height:88px;gap:.8rem}
+      .brand img{width:205px}
+      .site-nav{
+        position:static!important;
+        display:flex!important;
+        flex-direction:row!important;
+        gap:.8rem!important;
+        padding:0!important;
+        background:transparent!important;
+        box-shadow:none!important;
+      }
+      .site-nav a{font-size:.78rem}
+      .menu-toggle{display:none!important}
+      .nav-dropdown-menu{
+        position:absolute;
+        top:calc(100% + 10px);
+        left:0;
+        min-width:290px;
+      }
+      .nav-dropdown:hover .nav-dropdown-menu,
+      .nav-dropdown:focus-within .nav-dropdown-menu{
+        display:grid;
+      }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="topbar">
+<div class="container topbar-inner">
+<span>Hope. Healing. Recovery. Every Day.</span>
+<div class="topbar-actions">
+<a href="tel:+15052700840">Call (505) 270-0840</a>
+</div>
+</div>
+</div>
+
+<header class="site-header">
+<div class="container nav-wrap">
+<a aria-label="Desert Mountain Healing IOP home" class="brand" href="/">
+<img alt="Desert Mountain Healing IOP" src="/dmh-logo (1).png"/>
+</a>
+<button aria-controls="siteNav" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle">☰</button>
+<nav aria-label="Main navigation" class="site-nav" id="siteNav">
+<a href="/">Home</a>
+<div class="nav-dropdown">
+<button aria-expanded="false" class="nav-dropdown-toggle" type="button">Treatment <span class="dropdown-arrow">▼</span></button>
+<div class="nav-dropdown-menu">
+<a href="/iop-benefits/">Intensive Outpatient Program</a>
+<a href="/reliable-substance-abuse-treatments/">Programs & Services</a>
+<a href="/services/">Additional Services</a>
+<a href="/mat/">Medication-Assisted Treatment</a>
+<a href="/medical-detox-assistance/">Medical Detox Assistance</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<button aria-expanded="false" class="nav-dropdown-toggle" type="button">About Us <span class="dropdown-arrow">▼</span></button>
+<div class="nav-dropdown-menu">
+<a href="/team/">Our Team</a>
+<a href="/reviews/">Reviews</a>
+<a href="/blog/">Blog</a>
+<a href="/faq/">Frequently Asked Questions</a>
+<a href="/contact-us/">Contact Us</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<button aria-expanded="false" class="nav-dropdown-toggle" type="button">Client Resources <span class="dropdown-arrow">▼</span></button>
+<div class="nav-dropdown-menu">
+<a href="/client-app/">Recovery Portal</a>
+<a href="/client-portal/">Client Login</a>
+<a href="https://myrecoverynm.org" rel="noopener external" target="_blank">Recovery NM</a>
+</div>
+</div>
+<a class="btn btn-warm" href="/insurance-verification/">Verify Insurance</a>
+</nav>
+</div>
+</header>
+
+<main id="main-content">
+
+<!-- Bio Hero -->
+<section class="bio-hero">
+<div class="container bio-hero-inner">
+<div class="bio-photo-wrap">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect fill='%23e0f2f4' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial,sans-serif' font-size='120' font-weight='bold' fill='%230d7485' text-anchor='middle' dy='.35em'%3ERG%3C/text%3E%3C/svg%3E" alt="Robert Galligan" class="bio-photo" style="background:#e0f2f4">
+</div>
+<div class="bio-copy">
+<span class="bio-role">Clinical Director</span>
+<h1>Robert "Bob" Galligan</h1>
+<p class="bio-lead">For more than three decades, Robert "Bob" Galligan has dedicated his career to helping individuals and families overcome addiction, mental health challenges, and life's most difficult obstacles. As Clinical Director, he provides clinical leadership that ensures every client receives individualized, evidence-based treatment rooted in compassion and respect.</p>
+<div class="bio-stats">
+<div class="bio-stat-item">
+<div class="bio-stat-label">Experience</div>
+<div class="bio-stat-value">30+ Years</div>
+</div>
+<div class="bio-stat-item">
+<div class="bio-stat-label">Education</div>
+<div class="bio-stat-value">Harvard M.Ed.</div>
+</div>
+<div class="bio-stat-item">
+<div class="bio-stat-label">Credentials</div>
+<div class="bio-stat-value">LPCC, LADAC</div>
+</div>
+<div class="bio-stat-item">
+<div class="bio-stat-label">Role</div>
+<div class="bio-stat-value">Clinical Director</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Opening Quote -->
+<section class="section section-soft">
+<div class="container bio-content">
+<blockquote>
+<p>"True healing begins when people feel understood, supported, and empowered to create lasting change."</p>
+</blockquote>
+</div>
+</section>
+
+<!-- Meet Bob -->
+<section class="section">
+<div class="container bio-content">
+<span class="eyebrow">Meet Bob</span>
+<h2>Three Decades of Clinical Excellence</h2>
+<p>For more than three decades, Robert "Bob" Galligan has dedicated his career to helping individuals and families overcome addiction, mental health challenges, and life's most difficult obstacles.</p>
+<p>As Clinical Director of Desert Mountain Healing IOP, Bob provides the clinical leadership that ensures every client receives individualized, evidence-based treatment rooted in compassion, professionalism, and respect.</p>
+<p>Bob believes recovery is never a one-size-fits-all process. Every individual arrives with a unique story, different strengths, and personal challenges. His philosophy centers on developing treatment plans that recognize the whole person—not simply the addiction—while helping clients build the skills, confidence, and resilience needed for lifelong recovery.</p>
+<p>His calm, approachable style and extensive clinical experience have earned the trust of clients, families, healthcare professionals, and community partners throughout New Mexico.</p>
+</div>
+</section>
+
+<!-- Professional Background -->
+<section class="section section-gray">
+<div class="container bio-content">
+<span class="eyebrow">Professional Background</span>
+<h2>A Career Devoted to Healing</h2>
+<p>Bob has spent his professional career working with individuals experiencing substance use disorders, co-occurring mental health conditions, trauma, and complex life circumstances.</p>
+<p>Throughout his career, he has provided clinical supervision, therapist mentoring, individual counseling, family counseling, crisis intervention, and program development across multiple levels of care.</p>
+<p>His extensive experience allows him to guide both clients and clinicians through challenging situations while maintaining a focus on evidence-based practices and compassionate care.</p>
+<p>At Desert Mountain Healing IOP, Bob oversees clinical services, ensuring every member of the treatment team shares a common commitment to excellence, ethics, and individualized treatment.</p>
+</div>
+</section>
+
+<!-- Education & Credentials -->
+<section class="section">
+<div class="container bio-content">
+<span class="eyebrow">Education & Credentials</span>
+<h2>Harvard-Trained Clinical Leadership</h2>
+
+<h3>Academic Background</h3>
+<ul>
+<li><strong>Master of Education (M.Ed.)</strong> - Harvard University</li>
+<li>Specialized training in behavioral health and addiction treatment</li>
+<li>Advanced clinical counseling education</li>
+</ul>
+
+<h3>Professional Licenses & Certifications</h3>
+<ul>
+<li><strong>Licensed Professional Clinical Counselor (LPCC)</strong></li>
+<li><strong>Licensed Alcohol and Drug Abuse Counselor (LADAC)</strong></li>
+<li>Ongoing continuing education in evidence-based practices</li>
+</ul>
+
+<p>Bob remains committed to continuing education and staying current with advances in addiction treatment, behavioral healthcare, and evidence-based clinical practices.</p>
+</div>
+</section>
+
+<!-- Clinical Philosophy -->
+<section class="section section-soft">
+<div class="container bio-content">
+<span class="eyebrow">Clinical Philosophy</span>
+<h2>Three Essential Foundations for Recovery</h2>
+<p>Bob believes successful recovery is built upon three essential foundations:</p>
+
+<h3>1. Every person deserves to be heard.</h3>
+<p>Healing begins when clients feel safe enough to tell their story without fear of judgment.</p>
+
+<h3>2. Recovery requires individualized care.</h3>
+<p>No two recovery journeys are identical. Treatment should always reflect each person's unique experiences, strengths, goals, and needs.</p>
+
+<h3>3. Growth happens through connection.</h3>
+<p>Strong therapeutic relationships, family support, peer encouragement, and community involvement all play critical roles in sustaining long-term recovery.</p>
+</div>
+</section>
+
+<!-- Areas of Clinical Expertise -->
+<section class="section">
+<div class="container bio-content">
+<span class="eyebrow">Areas of Clinical Expertise</span>
+<h2>Comprehensive Behavioral Health Experience</h2>
+<ul>
+<li>Substance Use Disorders</li>
+<li>Co-Occurring Mental Health Disorders</li>
+<li>Clinical Assessment</li>
+<li>Treatment Planning</li>
+<li>Individual Counseling</li>
+<li>Group Therapy</li>
+<li>Family Systems</li>
+<li>Relapse Prevention</li>
+<li>Clinical Supervision</li>
+<li>Behavioral Health Program Development</li>
+<li>Professional Mentoring</li>
+<li>Crisis Intervention</li>
+</ul>
+</div>
+</section>
+
+<!-- Leadership at DMHIOP -->
+<section class="section section-gray">
+<div class="container bio-content">
+<span class="eyebrow">Leadership at Desert Mountain Healing IOP</span>
+<h2>Overseeing Clinical Excellence</h2>
+<p>As Clinical Director, Bob provides oversight for every aspect of clinical care.</p>
+
+<h3>His responsibilities include:</h3>
+<ul>
+<li>Clinical program development</li>
+<li>Therapist supervision and mentoring</li>
+<li>Quality assurance</li>
+<li>Evidence-based treatment implementation</li>
+<li>Individualized treatment planning</li>
+<li>Clinical consultation</li>
+<li>Staff education and professional development</li>
+<li>Maintaining the highest standards of ethical care</li>
+</ul>
+
+<p>Bob works closely with counselors, case managers, peer support specialists, and medical providers to ensure every client receives coordinated, comprehensive care.</p>
+</div>
+</section>
+
+<!-- What Clients Can Expect -->
+<section class="section">
+<div class="container bio-content">
+<span class="eyebrow">What Clients Can Expect</span>
+<h2>Working with Bob</h2>
+<p>Clients working with Bob can expect:</p>
+<ul>
+<li><strong>Respect and compassion</strong> in every interaction</li>
+<li><strong>Honest, collaborative communication</strong> throughout treatment</li>
+<li><strong>Evidence-based treatment recommendations</strong> tailored to individual needs</li>
+<li><strong>Individualized care</strong> that honors each person's unique journey</li>
+<li><strong>Professional guidance without judgment</strong></li>
+<li><strong>Encouragement balanced with accountability</strong></li>
+<li><strong>A safe environment for growth and healing</strong></li>
+</ul>
+<p>Bob believes therapy should empower clients to discover their own strengths while providing the tools necessary to build lasting recovery.</p>
+</div>
+</section>
+
+<!-- Why Bob Chose Behavioral Health -->
+<section class="section section-soft">
+<div class="container bio-content">
+<span class="eyebrow">Why Bob Chose Behavioral Health</span>
+<h2>A Lifelong Calling to Help Others Heal</h2>
+<p>Bob has devoted his career to behavioral health because he believes people are capable of remarkable change when they are given the right support, guidance, and opportunity.</p>
+<p>He considers it a privilege to walk alongside individuals during some of the most challenging—and ultimately rewarding—chapters of their lives.</p>
+<p>Watching clients regain hope, reconnect with their families, and rebuild meaningful lives continues to inspire his work every day.</p>
+</div>
+</section>
+
+<!-- Working With the Treatment Team -->
+<section class="section">
+<div class="container bio-content">
+<span class="eyebrow">Working With the Treatment Team</span>
+<h2>Collaborative, Multidisciplinary Care</h2>
+<p>Bob believes exceptional treatment happens through collaboration.</p>
+<p>He works closely with Desert Mountain Healing IOP's counselors, medical providers, peer support specialists, and case managers to ensure every client benefits from a coordinated, multidisciplinary approach.</p>
+<p>This team-based philosophy allows clients to receive comprehensive care that addresses the medical, emotional, psychological, social, and practical aspects of recovery.</p>
+</div>
+</section>
+
+<!-- Personal Message -->
+<section class="section section-soft">
+<div class="container bio-content">
+<span class="eyebrow">A Personal Message from Bob</span>
+<h2>You Are Not Alone</h2>
+<blockquote>
+<p>"Recovery is about much more than overcoming addiction. It is about rediscovering your strengths, rebuilding relationships, and creating a future that reflects the life you want to live. No matter where you are in your journey, know that change is possible, and you do not have to face it alone. Our entire team is here to support you every step of the way."</p>
+<p><strong>— Robert "Bob" Galligan, M.Ed., LPCC, LADAC</strong><br>
+<em>Clinical Director</em></p>
+</blockquote>
+</div>
+</section>
+
+<!-- Back to Team -->
+<section class="back-section">
+<div class="container">
+<a href="/team/" class="btn btn-secondary">← Back to Our Team</a>
+</div>
+</section>
+
+<!-- Prefooter CTA -->
+<section class="prefooter-cta">
+<div class="container">
+<span class="eyebrow">Ready to start your recovery journey?</span>
+<h2>Take the First Step Today</h2>
+<p>Our compassionate team is here to help you build a life worth living. Reach out now for a confidential consultation.</p>
+<div class="prefooter-actions">
+<a href="/contact-us/" class="btn btn-warm">Start Your Recovery</a>
+<a href="tel:+15052700840" class="btn btn-secondary">Call (505) 270-0840</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+
+<div class="footer-sitemap">
+<div class="footer-sitemap-heading">
+<h3>Quick Navigation</h3>
+</div>
+<div class="footer-sitemap-grid">
+<div>
+<h4>Treatment</h4>
+<a href="/iop-benefits/">IOP Program</a>
+<a href="/reliable-substance-abuse-treatments/">Programs & Services</a>
+<a href="/mat/">MAT</a>
+<a href="/medical-detox-assistance/">Detox Assistance</a>
+</div>
+<div>
+<h4>About</h4>
+<a href="/team/">Our Team</a>
+<a href="/reviews/">Reviews</a>
+<a href="/faq/">FAQ</a>
+<a href="/blog/">Blog</a>
+</div>
+<div>
+<h4>Resources</h4>
+<a href="/insurance-verification/">Verify Insurance</a>
+<a href="/client-app/">Client Portal</a>
+<a href="/contact-us/">Contact Us</a>
+</div>
+<div>
+<h4>Contact</h4>
+<a href="tel:+15052700840">(505) 270-0840</a>
+<p style="margin-top:.5rem;font-size:.9rem">3301 Southern Blvd SE<br>Suite 105<br>Rio Rancho, NM 87124</p>
+</div>
+</div>
+</div>
+
+<div class="footer-privacy">
+<h3>Privacy & Compliance</h3>
+<p>Desert Mountain Healing IOP is committed to protecting your privacy and maintaining HIPAA compliance. All client information is confidential and secure.</p>
+<div class="footer-privacy-links">
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms-of-service/">Terms of Service</a>
+<a href="/hipaa-notice/">HIPAA Notice</a>
+<a href="/accessibility/">Accessibility</a>
+</div>
+</div>
+
+<div class="footer-trust">
+<div class="footer-trust-item">🔒 HIPAA Compliant</div>
+<div class="footer-trust-item">✓ NM Licensed</div>
+<div class="footer-trust-item">✓ Evidence-Based</div>
+<div class="footer-trust-item">✓ Harvard-Trained</div>
+</div>
+
+<div class="footer-emergency">
+<strong>24/7 Crisis Resources</strong>
+<p><strong>Suicide Prevention:</strong> <a href="tel:988" style="color:#fff;font-weight:700">988</a> | <strong>SAMHSA Helpline:</strong> <a href="tel:1-800-662-4357" style="color:#fff;font-weight:700">1-800-662-4357</a></p>
+</div>
+
+<div class="footer-signature">
+Desert Mountain Healing IOP · Licensed Outpatient Treatment · Rio Rancho, New Mexico
+</div>
+
+<div class="footer-legal">
+<span>© 2025 Desert Mountain Healing IOP, LLC</span>
+<a href="/privacy-policy/">Privacy</a>
+<a href="/terms-of-service/">Terms</a>
+<a href="/sitemap.xml">Sitemap</a>
+</div>
+
+</div>
+</footer>
+
+</main>
+
+<script>
+// Mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const siteNav = document.querySelector('.site-nav');
+if(menuToggle){
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    siteNav.classList.toggle('open');
+  });
+}
+
+// Dropdown toggles
+document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const dropdown = btn.parentElement;
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    dropdown.classList.toggle('open');
+  });
+});
+</script>
+
+</body>
+</html>
