@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Roberts - Co-Founder & Operations Director | Desert Mountain Healing IOP</title>
+    <meta name="description" content="Meet Sean Roberts, Co-Founder of Desert Mountain Healing IOP. In recovery since 1987, Sean built a treatment center based on dignity, compassion, respect, and hope.">
+    <link rel="canonical" href="https://dmhiop.com/sean-roberts.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sean Roberts - Co-Founder & Operations Director | Desert Mountain Healing IOP">
+    <meta property="og:description" content="Meet Sean Roberts, Co-Founder of Desert Mountain Healing IOP. In recovery since 1987, Sean built a treatment center based on dignity, compassion, respect, and hope.">
+    <meta property="og:url" content="https://dmhiop.com/sean-roberts.html">
+    <meta property="og:type" content="profile">
+    <meta property="og:image" content="https://dmhiop.com/images/team/sean-roberts.jpg">
+    
+    <!-- Schema.org Person Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sean Roberts",
+      "jobTitle": "Co-Founder & Operations Director",
+      "worksFor": {
+        "@type": "MedicalOrganization",
+        "name": "Desert Mountain Healing IOP",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3301 Southern Blvd SE, Suite 105",
+          "addressLocality": "Rio Rancho",
+          "addressRegion": "NM",
+          "postalCode": "87124"
+        },
+        "telephone": "+1-505-270-0840"
+      },
+      "description": "Co-Founder of Desert Mountain Healing IOP with 37+ years in recovery, dedicated to treating individuals with dignity, compassion, and respect.",
+      "url": "https://dmhiop.com/sean-roberts.html"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #063743 0%, #1ba3bd 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-section h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .logo-section .tagline {
+            font-size: 0.9rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .header-contact {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .header-contact a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .header-contact a:hover {
+            opacity: 0.8;
+        }
+        
+        .cta-button {
+            background: #ef8b22;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(239, 139, 34, 0.4);
+        }
+        
+        /* Navigation Styles */
+        nav {
+            background: rgba(6, 55, 67, 0.95);
+            padding: 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 0;
+            flex-wrap: wrap;
+        }
+        
+        .nav-menu > li {
+            position: relative;
+        }
+        
+        .nav-menu > li > a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+        
+        .nav-menu > li > a:hover,
+        .nav-menu > li:hover > a {
+            background: rgba(27, 163, 189, 0.3);
+        }
+        
+        /* Dropdown Styles */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(6, 55, 67, 0.98);
+            min-width: 250px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+        
+        .nav-menu > li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown li {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .dropdown li:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown a {
+            color: white;
+            padding: 12px 20px;
+            display: block;
+            text-decoration: none;
+            transition: background 0.3s, padding-left 0.3s;
+        }
+        
+        .dropdown a:hover {
+            background: rgba(27, 163, 189, 0.4);
+            padding-left: 25px;
+        }
+        
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: #ef8b22;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(6, 55, 67, 0.95) 0%, rgba(27, 163, 189, 0.9) 100%),
+                        url('https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/team/sean-roberts.jpg') center/cover no-repeat;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero .title {
+            font-size: 1.5rem;
+            color: #ef8b22;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .hero .quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-top: 30px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Bio Sections */
+        .bio-section {
+            padding: 60px 20px;
+        }
+        
+        .bio-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .bio-section h2 {
+            color: #063743;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+        
+        .bio-section h3 {
+            color: #1ba3bd;
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .bio-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .bio-section ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .bio-section li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #1ba3bd 0%, #063743 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .highlight-box h3 {
+            color: #ef8b22;
+            margin-bottom: 20px;
+        }
+        
+        .highlight-box p {
+            color: white;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        /* Quick Facts Grid */
+        .quick-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .fact-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .fact-card strong {
+            color: #1ba3bd;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .fact-card p {
+            margin: 0;
+            color: #555;
+        }
+        
+        /* Back to Team Link */
+        .back-link {
+            display: inline-block;
+            background: #ef8b22;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 30px;
+        }
+        
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(239, 139, 34, 0.4);
+        }
+        
+        /* Footer Styles */
+        footer {
+            background: #063743;
+            color: white;
+            padding: 60px 20px 20px 20px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            color: #ef8b22;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #1ba3bd;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu > li {
+                width: 100%;
+            }
+            
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: rgba(27, 163, 189, 0.2);
+                display: none;
+            }
+            
+            .nav-menu > li:hover .dropdown {
+                display: block;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .quote {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 760px) {
+            .hero {
+                padding: 80px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .bio-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div>
+                    <h1>Desert Mountain Healing IOP</h1>
+                    <p class="tagline">Compassionate Outpatient Treatment in Rio Rancho, NM</p>
+                </div>
+            </div>
+            <div class="header-contact">
+                <a href="tel:+15052700840">📞 (505) 270-0840</a>
+                <a href="contact-us.html" class="cta-button">Start Your Recovery</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="reliable-substance-abuse-treatments.html">Treatment ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="iop-benefits.html">IOP Benefits</a></li>
+                        <li><a href="mat.html">Medication-Assisted Treatment</a></li>
+                        <li><a href="medical-detox-assistance.html">Medical Detox Assistance</a></li>
+                        <li><a href="reliable-substance-abuse-treatments.html">All Services</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About Us ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="reviews.html">Client Reviews</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Client Resources ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="client-app.html">Recovery Portal</a></li>
+                        <li><a href="insurance-verification.html">Insurance Verification</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sean Roberts</h1>
+            <p class="title">Co-Founder & Operations Director</p>
+            <p class="quote">"Recovery isn't just about overcoming addiction—it's about rediscovering purpose, rebuilding hope, and creating a life worth living."</p>
+        </div>
+    </section>
+
+    <!-- Meet Sean Section -->
+    <section class="bio-section">
+        <div class="container">
+            <h2>Meet Sean</h2>
+            <p>For Sean Roberts, recovery is more than a profession—it's a lifelong calling.</p>
+            
+            <p>In 1987, Sean began his own recovery journey. Over the past 37+ years, he has dedicated his life to helping others find the same freedom, purpose, and hope that transformed his own life.</p>
+            
+            <p>Sean didn't just want to create another addiction treatment center—he wanted to build a place where people are treated with the dignity, compassion, and respect they deserve. Together with his business partner Gary Gamboa, Sean co-founded Desert Mountain Healing IOP on principles they both knew were essential: dignity, compassion, respect, hope, and accountability.</p>
+            
+            <p>As Operations Director, Sean oversees the day-to-day functions of the program, ensuring every client receives individualized, high-quality care. His leadership reflects his belief that treatment should honor the humanity of every person who walks through the door—whether it's their first time seeking help or they're returning after a relapse.</p>
+        </div>
+    </section>
+
+    <!-- Professional Background Section -->
+    <section class="bio-section">
+        <div class="container">
+            <h2>Professional Background</h2>
+            <p>Sean brings more than three decades of personal recovery experience and professional leadership to Desert Mountain Healing IOP.</p>
+            
+            <p>Throughout his career, Sean has worked in various capacities within the addiction treatment industry, always guided by the belief that people deserve to be treated as individuals—not diagnoses.</p>
+            
+            <p>He has seen firsthand how the right treatment environment can change lives. He has also witnessed the damage caused by programs that lack compassion, fail to offer individualized care, or treat clients as statistics rather than human beings.</p>
+            
+            <p>Those experiences motivated him to create a treatment center that operates differently—one where clients are welcomed without judgment, supported with evidence-based care, and empowered to create lasting change.</p>
+        </div>
+    </section>
+
+    <!-- Leadership Philosophy Section -->
+    <section class="bio-section">
+        <div class="container">
+            <h2>Leadership Philosophy</h2>
+            <p>Sean's leadership is guided by five core principles that shape every aspect of Desert Mountain Healing IOP:</p>
+            
+            <h3>1. Dignity</h3>
+            <p>Every person who seeks treatment deserves to be treated with dignity. Addiction does not define a person's worth, and recovery begins when individuals are reminded of their inherent value.</p>
+            
+            <h3>2. Compassion</h3>
+            <p>Sean believes compassion creates the foundation for healing. When people feel understood and supported, they are more likely to engage in treatment and commit to long-term recovery.</p>
+            
+            <h3>3. Respect</h3>
+            <p>Respect means honoring each client's unique experiences, goals, and recovery journey. There is no "one-size-fits-all" approach to addiction treatment.</p>
+            
+            <h3>4. Hope</h3>
+            <p>Hope is essential for recovery. Sean works to ensure every client knows that recovery is possible, no matter how many times they've tried before.</p>
+            
+            <h3>5. Accountability</h3>
+            <p>While compassion is critical, accountability is equally important. Sean believes clients need supportive accountability to develop the skills, confidence, and resilience required for sustainable recovery.</p>
+        </div>
+    </section>
+
+    <!-- Why Sean Built DMHIOP Section -->
+    <section class="bio-section">
+        <div class="container">
+            <div class="highlight-box">
+                <h3>Why Sean Built Desert Mountain Healing IOP</h3>
+                <p>Sean co-founded Desert Mountain Healing IOP because he believes people struggling with addiction deserve better than what many treatment centers offer.</p>
+                
+                <p style="margin-top: 20px;">He wanted to create a program where:</p>
+                <ul style="color: white; margin-left: 20px; margin-top: 15px;">
+                    <li>Clients are treated with dignity, not judgment</li>
+                    <li>First-time treatment seekers feel welcomed and supported</li>
+                    <li>People returning after relapse are met with compassion, not shame</li>
+                    <li>Treatment is personalized to meet individual needs</li>
+                    <li>Recovery is built on hope, accountability, and evidence-based care</li>
+                </ul>
+                
+                <p style="margin-top: 20px;">That vision became Desert Mountain Healing IOP—a place where recovery is possible, and every person is valued.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sean's Role Section -->
+    <section class="bio-section">
+        <div class="container">
+            <h2>Sean's Role at Desert Mountain Healing IOP</h2>
+            <p>As Co-Founder and Operations Director, Sean's responsibilities include:</p>
+            
+            <ul>
+                <li><strong>Operational Leadership:</strong> Overseeing daily operations to ensure the program runs smoothly and efficiently</li>
+                <li><strong>Quality Assurance:</strong> Ensuring every client receives high-quality, individualized care</li>
+                <li><strong>Staff Development:</strong> Supporting and mentoring the treatment team to maintain the highest standards of compassionate care</li>
+                <li><strong>Client Advocacy:</strong> Ensuring clients' voices are heard and their needs are prioritized</li>
+                <li><strong>Community Engagement:</strong> Building relationships with referral sources, community organizations, and recovery advocates</li>
+                <li><strong>Strategic Planning:</strong> Guiding the long-term vision and growth of Desert Mountain Healing IOP</li>
+            </ul>
+            
+            <p>Sean's leadership ensures that Desert Mountain Healing IOP remains true to its founding principles while continually improving the quality of care provided to every client.</p>
+        </div>
+    </section>
+
+    <!-- Personal Message Section -->
+    <section class="bio-section">
+        <div class="container">
+            <h2>Personal Message from Sean</h2>
+            <p><em>"If you're struggling with addiction, I want you to know that recovery is possible—no matter how many times you've tried before, no matter how hopeless things feel right now.</em></p>
+            
+            <p><em>I've been where you are. I know what it's like to feel stuck, ashamed, and alone. I also know what it's like to find freedom, purpose, and hope again.</em></p>
+            
+            <p><em>At Desert Mountain Healing IOP, we don't judge you. We don't see you as a diagnosis or a statistic. We see you as a person who deserves compassion, respect, and the opportunity to build a better life.</em></p>
+            
+            <p><em>Whether this is your first time seeking help or you're returning after a relapse, you'll find a welcoming, supportive environment where you can heal, grow, and discover the life you deserve.</em></p>
+            
+            <p><em>Recovery isn't easy, but you don't have to do it alone. We're here to walk beside you every step of the way."</em></p>
+            
+            <p style="margin-top: 30px;"><strong>– Sean Roberts, Co-Founder & Operations Director</strong></p>
+        </div>
+    </section>
+
+    <!-- Quick Facts Section -->
+    <section class="bio-section">
+        <div class="container">
+            <h2>Quick Facts</h2>
+            <div class="quick-facts">
+                <div class="fact-card">
+                    <strong>Role:</strong>
+                    <p>Co-Founder & Operations Director</p>
+                </div>
+                <div class="fact-card">
+                    <strong>Recovery Since:</strong>
+                    <p>1987 (37+ years)</p>
+                </div>
+                <div class="fact-card">
+                    <strong>Professional Focus:</strong>
+                    <p>Operational Leadership, Quality Assurance, Client Advocacy, Staff Development</p>
+                </div>
+                <div class="fact-card">
+                    <strong>Core Philosophy:</strong>
+                    <p>"Treatment must honor the dignity of every individual seeking help."</p>
+                </div>
+                <div class="fact-card">
+                    <strong>Why He Built DMHIOP:</strong>
+                    <p>To create a treatment center where people are treated with dignity, compassion, respect, hope, and accountability</p>
+                </div>
+                <div class="fact-card">
+                    <strong>What Drives Him:</strong>
+                    <p>Watching individuals rediscover purpose, rebuild hope, and create lives worth living</p>
+                </div>
+            </div>
+            
+            <a href="team.html" class="back-link">← Back to Our Team</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Desert Mountain Healing IOP</h3>
+                    <p>Compassionate outpatient addiction treatment in Rio Rancho, New Mexico.</p>
+                    <p style="margin-top: 15px;">
+                        <strong>Phone:</strong> (505) 270-0840<br>
+                        <strong>Address:</strong><br>
+                        3301 Southern Blvd SE, Suite 105<br>
+                        Rio Rancho, NM 87124
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Treatment Programs</h3>
+                    <ul>
+                        <li><a href="iop-benefits.html">Intensive Outpatient Program (IOP)</a></li>
+                        <li><a href="mat.html">Medication-Assisted Treatment (MAT)</a></li>
+                        <li><a href="medical-detox-assistance.html">Medical Detox Assistance</a></li>
+                        <li><a href="reliable-substance-abuse-treatments.html">All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="reviews.html">Client Reviews</a></li>
+                        <li><a href="faq.html">Frequently Asked Questions</a></li>
+                        <li><a href="blog.html">Recovery Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Client Resources</h3>
+                    <ul>
+                        <li><a href="client-app.html">Client Recovery Portal</a></li>
+                        <li><a href="insurance-verification.html">Insurance Verification</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Desert Mountain Healing IOP. All rights reserved. | <a href="privacy-policy.html" style="color: rgba(255,255,255,0.7);">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
