@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<!-- =========================================================
+     DMHIOP WEBSITE FRAMEWORK v4
+     Desert Mountain Healing IOP
+     Alicia Chavez Bio Page
+========================================================= -->
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alicia Chavez, LSAA - Primary Therapist | Desert Mountain Healing IOP</title>
+<meta content="Meet Alicia Chavez, LSAA, Primary Therapist at Desert Mountain Healing IOP. UNM graduate currently pursuing bachelor's degree, specializing in addiction recovery, relapse prevention, and emotional wellness in Rio Rancho, NM." name="description"/>
+<meta content="Alicia Chavez LSAA, addiction therapist, UNM graduate, relapse prevention, Rio Rancho counseling" name="keywords"/>
+<meta content="Desert Mountain Healing IOP" name="author"/>
+<link href="https://dmhiop.com/alicia-chavez/" rel="canonical"/>
+<meta content="#0d7485" name="theme-color"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alicia Chavez",
+  "jobTitle": "Primary Therapist",
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Desert Mountain Healing IOP"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of New Mexico"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Source+Sans+3:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+<style>
+    :root{
+      --teal-950:#063743;
+      --teal-900:#084754;
+      --teal-800:#0b5f6e;
+      --teal-700:#0d7485;
+      --teal-600:#1493a8;
+      --teal-500:#1ba3bd;
+      --teal-100:#dff4f7;
+      --teal-050:#f2fbfc;
+      --gold:#ef8b22;
+      --gold-soft:#fff0dc;
+      --ink:#173139;
+      --muted:#60747b;
+      --line:#dce8ea;
+      --surface:#ffffff;
+      --soft:#f7fafb;
+      --shadow-sm:0 10px 30px rgba(6,55,67,.08);
+      --shadow-md:0 22px 60px rgba(6,55,67,.16);
+      --radius:22px;
+      --max:1220px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:#fff;
+      font-family:"Source Sans 3",Arial,sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    h1,h2,h3,h4{
+      margin:0 0 .85rem;
+      color:var(--teal-950);
+      font-family:"Merriweather",Georgia,serif;
+      line-height:1.15;
+    }
+    h1{font-size:clamp(3rem,6vw,5.8rem);letter-spacing:-.045em}
+    h2{font-size:clamp(2.15rem,4.2vw,3.7rem);letter-spacing:-.035em}
+    h3{font-size:1.35rem}
+    p{margin:0 0 1rem;color:var(--muted)}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .section{padding:96px 0}
+    .section-soft{background:var(--teal-050)}
+    .section-gray{background:var(--soft)}
+    
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      margin-bottom:1rem;
+      color:var(--teal-700);
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      width:34px;height:3px;border-radius:99px;background:var(--gold);content:"";
+    }
+    
+    .btn{
+      min-height:52px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.55rem;
+      padding:0 1.45rem;
+      border:1px solid transparent;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      transition:transform .18s ease,box-shadow .18s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--teal-700),var(--teal-500));
+      box-shadow:0 14px 34px rgba(27,163,189,.28);
+    }
+    .btn-secondary{
+      color:var(--teal-950);
+      background:#fff;
+      border-color:rgba(6,55,67,.14);
+      box-shadow:var(--shadow-sm);
+    }
+    .btn-warm{color:#fff;background:var(--gold);box-shadow:0 12px 28px rgba(239,139,34,.3)}
+    
+    .topbar{color:#fff;background:var(--teal-950);font-size:.9rem}
+    .topbar-inner{
+      min-height:42px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .topbar a{font-weight:700;text-decoration:none}
+    .topbar-actions{display:flex;align-items:center;gap:1rem}
+    
+    .site-header{
+      position:sticky;top:0;z-index:100;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(6,55,67,.08);
+      backdrop-filter:blur(14px);
+    }
+    .nav-wrap{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .brand img{height:auto;width:180px}
+    .menu-toggle{
+      min-width:46px;min-height:46px;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:0;
+      border:none;
+      background:none;
+      color:var(--teal-950);
+      font-size:1.55rem;
+      cursor:pointer;
+    }
+    .site-nav{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+    }
+    .site-nav>a{
+      padding:.65rem 0;
+      color:var(--teal-950);
+      font-weight:700;
+      font-size:.875rem;
+    }
+    .site-nav>a:hover{color:var(--teal-500)}
+    .nav-dropdown{position:relative}
+    .nav-dropdown-toggle{
+      min-height:44px;
+      display:flex;
+      width:100%;
+      align-items:center;
+      justify-content:space-between;
+      gap:.4rem;
+      padding:0;
+      border:none;
+      background:none;
+      color:var(--teal-950);
+      font-weight:700;
+      font-size:.875rem;
+      cursor:pointer;
+    }
+    .nav-dropdown-menu{
+      display:none;
+      grid-template-columns:1fr;
+      gap:0;
+      margin-top:12px;
+      padding:8px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+      box-shadow:var(--shadow-md);
+    }
+    .nav-dropdown-menu a{
+      padding:.9rem 1rem;
+      border-radius:12px;
+      color:var(--muted);
+      font-weight:700;
+      font-size:.875rem;
+    }
+    .nav-dropdown-menu a:hover{background:var(--teal-050);color:var(--teal-700)}
+    .nav-dropdown-menu a.active{background:var(--teal-050);color:var(--teal-700)}
+    
+    /* Bio Hero */
+    .bio-hero{
+      padding:80px 0;
+      background:linear-gradient(135deg,var(--teal-950),var(--teal-800));
+      color:#fff;
+    }
+    .bio-hero-inner{
+      display:grid;
+      grid-template-columns:400px 1fr;
+      gap:64px;
+      align-items:center;
+    }
+    .bio-photo-wrap{position:relative}
+    .bio-photo-wrap::before{
+      position:absolute;inset:-16px 16px 16px -16px;content:"";
+      border-radius:28px;
+      background:linear-gradient(145deg,rgba(27,163,189,.4),rgba(239,139,34,.3));
+    }
+    .bio-photo{
+      position:relative;
+      width:100%;
+      height:480px;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:26px;
+    }
+    .bio-hero h1{color:#fff;margin-bottom:1.2rem}
+    .bio-role{
+      display:inline-block;
+      margin-bottom:1rem;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(239,139,34,.2);
+      color:var(--gold);
+      font-size:.85rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .bio-lead{
+      font-size:1.25rem;
+      line-height:1.6;
+      color:rgba(255,255,255,.9);
+      margin-bottom:2rem;
+    }
+    .bio-stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:1.5rem;
+      margin-top:2.5rem;
+    }
+    .bio-stat-item{
+      padding:1.25rem;
+      border-radius:18px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .bio-stat-label{
+      font-size:.8rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--gold);
+      margin-bottom:.5rem;
+    }
+    .bio-stat-value{
+      font-size:1.1rem;
+      font-weight:700;
+      color:#fff;
+    }
+    
+    /* Content Sections */
+    .bio-content{max-width:900px;margin:0 auto}
+    .bio-content h2{margin-bottom:1.5rem}
+    .bio-content h3{color:var(--teal-700);margin-top:2rem;margin-bottom:1rem}
+    .bio-content ul{
+      margin:1.5rem 0;
+      padding:0;
+      list-style:none;
+    }
+    .bio-content ul li{
+      position:relative;
+      padding-left:2rem;
+      margin-bottom:1rem;
+      color:var(--muted);
+    }
+    .bio-content ul li::before{
+      position:absolute;
+      left:0;
+      content:"✓";
+      color:var(--gold);
+      font-weight:900;
+    }
+    .bio-content blockquote{
+      margin:2.5rem 0;
+      padding:2rem 2.5rem;
+      border-left:4px solid var(--gold);
+      border-radius:12px;
+      background:var(--gold-soft);
+      font-family:"Merriweather",Georgia,serif;
+      font-size:1.25rem;
+      font-style:italic;
+      line-height:1.6;
+      color:var(--teal-950);
+    }
+    .bio-content blockquote p{color:inherit;margin:0}
+    
+    /* Back Button */
+    .back-section{
+      padding:48px 0;
+      text-align:center;
+      background:var(--soft);
+    }
+    
+    /* Prefooter CTA */
+    .prefooter-cta{
+      padding:86px 0;
+      color:#fff;
+      background:linear-gradient(135deg,var(--teal-950),var(--teal-700));
+      text-align:center;
+    }
+    .prefooter-cta .eyebrow{color:var(--gold)}
+    .prefooter-cta h2{color:#fff;margin-bottom:1.2rem}
+    .prefooter-cta p{
+      max-width:720px;
+      margin:0 auto 2rem;
+      color:rgba(255,255,255,.88);
+      font-size:1.15rem;
+    }
+    .prefooter-actions{
+      display:flex;
+      gap:1rem;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    
+    /* Footer */
+    footer{
+      padding:54px 0 28px;
+      color:rgba(255,255,255,.78);
+      background:var(--teal-950);
+    }
+    footer h3,footer h4{color:#fff}
+    footer a{text-decoration:none}
+    footer a:hover{color:#fff}
+    
+    .footer-sitemap{
+      margin-top:46px;
+      padding-top:34px;
+      border-top:1px solid rgba(255,255,255,.16);
+    }
+    .footer-sitemap-heading{margin-bottom:22px}
+    .footer-sitemap-heading h3{
+      margin:0;
+      font-size:1.4rem;
+    }
+    .footer-sitemap-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:30px;
+      padding:28px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:22px;
+      background:rgba(255,255,255,.055);
+    }
+    .footer-sitemap-grid h4{
+      margin:0 0 .8rem;
+      color:#86e6ef;
+      font-family:"Source Sans 3",Arial,sans-serif;
+      font-size:.9rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .footer-sitemap-grid a{
+      display:block;
+      margin:.48rem 0;
+      color:rgba(255,255,255,.82);
+    }
+    
+    .footer-privacy{
+      margin-top:32px;
+      padding-top:28px;
+      border-top:1px solid rgba(255,255,255,.16);
+    }
+    .footer-privacy h3{
+      margin-bottom:.6rem;
+      font-size:1.15rem;
+    }
+    .footer-privacy p{
+      max-width:980px;
+      margin:0;
+      color:rgba(255,255,255,.78);
+    }
+    .footer-privacy-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.7rem 1.15rem;
+      margin-top:1rem;
+    }
+    .footer-privacy-links a{
+      color:#86e6ef;
+      font-weight:700;
+    }
+    
+    .footer-trust{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1rem;
+      margin-top:28px;
+    }
+    .footer-trust-item{
+      min-height:112px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:.75rem;
+      padding:1rem;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      background:rgba(255,255,255,.045);
+      text-align:center;
+      font-weight:800;
+    }
+    
+    .footer-emergency{
+      margin-top:28px;
+      padding:20px 22px;
+      border-left:4px solid var(--gold);
+      border-radius:12px;
+      background:rgba(239,139,34,.09);
+    }
+    .footer-emergency strong{color:#fff}
+    .footer-emergency p{
+      margin:0;
+      color:rgba(255,255,255,.80);
+    }
+    
+    .footer-signature{
+      margin:30px 0 0;
+      color:#bceef3;
+      font-family:"Merriweather",Georgia,serif;
+      font-size:1.1rem;
+      text-align:center;
+    }
+    
+    .footer-legal{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:.5rem .9rem;
+      margin-top:.7rem;
+    }
+    .footer-legal a{color:rgba(255,255,255,.72)}
+    
+    /* Responsive */
+    @media(max-width:1080px){
+      .bio-hero-inner{grid-template-columns:1fr;gap:40px}
+      .bio-photo{height:400px}
+      .footer-sitemap-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-trust{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:760px){
+      .bio-hero{padding:60px 0}
+      .bio-stats{grid-template-columns:1fr}
+      .section{padding:64px 0}
+      .prefooter-cta{padding:64px 0}
+      .prefooter-actions{flex-direction:column}
+      .prefooter-actions .btn{width:100%}
+      .footer-sitemap-grid{grid-template-columns:1fr;padding:22px}
+      .footer-trust{grid-template-columns:1fr}
+      .menu-toggle{display:flex}
+      .site-nav{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:min(340px,85vw);
+        height:100vh;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:28px 22px;
+        background:#fff;
+        box-shadow:var(--shadow-md);
+        transition:right .3s ease;
+        overflow-y:auto;
+      }
+      .site-nav.open{right:0}
+      .site-nav>a{padding:.85rem 0;border-bottom:1px solid var(--line)}
+      .nav-dropdown{border-bottom:1px solid var(--line)}
+      .nav-dropdown-menu{position:static;border:none;box-shadow:none;margin-top:0;padding:0 0 .85rem 1.2rem}
+      .nav-dropdown.open .nav-dropdown-menu{display:grid}
+    }
+    
+    /* Desktop nav hover */
+    @media(min-width:901px){
+      .nav-wrap{min-height:88px;gap:.8rem}
+      .brand img{width:205px}
+      .site-nav{
+        position:static!important;
+        display:flex!important;
+        flex-direction:row!important;
+        gap:.8rem!important;
+        padding:0!important;
+        background:transparent!important;
+        box-shadow:none!important;
+      }
+      .site-nav a{font-size:.78rem}
+      .menu-toggle{display:none!important}
+      .nav-dropdown-menu{
+        position:absolute;
+        top:calc(100% + 10px);
+        left:0;
+        min-width:290px;
+      }
+      .nav-dropdown:hover .nav-dropdown-menu,
+      .nav-dropdown:focus-within .nav-dropdown-menu{
+        display:grid;
+      }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="topbar">
+<div class="container topbar-inner">
+<span>Hope. Healing. Recovery. Every Day.</span>
+<div class="topbar-actions">
+<a href="tel:+15052700840">Call (505) 270-0840</a>
+</div>
+</div>
+</div>
+
+<header class="site-header">
+<div class="container nav-wrap">
+<a aria-label="Desert Mountain Healing IOP home" class="brand" href="/">
+<img alt="Desert Mountain Healing IOP" src="/dmh-logo (1).png"/>
+</a>
+<button aria-controls="siteNav" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle">☰</button>
+<nav aria-label="Main navigation" class="site-nav" id="siteNav">
+<a href="/">Home</a>
+<div class="nav-dropdown">
+<button aria-expanded="false" class="nav-dropdown-toggle" type="button">Treatment <span class="dropdown-arrow">▼</span></button>
+<div class="nav-dropdown-menu">
+<a href="/iop-benefits/">Intensive Outpatient Program</a>
+<a href="/reliable-substance-abuse-treatments/">Programs & Services</a>
+<a href="/services/">Additional Services</a>
+<a href="/mat/">Medication-Assisted Treatment</a>
+<a href="/medical-detox-assistance/">Medical Detox Assistance</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<button aria-expanded="false" class="nav-dropdown-toggle" type="button">About Us <span class="dropdown-arrow">▼</span></button>
+<div class="nav-dropdown-menu">
+<a href="/team/">Our Team</a>
+<a href="/reviews/">Reviews</a>
+<a href="/blog/">Blog</a>
+<a href="/faq/">Frequently Asked Questions</a>
+<a href="/contact-us/">Contact Us</a>
+</div>
+</div>
+<div class="nav-dropdown">
+<button aria-expanded="false" class="nav-dropdown-toggle" type="button">Client Resources <span class="dropdown-arrow">▼</span></button>
+<div class="nav-dropdown-menu">
+<a href="/client-app/">Recovery Portal</a>
+<a href="/client-portal/">Client Login</a>
+<a href="https://myrecoverynm.org" rel="noopener external" target="_blank">Recovery NM</a>
+</div>
+</div>
+<a class="btn btn-warm" href="/insurance-verification/">Verify Insurance</a>
+</nav>
+</div>
+</header>
+
+<main id="main-content">
+
+<!-- Bio Hero -->
+<section class="bio-hero">
+<div class="container bio-hero-inner">
+<div class="bio-photo-wrap">
+<img src="/__static/team/alicia-chavez.png" alt="Alicia Chavez" class="bio-photo">
+</div>
+<div class="bio-copy">
+<span class="bio-role">Primary Therapist</span>
+<h1>Alicia Chavez, LSAA</h1>
+<p class="bio-lead">Alicia Chavez is a Licensed Substance Abuse Associate who is passionate about helping individuals overcome substance use disorders and develop the skills needed to achieve lasting recovery. She believes that every person's recovery journey is unique, and effective treatment begins by listening without judgment and building a therapeutic relationship founded on trust, compassion, and respect.</p>
+<div class="bio-stats">
+<div class="bio-stat-item">
+<div class="bio-stat-label">Credential</div>
+<div class="bio-stat-value">LSAA</div>
+</div>
+<div class="bio-stat-item">
+<div class="bio-stat-label">Education</div>
+<div class="bio-stat-value">UNM Graduate</div>
+</div>
+<div class="bio-stat-item">
+<div class="bio-stat-label">Role</div>
+<div class="bio-stat-value">Primary Therapist</div>
+</div>
+<div class="bio-stat-item">
+<div class="bio-stat-label">Focus</div>
+<div class="bio-stat-value">Relapse Prevention</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Opening Quote -->
+<section class="section section-soft">
+<div class="container bio-content">
+<blockquote>
+<p>"Every person deserves the opportunity to heal, grow, and create a future filled with hope."</p>
+</blockquote>
+</div>
+</section>
+
+<!-- Meet Alicia -->
+<section class="section">
+<div class="container bio-content">
+<span class="eyebrow">Meet Alicia</span>
+<h2>Compassionate Support for Lasting Change</h2>
+<p>Alicia Chavez is a Licensed Substance Abuse Associate (LSAA) who is passionate about helping individuals overcome substance use disorders and develop the skills needed to achieve lasting recovery.</p>
+<p>She believes that every person's recovery journey is unique, and effective treatment begins by listening without judgment, understanding each individual's experiences, and building a therapeutic relationship founded on trust, compassion, and respect.</p>
+<p>At Desert Mountain Healing IOP, Alicia provides individual counseling, facilitates group therapy, and works collaboratively with the multidisciplinary treatment team to help clients overcome barriers, strengthen coping skills, and build healthier, more meaningful lives.</p>
+<p>Her compassionate and encouraging approach helps clients recognize their strengths while empowering them to take ownership of their recovery journey.</p>
+</div>
+</section>
+
+<!-- Professional Background -->
+<section class="section section-gray">
+<div class="container bio-content">
+<span class="eyebrow">Professional Background</span>
+<h2>Experience in Addiction Counseling</h2>
+<p>Alicia has experience working with individuals facing substance use disorders, anxiety, depression, trauma, life transitions, and other behavioral health challenges.</p>
+<p>She believes meaningful recovery requires more than abstinence. It involves developing healthy relationships, improving emotional wellness, strengthening communication, and learning practical strategies for navigating life's challenges without returning to substance use.</p>
+<p>As a counselor, Alicia is committed to helping clients discover their resilience and develop the confidence needed to create lasting change. She works alongside each individual to identify their strengths, address obstacles, and develop realistic goals that support lifelong recovery.</p>
+<p>Her collaborative style encourages clients to actively participate in their treatment while celebrating progress and learning from setbacks.</p>
+</div>
+</section>
+
+<!-- Education & Credentials -->
+<section class="section">
+<div class="container bio-content">
+<span class="eyebrow">Education & Credentials</span>
+<h2>Academic Foundation & Continued Growth</h2>
+
+<h3>Professional Credentials</h3>
+<ul>
+<li><strong>Licensed Substance Abuse Associate (LSAA)</strong></li>
+</ul>
+
+<h3>Education</h3>
+<ul>
+<li><strong>Associate Degree</strong> - The University of New Mexico (UNM)</li>
+<li><strong>Currently Pursuing a Bachelor's Degree</strong></li>
+</ul>
+
+<p>Alicia earned her Associate Degree from the University of New Mexico and is continuing her education by pursuing her bachelor's degree. She is committed to lifelong learning and continually expanding her knowledge of behavioral health, addiction treatment, and evidence-based counseling practices.</p>
+<p>She believes that professional growth directly benefits her clients by allowing her to provide the highest quality care while remaining current with advances in the behavioral health field.</p>
+</div>
+</section>
+
+<!-- Counseling Philosophy -->
+<section class="section section-soft">
+<div class="container bio-content">
+<span class="eyebrow">Counseling Philosophy</span>
+<h2>Connection, Trust, and Hope</h2>
+<p>Alicia believes recovery is built on connection, trust, and hope.</p>
+
+<h3>Her counseling philosophy centers on four core principles:</h3>
+
+<h3>1. Everyone Deserves Compassion</h3>
+<p>Healing begins when individuals feel respected, accepted, and supported without judgment.</p>
+
+<h3>2. Growth Happens Through Relationships</h3>
+<p>Strong therapeutic relationships create the foundation for lasting change.</p>
+
+<h3>3. Recovery Is About Building a Better Life</h3>
+<p>Recovery is not simply the absence of substance use—it is the development of purpose, confidence, healthy relationships, and emotional well-being.</p>
+
+<h3>4. Progress Matters More Than Perfection</h3>
+<p>Every positive step deserves recognition. Recovery is a lifelong journey built one day at a time.</p>
+</div>
+</section>
+
+<!-- Areas of Focus -->
+<section class="section">
+<div class="container bio-content">
+<span class="eyebrow">Areas of Focus</span>
+<h2>Clinical Specializations</h2>
+<ul>
+<li>Substance Use Disorders</li>
+<li>Individual Counseling</li>
+<li>Group Therapy</li>
+<li>Relapse Prevention</li>
+<li>Emotional Wellness</li>
+<li>Coping Skills Development</li>
+<li>Stress Management</li>
+<li>Self-Esteem</li>
+<li>Recovery Planning</li>
+<li>Personal Growth</li>
+</ul>
+</div>
+</section>
+
+<!-- Alicia's Role -->
+<section class="section section-gray">
+<div class="container bio-content">
+<span class="eyebrow">Alicia's Role on Your Recovery Team</span>
+<h2>Primary Therapist & Recovery Partner</h2>
+<p>As a Primary Therapist, Alicia works alongside clients throughout their recovery journey by helping them understand the thoughts, emotions, and behaviors that contribute to addiction.</p>
+
+<h3>Her responsibilities include:</h3>
+<ul>
+<li>Individual counseling</li>
+<li>Group facilitation</li>
+<li>Treatment planning</li>
+<li>Progress evaluations</li>
+<li>Recovery education</li>
+<li>Relapse prevention planning</li>
+<li>Care coordination with the treatment team</li>
+<li>Long-term recovery support</li>
+</ul>
+
+<p>She believes coordinated, team-based care provides clients with the greatest opportunity for long-term success.</p>
+</div>
+</section>
+
+<!-- What Clients Can Expect -->
+<section class="section">
+<div class="container bio-content">
+<span class="eyebrow">What Clients Can Expect</span>
+<h2>Working with Alicia</h2>
+<p>Clients working with Alicia can expect:</p>
+<ul>
+<li><strong>A welcoming, supportive environment</strong></li>
+<li><strong>Compassionate, judgment-free counseling</strong></li>
+<li><strong>Honest communication</strong></li>
+<li><strong>Individualized treatment planning</strong></li>
+<li><strong>Practical coping strategies</strong></li>
+<li><strong>Encouragement balanced with accountability</strong></li>
+<li><strong>Evidence-based therapeutic approaches</strong></li>
+</ul>
+<p>Her goal is to help every client feel empowered, capable, and hopeful about the future while providing the tools needed for lasting recovery.</p>
+</div>
+</section>
+
+<!-- Why Alicia Chose Behavioral Health -->
+<section class="section section-soft">
+<div class="container bio-content">
+<span class="eyebrow">Why Alicia Chose Behavioral Health</span>
+<h2>A Passion for Helping Others Heal</h2>
+<p>Alicia chose behavioral health because she believes helping people overcome adversity and rediscover their potential is one of the most rewarding professions.</p>
+<p>She understands that recovery is rarely a straight path and believes every individual deserves encouragement, understanding, and the opportunity to create a healthier, more fulfilling life.</p>
+<p>Watching clients regain confidence, reconnect with their families, and achieve goals they once thought impossible continues to inspire her work every day.</p>
+</div>
+</section>
+
+<!-- Therapeutic Approach -->
+<section class="section">
+<div class="container bio-content">
+<span class="eyebrow">Therapeutic Approach</span>
+<h2>Practical Tools for Lifelong Recovery</h2>
+<p>Alicia believes counseling should provide clients with practical tools they can continue using long after treatment has ended.</p>
+
+<h3>She works collaboratively with clients to:</h3>
+<ul>
+<li>Identify unhealthy patterns</li>
+<li>Build emotional resilience</li>
+<li>Improve communication skills</li>
+<li>Develop healthy coping strategies</li>
+<li>Strengthen relationships</li>
+<li>Increase confidence</li>
+<li>Create sustainable recovery plans</li>
+</ul>
+
+<p>Her approach focuses on helping clients build lives they no longer want to escape from while discovering purpose, hope, and personal fulfillment.</p>
+</div>
+</section>
+
+<!-- Personal Message -->
+<section class="section section-soft">
+<div class="container bio-content">
+<span class="eyebrow">A Personal Message from Alicia</span>
+<h2>You Are Never Alone</h2>
+<blockquote>
+<p>"Recovery is a journey of courage, resilience, and hope. No matter where you are today, positive change is possible. My goal is to provide a supportive environment where you feel heard, respected, and encouraged as you work toward the life you deserve. You are never alone in your recovery journey, and I am honored to walk alongside you as you take each step forward."</p>
+<p><strong>— Alicia Chavez, LSAA</strong><br>
+<em>Primary Therapist</em></p>
+</blockquote>
+</div>
+</section>
+
+<!-- Back to Team -->
+<section class="back-section">
+<div class="container">
+<a href="/team/" class="btn btn-secondary">← Back to Our Team</a>
+</div>
+</section>
+
+<!-- Prefooter CTA -->
+<section class="prefooter-cta">
+<div class="container">
+<span class="eyebrow">Ready to start your recovery journey?</span>
+<h2>Take the First Step Today</h2>
+<p>Our compassionate team is here to help you build a life worth living. Reach out now for a confidential consultation.</p>
+<div class="prefooter-actions">
+<a href="/contact-us/" class="btn btn-warm">Start Your Recovery</a>
+<a href="tel:+15052700840" class="btn btn-secondary">Call (505) 270-0840</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+
+<div class="footer-sitemap">
+<div class="footer-sitemap-heading">
+<h3>Quick Navigation</h3>
+</div>
+<div class="footer-sitemap-grid">
+<div>
+<h4>Treatment</h4>
+<a href="/iop-benefits/">IOP Program</a>
+<a href="/reliable-substance-abuse-treatments/">Programs & Services</a>
+<a href="/mat/">MAT</a>
+<a href="/medical-detox-assistance/">Detox Assistance</a>
+</div>
+<div>
+<h4>About</h4>
+<a href="/team/">Our Team</a>
+<a href="/reviews/">Reviews</a>
+<a href="/faq/">FAQ</a>
+<a href="/blog/">Blog</a>
+</div>
+<div>
+<h4>Resources</h4>
+<a href="/insurance-verification/">Verify Insurance</a>
+<a href="/client-app/">Client Portal</a>
+<a href="/contact-us/">Contact Us</a>
+</div>
+<div>
+<h4>Contact</h4>
+<a href="tel:+15052700840">(505) 270-0840</a>
+<p style="margin-top:.5rem;font-size:.9rem">3301 Southern Blvd SE<br>Suite 105<br>Rio Rancho, NM 87124</p>
+</div>
+</div>
+</div>
+
+<div class="footer-privacy">
+<h3>Privacy & Compliance</h3>
+<p>Desert Mountain Healing IOP is committed to protecting your privacy and maintaining HIPAA compliance. All client information is confidential and secure.</p>
+<div class="footer-privacy-links">
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms-of-service/">Terms of Service</a>
+<a href="/hipaa-notice/">HIPAA Notice</a>
+<a href="/accessibility/">Accessibility</a>
+</div>
+</div>
+
+<div class="footer-trust">
+<div class="footer-trust-item">🔒 HIPAA Compliant</div>
+<div class="footer-trust-item">✓ NM Licensed</div>
+<div class="footer-trust-item">✓ Evidence-Based</div>
+<div class="footer-trust-item">✓ UNM Graduate</div>
+</div>
+
+<div class="footer-emergency">
+<strong>24/7 Crisis Resources</strong>
+<p><strong>Suicide Prevention:</strong> <a href="tel:988" style="color:#fff;font-weight:700">988</a> | <strong>SAMHSA Helpline:</strong> <a href="tel:1-800-662-4357" style="color:#fff;font-weight:700">1-800-662-4357</a></p>
+</div>
+
+<div class="footer-signature">
+Desert Mountain Healing IOP · Licensed Outpatient Treatment · Rio Rancho, New Mexico
+</div>
+
+<div class="footer-legal">
+<span>© 2025 Desert Mountain Healing IOP, LLC</span>
+<a href="/privacy-policy/">Privacy</a>
+<a href="/terms-of-service/">Terms</a>
+<a href="/sitemap.xml">Sitemap</a>
+</div>
+
+</div>
+</footer>
+
+</main>
+
+<script>
+// Mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const siteNav = document.querySelector('.site-nav');
+if(menuToggle){
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    siteNav.classList.toggle('open');
+  });
+}
+
+// Dropdown toggles
+document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const dropdown = btn.parentElement;
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    dropdown.classList.toggle('open');
+  });
+});
+</script>
+
+</body>
+</html>
