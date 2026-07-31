@@ -1,790 +1,577 @@
 <!DOCTYPE html>
+<!-- =========================================================
+     DMHIOP WEBSITE FRAMEWORK v4
+     Desert Mountain Healing IOP
+     Tatiana Schnierow Bio Page
+========================================================= -->
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Tatiana Schnierow - Office Manager | Desert Mountain Healing IOP</title>
-<meta name="description" content="Meet Tatiana Schnierow, Office Manager at Desert Mountain Healing IOP. With personal recovery experience, she welcomes every client with compassion and hope.">
+<meta content="Meet Tatiana Schnierow, Office Manager at Desert Mountain Healing IOP. With personal recovery experience since the organization's founding, she welcomes every client with compassion and hope." name="description"/>
+<meta content="Tatiana Schnierow DMHIOP, office manager recovery, Rio Rancho IOP, addiction treatment support" name="keywords"/>
+<meta content="Desert Mountain Healing IOP" name="author"/>
+<link href="https://dmhiop.com/tatiana-schnierow/" rel="canonical"/>
+<meta content="#0d7485" name="theme-color"/>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tatiana Schnierow",
+  "jobTitle": "Office Manager",
+  "worksFor": {
+    "@type": "MedicalOrganization",
+    "name": "Desert Mountain Healing IOP"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Source+Sans+3:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 
 <style>
-/* ========================================
-   DMHIOP v4 CSS Variables & Reset
-   ======================================== */
-:root {
-  --teal-950: #062d34;
-  --teal-900: #0a424d;
-  --teal-800: #0d5561;
-  --teal-700: #0d7485;
-  --teal-600: #0d8ca1;
-  --teal-500: #18a2b8;
-  --teal-400: #3ebfd4;
-  --teal-300: #7dd3e3;
-  --teal-200: #abe5f1;
-  --teal-100: #d1f0f7;
-  --teal-050: #e0f2f4;
-  
-  --gold: #ef8b22;
-  
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-300: #d1d5db;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
-  
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  
-  --radius: 22px;
-  --max: 1220px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: var(--gray-800);
-  background: #fff;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-  color: var(--teal-950);
-  line-height: 1.2;
-}
-
-h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
-h2 { font-size: 2.75rem; margin-bottom: 1.25rem; }
-h3 { font-size: 1.75rem; margin-bottom: 1rem; }
-p { margin-bottom: 1.25rem; }
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: var(--teal-600);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: var(--teal-700);
-}
-
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 28px;
-}
-
-/* ========================================
-   Eyebrow Component
-   ======================================== */
-.eyebrow {
-  display: inline-block;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold);
-  padding-left: 50px;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.eyebrow::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 34px;
-  height: 3px;
-  background: var(--gold);
-  border-radius: 99px;
-}
-
-/* ========================================
-   Buttons
-   ======================================== */
-.btn {
-  display: inline-block;
-  padding: 16px 32px;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  text-align: center;
-  border-radius: var(--radius);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  border: 2px solid transparent;
-}
-
-.btn-primary {
-  background: var(--teal-600);
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background: var(--teal-700);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--teal-600);
-  border: 2px solid var(--teal-600);
-}
-
-.btn-secondary:hover {
-  background: var(--teal-600);
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-.btn-white {
-  background: #fff;
-  color: var(--teal-700);
-  border: 2px solid #fff;
-}
-
-.btn-white:hover {
-  background: transparent;
-  color: #fff;
-  border-color: #fff;
-}
-
-/* ========================================
-   Header & Navigation
-   ======================================== */
-header {
-  background: #fff;
-  box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.25rem 28px;
-  max-width: var(--max);
-  margin: 0 auto;
-}
-
-.logo {
-  font-family: 'Merriweather', serif;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--teal-700);
-}
-
-.logo span {
-  color: var(--gold);
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 2.5rem;
-  align-items: center;
-}
-
-nav a {
-  font-weight: 600;
-  color: var(--gray-700);
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: var(--teal-600);
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.75rem;
-  color: var(--teal-700);
-  cursor: pointer;
-}
-
-/* ========================================
-   Bio Hero Section
-   ======================================== */
-.bio-hero {
-  background: linear-gradient(135deg, var(--teal-050) 0%, #fff 100%);
-  padding: 6rem 0;
-  border-bottom: 1px solid var(--gray-200);
-}
-
-.bio-hero-inner {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.bio-photo-wrap {
-  position: sticky;
-  top: 120px;
-}
-
-.bio-photo {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
-  border: 4px solid #fff;
-}
-
-.bio-role {
-  display: inline-block;
-  background: var(--teal-600);
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 99px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 1rem;
-}
-
-.bio-copy h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--teal-950);
-}
-
-.bio-lead {
-  font-size: 1.35rem;
-  line-height: 1.7;
-  color: var(--gray-700);
-  margin-bottom: 2.5rem;
-}
-
-.bio-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-}
-
-.bio-stat-item {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow-sm);
-  border-left: 4px solid var(--gold);
-}
-
-.bio-stat-label {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--gray-600);
-  margin-bottom: 0.5rem;
-}
-
-.bio-stat-value {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--teal-700);
-}
-
-/* ========================================
-   Bio Content Sections
-   ======================================== */
-.bio-section {
-  padding: 5rem 0;
-}
-
-.bio-section.soft {
-  background: var(--teal-050);
-}
-
-.bio-section.gray {
-  background: var(--gray-50);
-}
-
-.bio-content {
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.bio-content h2 {
-  margin-bottom: 1.5rem;
-  color: var(--teal-950);
-}
-
-.bio-content h3 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--teal-800);
-}
-
-.bio-content ul {
-  list-style: none;
-  margin: 1.5rem 0;
-}
-
-.bio-content ul li {
-  padding-left: 2rem;
-  margin-bottom: 0.75rem;
-  position: relative;
-}
-
-.bio-content ul li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.bio-content strong {
-  color: var(--teal-800);
-  font-weight: 700;
-}
-
-blockquote {
-  background: #fff;
-  border-left: 5px solid var(--gold);
-  padding: 2.5rem;
-  margin: 3rem 0;
-  font-size: 1.35rem;
-  font-style: italic;
-  line-height: 1.7;
-  color: var(--teal-900);
-  box-shadow: var(--shadow-sm);
-  border-radius: 12px;
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin: 2.5rem 0;
-}
-
-.value-card {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow-sm);
-  border-top: 4px solid var(--teal-600);
-  text-align: center;
-}
-
-.value-card h4 {
-  color: var(--teal-700);
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-
-.value-card p {
-  font-size: 0.95rem;
-  color: var(--gray-700);
-  margin-bottom: 0;
-}
-
-.quick-facts {
-  background: var(--teal-050);
-  padding: 2.5rem;
-  border-radius: var(--radius);
-  margin: 3rem 0;
-}
-
-.quick-facts h3 {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-}
-
-.quick-facts dl {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.quick-facts dt {
-  font-weight: 700;
-  color: var(--teal-800);
-  margin-bottom: 0.25rem;
-}
-
-.quick-facts dd {
-  margin-left: 0;
-  color: var(--gray-700);
-  padding-left: 1.25rem;
-  border-left: 3px solid var(--gold);
-}
-
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.expertise-item {
-  background: #fff;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-sm);
-  border-left: 3px solid var(--teal-600);
-  font-weight: 600;
-  color: var(--teal-800);
-}
-
-/* ========================================
-   Back to Team Section
-   ======================================== */
-.back-to-team {
-  padding: 4rem 0;
-  text-align: center;
-  background: #fff;
-}
-
-/* ========================================
-   Prefooter CTA
-   ======================================== */
-.prefooter-cta {
-  background: linear-gradient(135deg, var(--teal-700) 0%, var(--teal-900) 100%);
-  color: #fff;
-  padding: 5rem 0;
-  text-align: center;
-}
-
-.prefooter-cta h2 {
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.prefooter-cta p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  color: var(--teal-100);
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 1.25rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ========================================
-   Footer
-   ======================================== */
-footer {
-  background: var(--teal-950);
-  color: var(--teal-100);
-  padding: 4rem 0 2rem;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-.footer-col h4 {
-  color: #fff;
-  font-size: 1.1rem;
-  margin-bottom: 1.25rem;
-}
-
-.footer-col ul {
-  list-style: none;
-}
-
-.footer-col ul li {
-  margin-bottom: 0.75rem;
-}
-
-.footer-col a {
-  color: var(--teal-200);
-  transition: color 0.2s ease;
-}
-
-.footer-col a:hover {
-  color: #fff;
-}
-
-.footer-trust {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
-
-.footer-trust-item {
-  background: rgba(255,255,255,0.1);
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--teal-100);
-  border-left: 3px solid var(--gold);
-}
-
-.footer-emergency {
-  background: rgba(239, 139, 34, 0.15);
-  border: 2px solid var(--gold);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-top: 1rem;
-}
-
-.footer-emergency strong {
-  display: block;
-  color: var(--gold);
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
-}
-
-.footer-emergency a {
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.footer-signature {
-  text-align: center;
-  padding-top: 2.5rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  margin-top: 3rem;
-}
-
-.footer-signature p {
-  color: var(--teal-200);
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-}
-
-.footer-legal {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.footer-legal a {
-  color: var(--teal-300);
-  font-size: 0.9rem;
-}
-
-/* ========================================
-   Responsive Design
-   ======================================== */
-@media (max-width: 1080px) {
-  .bio-hero-inner {
-    grid-template-columns: 320px 1fr;
-    gap: 3rem;
-  }
-  
-  .bio-copy h1 {
-    font-size: 2.75rem;
-  }
-  
-  .expertise-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-  .bio-hero-inner {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  
-  .bio-photo-wrap {
-    position: relative;
-    top: 0;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  
-  .bio-stats {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 760px) {
-  h1 { font-size: 2.25rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.5rem; }
-  
-  body {
-    font-size: 16px;
-  }
-  
-  .bio-hero {
-    padding: 3rem 0;
-  }
-  
-  .bio-copy h1 {
-    font-size: 2.25rem;
-  }
-  
-  .bio-lead {
-    font-size: 1.15rem;
-  }
-  
-  blockquote {
-    font-size: 1.15rem;
-    padding: 1.75rem;
-  }
-  
-  .bio-section {
-    padding: 3rem 0;
-  }
-  
-  nav ul {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 320px;
-    height: 100vh;
-    background: var(--teal-950);
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 6rem 2rem 2rem;
-    gap: 1.5rem;
-    transition: right 0.3s ease;
-    box-shadow: -4px 0 12px rgba(0,0,0,0.2);
-  }
-  
-  nav ul.active {
-    right: 0;
-  }
-  
-  nav a {
-    color: #fff;
-    font-size: 1.15rem;
-  }
-  
-  .menu-toggle {
-    display: block;
-  }
-  
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-buttons .btn {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-/* ========================================
-   Reveal Animation
-   ======================================== */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+    :root{
+      --teal-950:#063743;
+      --teal-900:#084754;
+      --teal-800:#0b5f6e;
+      --teal-700:#0d7485;
+      --teal-600:#1493a8;
+      --teal-500:#1ba3bd;
+      --teal-100:#dff4f7;
+      --teal-050:#f2fbfc;
+      --gold:#ef8b22;
+      --gold-soft:#fff0dc;
+      --ink:#173139;
+      --muted:#60747b;
+      --line:#dce8ea;
+      --surface:#ffffff;
+      --soft:#f7fafb;
+      --shadow-sm:0 10px 30px rgba(6,55,67,.08);
+      --shadow-md:0 22px 60px rgba(6,55,67,.16);
+      --radius:22px;
+      --max:1220px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:#fff;
+      font-family:"Source Sans 3",Arial,sans-serif;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    h1,h2,h3,h4{
+      margin:0 0 .85rem;
+      color:var(--teal-950);
+      font-family:"Merriweather",Georgia,serif;
+      line-height:1.15;
+    }
+    h1{font-size:clamp(3rem,6vw,5.8rem);letter-spacing:-.045em}
+    h2{font-size:clamp(2.15rem,4.2vw,3.7rem);letter-spacing:-.035em}
+    h3{font-size:1.35rem}
+    p{margin:0 0 1rem;color:var(--muted)}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .section{padding:96px 0}
+    .section-soft{background:var(--teal-050)}
+    .section-gray{background:var(--soft)}
+    
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      margin-bottom:1rem;
+      color:var(--teal-700);
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      width:34px;height:3px;border-radius:99px;background:var(--gold);content:"";
+    }
+    
+    .btn{
+      min-height:52px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.55rem;
+      padding:0 1.45rem;
+      border:1px solid transparent;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      transition:transform .18s ease,box-shadow .18s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--teal-700),var(--teal-500));
+      box-shadow:0 14px 34px rgba(27,163,189,.28);
+    }
+    .btn-secondary{
+      color:var(--teal-950);
+      background:#fff;
+      border-color:rgba(6,55,67,.14);
+      box-shadow:var(--shadow-sm);
+    }
+    .btn-warm{color:#fff;background:var(--gold);box-shadow:0 12px 28px rgba(239,139,34,.3)}
+    
+    .topbar{color:#fff;background:var(--teal-950);font-size:.9rem}
+    .topbar-inner{
+      min-height:42px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .topbar a{font-weight:700;text-decoration:none}
+    .topbar-actions{display:flex;align-items:center;gap:1rem}
+    
+    .site-header{
+      position:sticky;top:0;z-index:100;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(6,55,67,.08);
+      backdrop-filter:blur(14px);
+    }
+    .nav-wrap{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .brand img{height:auto;width:180px}
+    .menu-toggle{
+      min-width:46px;min-height:46px;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:0;
+      border:none;
+      background:none;
+      color:var(--teal-950);
+      font-size:1.55rem;
+      cursor:pointer;
+    }
+    .site-nav{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+    }
+    .site-nav>a{
+      padding:.65rem 0;
+      color:var(--teal-950);
+      font-weight:700;
+      font-size:.875rem;
+    }
+    .site-nav>a:hover{color:var(--teal-500)}
+    
+    /* Bio Hero */
+    .bio-hero{
+      padding:80px 0;
+      background:linear-gradient(135deg,var(--teal-950),var(--teal-800));
+      color:#fff;
+    }
+    .bio-hero-inner{
+      display:grid;
+      grid-template-columns:400px 1fr;
+      gap:64px;
+      align-items:center;
+    }
+    .bio-photo-wrap{position:relative}
+    .bio-photo-wrap::before{
+      position:absolute;inset:-16px 16px 16px -16px;content:"";
+      border-radius:28px;
+      background:linear-gradient(145deg,rgba(27,163,189,.4),rgba(239,139,34,.3));
+    }
+    .bio-photo{
+      position:relative;
+      width:100%;
+      height:480px;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:26px;
+    }
+    .bio-hero h1{color:#fff;margin-bottom:1.2rem}
+    .bio-role{
+      display:inline-block;
+      margin-bottom:1rem;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(239,139,34,.2);
+      color:var(--gold);
+      font-size:.85rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .bio-lead{
+      font-size:1.25rem;
+      line-height:1.6;
+      color:rgba(255,255,255,.9);
+      margin-bottom:2rem;
+    }
+    .bio-stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:1.5rem;
+      margin-top:2.5rem;
+    }
+    .bio-stat{
+      padding:1.5rem;
+      border-radius:16px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .bio-stat-label{
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.65);
+      margin-bottom:.4rem;
+    }
+    .bio-stat-value{
+      font-size:1.35rem;
+      font-weight:800;
+      color:#fff;
+    }
+    
+    /* Content Sections */
+    .content-block{max-width:820px;margin:0 auto}
+    .content-block h2{margin-bottom:1.5rem}
+    .content-block h3{
+      margin-top:2.5rem;
+      margin-bottom:1rem;
+      color:var(--teal-800);
+    }
+    .content-block p{font-size:1.05rem;line-height:1.75}
+    .content-block ul{
+      list-style:none;
+      padding:0;
+      margin:1.5rem 0;
+    }
+    .content-block ul li{
+      padding-left:2rem;
+      margin-bottom:.85rem;
+      position:relative;
+    }
+    .content-block ul li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      color:var(--gold);
+      font-weight:800;
+      font-size:1.15rem;
+    }
+    .content-block strong{color:var(--teal-800);font-weight:700}
+    
+    blockquote{
+      background:rgba(27,163,189,.06);
+      border-left:5px solid var(--gold);
+      padding:2.5rem;
+      margin:3rem 0;
+      font-size:1.35rem;
+      font-style:italic;
+      line-height:1.6;
+      color:var(--teal-900);
+      border-radius:16px;
+    }
+    
+    .values-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:1.5rem;
+      margin:2.5rem 0;
+    }
+    .value-card{
+      padding:2rem;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-sm);
+    }
+    .value-card h4{
+      color:var(--teal-700);
+      font-size:1.15rem;
+      margin-bottom:.75rem;
+    }
+    .value-card p{
+      font-size:.95rem;
+      color:var(--muted);
+      margin:0;
+    }
+    
+    .expertise-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:1rem;
+      margin:2rem 0;
+    }
+    .expertise-item{
+      padding:1rem 1.25rem;
+      border-radius:12px;
+      background:rgba(27,163,189,.06);
+      border-left:3px solid var(--teal-600);
+      font-weight:700;
+      font-size:.95rem;
+      color:var(--teal-800);
+    }
+    
+    .quick-facts{
+      background:var(--teal-050);
+      padding:2.5rem;
+      border-radius:var(--radius);
+      margin:3rem 0;
+    }
+    .quick-facts h3{margin-top:0;margin-bottom:1.5rem}
+    .quick-facts dl{display:grid;gap:1.25rem}
+    .quick-facts dt{
+      font-weight:800;
+      color:var(--teal-800);
+      margin-bottom:.25rem;
+    }
+    .quick-facts dd{
+      margin-left:0;
+      color:var(--muted);
+      padding-left:1.25rem;
+      border-left:3px solid var(--gold);
+    }
+    
+    /* Prefooter */
+    .prefooter{
+      padding:96px 0;
+      background:linear-gradient(135deg,var(--teal-700),var(--teal-500));
+      color:#fff;
+      text-align:center;
+    }
+    .prefooter h2{color:#fff;margin-bottom:1rem}
+    .prefooter p{
+      font-size:1.2rem;
+      color:rgba(255,255,255,.9);
+      margin-bottom:2rem;
+    }
+    .prefooter .eyebrow{color:#fff}
+    .prefooter .eyebrow::before{background:#fff}
+    .cta-actions{
+      display:flex;
+      gap:1rem;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    
+    /* Footer */
+    .site-footer{
+      background:var(--teal-950);
+      color:rgba(255,255,255,.8);
+      padding:80px 0 40px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:3rem;
+      margin-bottom:3rem;
+    }
+    .footer-col h4{
+      color:#fff;
+      font-size:1.05rem;
+      margin-bottom:1.25rem;
+    }
+    .footer-col ul{list-style:none;padding:0;margin:0}
+    .footer-col ul li{margin-bottom:.65rem}
+    .footer-col a{
+      color:rgba(255,255,255,.75);
+      font-size:.9rem;
+      transition:color .2s;
+    }
+    .footer-col a:hover{color:#fff}
+    
+    .footer-trust{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:.75rem;
+      margin-top:1rem;
+    }
+    .footer-trust-item{
+      padding:.6rem 1rem;
+      border-radius:8px;
+      background:rgba(255,255,255,.08);
+      border-left:3px solid var(--gold);
+      font-size:.82rem;
+      font-weight:700;
+      color:rgba(255,255,255,.9);
+    }
+    
+    .footer-emergency{
+      background:rgba(239,139,34,.12);
+      border:2px solid var(--gold);
+      border-radius:12px;
+      padding:1.5rem;
+      margin-top:1rem;
+    }
+    .footer-emergency strong{
+      display:block;
+      color:var(--gold);
+      font-size:1rem;
+      margin-bottom:.5rem;
+    }
+    .footer-emergency a{
+      color:#fff;
+      font-size:1.2rem;
+      font-weight:800;
+    }
+    
+    .footer-signature{
+      text-align:center;
+      padding-top:2.5rem;
+      border-top:1px solid rgba(255,255,255,.1);
+      margin-top:3rem;
+    }
+    .footer-signature p{
+      color:rgba(255,255,255,.7);
+      font-size:.9rem;
+      margin-bottom:.5rem;
+    }
+    .footer-legal{
+      display:flex;
+      justify-content:center;
+      gap:2rem;
+      margin-top:1rem;
+      flex-wrap:wrap;
+    }
+    .footer-legal a{
+      color:rgba(255,255,255,.6);
+      font-size:.85rem;
+    }
+    
+    /* Responsive */
+    @media (max-width:1080px){
+      .bio-hero-inner{grid-template-columns:320px 1fr;gap:48px}
+      .bio-photo{height:420px}
+      .expertise-grid{grid-template-columns:1fr}
+    }
+    
+    @media (max-width:900px){
+      .bio-hero-inner{grid-template-columns:1fr;gap:40px}
+      .bio-photo-wrap{max-width:360px;margin:0 auto}
+      .bio-photo{height:380px}
+      .bio-stats{grid-template-columns:1fr}
+      .values-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    
+    @media (max-width:760px){
+      h1{font-size:2.5rem}
+      h2{font-size:2rem}
+      .section{padding:64px 0}
+      .bio-hero{padding:60px 0}
+      .bio-lead{font-size:1.1rem}
+      blockquote{font-size:1.15rem;padding:1.75rem}
+      .menu-toggle{display:flex}
+      .site-nav{
+        position:fixed;
+        top:0;right:-100%;
+        width:85%;max-width:340px;
+        height:100vh;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        padding:80px 24px 24px;
+        background:var(--teal-950);
+        box-shadow:-8px 0 40px rgba(0,0,0,.3);
+        transition:right .3s ease;
+      }
+      .site-nav.active{right:0}
+      .site-nav>a{
+        width:100%;
+        padding:1rem 0;
+        color:#fff;
+        font-size:1.05rem;
+        border-bottom:1px solid rgba(255,255,255,.1);
+      }
+      .footer-grid{grid-template-columns:1fr;gap:2.5rem}
+      .cta-actions{flex-direction:column;align-items:center}
+      .cta-actions .btn{width:100%;max-width:280px}
+    }
+    
+    /* Reveal Animation */
+    .reveal{
+      opacity:0;
+      transform:translateY(30px);
+      transition:opacity .6s ease,transform .6s ease;
+    }
+    .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+    }
 </style>
 </head>
 <body>
 
-<!-- ========================================
-     HEADER & NAVIGATION
-     ======================================== -->
-<header>
-  <div class="header-inner">
-    <div class="logo">Desert Mountain <span>Healing</span></div>
-    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/programs/">Programs</a></li>
-        <li><a href="/team/">Our Team</a></li>
-        <li><a href="/contact/">Contact</a></li>
-        <li><a href="/contact/" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.95rem;">Get Started</a></li>
-      </ul>
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div>📞 <a href="tel:505-XXX-XXXX">Call (505) XXX-XXXX</a> for Immediate Support</div>
+    <div class="topbar-actions">
+      <a href="/contact/">Verify Insurance</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="/" class="brand">
+      <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/logo/logo-dmhiop-full.png" alt="Desert Mountain Healing IOP"/>
+    </a>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+    <nav class="site-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/programs/">Programs</a>
+      <a href="/team/">Our Team</a>
+      <a href="/contact/">Contact</a>
+      <a href="/contact/" class="btn btn-primary">Get Started</a>
     </nav>
   </div>
 </header>
 
-<!-- ========================================
-     BIO HERO SECTION
-     ======================================== -->
+<!-- Bio Hero -->
 <section class="bio-hero">
   <div class="container bio-hero-inner">
     <div class="bio-photo-wrap">
-      <img src="/__static/team/tatiana-schnierow.jpg" alt="Tatiana Schnierow - Office Manager" class="bio-photo">
+      <img src="/__static/team/tatiana-schnierow.jpg" alt="Tatiana Schnierow" class="bio-photo"/>
     </div>
     
-    <div class="bio-copy">
+    <div>
       <span class="bio-role">Office Manager</span>
       <h1>Tatiana Schnierow</h1>
-      
-      <p class="bio-lead">The first step toward recovery can be the hardest. My goal is to make every person who contacts us feel welcomed, respected, and supported from the very beginning.</p>
+      <p class="bio-lead">"The first step toward recovery can be the hardest. My goal is to make every person who contacts us feel welcomed, respected, and supported from the very beginning."</p>
       
       <div class="bio-stats">
-        <div class="bio-stat-item">
+        <div class="bio-stat">
           <div class="bio-stat-label">Role</div>
           <div class="bio-stat-value">Office Manager</div>
         </div>
-        
-        <div class="bio-stat-item">
+        <div class="bio-stat">
           <div class="bio-stat-label">With DMHIOP Since</div>
           <div class="bio-stat-value">The Beginning</div>
         </div>
-        
-        <div class="bio-stat-item">
+        <div class="bio-stat">
           <div class="bio-stat-label">Expertise</div>
           <div class="bio-stat-value">Client Support</div>
         </div>
-        
-        <div class="bio-stat-item">
+        <div class="bio-stat">
           <div class="bio-stat-label">Special Strength</div>
           <div class="bio-stat-value">Personal Recovery</div>
         </div>
@@ -793,10 +580,8 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     OPENING QUOTE
-     ======================================== -->
-<section class="bio-section">
+<!-- Opening Quote -->
+<section class="section">
   <div class="container">
     <blockquote class="reveal">
       "I know how difficult it can be to ask for help because I've walked that path myself. Recovery gave me a new beginning, and I believe it can do the same for you."
@@ -804,12 +589,10 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     MEET TATIANA
-     ======================================== -->
-<section class="bio-section soft">
+<!-- Meet Tatiana -->
+<section class="section section-soft">
   <div class="container">
-    <div class="bio-content reveal">
+    <div class="content-block reveal">
       <span class="eyebrow">Meet Tatiana</span>
       <h2>A Welcoming Presence from Day One</h2>
       
@@ -822,12 +605,10 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     PROFESSIONAL BACKGROUND
-     ======================================== -->
-<section class="bio-section">
+<!-- Professional Background -->
+<section class="section">
   <div class="container">
-    <div class="bio-content reveal">
+    <div class="content-block reveal">
       <span class="eyebrow">Professional Background</span>
       <h2>Helping Build Desert Mountain Healing IOP</h2>
       
@@ -842,12 +623,10 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     RECOVERY JOURNEY
-     ======================================== -->
-<section class="bio-section gray">
+<!-- Recovery Journey -->
+<section class="section section-gray">
   <div class="container">
-    <div class="bio-content reveal">
+    <div class="content-block reveal">
       <span class="eyebrow">Recovery Journey</span>
       <h2>Personal Experience That Inspires Hope</h2>
       
@@ -862,12 +641,10 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     PHILOSOPHY
-     ======================================== -->
-<section class="bio-section soft">
+<!-- Philosophy -->
+<section class="section section-soft">
   <div class="container">
-    <div class="bio-content reveal">
+    <div class="content-block reveal">
       <span class="eyebrow">Philosophy</span>
       <h2>Creating a Culture of Compassion</h2>
       
@@ -900,12 +677,10 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     AREAS OF EXPERTISE
-     ======================================== -->
-<section class="bio-section">
+<!-- Areas of Expertise -->
+<section class="section">
   <div class="container">
-    <div class="bio-content reveal">
+    <div class="content-block reveal">
       <span class="eyebrow">Areas of Expertise</span>
       <h2>How Tatiana Supports Clients</h2>
       
@@ -925,12 +700,10 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     TATIANA'S ROLE
-     ======================================== -->
-<section class="bio-section gray">
+<!-- Tatiana's Role -->
+<section class="section section-gray">
   <div class="container">
-    <div class="bio-content reveal">
+    <div class="content-block reveal">
       <span class="eyebrow">Tatiana's Role on Your Recovery Team</span>
       <h2>Creating a Welcoming First Experience</h2>
       
@@ -954,12 +727,10 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     WHAT CLIENTS CAN EXPECT
-     ======================================== -->
-<section class="bio-section soft">
+<!-- What Clients Can Expect -->
+<section class="section section-soft">
   <div class="container">
-    <div class="bio-content reveal">
+    <div class="content-block reveal">
       <span class="eyebrow">What Clients Can Expect</span>
       <h2>Compassionate Support from the Start</h2>
       
@@ -980,12 +751,10 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     WHY TATIANA CHOSE RECOVERY WORK
-     ======================================== -->
-<section class="bio-section">
+<!-- Why Recovery Work -->
+<section class="section">
   <div class="container">
-    <div class="bio-content reveal">
+    <div class="content-block reveal">
       <span class="eyebrow">Why Tatiana Chose Recovery Work</span>
       <h2>Giving Back Through Service</h2>
       
@@ -998,12 +767,10 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     PERSONAL MESSAGE
-     ======================================== -->
-<section class="bio-section gray">
+<!-- Personal Message -->
+<section class="section section-gray">
   <div class="container">
-    <div class="bio-content reveal">
+    <div class="content-block reveal">
       <span class="eyebrow">Personal Message</span>
       <h2>A Message from Tatiana</h2>
       
@@ -1014,12 +781,10 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     QUICK FACTS
-     ======================================== -->
-<section class="bio-section soft">
+<!-- Quick Facts -->
+<section class="section section-soft">
   <div class="container">
-    <div class="bio-content reveal">
+    <div class="content-block reveal">
       <div class="quick-facts">
         <h3>Quick Facts</h3>
         <dl>
@@ -1031,12 +796,7 @@ footer {
           
           <dt>Special Interests:</dt>
           <dd>
-            Client Support<br>
-            Recovery Advocacy<br>
-            Family Assistance<br>
-            Office Leadership<br>
-            Building a Welcoming Environment<br>
-            Helping Clients Feel Comfortable
+            Client Support • Recovery Advocacy • Family Assistance • Office Leadership • Building a Welcoming Environment • Helping Clients Feel Comfortable
           </dd>
           
           <dt>Professional Philosophy:</dt>
@@ -1047,34 +807,28 @@ footer {
   </div>
 </section>
 
-<!-- ========================================
-     BACK TO TEAM
-     ======================================== -->
-<section class="back-to-team">
+<!-- Back to Team -->
+<section class="section" style="padding:64px 0;text-align:center">
   <div class="container">
     <a href="/team/" class="btn btn-secondary">← Back to Our Team</a>
   </div>
 </section>
 
-<!-- ========================================
-     PREFOOTER CTA
-     ======================================== -->
-<section class="prefooter-cta">
+<!-- Prefooter CTA -->
+<section class="prefooter">
   <div class="container reveal">
-    <span class="eyebrow" style="color: var(--gold);">Ready to Begin Your Recovery Journey?</span>
+    <span class="eyebrow">Ready to Begin Your Recovery Journey?</span>
     <h2>Take the First Step Today</h2>
     <p>Our compassionate team is here to support you every step of the way.</p>
-    <div class="cta-buttons">
-      <a href="/contact/" class="btn btn-white">Contact Us</a>
-      <a href="/programs/" class="btn btn-secondary" style="border-color: #fff; color: #fff;">View Our Programs</a>
+    <div class="cta-actions">
+      <a href="/contact/" class="btn btn-warm">Contact Us</a>
+      <a href="/programs/" class="btn btn-secondary">View Our Programs</a>
     </div>
   </div>
 </section>
 
-<!-- ========================================
-     FOOTER
-     ======================================== -->
-<footer>
+<!-- Footer -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -1112,13 +866,13 @@ footer {
       
       <div class="footer-col">
         <h4>Get Help Now</h4>
-        <p style="color: var(--teal-200); margin-bottom: 1rem;">If you or a loved one is struggling with substance use, we're here to help.</p>
-        <a href="/contact/" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Start Your Recovery</a>
+        <p style="color:rgba(255,255,255,.75);margin-bottom:1rem;font-size:.9rem">If you or a loved one is struggling with substance use, we're here to help.</p>
+        <a href="/contact/" class="btn btn-primary" style="width:100%;margin-bottom:1rem">Start Your Recovery</a>
         
         <div class="footer-emergency">
           <strong>Crisis Support</strong>
-          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--teal-100);">
-            988 Suicide & Crisis Lifeline<br>
+          <p style="margin:.5rem 0 0;font-size:.85rem;color:rgba(255,255,255,.8)">
+            988 Suicide & Crisis Lifeline<br/>
             <a href="tel:988">Call 988</a>
           </p>
         </div>
@@ -1134,42 +888,40 @@ footer {
         <a href="/terms/">Terms</a>
         <a href="/sitemap.xml">Sitemap</a>
       </div>
-      <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--teal-300);">
+      <p style="margin-top:1.5rem;font-size:.8rem;color:rgba(255,255,255,.5)">
         © 2025 Desert Mountain Healing IOP, LLC. All rights reserved.
       </p>
     </div>
   </div>
 </footer>
 
-<!-- ========================================
-     JAVASCRIPT
-     ======================================== -->
 <script>
 // Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav ul');
+const siteNav = document.querySelector('.site-nav');
 
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('active');
-});
+if(menuToggle){
+  menuToggle.addEventListener('click', () => {
+    siteNav.classList.toggle('active');
+  });
+  
+  document.addEventListener('click', (e) => {
+    if(!e.target.closest('.site-nav') && !e.target.closest('.menu-toggle')){
+      siteNav.classList.remove('active');
+    }
+  });
+}
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('nav') && !e.target.closest('.menu-toggle')) {
-    nav.classList.remove('active');
-  }
-});
-
-// Reveal animations on scroll
+// Reveal on scroll
 const reveals = document.querySelectorAll('.reveal');
 
 const revealOnScroll = () => {
-  reveals.forEach(element => {
-    const elementTop = element.getBoundingClientRect().top;
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
     
-    if (elementTop < windowHeight - 80) {
-      element.classList.add('active');
+    if(top < windowHeight - 80){
+      el.classList.add('active');
     }
   });
 };
