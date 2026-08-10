@@ -1,30 +1,23 @@
 <!DOCTYPE html>
-<!-- =========================================================
-     DMHIOP WEBSITE FRAMEWORK v4
-     Desert Mountain Healing IOP
-     Recovery Portal - Apple-Style Presentation with Real App UI
-========================================================= -->
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Recovery Portal - Own Today | Desert Mountain Healing IOP</title>
-<meta content="The ONLY IOP with exclusive Own Today recovery app. 20+ features including AA/NA meeting finder with geofence check-ins, journal, goals, meditation, 24/7 AI support, rewards. Lifetime access for DMHIOP clients. Rio Rancho, NM." name="description"/>
-<meta content="Own Today app, recovery portal, DMHIOP client app, AA meeting finder, NA meeting finder, recovery app Albuquerque, IOP technology, addiction recovery app, appdmhiop.com" name="keywords"/>
-<meta content="Desert Mountain Healing IOP" name="author"/>
-<link href="https://dmhiop.com/client-app/" rel="canonical"/>
-<meta content="#0d7485" name="theme-color"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Source+Sans+3:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Recovery Portal - Own Today | Desert Mountain Healing IOP</title>
+  <meta name="description" content="The ONLY IOP with exclusive Own Today recovery app. 20+ features including AA/NA meeting finder, journal, goals, meditation, 24/7 support. Lifetime access for DMHIOP clients.">
+  <meta name="keywords" content="Own Today app, recovery portal, DMHIOP client app, AA meeting finder, NA meeting finder, recovery app Albuquerque, IOP technology, addiction recovery app">
+  <meta name="author" content="Desert Mountain Healing IOP">
+  <link rel="canonical" href="https://dmhiop.com/client-app/">
+  <meta name="theme-color" content="#0d7485">
 
-<style>
-    /* V4 FRAMEWORK BASE */
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
     :root{
-      /* DMHIOP V4 Brand Colors */
       --teal-950:#063743;
       --teal-900:#084754;
       --teal-800:#0b5f6e;
@@ -42,18 +35,14 @@
       --soft:#f7fafb;
       --shadow-sm:0 10px 30px rgba(6,55,67,.08);
       --shadow-md:0 22px 60px rgba(6,55,67,.16);
-      --shadow-lg:0 40px 100px rgba(6,55,67,.2);
+      --shadow-xl:0 50px 100px rgba(6,55,67,.25);
       --radius:22px;
       --max:1220px;
       
-      /* OWN TODAY APP COLORS (from real app) */
-      --app-primary: #D97706;        /* Warm Amber */
-      --app-primary-dark: #B45309;   /* Deep Amber */
-      --app-primary-light: #FBBF24;  /* Bright Gold */
-      --app-secondary: #10B981;      /* Sage Green */
-      --app-bg-sunrise: linear-gradient(135deg, #FFFBEB 0%, #FED7AA 50%, #FDBA74 100%);
-      --app-gradient-warm: linear-gradient(135deg, #D97706 0%, #FBBF24 100%);
-      --app-gradient-streak: linear-gradient(135deg, #EF4444 0%, #F59E0B 100%);
+      /* App Colors */
+      --app-amber:#D97706;
+      --app-amber-light:#FBBF24;
+      --app-green:#10B981;
     }
 
     *{box-sizing:border-box}
@@ -67,7 +56,7 @@
       -webkit-font-smoothing:antialiased;
     }
     img{display:block;max-width:100%}
-    a{color:inherit;text-decoration:none}
+    a{color:inherit}
     button{font:inherit}
     h1,h2,h3,h4{
       margin:0 0 .85rem;
@@ -78,11 +67,10 @@
     h1{font-size:clamp(3rem,6vw,5.8rem);letter-spacing:-.045em}
     h2{font-size:clamp(2.15rem,4.2vw,3.7rem);letter-spacing:-.035em}
     h3{font-size:1.35rem}
-    p{margin:0 0 1rem;color:var(--muted)}
+    p{margin:0 0 1rem}
     .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
     .section{padding:96px 0}
     .section-soft{background:var(--teal-050)}
-    .section-dark{background:var(--teal-950);color:#fff}
     
     .eyebrow{
       display:inline-flex;
@@ -144,348 +132,401 @@
       backdrop-filter:blur(14px);
     }
     .nav-wrap{
-      min-height:72px;
+      min-height:88px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:1rem;
+      gap:1.25rem;
     }
-    .brand img{height:auto;width:180px}
+    .brand{display:flex;align-items:center;text-decoration:none}
+    .brand img{width:230px;max-height:72px;object-fit:contain;object-position:left center}
+    .site-nav{display:flex;align-items:center;gap:1.05rem}
+    .site-nav a{
+      color:var(--teal-950);
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.035em;
+      text-decoration:none;
+      text-transform:uppercase;
+    }
+    .site-nav a:not(.btn):hover{color:var(--teal-500)}
     .menu-toggle{
-      min-width:46px;min-height:46px;
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding:0;
-      border:none;
-      background:none;
-      color:var(--teal-950);
-      font-size:1.55rem;
-      cursor:pointer;
+      display:none;width:46px;height:46px;border:0;border-radius:12px;
+      color:#fff;background:var(--teal-700);cursor:pointer;font-size:1.35rem;
     }
-    .site-nav{
-      display:flex;
-      align-items:center;
-      gap:.75rem;
-    }
-    .site-nav>a{
-      padding:.65rem 0;
-      color:var(--teal-950);
-      font-weight:700;
-      font-size:.875rem;
-    }
-    .site-nav>a:hover{color:var(--teal-500)}
-    .nav-dropdown{position:relative}
-    .nav-dropdown-toggle{
-      min-height:44px;
-      display:flex;
-      width:100%;
-      align-items:center;
-      justify-content:space-between;
-      gap:.4rem;
-      padding:0;
-      border:none;
-      background:none;
-      color:var(--teal-950);
-      font-weight:700;
-      font-size:.875rem;
-      cursor:pointer;
-    }
-    .nav-dropdown-menu{
-      display:none;
-      grid-template-columns:1fr;
-      gap:0;
-      margin-top:12px;
-      padding:8px;
-      border:1px solid var(--line);
-      border-radius:16px;
-      background:#fff;
-      box-shadow:var(--shadow-md);
-    }
-    .nav-dropdown-menu a{
-      padding:.9rem 1rem;
-      border-radius:12px;
-      color:var(--muted);
-      font-weight:700;
-      font-size:.875rem;
-    }
-    .nav-dropdown-menu a:hover{background:var(--teal-050);color:var(--teal-700)}
-    .nav-dropdown.open .nav-dropdown-menu{display:grid}
-    
-    /* HERO - Apple Style with App Sunrise Gradient */
+
+    /* APPLE-STYLE HERO */
     .hero-app{
-      min-height:92vh;
+      position:relative;
+      min-height:95vh;
       display:flex;
       align-items:center;
       justify-content:center;
-      background:var(--app-bg-sunrise);
-      color:var(--teal-950);
-      text-align:center;
-      position:relative;
+      background:linear-gradient(135deg,#FFFBEB 0%,#FEF3C7 25%,#FED7AA 60%,#FDBA74 100%);
       overflow:hidden;
+      text-align:center;
+      padding:120px 0 80px;
     }
     .hero-app::before{
-      content:"🌅";
+      content:"";
       position:absolute;
-      top:60px;
-      right:80px;
-      font-size:12rem;
-      opacity:.08;
-      animation:float 8s ease-in-out infinite;
+      width:800px;height:800px;
+      top:-200px;right:-200px;
+      background:radial-gradient(circle,rgba(251,191,36,.3),transparent 70%);
+      border-radius:50%;
+      animation:float 20s ease-in-out infinite;
     }
+    .hero-app::after{
+      content:"";
+      position:absolute;
+      width:600px;height:600px;
+      bottom:-150px;left:-150px;
+      background:radial-gradient(circle,rgba(217,119,6,.2),transparent 70%);
+      border-radius:50%;
+      animation:float 15s ease-in-out infinite reverse;
+    }
+    
     .hero-app-content{
       position:relative;
       z-index:2;
-      max-width:980px;
-      padding:3rem 1.5rem;
+      max-width:1100px;
     }
-    .hero-app h1{
-      color:var(--teal-950);
-      font-size:clamp(2.8rem,5.5vw,5rem);
-      margin-bottom:1.5rem;
-      font-weight:900;
-    }
-    .hero-app-tagline{
-      font-size:clamp(1.3rem,2.2vw,1.85rem);
-      color:var(--teal-800);
-      margin-bottom:3rem;
-      font-weight:500;
-      line-height:1.5;
-    }
-    .hero-badge-app{
+    
+    .app-badge{
       display:inline-block;
+      padding:10px 22px;
       background:rgba(217,119,6,.15);
-      color:var(--app-primary-dark);
-      padding:12px 24px;
+      border:2px solid rgba(217,119,6,.3);
       border-radius:999px;
-      font-size:.92rem;
+      color:#92400E;
+      font-size:.88rem;
       font-weight:800;
-      letter-spacing:.08em;
+      letter-spacing:.12em;
       text-transform:uppercase;
       margin-bottom:2rem;
-      border:2px solid rgba(217,119,6,.25);
     }
+    
+    .hero-app h1{
+      color:var(--teal-950);
+      font-size:clamp(3.5rem,7vw,6.5rem);
+      font-weight:900;
+      margin-bottom:1.5rem;
+      line-height:1;
+    }
+    
+    .hero-app-tagline{
+      font-size:clamp(1.3rem,2.5vw,2rem);
+      color:var(--teal-800);
+      font-weight:500;
+      max-width:850px;
+      margin:0 auto 3rem;
+      line-height:1.4;
+    }
+    
     .hero-app-cta{
       display:flex;
       gap:1.25rem;
       justify-content:center;
       flex-wrap:wrap;
-      margin-bottom:4rem;
+      margin-bottom:5rem;
+    }
+    .hero-app-cta .btn{
+      min-height:58px;
+      padding:0 2.5rem;
+      font-size:1.05rem;
+    }
+
+    /* APP SHOWCASE - APPLE STYLE */
+    .app-showcase{
+      position:relative;
+      z-index:3;
+      max-width:1000px;
+      margin:-80px auto 0;
+      background:rgba(255,255,255,.98);
+      backdrop-filter:blur(20px);
+      border-radius:40px;
+      padding:4rem 3.5rem;
+      box-shadow:0 60px 140px rgba(0,0,0,.15);
+      border:1px solid rgba(255,255,255,.6);
     }
     
-    /* REAL APP DASHBOARD PREVIEW */
-    .app-dashboard-preview{
-      background:rgba(255,255,255,.95);
-      backdrop-filter:blur(10px);
-      border-radius:2rem;
-      padding:3rem;
-      max-width:900px;
-      margin:0 auto;
-      box-shadow:0 30px 80px rgba(0,0,0,.12);
-      border:3px solid rgba(217,119,6,.2);
+    /* Streak Badge */
+    .streak-display{
+      text-align:center;
+      margin-bottom:3rem;
     }
-    
-    /* Real App Streak Badge (from actual app) */
-    .app-streak-badge{
+    .streak-badge{
       display:inline-flex;
       align-items:center;
-      gap:.6rem;
-      background:var(--app-gradient-streak);
+      gap:.8rem;
+      background:linear-gradient(135deg,#EF4444 0%,#F59E0B 100%);
       color:white;
-      padding:.85rem 1.75rem;
-      border-radius:2rem;
+      padding:1rem 2.5rem;
+      border-radius:3rem;
+      font-size:1.3rem;
       font-weight:700;
-      font-size:1.15rem;
-      box-shadow:0 8px 24px rgba(239,68,68,.35);
-      margin-bottom:2rem;
-      animation:pulse 2.5s infinite;
+      box-shadow:0 12px 35px rgba(239,68,68,.4);
+      animation:pulse 3s infinite;
     }
-    .app-streak-badge i{font-size:1.4rem}
+    .streak-badge i{font-size:1.6rem}
     
-    /* Real App Stats Grid */
-    .app-stats-grid{
+    /* Stats Grid */
+    .stats-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:1.5rem;
-      margin:2.5rem 0;
+      margin:3rem 0;
     }
-    .app-stat-card{
-      background:rgba(255,251,235,.8);
-      border-radius:1.25rem;
-      padding:1.75rem 1.25rem;
+    .stat-card{
+      background:linear-gradient(135deg,#FFFBEB 0%,#FEF3C7 100%);
+      border-radius:24px;
+      padding:2rem 1.5rem;
       text-align:center;
-      border:2px solid rgba(217,119,6,.15);
+      border:2px solid rgba(217,119,6,.12);
       transition:all .3s ease;
     }
-    .app-stat-card:hover{
-      transform:translateY(-5px);
-      box-shadow:0 12px 30px rgba(217,119,6,.2);
-      border-color:var(--app-primary);
+    .stat-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 50px rgba(217,119,6,.25);
+      border-color:var(--app-amber);
     }
-    .app-stat-card i{
-      font-size:2.5rem;
-      margin-bottom:.75rem;
-      background:var(--app-gradient-warm);
+    .stat-card i{
+      font-size:2.8rem;
+      margin-bottom:1rem;
+      background:linear-gradient(135deg,var(--app-amber),var(--app-amber-light));
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
-      background-clip:text;
     }
-    .app-stat-number{
-      font-size:2.5rem;
+    .stat-number{
+      font-size:3rem;
       font-weight:800;
-      background:var(--app-gradient-warm);
+      background:linear-gradient(135deg,var(--app-amber),var(--app-amber-light));
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
-      background-clip:text;
       line-height:1;
       margin-bottom:.5rem;
     }
-    .app-stat-label{
+    .stat-label{
       color:#78716C;
-      font-size:.95rem;
-      font-weight:600;
+      font-weight:700;
+      font-size:1rem;
     }
     
-    /* Real App Feature Cards (2-column grid like actual app) */
-    .app-features-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:1.25rem;
-      margin:3rem 0;
+    /* Feature Preview */
+    .feature-preview{
+      margin-top:4rem;
     }
-    .app-feature-card{
-      background:rgba(255,255,255,.95);
-      border-radius:1.25rem;
-      padding:2rem;
-      border:2px solid rgba(217,119,6,.12);
+    .feature-preview h3{
+      text-align:center;
+      color:var(--teal-950);
+      font-size:2rem;
+      margin-bottom:2.5rem;
+    }
+    
+    .features-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1.5rem;
+    }
+    .feature-card{
+      background:white;
+      border-radius:20px;
+      padding:2rem 1.75rem;
+      border:2px solid rgba(217,119,6,.1);
       transition:all .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position:relative;
       overflow:hidden;
     }
-    .app-feature-card::before{
+    .feature-card::before{
       content:"";
       position:absolute;
-      top:0;left:0;
-      width:100%;height:100%;
-      background:var(--app-gradient-warm);
+      inset:0;
+      background:linear-gradient(135deg,var(--app-amber),var(--app-amber-light));
       opacity:0;
-      transition:opacity .35s ease;
-      z-index:0;
+      transition:opacity .35s;
     }
-    .app-feature-card:hover::before{opacity:.05}
-    .app-feature-card:hover{
-      transform:translateY(-8px) scale(1.02);
-      box-shadow:0 20px 50px rgba(217,119,6,.25);
-      border-color:var(--app-primary);
+    .feature-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 25px 60px rgba(217,119,6,.3);
+      border-color:var(--app-amber);
     }
-    .app-feature-icon{
-      width:70px;height:70px;
-      background:var(--app-gradient-warm);
-      border-radius:1.25rem;
+    .feature-card:hover::before{opacity:.06}
+    
+    .feature-icon-box{
+      position:relative;
+      z-index:1;
+      width:70px;
+      height:70px;
+      background:linear-gradient(135deg,var(--app-amber),var(--app-amber-light));
+      border-radius:18px;
       display:flex;
       align-items:center;
       justify-content:center;
-      margin-bottom:1.25rem;
-      box-shadow:0 8px 20px rgba(217,119,6,.3);
-      position:relative;
-      z-index:1;
+      margin-bottom:1.5rem;
+      box-shadow:0 10px 25px rgba(217,119,6,.35);
     }
-    .app-feature-icon i{
+    .feature-icon-box i{
       font-size:2rem;
       color:white;
     }
-    .app-feature-card h3{
+    .feature-card h4{
+      position:relative;
+      z-index:1;
       color:#92400E;
-      font-size:1.35rem;
-      margin-bottom:.5rem;
+      font-size:1.25rem;
+      margin-bottom:.75rem;
+    }
+    .feature-card p{
       position:relative;
       z-index:1;
-    }
-    .app-feature-card p{
       color:#78716C;
-      line-height:1.7;
-      margin:0;
+      font-size:.95rem;
+      line-height:1.6;
+      margin-bottom:.75rem;
+    }
+    .feature-points{
       position:relative;
       z-index:1;
-    }
-    .app-feature-points{
-      display:inline-block;
-      margin-top:.85rem;
-      color:var(--app-secondary);
+      color:var(--app-green);
       font-size:.85rem;
       font-weight:700;
-      position:relative;
-      z-index:1;
     }
-    
-    /* Platform Cards */
+
+    /* Platform Section */
+    .platform-section{
+      padding:100px 0;
+      background:linear-gradient(135deg,var(--teal-700),var(--teal-500));
+      color:white;
+      text-align:center;
+    }
+    .platform-section h2{
+      color:white;
+      margin-bottom:1rem;
+    }
+    .platform-section p{
+      font-size:1.25rem;
+      color:rgba(255,255,255,.9);
+      max-width:650px;
+      margin:0 auto 3.5rem;
+    }
     .platform-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:2rem;
-      margin:3rem 0;
+      max-width:1000px;
+      margin:0 auto;
     }
     .platform-card{
-      background:#fff;
-      border-radius:22px;
+      background:rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:24px;
       padding:2.5rem 2rem;
-      text-align:center;
-      box-shadow:var(--shadow-sm);
       transition:all .3s ease;
-      border:1px solid var(--line);
     }
     .platform-card:hover{
+      background:rgba(255,255,255,.18);
       transform:translateY(-8px);
-      box-shadow:var(--shadow-md);
-      border-color:var(--app-primary);
+      box-shadow:0 20px 50px rgba(0,0,0,.2);
     }
-    .platform-icon{
-      font-size:3.5rem;
-      margin-bottom:1rem;
+    .platform-card .icon{
+      background:rgba(255,255,255,.15);
+      color:white;
+      font-size:2.5rem;
     }
     .platform-card h4{
-      font-size:1.15rem;
-      margin-bottom:.5rem;
-      color:var(--teal-900);
+      color:white;
+      font-size:1.2rem;
+      margin:.5rem 0;
     }
     .platform-card p{
+      color:rgba(255,255,255,.8);
       font-size:.9rem;
-      color:var(--muted);
       margin:0;
     }
-    
-    /* CTA Section */
-    .cta-app{
-      background:linear-gradient(135deg,var(--teal-700),var(--teal-500));
-      color:#fff;
+
+    /* Lifetime Access Section */
+    .lifetime-section{
       padding:120px 0;
+      background:var(--teal-950);
+      color:white;
       text-align:center;
-      position:relative;
-      overflow:hidden;
     }
-    .cta-app::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
-      opacity:.1;
+    .lifetime-section .eyebrow{
+      color:var(--gold);
+      justify-content:center;
     }
-    .cta-app-content{
-      position:relative;
-      z-index:2;
-    }
-    .cta-app h2{
-      color:#fff;
-      font-size:clamp(2rem,4vw,3.5rem);
+    .lifetime-section h2{
+      color:white;
+      font-size:clamp(2.5rem,5vw,4.5rem);
       margin-bottom:1.5rem;
     }
-    .cta-app p{
+    .lifetime-section p{
       font-size:1.35rem;
-      color:rgba(255,255,255,.95);
+      color:rgba(255,255,255,.9);
+      max-width:800px;
+      margin:0 auto;
+      line-height:1.7;
+    }
+
+    /* Features List Section */
+    .features-list-section{
+      padding:100px 0;
+      background:var(--soft);
+    }
+    .features-list-section h2{
+      text-align:center;
       margin-bottom:3rem;
-      max-width:700px;
-      margin-left:auto;
-      margin-right:auto;
+    }
+    .features-list{
+      max-width:900px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:1.25rem;
+    }
+    .feature-item{
+      background:white;
+      padding:1.5rem;
+      border-radius:16px;
+      border-left:4px solid var(--app-amber);
+      box-shadow:var(--shadow-sm);
+      transition:all .3s ease;
+    }
+    .feature-item:hover{
+      transform:translateX(8px);
+      box-shadow:var(--shadow-md);
+    }
+    .feature-item strong{
+      color:var(--teal-800);
+      font-size:1.05rem;
+      display:block;
+      margin-bottom:.35rem;
+    }
+    .feature-item span{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    /* Final CTA */
+    .final-cta-app{
+      padding:100px 0;
+      background:
+        linear-gradient(rgba(6,55,67,.92),rgba(6,55,67,.95)),
+        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
+      color:white;
+      text-align:center;
+    }
+    .final-cta-app h2{
+      color:white;
+      font-size:clamp(2.5rem,5vw,4rem);
+      margin-bottom:1.5rem;
+    }
+    .final-cta-app p{
+      font-size:1.3rem;
+      color:rgba(255,255,255,.95);
+      max-width:750px;
+      margin:0 auto 3rem;
     }
     .cta-buttons{
       display:flex;
@@ -493,519 +534,421 @@
       justify-content:center;
       flex-wrap:wrap;
     }
-    
+    .cta-buttons .btn{
+      min-height:62px;
+      padding:0 2.75rem;
+      font-size:1.15rem;
+    }
+
     /* Footer */
-    .site-footer{
-      background:var(--teal-950);
-      color:rgba(255,255,255,.8);
-      padding:80px 0 40px;
-    }
-    .footer-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:3rem;
-      margin-bottom:3rem;
-    }
-    .footer-col h4{
+    footer{padding:58px 0 24px;color:rgba(255,255,255,.8);background:#042f39}
+    .footer-grid{display:grid;grid-template-columns:1.25fr .8fr 1fr .9fr;gap:2.5rem}
+    .footer-logo{width:220px;padding:8px;border-radius:10px;background:#fff}
+    footer h3{
       color:#fff;
-      font-size:1.05rem;
-      margin-bottom:1.25rem;
+      font-family:"Source Sans 3",sans-serif;
+      font-size:.95rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
     }
-    .footer-col ul{list-style:none;padding:0;margin:0}
-    .footer-col ul li{margin-bottom:.65rem}
-    .footer-col a{
-      color:rgba(255,255,255,.75);
-      font-size:.9rem;
-      transition:color .2s;
+    footer a{color:rgba(255,255,255,.8);text-decoration:none}
+    footer a:hover{color:#fff}
+    .footer-links{display:grid;gap:.5rem}
+    .footer-bottom{
+      margin-top:36px;padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.12);
+      font-size:.85rem;text-align:center;
     }
-    .footer-col a:hover{color:#fff}
-    
-    .footer-trust{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:.75rem;
-      margin-top:1rem;
-    }
-    .footer-trust-item{
-      padding:.6rem 1rem;
-      border-radius:8px;
-      background:rgba(255,255,255,.08);
-      border-left:3px solid var(--gold);
-      font-size:.82rem;
-      font-weight:700;
-      color:rgba(255,255,255,.9);
-    }
-    
-    .footer-emergency{
-      background:rgba(239,139,34,.12);
-      border:2px solid var(--gold);
-      border-radius:12px;
-      padding:1.5rem;
-      margin-top:1rem;
-    }
-    .footer-emergency strong{
-      display:block;
-      color:var(--gold);
-      font-size:1rem;
-      margin-bottom:.5rem;
-    }
-    .footer-emergency a{
-      color:#fff;
-      font-size:1.2rem;
-      font-weight:800;
-    }
-    
-    .footer-signature{
-      text-align:center;
-      padding-top:2.5rem;
-      border-top:1px solid rgba(255,255,255,.1);
-      margin-top:3rem;
-    }
-    .footer-signature p{
-      color:rgba(255,255,255,.7);
-      font-size:.9rem;
-      margin-bottom:.5rem;
-    }
-    .footer-legal{
-      display:flex;
-      justify-content:center;
-      gap:2rem;
-      margin-top:1rem;
-      flex-wrap:wrap;
-    }
-    .footer-legal a{
-      color:rgba(255,255,255,.6);
-      font-size:.85rem;
-    }
-    
+
     /* Animations */
     @keyframes float{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-30px)}
+      0%,100%{transform:translateY(0) rotate(0deg)}
+      50%{transform:translateY(-30px) rotate(5deg)}
     }
     @keyframes pulse{
       0%,100%{transform:scale(1)}
-      50%{transform:scale(1.05)}
+      50%{transform:scale(1.08)}
     }
-    
+
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.visible{opacity:1;transform:none}
+
     /* Responsive */
-    @media (max-width:1080px){
-      .app-stats-grid{grid-template-columns:repeat(2,1fr)}
+    @media(max-width:1080px){
+      .site-nav{
+        position:absolute;top:88px;left:0;right:0;
+        display:none;align-items:stretch;padding:22px;
+        background:#fff;box-shadow:var(--shadow-md);flex-direction:column;
+      }
+      .site-nav.open{display:flex}
+      .menu-toggle{display:inline-grid;place-items:center}
+      .app-showcase{margin:-60px auto 0;padding:3rem 2rem}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .features-grid{grid-template-columns:repeat(2,1fr)}
       .platform-grid{grid-template-columns:repeat(2,1fr)}
+      .features-list{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:repeat(2,1fr)}
     }
-    
-    @media (max-width:760px){
-      h1{font-size:2.5rem}
-      h2{font-size:2rem}
-      .section{padding:64px 0}
-      .hero-app{min-height:auto;padding:80px 0}
-      .app-dashboard-preview{padding:2rem 1.5rem}
-      .app-stats-grid{grid-template-columns:1fr;gap:1rem}
-      .app-features-grid{grid-template-columns:1fr}
+
+    @media(max-width:760px){
+      .container{width:min(100% - 26px,var(--max))}
+      .section{padding:72px 0}
+      .topbar-inner{justify-content:center}
+      .topbar-inner>span{display:none}
+      .brand img{width:190px}
+      .hero-app{min-height:auto;padding:100px 0 60px}
+      .app-showcase{margin:0 auto;padding:2.5rem 1.5rem;border-radius:30px}
+      .streak-badge{font-size:1.1rem;padding:.85rem 1.75rem}
+      .stats-grid{grid-template-columns:1fr;gap:1rem}
+      .features-grid{grid-template-columns:1fr}
       .platform-grid{grid-template-columns:1fr}
-      .cta-app{padding:80px 0}
-      .menu-toggle{display:flex}
-      .site-nav{
-        position:fixed;
-        top:0;right:-100%;
-        width:85%;max-width:340px;
-        height:100vh;
-        flex-direction:column;
-        align-items:flex-start;
-        gap:0;
-        padding:80px 24px 24px;
-        background:var(--teal-950);
-        box-shadow:-8px 0 40px rgba(0,0,0,.3);
-        transition:right .3s ease;
-      }
-      .site-nav.open{right:0}
-      .site-nav>a{
-        width:100%;
-        padding:1rem 0;
-        color:#fff;
-        font-size:1.05rem;
-        border-bottom:1px solid rgba(255,255,255,.1);
-      }
-      .nav-dropdown{border-bottom:1px solid rgba(255,255,255,.1)}
-      .nav-dropdown-toggle{color:#fff;justify-content:flex-start}
-      .nav-dropdown-menu{
-        position:static;
-        border:none;
-        box-shadow:none;
-        margin-top:0;
-        padding:0 0 .85rem 1.2rem;
-        background:transparent;
-      }
-      .nav-dropdown-menu a{color:rgba(255,255,255,.8)}
-      .nav-dropdown-menu a:hover{background:rgba(255,255,255,.08);color:#fff}
-      .footer-grid{grid-template-columns:1fr}
       .cta-buttons{flex-direction:column;align-items:center}
-      .cta-buttons .btn{width:100%;max-width:280px}
+      .cta-buttons .btn{width:100%;max-width:320px}
+      .footer-grid{grid-template-columns:1fr}
     }
-    
-    /* Desktop nav hover */
-    @media(min-width:761px){
-      .nav-dropdown-menu{
-        position:absolute;
-        top:calc(100% + 10px);
-        left:0;
-        min-width:290px;
-      }
-      .nav-dropdown:hover .nav-dropdown-menu,
-      .nav-dropdown:focus-within .nav-dropdown-menu{
-        display:grid;
-      }
+
+    @media(prefers-reduced-motion:reduce){
+      *{animation:none!important;transition:none!important}
     }
-</style>
+  </style>
 </head>
+
 <body>
-
-<!-- Top Bar -->
-<div class="topbar">
-  <div class="container topbar-inner">
-    <div>🏆 The ONLY IOP with 24/7 Recovery App Support</div>
-    <div class="topbar-actions">
-      <a href="tel:505-270-0840">Call (505) 270-0840</a>
+  <!-- V4 Topbar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>🏆 The ONLY IOP with 24/7 Recovery App Support</span>
+      <div class="topbar-actions">
+        <a href="tel:+15052700840">Call (505) 270-0840</a>
+        <a class="btn btn-warm" href="/insurance-verification">Verify Insurance</a>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a href="/" class="brand">
-      <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/logo/logo-dmhiop-full.png" alt="Desert Mountain Healing IOP"/>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">☰</button>
-    <nav class="site-nav" id="siteNav">
-      <a href="/">Home</a>
-      <div class="nav-dropdown">
-        <button aria-expanded="false" class="nav-dropdown-toggle" type="button">Treatment <span>▼</span></button>
-        <div class="nav-dropdown-menu">
-          <a href="/iop-benefits/">IOP Benefits</a>
+  <!-- V4 Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="Desert Mountain Healing IOP home">
+        <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation">☰</button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/team/">Our Team</a>
+        <a href="/iop-benefits/">IOP</a>
+        <a href="/reliable-substance-abuse-treatments/">Services</a>
+        <a href="/mat/">MAT</a>
+        <a href="/medical-detox-assistance/">Detox</a>
+        <a href="/client-app/" style="color:var(--gold)">Recovery Portal</a>
+        <a href="/faq/">FAQ</a>
+        <a class="btn btn-primary" href="/insurance-verification">Verify Insurance</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Apple-Style Hero -->
+    <section class="hero-app">
+      <div class="hero-app-content">
+        <div class="app-badge reveal">EXCLUSIVE TO DMHIOP CLIENTS</div>
+        <h1 class="reveal">Own Today<br>Recovery Portal</h1>
+        <p class="hero-app-tagline reveal">Your lifelong recovery companion. 20+ powerful tools built by people in recovery, for people in recovery. Available 24/7 on every device.</p>
+        
+        <div class="hero-app-cta reveal">
+          <a href="/insurance-verification" class="btn btn-warm">Start Treatment & Get Access</a>
+          <a href="https://appdmhiop.com" target="_blank" class="btn btn-secondary">Visit appdmhiop.com →</a>
+        </div>
+
+        <!-- App Showcase Card -->
+        <div class="app-showcase reveal">
+          <!-- Live Streak -->
+          <div class="streak-display">
+            <div class="streak-badge">
+              <i class="fas fa-fire"></i>
+              <span>7-Day Streak!</span>
+            </div>
+          </div>
+
+          <!-- Dashboard Stats -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <i class="fas fa-home"></i>
+              <div class="stat-number">15</div>
+              <div class="stat-label">Meetings</div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-book"></i>
+              <div class="stat-number">8</div>
+              <div class="stat-label">Journals</div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-bullseye"></i>
+              <div class="stat-number">3</div>
+              <div class="stat-label">Goals</div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-star"></i>
+              <div class="stat-number">250</div>
+              <div class="stat-label">Points</div>
+            </div>
+          </div>
+
+          <!-- Top Features -->
+          <div class="feature-preview">
+            <h3>Powerful Recovery Tools</h3>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon-box">
+                  <i class="fas fa-home"></i>
+                </div>
+                <h4>Meeting Guide</h4>
+                <p>Find AA, NA, SMART Recovery meetings with GPS check-ins</p>
+                <div class="feature-points">+50 points per check-in</div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon-box">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <h4>24/7 AI Support</h4>
+                <p>Always-available support trained on recovery principles</p>
+                <div class="feature-points">Anytime support</div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon-box">
+                  <i class="fas fa-pen"></i>
+                </div>
+                <h4>Private Journal</h4>
+                <p>Secure space for reflection and growth</p>
+                <div class="feature-points">+25 points per entry</div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon-box">
+                  <i class="fas fa-gift"></i>
+                </div>
+                <h4>Rewards Store</h4>
+                <p>Redeem your progress for meaningful rewards</p>
+                <div class="feature-points">24 items available</div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon-box">
+                  <i class="fas fa-bullseye"></i>
+                </div>
+                <h4>Goals Tracker</h4>
+                <p>Set intentions and achieve milestones</p>
+                <div class="feature-points">+20 points per goal</div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon-box">
+                  <i class="fas fa-spa"></i>
+                </div>
+                <h4>Guided Meditation</h4>
+                <p>Stress relief and mindfulness sessions</p>
+                <div class="feature-points">+15 points per session</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Complete Feature List -->
+    <section class="features-list-section">
+      <div class="container">
+        <div class="reveal" style="text-align:center;margin-bottom:3rem">
+          <span class="eyebrow" style="justify-content:center">Complete Recovery Toolkit</span>
+          <h2>20+ Tools to Support Your Journey</h2>
+          <p style="color:var(--muted);font-size:1.15rem;max-width:700px;margin:0 auto">Everything you need in one powerful app. From meetings to meditation, journaling to rewards—comprehensive support for every aspect of recovery.</p>
+        </div>
+
+        <div class="features-list">
+          <div class="feature-item reveal">
+            <strong>📖 Literature Library</strong>
+            <span>Recovery readings & daily meditations</span>
+          </div>
+          <div class="feature-item reveal">
+            <strong>📊 Progress Tracker</strong>
+            <span>Visual insights into your journey</span>
+          </div>
+          <div class="feature-item reveal">
+            <strong>🤝 Community</strong>
+            <span>Connect with others on the same path</span>
+          </div>
+          <div class="feature-item reveal">
+            <strong>📅 Appointments</strong>
+            <span>Never miss a session</span>
+          </div>
+          <div class="feature-item reveal">
+            <strong>🧮 Sobriety Calculator</strong>
+            <span>Count every victorious day</span>
+          </div>
+          <div class="feature-item reveal">
+            <strong>💫 Daily Affirmations</strong>
+            <span>Start each day inspired</span>
+          </div>
+          <div class="feature-item reveal">
+            <strong>🏆 Achievements</strong>
+            <span>Unlock milestones & badges</span>
+          </div>
+          <div class="feature-item reveal">
+            <strong>🛡️ Relapse Prevention</strong>
+            <span>Tools for tough moments</span>
+          </div>
+        </div>
+
+        <p style="text-align:center;margin-top:2.5rem;color:var(--app-amber);font-size:1.1rem;font-weight:700">And we're adding new features every month based on client feedback!</p>
+      </div>
+    </section>
+
+    <!-- Platform Availability -->
+    <section class="platform-section">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow" style="color:rgba(255,255,255,.8);justify-content:center">Available Everywhere</span>
+          <h2>One App. Every Device.</h2>
+          <p>Access your recovery tools on the platform that works best for you. Same account, seamless experience.</p>
+        </div>
+
+        <div class="platform-grid">
+          <div class="platform-card reveal">
+            <div class="icon">📱</div>
+            <h4>iOS</h4>
+            <p>iPhone & iPad</p>
+          </div>
+          <div class="platform-card reveal">
+            <div class="icon">🤖</div>
+            <h4>Android</h4>
+            <p>All devices</p>
+          </div>
+          <div class="platform-card reveal">
+            <div class="icon">💻</div>
+            <h4>Windows</h4>
+            <p>Desktop & laptop</p>
+          </div>
+          <div class="platform-card reveal">
+            <div class="icon">🌐</div>
+            <h4>Web</h4>
+            <p>Any browser</p>
+          </div>
+        </div>
+
+        <p style="margin-top:3rem">
+          <a href="https://appdmhiop.com" target="_blank" class="btn btn-warm" style="min-height:56px;padding:0 2.25rem">Visit appdmhiop.com</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Lifetime Access -->
+    <section class="lifetime-section">
+      <div class="container reveal" style="max-width:900px">
+        <span class="eyebrow">Lifetime Access</span>
+        <h2>Yours to Keep.<br>Forever.</h2>
+        <p>When you complete treatment at DMHIOP, you don't lose access. You keep Own Today for life—no subscriptions, no expiration dates. We're committed to supporting your recovery journey long after discharge.</p>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta-app">
+      <div class="container reveal">
+        <h2>Get Treatment.<br>Get Lifetime App Access.</h2>
+        <p>When you enroll at Desert Mountain Healing IOP, you automatically receive lifetime access to Own Today—the most comprehensive recovery app available.</p>
+        <div class="cta-buttons">
+          <a href="/insurance-verification" class="btn btn-warm">Verify Insurance & Enroll</a>
+          <a href="tel:+15052700840" class="btn btn-secondary">Call (505) 270-0840</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- V4 Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP">
+        <p style="margin-top:1rem">Empowering Recovery Through Compassionate Care.</p>
+      </div>
+
+      <div>
+        <h3>Programs</h3>
+        <div class="footer-links">
+          <a href="/iop-benefits/">Intensive Outpatient Program</a>
           <a href="/mat/">Medication-Assisted Treatment</a>
-          <a href="/reliable-substance-abuse-treatments/">All Services</a>
+          <a href="/medical-detox-assistance/">Medical Detox Assistance</a>
+          <a href="/client-app/">Recovery Portal</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button aria-expanded="false" class="nav-dropdown-toggle" type="button">About Us <span>▼</span></button>
-        <div class="nav-dropdown-menu">
+
+      <div>
+        <h3>Contact</h3>
+        <div class="footer-links">
+          <span>3301 Southern Blvd. SE, Suite 105</span>
+          <span>Rio Rancho, NM 87124</span>
+          <a href="tel:+15052700840">(505) 270-0840</a>
+          <a href="mailto:sean_roberts@dmhiop.com">sean_roberts@dmhiop.com</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Resources</h3>
+        <div class="footer-links">
           <a href="/team/">Our Team</a>
+          <a href="/insurance-verification">Verify Insurance</a>
+          <a href="/faq/">Frequently Asked Questions</a>
+          <a href="/blog/">Recovery Resources</a>
           <a href="/reviews/">Reviews</a>
-          <a href="/faq/">FAQ</a>
-          <a href="/blog/">Blog</a>
-        </div>
-      </div>
-      <a href="/client-app/" style="color:var(--gold)">Recovery Portal</a>
-      <a href="/contact/">Contact</a>
-      <a href="/contact/" class="btn btn-warm">Verify Insurance</a>
-    </nav>
-  </div>
-</header>
-
-<!-- Hero - Apple Style with Real App Sunrise Gradient -->
-<section class="hero-app">
-  <div class="hero-app-content">
-    <div class="hero-badge-app">EXCLUSIVE TO DMHIOP CLIENTS</div>
-    <h1>Own Today<br>Recovery Portal</h1>
-    <p class="hero-app-tagline">Your lifelong recovery companion. 20+ tools built by people in recovery, for people in recovery. Available 24/7 on every device.</p>
-    <div class="hero-app-cta">
-      <a href="/contact/" class="btn btn-warm" style="font-size:1.1rem;padding:0 2.25rem;min-height:58px">Start Treatment & Get Lifetime Access</a>
-      <a href="https://appdmhiop.com" target="_blank" class="btn btn-secondary" style="font-size:1.1rem;padding:0 2.25rem;min-height:58px">Visit appdmhiop.com →</a>
-    </div>
-    
-    <!-- REAL APP DASHBOARD PREVIEW -->
-    <div class="app-dashboard-preview">
-      <div class="app-streak-badge">
-        <i class="fas fa-fire"></i>
-        <span>7-Day Streak!</span>
-      </div>
-      
-      <div class="app-stats-grid">
-        <div class="app-stat-card">
-          <i class="fas fa-home"></i>
-          <div class="app-stat-number">15</div>
-          <div class="app-stat-label">Meetings</div>
-        </div>
-        <div class="app-stat-card">
-          <i class="fas fa-book"></i>
-          <div class="app-stat-number">8</div>
-          <div class="app-stat-label">Journals</div>
-        </div>
-        <div class="app-stat-card">
-          <i class="fas fa-bullseye"></i>
-          <div class="app-stat-number">3</div>
-          <div class="app-stat-label">Goals</div>
-        </div>
-        <div class="app-stat-card">
-          <i class="fas fa-star"></i>
-          <div class="app-stat-number">250</div>
-          <div class="app-stat-label">Points</div>
-        </div>
-      </div>
-      
-      <div class="app-features-grid">
-        <div class="app-feature-card">
-          <div class="app-feature-icon">
-            <i class="fas fa-home"></i>
-          </div>
-          <h3>Meeting Guide</h3>
-          <p>Find AA, NA, SMART Recovery, LifeRing, and Celebrate Recovery meetings near you with GPS-powered geofence check-ins.</p>
-          <div class="app-feature-points">+50 points per check-in</div>
-        </div>
-        
-        <div class="app-feature-card">
-          <div class="app-feature-icon">
-            <i class="fas fa-comments"></i>
-          </div>
-          <h3>24/7 AI Support Chat</h3>
-          <p>Trained on evidence-based recovery principles. Available anytime—2 AM cravings, late-night anxiety, or moments of doubt.</p>
-          <div class="app-feature-points">Anytime support</div>
-        </div>
-        
-        <div class="app-feature-card">
-          <div class="app-feature-icon">
-            <i class="fas fa-pen"></i>
-          </div>
-          <h3>Private Journal</h3>
-          <p>Your words have power. Every entry is a step forward in your healing journey.</p>
-          <div class="app-feature-points">+25 points per entry</div>
-        </div>
-        
-        <div class="app-feature-card">
-          <div class="app-feature-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <h3>Rewards Store</h3>
-          <p>Celebrate your wins! Redeem your points for meaningful rewards as you progress.</p>
-          <div class="app-feature-points">24 items available</div>
-        </div>
-        
-        <div class="app-feature-card">
-          <div class="app-feature-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Goals Tracker</h3>
-          <p>Dreams become reality one step at a time. Set your path and track your victories.</p>
-          <div class="app-feature-points">+20 points per goal</div>
-        </div>
-        
-        <div class="app-feature-card">
-          <div class="app-feature-icon">
-            <i class="fas fa-spa"></i>
-          </div>
-          <h3>Guided Meditation</h3>
-          <p>Guided sessions for stress relief, mindfulness, and inner calm when you need it most.</p>
-          <div class="app-feature-points">+15 points per session</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<main>
-
-<!-- Features Section -->
-<section class="section section-soft">
-  <div class="container" style="text-align:center">
-    <span class="eyebrow" style="justify-content:center">Complete Recovery Toolkit</span>
-    <h2>20+ Tools to Support Your Journey</h2>
-    <p style="font-size:1.25rem;max-width:700px;margin:0 auto 3rem;color:var(--muted)">Everything you need in one powerful app. From meetings to meditation, journaling to rewards—we've built comprehensive support for every aspect of recovery.</p>
-    
-    <div style="background:#fff;border-radius:1.5rem;padding:3rem;box-shadow:var(--shadow-sm);max-width:900px;margin:0 auto">
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;text-align:left">
-        <div style="padding:1.25rem;background:var(--teal-050);border-radius:1rem;border-left:4px solid var(--app-primary)">
-          <strong style="color:var(--teal-800);display:block;margin-bottom:.5rem">📖 Literature Library</strong>
-          <span style="color:var(--muted);font-size:.95rem">Recovery readings & daily meditations</span>
-        </div>
-        <div style="padding:1.25rem;background:var(--teal-050);border-radius:1rem;border-left:4px solid var(--app-primary)">
-          <strong style="color:var(--teal-800);display:block;margin-bottom:.5rem">📊 Progress Tracker</strong>
-          <span style="color:var(--muted);font-size:.95rem">Visual insights into your journey</span>
-        </div>
-        <div style="padding:1.25rem;background:var(--teal-050);border-radius:1rem;border-left:4px solid var(--app-primary)">
-          <strong style="color:var(--teal-800);display:block;margin-bottom:.5rem">🤝 Community</strong>
-          <span style="color:var(--muted);font-size:.95rem">Connect with others on the same path</span>
-        </div>
-        <div style="padding:1.25rem;background:var(--teal-050);border-radius:1rem;border-left:4px solid var(--app-primary)">
-          <strong style="color:var(--teal-800);display:block;margin-bottom:.5rem">📅 Appointments</strong>
-          <span style="color:var(--muted);font-size:.95rem">Never miss a session</span>
-        </div>
-        <div style="padding:1.25rem;background:var(--teal-050);border-radius:1rem;border-left:4px solid var(--app-primary)">
-          <strong style="color:var(--teal-800);display:block;margin-bottom:.5rem">🧮 Sobriety Calculator</strong>
-          <span style="color:var(--muted);font-size:.95rem">Count every victorious day</span>
-        </div>
-        <div style="padding:1.25rem;background:var(--teal-050);border-radius:1rem;border-left:4px solid var(--app-primary)">
-          <strong style="color:var(--teal-800);display:block;margin-bottom:.5rem">💫 Daily Affirmations</strong>
-          <span style="color:var(--muted);font-size:.95rem">Start each day inspired</span>
-        </div>
-        <div style="padding:1.25rem;background:var(--teal-050);border-radius:1rem;border-left:4px solid var(--app-primary)">
-          <strong style="color:var(--teal-800);display:block;margin-bottom:.5rem">🏆 Achievements</strong>
-          <span style="color:var(--muted);font-size:.95rem">Unlock milestones & badges</span>
-        </div>
-        <div style="padding:1.25rem;background:var(--teal-050);border-radius:1rem;border-left:4px solid var(--app-primary)">
-          <strong style="color:var(--teal-800);display:block;margin-bottom:.5rem">🛡️ Relapse Prevention</strong>
-          <span style="color:var(--muted);font-size:.95rem">Tools for tough moments</span>
-        </div>
-      </div>
-      <p style="text-align:center;margin-top:2rem;font-size:1.05rem;color:var(--app-primary-dark)"><strong>And we're adding new features every month based on client feedback!</strong></p>
+    <div class="container footer-bottom">
+      © 2026 Desert Mountain Healing IOP. All rights reserved.
+      If you or someone else is in immediate danger, call 911. For crisis support, call or text 988.
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- Platforms -->
-<section class="section">
-  <div class="container" style="text-align:center">
-    <span class="eyebrow" style="justify-content:center">Available Everywhere</span>
-    <h2>One App. Every Device.</h2>
-    <p style="font-size:1.25rem;max-width:700px;margin:0 auto 3rem;color:var(--muted)">Access your recovery tools on the platform that works best for you. Same account, seamless experience.</p>
-    
-    <div class="platform-grid">
-      <div class="platform-card">
-        <div class="platform-icon">📱</div>
-        <h4>iOS</h4>
-        <p>iPhone & iPad</p>
-      </div>
-      <div class="platform-card">
-        <div class="platform-icon">🤖</div>
-        <h4>Android</h4>
-        <p>All devices</p>
-      </div>
-      <div class="platform-card">
-        <div class="platform-icon">💻</div>
-        <h4>Windows</h4>
-        <p>Desktop & laptop</p>
-      </div>
-      <div class="platform-card">
-        <div class="platform-icon">🌐</div>
-        <h4>Web</h4>
-        <p>Any browser</p>
-      </div>
-    </div>
-    
-    <a href="https://appdmhiop.com" target="_blank" class="btn btn-primary" style="margin-top:2rem;font-size:1.05rem">Visit appdmhiop.com</a>
-  </div>
-</section>
+  <!-- V4 JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const siteNav = document.getElementById("siteNav");
 
-<!-- Dark Section - Lifetime Access -->
-<section class="section-dark" style="padding:120px 0">
-  <div class="container" style="text-align:center;max-width:800px;margin:0 auto">
-    <span class="eyebrow" style="color:var(--gold);justify-content:center">Lifetime Access</span>
-    <h2 style="color:#fff;font-size:clamp(2rem,4vw,3.5rem);margin-bottom:1.5rem">Yours to Keep.<br>Forever.</h2>
-    <p style="font-size:1.3rem;color:rgba(255,255,255,.9);line-height:1.75">When you complete treatment at DMHIOP, you don't lose access. You keep Own Today for life—no subscriptions, no expiration dates. We're committed to supporting your recovery journey long after discharge.</p>
-  </div>
-</section>
+    menuToggle.addEventListener("click", () => {
+      const isOpen = siteNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
 
-<!-- CTA -->
-<section class="cta-app">
-  <div class="cta-app-content">
-    <div class="container" style="max-width:900px">
-      <h2>Get Treatment.<br>Get Lifetime App Access.</h2>
-      <p>When you enroll at Desert Mountain Healing IOP, you automatically receive lifetime access to Own Today—the most comprehensive recovery app available.</p>
-      <div class="cta-buttons">
-        <a href="/contact/" class="btn btn-warm" style="font-size:1.15rem;padding:0 2.5rem;min-height:62px">Verify Insurance & Enroll</a>
-        <a href="tel:505-270-0840" class="btn btn-secondary" style="font-size:1.15rem;padding:0 2.5rem;min-height:62px">Call (505) 270-0840</a>
-      </div>
-    </div>
-  </div>
-</section>
+    siteNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
 
-</main>
+    // Reveal on Scroll
+    const revealElements = document.querySelectorAll(".reveal");
 
-<!-- Footer -->
-<footer class="site-footer">
-<div class="container">
-<div class="footer-grid">
-<div class="footer-col">
-<h4>Quick Links</h4>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/about/">About Us</a></li>
-<li><a href="/programs/">Our Programs</a></li>
-<li><a href="/team/">Our Team</a></li>
-<li><a href="/client-app/">Recovery Portal</a></li>
-<li><a href="/contact/">Contact</a></li>
-</ul>
-</div>
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
 
-<div class="footer-col">
-<h4>Privacy & Legal</h4>
-<ul>
-<li><a href="/privacy/">Privacy Policy</a></li>
-<li><a href="/hipaa/">HIPAA Notice</a></li>
-<li><a href="/terms/">Terms of Service</a></li>
-<li><a href="/consent/">Consent Forms</a></li>
-</ul>
-</div>
-
-<div class="footer-col">
-<h4>Trust & Safety</h4>
-<div class="footer-trust">
-<div class="footer-trust-item">✓ Licensed IOP</div>
-<div class="footer-trust-item">✓ Insurance Accepted</div>
-<div class="footer-trust-item">✓ HIPAA Compliant</div>
-<div class="footer-trust-item">✓ Evidence-Based</div>
-<div class="footer-trust-item">✓ MAT Services</div>
-<div class="footer-trust-item">✓ 24/7 App Support</div>
-<div class="footer-trust-item">✓ Harvard-Trained</div>
-<div class="footer-trust-item">✓ Lifetime Access</div>
-</div>
-</div>
-
-<div class="footer-col">
-<h4>Get Help Now</h4>
-<p style="color:rgba(255,255,255,.75);margin-bottom:1rem;font-size:.9rem">If you or a loved one is struggling with substance use, we're here to help.</p>
-<a href="/contact/" class="btn btn-primary" style="width:100%;margin-bottom:1rem">Start Your Recovery</a>
-
-<div class="footer-emergency">
-<strong>Crisis Support</strong>
-<p style="margin:.5rem 0 0;font-size:.85rem;color:rgba(255,255,255,.8)">
-988 Suicide & Crisis Lifeline<br/>
-<a href="tel:988">Call 988</a>
-</p>
-</div>
-</div>
-</div>
-
-<div class="footer-signature">
-<p><strong>Desert Mountain Healing IOP</strong> — Rio Rancho, New Mexico</p>
-<p>The first and only IOP with exclusive 24/7 recovery app support. Founded by people in recovery, for people in recovery.</p>
-<div class="footer-legal">
-<a href="/privacy/">Privacy</a>
-<a href="/hipaa/">HIPAA</a>
-<a href="/terms/">Terms</a>
-<a href="https://appdmhiop.com" target="_blank">Recovery App</a>
-<a href="/sitemap.xml">Sitemap</a>
-</div>
-<p style="margin-top:1.5rem;font-size:.8rem;color:rgba(255,255,255,.5)">
-© 2025 Desert Mountain Healing IOP, LLC. All rights reserved.
-</p>
-</div>
-</div>
-</footer>
-
-<script>
-// Mobile menu toggle
-const menuToggle = document.getElementById('menuToggle');
-const siteNav = document.querySelector('.site-nav');
-if(menuToggle){
-  menuToggle.addEventListener('click', () => {
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !expanded);
-    siteNav.classList.toggle('open');
-  });
-}
-
-// Dropdown toggles
-document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const dropdown = btn.parentElement;
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', !expanded);
-    dropdown.classList.toggle('open');
-  });
-});
-</script>
-
+      revealElements.forEach(element => observer.observe(element));
+    } else {
+      revealElements.forEach(element => element.classList.add("visible"));
+    }
+  </script>
 </body>
 </html>
