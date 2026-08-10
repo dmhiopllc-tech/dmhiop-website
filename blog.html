@@ -184,7 +184,23 @@
       font-size:clamp(1.08rem,1.6vw,1.3rem);
     }
 
-    /* Blog Specific */
+    /* Blog Intro */
+    .intro-box{
+      background:linear-gradient(135deg,rgba(239,139,34,.08),rgba(27,163,189,.05));
+      border-left:6px solid var(--gold);
+      border-radius:var(--radius);
+      padding:2.5rem;
+      margin-bottom:3rem;
+    }
+    .intro-box p{
+      color:var(--muted);
+      font-size:1.08rem;
+      line-height:1.75;
+      margin-bottom:1rem;
+    }
+    .intro-box p:last-child{margin-bottom:0}
+
+    /* Table of Contents */
     .toc-section{
       background:#fff;
       border:2px solid var(--teal-500);
@@ -294,25 +310,6 @@
       flex-wrap:wrap;
     }
 
-    /* Who We Are Section */
-    .who-we-are{
-      background:var(--soft);
-      border-radius:var(--radius);
-      padding:3rem;
-      margin:3rem 0;
-      border-left:6px solid var(--teal-700);
-    }
-    .who-we-are h3{
-      color:var(--teal-950);
-      font-size:1.75rem;
-      margin-bottom:1rem;
-    }
-    .who-we-are p{
-      color:var(--muted);
-      font-size:1.05rem;
-      line-height:1.8;
-    }
-
     footer{padding:58px 0 24px;color:rgba(255,255,255,.8);background:#042f39}
     .footer-grid{display:grid;grid-template-columns:1.25fr .8fr 1fr .9fr;gap:2.5rem}
     .footer-logo{width:220px;padding:8px;border-radius:10px;background:#fff}
@@ -416,34 +413,18 @@
       </div>
     </section>
 
-    <!-- Who We Are -->
+    <!-- Subtle Introduction (answers 4 questions naturally) -->
     <section class="section">
       <div class="container">
-        <div class="who-we-are reveal">
-          <h3>🏢 Who We Are</h3>
-          <p>Desert Mountain Healing IOP is Rio Rancho's trusted intensive outpatient program, founded by people in recovery who understand your journey. Our Harvard-trained clinical team combines evidence-based treatment with compassionate, personalized care. We're the ONLY IOP in the region offering 24/7 recovery app support (Own Today) — because your recovery doesn't stop when you leave our doors.</p>
+        <div class="intro-box reveal">
+          <p>Desert Mountain Healing IOP is Rio Rancho's trusted intensive outpatient program, founded by Sean Roberts (in recovery since 1987) and Karla Wood (in recovery since 2015). Our Harvard-trained clinical director, Bob Galligan, M.Ed., leads a compassionate team dedicated to providing evidence-based addiction treatment that fits into your real life.</p>
+          
+          <p>We're not a corporate treatment chain — we're a locally-owned IOP built by people who understand recovery firsthand. We offer flexible scheduling (morning and evening programs), medication-assisted treatment, outpatient detox assistance, and lifetime access to our Own Today recovery app. Our approach combines clinical excellence with practical support, allowing you to heal while maintaining your work, family, and community connections.</p>
+          
+          <p>Why do we do this? Because recovery saved our lives. We believe everyone deserves access to compassionate, evidence-based care — not just those who can afford expensive residential programs. We show up every day because we know recovery is possible, you are worth it, and with the right support, you can build a life beyond your wildest dreams.</p>
         </div>
 
-        <div class="who-we-are reveal" style="border-left-color:var(--gold)">
-          <h3>🤝 Why Trust Us</h3>
-          <p>We're not a corporate treatment chain. We're a locally-owned IOP founded by Sean Roberts (in recovery since 1987) and Karla Wood (in recovery since 2015), with clinical direction from Bob Galligan, M.Ed. (Harvard). We're licensed, HIPAA-compliant, accept most insurance, and have helped hundreds of New Mexicans build lasting recovery while maintaining their work, family, and community connections.</p>
-        </div>
-
-        <div class="who-we-are reveal" style="border-left-color:var(--teal-500)">
-          <h3>💡 How We Help</h3>
-          <p>We provide flexible IOP treatment (morning & evening programs), medication-assisted treatment (MAT), outpatient detox assistance, individual & group therapy, case management, and lifetime access to our Own Today recovery app. Our approach combines clinical excellence with real-world practicality — you get the structure and support you need while continuing to work, care for your family, and live your life.</p>
-        </div>
-
-        <div class="who-we-are reveal" style="border-left-color:var(--gold);background:linear-gradient(135deg,rgba(239,139,34,.08),rgba(27,163,189,.08))">
-          <h3>❤️ Why We Do This</h3>
-          <p>Recovery saved our lives. We built Desert Mountain Healing IOP because we believe everyone deserves access to compassionate, evidence-based addiction treatment — not just those who can afford expensive residential programs. We know that recovery is possible, that you are worth it, and that with the right support, you can build a life beyond your wildest dreams. That's why we show up every day.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Table of Contents -->
-    <section class="section section-soft">
-      <div class="container">
+        <!-- Table of Contents -->
         <div class="toc-section reveal">
           <h2>📚 Complete Guide to IOP Treatment in New Mexico</h2>
           <p style="color:var(--muted);margin-bottom:2rem">Click any article to jump directly to that section:</p>
@@ -490,7 +471,7 @@
     </section>
 
     <!-- Articles -->
-    <section class="section">
+    <section class="section section-soft">
       <div class="container">
 
         <!-- Article 1 -->
@@ -624,7 +605,7 @@
         <!-- Final CTA -->
         <div class="cta-blog reveal">
           <h3>🌟 Take the First Step Toward Recovery Today</h3>
-          <p>Our compassionate team is available 24/7 to answer your questions and help you get started</p>
+          <p>Our compassionate team is available to answer your questions and help you get started</p>
           <div class="cta-actions">
             <a href="tel:5052700840" class="btn btn-warm">📞 Call (505) 270-0840</a>
             <a href="/contact-us/" class="btn btn-secondary">✉️ Contact Us Online</a>
