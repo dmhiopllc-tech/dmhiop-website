@@ -2,14 +2,14 @@
 <!-- =========================================================
      DMHIOP WEBSITE FRAMEWORK v4
      Desert Mountain Healing IOP
-     Recovery Portal (Own Today App) Page
+     Recovery Portal - Polished Apple-Style Presentation
 ========================================================= -->
 
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Recovery Portal - 24/7 App Support | Desert Mountain Healing IOP</title>
+<title>Recovery Portal - Own Today | Desert Mountain Healing IOP</title>
 <meta content="The ONLY IOP with exclusive Own Today recovery app. 20+ features including AA/NA meeting finder with geofence check-ins, journal, goals, meditation, 24/7 AI support, rewards. Lifetime access for DMHIOP clients. Rio Rancho, NM." name="description"/>
 <meta content="Own Today app, recovery portal, DMHIOP client app, AA meeting finder, NA meeting finder, recovery app Albuquerque, IOP technology, addiction recovery app, appdmhiop.com" name="keywords"/>
 <meta content="Desert Mountain Healing IOP" name="author"/>
@@ -39,6 +39,7 @@
       --soft:#f7fafb;
       --shadow-sm:0 10px 30px rgba(6,55,67,.08);
       --shadow-md:0 22px 60px rgba(6,55,67,.16);
+      --shadow-lg:0 40px 100px rgba(6,55,67,.2);
       --radius:22px;
       --max:1220px;
     }
@@ -69,7 +70,7 @@
     .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
     .section{padding:96px 0}
     .section-soft{background:var(--teal-050)}
-    .section-gray{background:var(--soft)}
+    .section-dark{background:var(--teal-950);color:#fff}
     
     .eyebrow{
       display:inline-flex;
@@ -199,140 +200,221 @@
     .nav-dropdown-menu a:hover{background:var(--teal-050);color:var(--teal-700)}
     .nav-dropdown.open .nav-dropdown-menu{display:grid}
     
-    /* Hero with Sunrise Background */
-    .hero{
-      padding:120px 0;
-      background:
-        linear-gradient(135deg,rgba(6,55,67,.92),rgba(11,95,110,.88)),
-        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
+    /* Hero - Apple Style */
+    .hero-app{
+      min-height:90vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,var(--teal-950) 0%,var(--teal-800) 100%);
       color:#fff;
       text-align:center;
+      position:relative;
+      overflow:hidden;
     }
-    .hero h1{color:#fff;margin-bottom:1.5rem}
-    .hero p{
-      font-size:1.4rem;
-      color:rgba(255,255,255,.95);
-      max-width:820px;
-      margin:0 auto 2.5rem;
+    .hero-app::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
+      opacity:.15;
     }
-    .hero-actions{
-      display:flex;
-      gap:1rem;
-      justify-content:center;
-      flex-wrap:wrap;
+    .hero-app-content{
+      position:relative;
+      z-index:2;
+      max-width:900px;
+      padding:3rem 1rem;
     }
-    .hero-badge{
-      display:inline-block;
-      background:rgba(239,139,34,.2);
-      color:var(--gold);
-      padding:8px 16px;
-      border-radius:999px;
-      font-size:.85rem;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      margin-bottom:1.5rem;
-    }
-    
-    /* Content Block */
-    .content-block{max-width:900px;margin:0 auto}
-    .content-block h2{margin-bottom:1.5rem}
-    .content-block h3{color:var(--teal-700);margin-top:2rem;margin-bottom:1rem}
-    
-    /* App Showcase */
-    .app-showcase{
-      background:var(--soft);
-      padding:3rem;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow-sm);
-    }
-    .app-showcase-grid{
-      display:grid;
-      grid-template-columns:400px 1fr;
-      gap:4rem;
-      align-items:center;
-    }
-    .app-phone{
-      width:100%;
-      height:auto;
-      border-radius:32px;
-      box-shadow:0 30px 80px rgba(6,55,67,.25);
-    }
-    .app-exclusive-badge{
-      display:inline-block;
-      background:linear-gradient(135deg,var(--gold),#ff9944);
+    .hero-app h1{
       color:#fff;
-      padding:10px 18px;
+      font-size:clamp(2.5rem,5vw,4.5rem);
+      margin-bottom:1.5rem;
+      font-weight:900;
+    }
+    .hero-app-tagline{
+      font-size:clamp(1.25rem,2vw,1.75rem);
+      color:rgba(255,255,255,.95);
+      margin-bottom:2.5rem;
+      font-weight:400;
+    }
+    .hero-badge-app{
+      display:inline-block;
+      background:rgba(239,139,34,.25);
+      color:var(--gold);
+      padding:10px 20px;
       border-radius:999px;
-      font-size:.8rem;
+      font-size:.9rem;
       font-weight:800;
       letter-spacing:.08em;
       text-transform:uppercase;
-      margin-bottom:1.5rem;
+      margin-bottom:2rem;
+      border:2px solid rgba(239,139,34,.3);
+    }
+    .hero-app-phone{
+      margin:4rem auto 0;
+      max-width:380px;
+      animation:float 6s ease-in-out infinite;
+    }
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-20px)}
     }
     
-    /* Feature Grid */
-    .feature-grid{
+    /* Feature Showcase - Split Layout */
+    .feature-showcase{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:2rem;
-      margin-top:3rem;
+      grid-template-columns:1fr 1fr;
+      gap:6rem;
+      align-items:center;
+      margin:0 auto;
+      max-width:1200px;
     }
-    .feature-card{
-      background:#fff;
+    .feature-showcase.reverse{
+      direction:rtl;
+    }
+    .feature-showcase.reverse>*{
+      direction:ltr;
+    }
+    .feature-visual{
+      position:relative;
+    }
+    .feature-phone{
+      width:100%;
+      max-width:400px;
+      border-radius:32px;
+      box-shadow:var(--shadow-lg);
+    }
+    .feature-content h2{
+      margin-bottom:1.5rem;
+    }
+    .feature-content p{
+      font-size:1.15rem;
+      line-height:1.75;
+      margin-bottom:1.5rem;
+    }
+    .feature-list{
+      list-style:none;
+      padding:0;
+      margin:2rem 0;
+    }
+    .feature-list li{
+      padding:1rem 0;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      gap:1rem;
+    }
+    .feature-list li:last-child{
+      border-bottom:none;
+    }
+    .feature-icon-inline{
+      font-size:1.75rem;
+      min-width:2.5rem;
+    }
+    .feature-list strong{
+      display:block;
+      color:var(--teal-900);
+      font-size:1.1rem;
+    }
+    
+    /* Stats Section */
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:3rem;
+      text-align:center;
+      padding:4rem 0;
+    }
+    .stat-item{
       padding:2rem;
-      border-radius:18px;
-      box-shadow:var(--shadow-sm);
-      transition:transform .2s,box-shadow .2s;
     }
-    .feature-card:hover{
-      transform:translateY(-4px);
+    .stat-number{
+      font-size:clamp(2.5rem,4vw,4rem);
+      font-weight:900;
+      color:var(--teal-500);
+      font-family:"Merriweather",Georgia,serif;
+      line-height:1;
+      margin-bottom:.5rem;
+    }
+    .stat-label{
+      font-size:1.1rem;
+      color:var(--muted);
+      font-weight:600;
+    }
+    
+    /* Platform Grid - Apple Style */
+    .platform-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:2rem;
+      margin:3rem 0;
+    }
+    .platform-card{
+      background:#fff;
+      border-radius:22px;
+      padding:2.5rem 2rem;
+      text-align:center;
+      box-shadow:var(--shadow-sm);
+      transition:all .3s ease;
+      border:1px solid var(--line);
+    }
+    .platform-card:hover{
+      transform:translateY(-8px);
       box-shadow:var(--shadow-md);
     }
-    .feature-icon{
-      font-size:2.5rem;
+    .platform-icon{
+      font-size:3.5rem;
       margin-bottom:1rem;
     }
-    .feature-card h3{
-      color:var(--teal-700);
-      font-size:1.25rem;
-      margin-bottom:.7rem;
+    .platform-card h4{
+      font-size:1.15rem;
+      margin-bottom:.5rem;
+      color:var(--teal-900);
     }
-    .feature-card p{
-      font-size:.95rem;
+    .platform-card p{
+      font-size:.9rem;
+      color:var(--muted);
       margin:0;
     }
     
-    /* Platform Badges */
-    .platform-badges{
-      display:flex;
-      gap:1rem;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:2rem;
-    }
-    .platform-badge{
-      padding:.8rem 1.5rem;
-      background:var(--teal-050);
-      border:2px solid var(--teal-500);
-      border-radius:999px;
-      color:var(--teal-700);
-      font-weight:700;
-      font-size:.9rem;
-    }
-    
-    /* Call-to-Action Section */
-    .cta-section{
-      padding:96px 0;
+    /* CTA Section - Apple Style */
+    .cta-app{
       background:linear-gradient(135deg,var(--teal-700),var(--teal-500));
       color:#fff;
+      padding:120px 0;
       text-align:center;
+      position:relative;
+      overflow:hidden;
     }
-    .cta-section h2{color:#fff;margin-bottom:1rem}
-    .cta-section p{
-      font-size:1.2rem;
-      color:rgba(255,255,255,.9);
-      margin-bottom:2rem;
+    .cta-app::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
+      opacity:.1;
+    }
+    .cta-app-content{
+      position:relative;
+      z-index:2;
+    }
+    .cta-app h2{
+      color:#fff;
+      font-size:clamp(2rem,4vw,3.5rem);
+      margin-bottom:1.5rem;
+    }
+    .cta-app p{
+      font-size:1.35rem;
+      color:rgba(255,255,255,.95);
+      margin-bottom:3rem;
+      max-width:700px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .cta-buttons{
+      display:flex;
+      gap:1.5rem;
+      justify-content:center;
+      flex-wrap:wrap;
     }
     
     /* Footer */
@@ -449,25 +531,22 @@
     
     /* Responsive */
     @media (max-width:1080px){
-      .app-showcase-grid{grid-template-columns:1fr;gap:3rem}
-      .app-phone{max-width:320px;margin:0 auto}
-      .feature-grid{grid-template-columns:repeat(2,1fr)}
+      .feature-showcase{grid-template-columns:1fr;gap:4rem;text-align:center}
+      .feature-phone{margin:0 auto}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .platform-grid{grid-template-columns:repeat(2,1fr)}
       .footer-grid{grid-template-columns:repeat(2,1fr)}
       .footer-trust{grid-template-columns:repeat(2,1fr)}
-    }
-    
-    @media (max-width:900px){
-      .hero{padding:80px 0}
-      .hero p{font-size:1.15rem}
     }
     
     @media (max-width:760px){
       h1{font-size:2.5rem}
       h2{font-size:2rem}
       .section{padding:64px 0}
-      .hero{padding:60px 0}
-      .app-showcase{padding:2rem}
-      .feature-grid{grid-template-columns:1fr}
+      .hero-app{min-height:auto;padding:80px 0}
+      .stats-grid{grid-template-columns:1fr;gap:2rem}
+      .platform-grid{grid-template-columns:1fr}
+      .cta-app{padding:80px 0}
       .menu-toggle{display:flex}
       .site-nav{
         position:fixed;
@@ -504,7 +583,8 @@
       .nav-dropdown-menu a:hover{background:rgba(255,255,255,.08);color:#fff}
       .footer-grid{grid-template-columns:1fr}
       .footer-trust{grid-template-columns:1fr}
-      .cta-section{padding:64px 0}
+      .cta-buttons{flex-direction:column;align-items:center}
+      .cta-buttons .btn{width:100%;max-width:280px}
     }
     
     /* Desktop nav hover */
@@ -538,7 +618,7 @@
 <header class="site-header">
   <div class="container nav-wrap">
     <a href="/" class="brand">
-      <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/logo/logo-dmhiop-full.png" alt="Desert Mountain Healing IOP"/>
+      <img src="/__static/images/logo/logo-dmhiop-full.png" alt="Desert Mountain Healing IOP"/>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">☰</button>
     <nav class="site-nav" id="siteNav">
@@ -567,245 +647,218 @@
   </div>
 </header>
 
-<!-- Hero -->
-<section class="hero">
+<!-- Hero - Apple Style -->
+<section class="hero-app">
+  <div class="hero-app-content">
+    <div class="hero-badge-app">EXCLUSIVE TO DMHIOP CLIENTS</div>
+    <h1>Own Today<br>Recovery Portal</h1>
+    <p class="hero-app-tagline">Your lifelong recovery companion. Available 24/7 on every device. Built by people in recovery, for people in recovery.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn btn-warm" style="font-size:1.1rem;padding:0 2rem;min-height:58px">Start Treatment & Get Lifetime Access</a>
+      <a href="https://appdmhiop.com" target="_blank" class="btn btn-secondary" style="font-size:1.1rem;padding:0 2rem;min-height:58px">Visit appdmhiop.com →</a>
+    </div>
+    <img src="https://i.imgur.com/zj3gqGG.png" alt="Own Today App" class="hero-app-phone"/>
+  </div>
+</section>
+
+<main>
+
+<!-- Stats Section -->
+<section class="section">
   <div class="container">
-    <div class="hero-badge">✨ EXCLUSIVE TO DMHIOP CLIENTS</div>
-    <h1>Own Today Recovery Portal</h1>
-    <p>The most advanced recovery app built exclusively for DMHIOP clients. 20+ features including meeting finder with geofence check-ins, 24/7 AI support, progress tracking, and lifetime access—even after discharge.</p>
-    <div class="hero-actions">
-      <a href="/contact/" class="btn btn-warm">Start Treatment & Get App Access</a>
-      <a href="https://appdmhiop.com" target="_blank" class="btn btn-secondary">Visit appdmhiop.com →</a>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Recovery Tools</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Support Access</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">∞</div>
+        <div class="stat-label">Lifetime Access</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Platforms</div>
+      </div>
     </div>
   </div>
 </section>
 
-<main id="main-content">
-
-<!-- What Makes This Different -->
-<section class="section">
-<div class="container">
-<div class="content-block">
-<span class="eyebrow">What Makes DMHIOP Different</span>
-<h2>The Only IOP With a Custom Recovery App</h2>
-
-<p>Most IOPs send clients home and hope for the best. We built <strong>Own Today</strong> because recovery doesn't stop when you walk out our doors.</p>
-
-<p>Built by co-founder Sean Roberts (in recovery since 1987), Own Today is a comprehensive recovery companion available exclusively to Desert Mountain Healing IOP clients—with <strong>lifetime access</strong>, even after you complete treatment.</p>
-
-<p>Available on <strong>all platforms</strong>: iOS, Android, Windows, and web browser at <a href="https://appdmhiop.com" target="_blank" style="color:var(--teal-500);font-weight:700">appdmhiop.com</a>.</p>
-</div>
-</div>
-</section>
-
-<!-- App Showcase -->
+<!-- Feature 1: Meeting Finder -->
 <section class="section section-soft">
-<div class="container">
-<div class="app-showcase">
-  <div class="app-showcase-grid">
-    <img src="https://i.imgur.com/zj3gqGG.png" alt="Own Today Recovery App" class="app-phone"/>
-    <div class="app-details">
-      <div class="app-exclusive-badge">✨ AVAILABLE ONLY TO DMHIOP CLIENTS</div>
-      <h2>Your Recovery, In Your Pocket</h2>
-      <p style="font-size:1.1rem;color:var(--muted);margin-bottom:2rem">Own Today puts 20+ evidence-based recovery tools at your fingertips—available 24/7, wherever you are.</p>
-      <a href="https://appdmhiop.com" target="_blank" class="btn btn-primary">Explore Own Today →</a>
+  <div class="container">
+    <div class="feature-showcase">
+      <div class="feature-visual">
+        <img src="https://i.imgur.com/zj3gqGG.png" alt="Meeting Finder" class="feature-phone"/>
+      </div>
+      <div class="feature-content">
+        <span class="eyebrow">Never Miss a Meeting</span>
+        <h2>Find Support<br>Wherever You Are</h2>
+        <p>GPS-powered meeting finder with geofence check-ins for accountability. Search AA, NA, SMART Recovery, LifeRing, and Celebrate Recovery meetings near you.</p>
+        <ul class="feature-list">
+          <li>
+            <span class="feature-icon-inline">📍</span>
+            <div>
+              <strong>Geofence Check-ins</strong>
+              <span style="color:var(--muted);font-size:.95rem">Automatic attendance verification</span>
+            </div>
+          </li>
+          <li>
+            <span class="feature-icon-inline">🗓️</span>
+            <div>
+              <strong>Real-Time Updates</strong>
+              <span style="color:var(--muted);font-size:.95rem">Always know what's happening nearby</span>
+            </div>
+          </li>
+          <li>
+            <span class="feature-icon-inline">⭐</span>
+            <div>
+              <strong>Save Favorites</strong>
+              <span style="color:var(--muted);font-size:.95rem">Quick access to your regular meetings</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </section>
 
-<!-- 20+ Features -->
+<!-- Feature 2: 24/7 Support -->
 <section class="section">
-<div class="container">
-<div class="content-block">
-<span class="eyebrow">20+ Recovery Tools</span>
-<h2>Everything You Need to Stay Strong</h2>
-<p style="text-align:center;font-size:1.1rem;margin-bottom:3rem">Own Today gives DMHIOP clients exclusive access to the most comprehensive recovery toolkit available—all in one app.</p>
-</div>
-
-<div class="feature-grid">
-  <div class="feature-card">
-    <div class="feature-icon">📍</div>
-    <h3>Meeting Finder</h3>
-    <p>Find AA, NA, SMART Recovery, LifeRing, and Celebrate Recovery meetings near you with GPS-verified geofence check-ins.</p>
+  <div class="container">
+    <div class="feature-showcase reverse">
+      <div class="feature-visual">
+        <img src="https://i.imgur.com/zj3gqGG.png" alt="24/7 Support" class="feature-phone"/>
+      </div>
+      <div class="feature-content">
+        <span class="eyebrow">Always There When You Need It</span>
+        <h2>24/7 AI Recovery<br>Support Chat</h2>
+        <p>Trained on evidence-based recovery principles, our AI support coach is available anytime—2 AM cravings, late-night anxiety, or moments of doubt.</p>
+        <ul class="feature-list">
+          <li>
+            <span class="feature-icon-inline">💬</span>
+            <div>
+              <strong>Instant Responses</strong>
+              <span style="color:var(--muted);font-size:.95rem">No waiting, no voicemail</span>
+            </div>
+          </li>
+          <li>
+            <span class="feature-icon-inline">🧠</span>
+            <div>
+              <strong>Evidence-Based Guidance</strong>
+              <span style="color:var(--muted);font-size:.95rem">CBT, DBT, and motivational interviewing</span>
+            </div>
+          </li>
+          <li>
+            <span class="feature-icon-inline">🔒</span>
+            <div>
+              <strong>Completely Private</strong>
+              <span style="color:var(--muted);font-size:.95rem">HIPAA-compliant & confidential</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">📊</div>
-    <h3>Progress Tracking</h3>
-    <p>Track your sobriety streaks, milestones, and daily wins. Visualize your recovery journey with charts and insights.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">✍️</div>
-    <h3>Private Journal</h3>
-    <p>Record your thoughts, feelings, and reflections in a secure, encrypted journal. Track patterns and growth over time.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">🎯</div>
-    <h3>Goal Setting</h3>
-    <p>Set personal recovery goals and track progress. Break big goals into achievable daily actions.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">🧘</div>
-    <h3>Guided Meditation</h3>
-    <p>Access recovery-focused meditation and mindfulness exercises to manage stress and cravings.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">💬</div>
-    <h3>24/7 AI Support Chat</h3>
-    <p>Get instant support anytime with our AI recovery coach. Trained on evidence-based recovery principles.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">🏆</div>
-    <h3>Rewards System</h3>
-    <p>Earn points for completing healthy activities. Redeem rewards and celebrate your progress.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">📅</div>
-    <h3>Appointment Manager</h3>
-    <p>Track therapy sessions, medical appointments, and group meetings all in one place.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">🤝</div>
-    <h3>Community Connection</h3>
-    <p>Connect with other DMHIOP clients in recovery. Share experiences and support each other.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">⏱️</div>
-    <h3>Sobriety Calculator</h3>
-    <p>Track your clean time down to the second. See time saved, money saved, and health improvements.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">📚</div>
-    <h3>Literature Library</h3>
-    <p>Access recovery literature, worksheets, and educational resources curated by our clinical team.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">☀️</div>
-    <h3>Daily Affirmations</h3>
-    <p>Start each day with recovery-focused affirmations and motivational messages.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">🚨</div>
-    <h3>Relapse Prevention</h3>
-    <p>Emergency tools for managing cravings, identifying triggers, and reaching out for help.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">📊</div>
-    <h3>Mood Tracking</h3>
-    <p>Monitor your emotional wellness and identify patterns that support or challenge recovery.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">📞</div>
-    <h3>Crisis Resources</h3>
-    <p>One-tap access to crisis hotlines, emergency contacts, and immediate support resources.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">🔔</div>
-    <h3>Smart Reminders</h3>
-    <p>Custom reminders for medications, meetings, check-ins, and daily recovery activities.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">👥</div>
-    <h3>Sponsor Connection</h3>
-    <p>Store sponsor information and track your sponsor-sponsee relationship progress.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">📈</div>
-    <h3>Recovery Analytics</h3>
-    <p>Detailed insights into your recovery patterns, strengths, and areas for growth.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">🎵</div>
-    <h3>Meditation Music</h3>
-    <p>Calming soundscapes and music designed to support mindfulness and stress reduction.</p>
-  </div>
-  
-  <div class="feature-card">
-    <div class="feature-icon">🌟</div>
-    <h3>Achievement Badges</h3>
-    <p>Unlock badges and milestones as you progress. Celebrate every victory, big and small.</p>
-  </div>
-</div>
-</div>
 </section>
 
-<!-- Platform Availability -->
+<!-- Feature 3: Progress Tracking -->
 <section class="section section-soft">
-<div class="container">
-<div class="content-block" style="text-align:center">
-<span class="eyebrow">Available Everywhere</span>
-<h2>Use Own Today on Any Device</h2>
-<p style="font-size:1.1rem;margin-bottom:2rem">Access your recovery tools on the platform that works best for you. Same account, seamless experience across all devices.</p>
-
-<div class="platform-badges">
-  <div class="platform-badge">📱 iOS (iPhone & iPad)</div>
-  <div class="platform-badge">🤖 Android</div>
-  <div class="platform-badge">💻 Windows</div>
-  <div class="platform-badge">🌐 Web Browser (appdmhiop.com)</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="feature-showcase">
+      <div class="feature-visual">
+        <img src="https://i.imgur.com/zj3gqGG.png" alt="Progress Tracking" class="feature-phone"/>
+      </div>
+      <div class="feature-content">
+        <span class="eyebrow">See How Far You've Come</span>
+        <h2>Track Every Victory</h2>
+        <p>Visualize your journey with charts, streaks, and milestones. Celebrate progress and stay motivated with rewards and achievements.</p>
+        <ul class="feature-list">
+          <li>
+            <span class="feature-icon-inline">📊</span>
+            <div>
+              <strong>Visual Analytics</strong>
+              <span style="color:var(--muted);font-size:.95rem">Charts, graphs, and insights</span>
+            </div>
+          </li>
+          <li>
+            <span class="feature-icon-inline">🔥</span>
+            <div>
+              <strong>Daily Streaks</strong>
+              <span style="color:var(--muted);font-size:.95rem">Build momentum day by day</span>
+            </div>
+          </li>
+          <li>
+            <span class="feature-icon-inline">🏆</span>
+            <div>
+              <strong>Earn Rewards</strong>
+              <span style="color:var(--muted);font-size:.95rem">Redeem points for real prizes</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Why This Matters -->
+<!-- Platforms -->
 <section class="section">
-<div class="container">
-<div class="content-block">
-<span class="eyebrow">Why This Matters</span>
-<h2>Recovery Doesn't Stop at 5 PM</h2>
-
-<p>The most dangerous moments in recovery often happen outside of treatment—late at night, on weekends, during unexpected triggers. That's when having 24/7 support in your pocket can make all the difference.</p>
-
-<p><strong>Own Today was built for those moments.</strong></p>
-
-<p>When you feel a craving at 2 AM, you can open the app and use guided meditation, chat with the AI support coach, or quickly find an emergency meeting nearby. When you're having a great day, you can track your progress and earn rewards for healthy choices. When you need accountability, the geofence check-in system helps you stay honest about meeting attendance.</p>
-
-<p>This isn't just an app—it's a 24/7 recovery companion built by people in recovery, for people in recovery.</p>
-</div>
-</div>
+  <div class="container" style="text-align:center">
+    <span class="eyebrow" style="justify-content:center">Available Everywhere</span>
+    <h2>One App. Every Device.</h2>
+    <p style="font-size:1.25rem;max-width:700px;margin:0 auto 3rem;color:var(--muted)">Access your recovery tools on the platform that works best for you. Same account, seamless experience.</p>
+    
+    <div class="platform-grid">
+      <div class="platform-card">
+        <div class="platform-icon">📱</div>
+        <h4>iOS</h4>
+        <p>iPhone & iPad</p>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">🤖</div>
+        <h4>Android</h4>
+        <p>All devices</p>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">💻</div>
+        <h4>Windows</h4>
+        <p>Desktop & laptop</p>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">🌐</div>
+        <h4>Web</h4>
+        <p>Any browser</p>
+      </div>
+    </div>
+    
+    <a href="https://appdmhiop.com" target="_blank" class="btn btn-primary" style="margin-top:2rem;font-size:1.05rem">Visit appdmhiop.com</a>
+  </div>
 </section>
 
-<!-- Lifetime Access -->
-<section class="section section-gray">
-<div class="container">
-<div class="content-block" style="text-align:center">
-<span class="eyebrow">Lifetime Access</span>
-<h2>Yours to Keep, Forever</h2>
-<p style="font-size:1.1rem;max-width:700px;margin:0 auto 2rem">When you complete treatment at DMHIOP, you keep full access to Own Today—<strong>for life</strong>. No subscriptions, no expiration dates. We're committed to supporting your recovery journey long after discharge.</p>
-</div>
-</div>
+<!-- Dark Section - Lifetime Access -->
+<section class="section-dark" style="padding:120px 0">
+  <div class="container" style="text-align:center;max-width:800px;margin:0 auto">
+    <span class="eyebrow" style="color:var(--gold);justify-content:center">Lifetime Access</span>
+    <h2 style="color:#fff;font-size:clamp(2rem,4vw,3.5rem);margin-bottom:1.5rem">Yours to Keep.<br>Forever.</h2>
+    <p style="font-size:1.3rem;color:rgba(255,255,255,.9);line-height:1.75">When you complete treatment at DMHIOP, you don't lose access. You keep Own Today for life—no subscriptions, no expiration dates. We're committed to supporting your recovery journey long after discharge.</p>
+  </div>
 </section>
 
-<!-- CTA Section -->
-<section class="cta-section">
-<div class="container">
-<span class="eyebrow" style="color:#fff;margin-bottom:1rem">Ready to Start Your Recovery?</span>
-<h2>Get Treatment + Lifetime App Access</h2>
-<p>When you enroll at Desert Mountain Healing IOP, you automatically get lifetime access to Own Today—the most comprehensive recovery app available, built exclusively for our clients.</p>
-<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
-  <a href="/contact/" class="btn btn-warm">Verify Insurance & Enroll</a>
-  <a href="tel:505-270-0840" class="btn btn-secondary">Call (505) 270-0840</a>
-</div>
-</div>
+<!-- CTA -->
+<section class="cta-app">
+  <div class="cta-app-content">
+    <div class="container" style="max-width:900px">
+      <h2>Get Treatment.<br>Get Lifetime App Access.</h2>
+      <p>When you enroll at Desert Mountain Healing IOP, you automatically receive lifetime access to Own Today—the most comprehensive recovery app available.</p>
+      <div class="cta-buttons">
+        <a href="/contact/" class="btn btn-warm" style="font-size:1.15rem;padding:0 2.5rem;min-height:62px">Verify Insurance & Enroll</a>
+        <a href="tel:505-270-0840" class="btn btn-secondary" style="font-size:1.15rem;padding:0 2.5rem;min-height:62px">Call (505) 270-0840</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 </main>
@@ -838,7 +891,7 @@
 <div>
 <h4>Contact</h4>
 <a href="tel:+15052700840">(505) 270-0840</a>
-<p style="margin-top:.5rem;font-size:.9rem">3301 Southern Blvd SE<br>Suite 105<br>Rio Rancho, NM 87124</p>
+<p style="margin-top:.5rem;font-size:.9rem;color:rgba(255,255,255,.7)">3301 Southern Blvd SE<br>Suite 105<br>Rio Rancho, NM 87124</p>
 </div>
 </div>
 
@@ -867,13 +920,12 @@
 
 <div class="footer-signature">
 Desert Mountain Healing IOP · Licensed Outpatient Treatment · Rio Rancho, New Mexico
-</div>
-
-<div class="footer-legal">
+<div class="footer-legal" style="margin-top:1.5rem">
 <span>© 2025 Desert Mountain Healing IOP, LLC</span>
 <a href="/privacy-policy/">Privacy</a>
 <a href="/terms-of-service/">Terms</a>
 <a href="/sitemap.xml">Sitemap</a>
+</div>
 </div>
 
 </div>
