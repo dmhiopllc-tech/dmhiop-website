@@ -9,7 +9,7 @@
     <meta name="description" content="Contact Desert Mountain Healing IOP: (505) 850-8897. Free insurance verification, same-week admissions. Serving Albuquerque, Rio Rancho & NM metro area.">
     <meta name="keywords" content="contact IOP Rio Rancho, Desert Mountain Healing contact, addiction treatment contact, IOP location Rio Rancho, substance abuse treatment contact, 3301 Southern Blvd SE, Albuquerque IOP contact, Rio Rancho treatment center">
     <meta name="author" content="Desert Mountain Healing IOP">
-        <link rel="canonical" href="https://dmhiop.com/contact-us.html">
+    <link rel="canonical" href="https://dmhiop.com/contact-us.html">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Contact Us | 3301 Southern Blvd SE, Rio Rancho | (505) 270-0840">
@@ -20,43 +20,22 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Desert Mountain Healing IOP">
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Us | 3301 Southern Blvd SE, Rio Rancho | (505) 270-0840">
-    <meta name="twitter:description" content="Visit Desert Mountain Healing IOP at 3301 Southern Blvd SE, Rio Rancho. Serving Albuquerque area. Call (505) 270-0840 now for immediate help. Medicaid accepted.">
-    <meta name="twitter:image" content="https://dmhiop.com/images/og-contact.jpg">
-    
-    <!-- Additional SEO Tags -->
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="geo.region" content="US-NM">
-    <meta name="geo.placename" content="Rio Rancho">
-    <meta name="geo.position" content="35.2327;-106.6630">
-    <meta name="ICBM" content="35.2327, -106.6630">
-    
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/40366ed9-1cfb-4167-920c-2a4b34462afc/apple-touch-icon-180x180.png">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/bundle/publish/0.72.5/publish.css">
-    <link rel="stylesheet" href="/styles/40366ed9-1cfb-4167-920c-2a4b34462afc.css">
-    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-color: #2c5f7d;
-            --secondary-color: #4a8fb5;
-            --accent-color: #ff6b35;
+            --teal-deep: #063743;
+            --teal: #1ba3bd;
+            --teal-dark: #117d91;
+            --gold: #ef8b22;
+            --earth-dark: #563c34;
+            --mist: #f5fafb;
+            --white: #ffffff;
             --text-dark: #2d3436;
             --text-light: #636e72;
-            --bg-light: #f8f9fa;
-            --white: #ffffff;
             --shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
@@ -72,86 +51,169 @@
             color: var(--text-dark);
         }
 
-        /* Header Styles */
-        .header {
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+        }
+
+        /* Topbar */
+        .topbar {
+            background: var(--teal-deep);
+            color: var(--white);
+            text-align: center;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+        }
+
+        .topbar a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .topbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
             background: var(--white);
-            box-shadow: var(--shadow);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 1rem 0;
         }
 
-        .nav-container {
-            max-width: 1200px;
+        .header-container {
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--teal-deep);
         }
 
         .logo img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
+            height: 80px;
+            width: auto;
         }
 
-        .nav-menu {
+        .logo span {
+            font-family: 'Merriweather', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--teal-deep);
+        }
+
+        .header-right {
             display: flex;
-            list-style: none;
-            gap: 2rem;
             align-items: center;
-            flex-wrap: wrap;
+            gap: 2rem;
         }
 
-        .nav-menu a {
-            text-decoration: none;
+        .primary-nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
             color: var(--text-dark);
+            text-decoration: none;
             font-weight: 500;
+            padding: 0.5rem 0;
             transition: color 0.3s;
         }
 
-        .nav-menu a:hover,
-        .nav-menu a.active {
-            color: var(--primary-color);
+        .nav-link:hover {
+            color: var(--teal);
         }
 
-        .recovery-logo {
-            display: inline-block;
-            transition: opacity 0.3s;
+        .nav-item {
+            position: relative;
         }
 
-        .recovery-logo:hover {
-            opacity: 0.8;
+        .nav-button {
+            background: none;
+            border: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.3s;
         }
 
-        .recovery-logo img {
-            height: 40px;
-            width: auto;
+        .nav-button:after {
+            content: '▾';
+            font-size: 0.8rem;
+        }
+
+        .nav-button:hover {
+            color: var(--teal);
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+            z-index: 1001;
+        }
+
+        .nav-item:hover .dropdown {
             display: block;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .dropdown a:hover {
+            background: var(--mist);
+            color: var(--teal);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: linear-gradient(135deg, var(--teal-deep) 0%, var(--teal-dark) 100%);
             color: var(--white);
             padding: 4rem 2rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-family: 'Mukta', sans-serif;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
             font-weight: 700;
         }
 
         .hero p {
             font-size: 1.2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
+            opacity: 0.95;
         }
 
         /* Main Content */
@@ -169,60 +231,60 @@
         }
 
         .contact-info {
-            background: var(--bg-light);
-            padding: 2rem;
+            background: var(--mist);
+            padding: 2.5rem;
             border-radius: 8px;
+            border-left: 4px solid var(--teal);
         }
 
         .contact-info h2 {
-            font-family: 'Mukta', sans-serif;
-            color: var(--primary-color);
+            color: var(--teal-deep);
             margin-bottom: 1.5rem;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
 
         .info-item {
             display: flex;
             align-items: start;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             gap: 1rem;
         }
 
         .info-icon {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            min-width: 30px;
+            font-size: 1.8rem;
+            min-width: 35px;
         }
 
         .info-content h3 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 0.5rem;
-            color: var(--primary-color);
+            color: var(--teal-dark);
+            font-family: 'Merriweather', serif;
         }
 
         .info-content p,
         .info-content a {
             color: var(--text-light);
             text-decoration: none;
+            line-height: 1.6;
         }
 
         .info-content a:hover {
-            color: var(--primary-color);
+            color: var(--teal);
         }
 
         /* Contact Form */
         .contact-form {
             background: var(--white);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
-            box-shadow: var(--shadow);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .contact-form h2 {
-            font-family: 'Mukta', sans-serif;
-            color: var(--primary-color);
+            color: var(--teal-deep);
             margin-bottom: 1.5rem;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
 
         .form-group {
@@ -240,20 +302,28 @@
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 0.75rem;
+            padding: 0.85rem;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-family: 'Open Sans', sans-serif;
             font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--teal);
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 130px;
         }
 
         .submit-btn {
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
             color: var(--white);
             padding: 1rem 2rem;
             border: none;
@@ -261,12 +331,13 @@
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: transform 0.2s, box-shadow 0.2s;
             width: 100%;
         }
 
         .submit-btn:hover {
-            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(27, 163, 189, 0.3);
         }
 
         .form-message {
@@ -274,6 +345,7 @@
             padding: 1rem;
             border-radius: 4px;
             margin-bottom: 1rem;
+            font-weight: 500;
         }
 
         .form-message.success {
@@ -293,99 +365,102 @@
             margin: 3rem 0;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .map-section iframe {
             width: 100%;
-            height: 450px;
+            height: 500px;
             border: 0;
         }
 
         /* Why Choose Section */
         .why-choose {
-            background: var(--bg-light);
+            background: var(--mist);
             padding: 4rem 2rem;
         }
 
         .why-choose h2 {
-            font-family: 'Mukta', sans-serif;
-            color: var(--primary-color);
+            color: var(--teal-deep);
             text-align: center;
             margin-bottom: 3rem;
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         .benefits-grid {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
         .benefit-card {
             background: var(--white);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
-            box-shadow: var(--shadow);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 3px solid var(--teal);
         }
 
         .benefit-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
         }
 
         .benefit-icon {
-            font-size: 3rem;
-            color: var(--primary-color);
+            font-size: 3.5rem;
             margin-bottom: 1rem;
         }
 
         .benefit-card h3 {
-            font-family: 'Mukta', sans-serif;
-            color: var(--primary-color);
+            color: var(--teal-deep);
             margin-bottom: 1rem;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
         }
 
         .benefit-card p {
             color: var(--text-light);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         /* Footer */
-        .footer {
-            background: var(--text-dark);
+        footer {
+            background: var(--teal-deep);
             color: var(--white);
-            padding: 3rem 2rem 1rem;
         }
 
-        .footer-content {
-            max-width: 1200px;
+        .footer-main {
+            max-width: 1400px;
             margin: 0 auto;
+            padding: 4rem 2rem 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
         }
 
         .footer-section h3 {
-            font-family: 'Mukta', sans-serif;
-            margin-bottom: 1rem;
-            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
         }
 
-        .footer-section p,
-        .footer-section a {
-            color: #b2bec3;
-            text-decoration: none;
+        .footer-section p {
             line-height: 1.8;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            transition: color 0.2s;
         }
 
         .footer-section a:hover {
-            color: var(--white);
+            color: var(--gold);
         }
 
         .footer-links {
@@ -393,30 +468,134 @@
         }
 
         .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-brand {
+            grid-column: span 1;
+        }
+
+        .footer-brand img {
+            width: 140px;
+            margin-bottom: 1.5rem;
+        }
+
+        .sitemap-section {
+            background: rgba(0,0,0,0.2);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .sitemap-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .sitemap-column h4 {
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .sitemap-column ul {
+            list-style: none;
+        }
+
+        .sitemap-column li {
             margin-bottom: 0.5rem;
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-legal {
+            background: rgba(0,0,0,0.3);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .legal-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .emergency-banner {
+            background: #dc3545;
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-weight: 600;
+        }
+
+        .emergency-banner a {
+            color: var(--white);
+            text-decoration: underline;
         }
 
         .footer-bottom {
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #4a4a4a;
-            color: #b2bec3;
+            padding: 1.5rem 2rem;
+            background: rgba(0,0,0,0.4);
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 1080px) {
+            .footer-main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sitemap-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .primary-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 760px) {
             .logo img {
-                width: 60px;
                 height: 60px;
             }
 
-            .nav-menu {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .recovery-logo img {
-                height: 30px;
+            .logo span {
+                font-size: 1.1rem;
             }
 
             .hero h1 {
@@ -435,43 +614,81 @@
                 grid-template-columns: 1fr;
             }
 
-            .footer-content {
+            .footer-main {
                 grid-template-columns: 1fr;
+            }
+
+            .sitemap-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-legal {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .legal-links {
+                flex-direction: column;
+                gap: 0.5rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Topbar -->
+    <div class="topbar">
+        📍 Visit Us: 3301 Southern Blvd SE, Suite 105, Rio Rancho, NM 87124 | 📞 Call Now: <a href="tel:5052700840">(505) 270-0840</a>
+    </div>
+
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="/" class="logo">
-                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo">
+    <header>
+        <div class="header-container">
+            <a class='logo' href='/'>
+                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
+                <span>Desert Mountain Healing IOP</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/team/">Our Team</a></li>
-                <li><a href="/iop-benefits/">IOP Benefits</a></li>
-                <li><a href="/reliable-substance-abuse-treatments/">Services</a></li>
-                <li><a href="/mat/">MAT</a></li>
-                <li><a href="/faq/">FAQ</a></li>
-                <li><a href="/reviews/">Reviews</a></li>
-                <li><a href="/contact-us/" class="active">Contact Us</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/client-app/">Client App</a></li>
-                <li>
-                    <a href="http://myrecoverynm.org" target="_blank" rel="noopener noreferrer" class="recovery-logo">
-                        <img src="/recovery_logo.png" alt="Recovery NM">
-                    </a>
-                </li>
-            </ul>
-        </nav>
+
+            <div class="header-right">
+                <nav class="primary-nav">
+                    <a class='nav-link' href='/'>Home</a>
+
+                    <div class="nav-item">
+                        <button class="nav-button">Treatment</button>
+                        <div class="dropdown">
+                            <a href='/iop-benefits'>IOP Benefits</a>
+                            <a href='/mat'>Medication-Assisted Treatment</a>
+                            <a href='/reliable-substance-abuse-treatments'>Medical Detox Assistance</a>
+                            <a href='/reliable-substance-abuse-treatments'>All Services</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <button class="nav-button">About Us</button>
+                        <div class="dropdown">
+                            <a href='/team'>Our Team</a>
+                            <a href='/reviews'>Reviews</a>
+                            <a href='/faq'>FAQ</a>
+                            <a href='/blog'>Blog</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <button class="nav-button">Client Resources</button>
+                        <div class="dropdown">
+                            <a href='/client-app'>Recovery Portal</a>
+                            <a href='/insurance-verification'>Insurance Verification</a>
+                            <a href='/contact-us'>Contact Us</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <h1>Contact Desert Mountain Healing IOP</h1>
-        <p>We're here to answer your questions and help you start your recovery journey</p>
+        <p>We're here to answer your questions and help you start your recovery journey. Reach out today—we typically respond within hours.</p>
     </section>
 
     <!-- Main Content -->
@@ -486,6 +703,7 @@
                     <div class="info-content">
                         <h3>Our Location</h3>
                         <p>3301 Southern Blvd SE, Suite 105<br>Rio Rancho, NM 87124</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.95rem;">Convenient access from Albuquerque, Corrales, Bernalillo, and all metro communities</p>
                     </div>
                 </div>
 
@@ -493,7 +711,8 @@
                     <div class="info-icon">📞</div>
                     <div class="info-content">
                         <h3>Phone</h3>
-                        <p><a href="tel:5052700840">(505) 270-0840</a></p>
+                        <p><a href="tel:5052700840"><strong>(505) 270-0840</strong></a></p>
+                        <p style="margin-top: 0.5rem; font-size: 0.95rem;">Available for calls and texts</p>
                     </div>
                 </div>
 
@@ -509,7 +728,9 @@
                     <div class="info-icon">🕐</div>
                     <div class="info-content">
                         <h3>Office Hours</h3>
-                        <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
+                        <p><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM<br>
+                        <strong>Saturday - Sunday:</strong> Closed</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.95rem; font-style: italic;">For crisis support outside office hours, please call our 24/7 crisis line</p>
                     </div>
                 </div>
             </div>
@@ -520,7 +741,7 @@
                 
                 <div id="formMessage" class="form-message"></div>
                 
-                <form id="contactForm">
+                <form id="contactForm" action="https://formspree.io/f/xnjykvkv" method="POST">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required>
@@ -543,15 +764,18 @@
                             <option value="general">General Information</option>
                             <option value="enrollment">Enrollment Questions</option>
                             <option value="insurance">Insurance Questions</option>
-                            <option value="emergency">Emergency/Crisis</option>
+                            <option value="tour">Schedule a Tour</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" required placeholder="Tell us how we can help..."></textarea>
                     </div>
+
+                    <input type="hidden" name="_next" value="https://dmhiop.com/thank-you.html">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission">
 
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
@@ -560,10 +784,12 @@
 
         <!-- Map Section -->
         <div class="map-section">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.8156!2d-106.672948!3d35.242545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDE0JzMzLjIiTiAxMDbCsDQwJzIyLjYiVw!5e0!3m2!1sen!2sus!4v1234567890" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.8156648297653!2d-106.67294848469572!3d35.24254548029684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220d3d3d3d3d3d%3A0x0!2zMzXCsDE0JzMzLjIiTiAxMDbCsDQwJzIyLjYiVw!5e0!3m2!1sen!2sus!4v1234567890123" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Desert Mountain Healing IOP Location Map">
             </iframe>
         </div>
     </main>
@@ -581,103 +807,205 @@
             <div class="benefit-card">
                 <div class="benefit-icon">❤️</div>
                 <h3>Compassionate Care</h3>
-                <p>We provide a supportive, non-judgmental environment where you can heal and grow.</p>
+                <p>We provide a supportive, non-judgmental environment where you can heal and grow at your own pace.</p>
             </div>
 
             <div class="benefit-card">
                 <div class="benefit-icon">🔬</div>
                 <h3>Evidence-Based Treatment</h3>
-                <p>Our programs utilize proven, evidence-based therapies and treatment modalities.</p>
+                <p>Our programs utilize proven, evidence-based therapies and treatment modalities that deliver results.</p>
             </div>
 
             <div class="benefit-card">
                 <div class="benefit-icon">💳</div>
                 <h3>Insurance Accepted</h3>
-                <p>We accept most major insurance plans and offer flexible payment options.</p>
+                <p>We accept most major insurance plans including Medicaid and offer flexible payment options.</p>
             </div>
 
             <div class="benefit-card">
                 <div class="benefit-icon">📅</div>
                 <h3>Flexible Scheduling</h3>
-                <p>Our IOP program allows you to maintain work, school, and family commitments.</p>
+                <p>Our IOP program allows you to maintain work, school, and family commitments while receiving treatment.</p>
             </div>
 
             <div class="benefit-card">
-                <div class="benefit-icon">✅</div>
-                <h3>Quality Approved</h3>
-                <p>Accredited facility meeting the highest standards of addiction treatment care.</p>
+                <div class="benefit-icon">🤝</div>
+                <h3>Lifetime Recovery Support</h3>
+                <p>We're here for you long after program completion with ongoing support and our exclusive Recovery Portal app.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <img src="/dmh-logo.png" alt="Desert Mountain Healing IOP" style="max-width: 150px; margin-bottom: 1rem;">
-                <p>Compassionate, evidence-based addiction treatment in Rio Rancho, NM.</p>
+    <footer>
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <!-- Brand Section -->
+            <div class="footer-section footer-brand">
+                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP">
+                <p>Desert Mountain Healing IOP provides compassionate, evidence-based addiction treatment in Rio Rancho, New Mexico. Founded by people in recovery, for people seeking recovery.</p>
             </div>
 
+            <!-- Contact Section -->
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>3301 Southern Blvd SE, Suite 105<br>Rio Rancho, NM 87124</p>
-                <p>Phone: <a href="tel:5052700840">(505) 270-0840</a></p>
-                <p>Email: <a href="mailto:sean_roberts@dmhiop.com">sean_roberts@dmhiop.com</a></p>
-                <p>Hours: Mon-Fri 8:00 AM - 5:00 PM</p>
+                <p><strong>Address:</strong><br>
+                3301 Southern Blvd SE, Suite 105<br>
+                Rio Rancho, NM 87124</p>
+                <p><strong>Phone:</strong> <a href="tel:5052700840">(505) 270-0840</a></p>
+                <p><strong>Email:</strong> <a href="mailto:sean_roberts@dmhiop.com">sean_roberts@dmhiop.com</a></p>
+                <p><strong>Hours:</strong> Mon-Fri 8:00 AM - 5:00 PM</p>
             </div>
 
+            <!-- Quick Links -->
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/team/">Our Team</a></li>
-                    <li><a href="/reliable-substance-abuse-treatments/">Services</a></li>
-                    <li><a href="/iop-benefits/">IOP Benefits</a></li>
+                    <li><a href="/team">Our Team</a></li>
+                    <li><a href="/iop-benefits">IOP Benefits</a></li>
+                    <li><a href="/mat">Medication-Assisted Treatment</a></li>
+                    <li><a href="/reliable-substance-abuse-treatments">All Services</a></li>
+                    <li><a href="/insurance-verification">Verify Insurance</a></li>
                 </ul>
             </div>
 
+            <!-- Resources -->
             <div class="footer-section">
-                <h3>Services</h3>
+                <h3>Resources</h3>
                 <ul class="footer-links">
-                    <li><a href="/mat/">Medication-Assisted Treatment</a></li>
-                    <li><a href="/reliable-substance-abuse-treatments/">Medical Detox Assistance</a></li>
-                    <li><a href="/faq/">FAQ</a></li>
-                    <li><a href="/reviews/">Reviews</a></li>
-                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/client-app">Recovery Portal App</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/reviews">Client Reviews</a></li>
+                    <li><a href="/blog">Recovery Blog</a></li>
+                    <li><a href="/contact-us">Contact Us</a></li>
                 </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3>Service Area</h3>
-                <p>Proudly serving the Metro Albuquerque area, including Rio Rancho, Corrales, Bernalillo, and surrounding communities in New Mexico.</p>
             </div>
         </div>
 
-        <div class="footer-bottom">
+        <!-- Complete Sitemap -->
+        <div class="sitemap-section">
+            <div class="sitemap-grid">
+                <div class="sitemap-column">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="/iop-benefits">Intensive Outpatient (IOP)</a></li>
+                        <li><a href="/reliable-substance-abuse-treatments">Outpatient Programs</a></li>
+                        <li><a href="/mat">Medication-Assisted Treatment</a></li>
+                        <li><a href="/reliable-substance-abuse-treatments">Medical Detox Assistance</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="/team">Our Team</a></li>
+                        <li><a href="/reviews">Client Success Stories</a></li>
+                        <li><a href="/faq">Frequently Asked Questions</a></li>
+                        <li><a href="/blog">Recovery Blog</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap-column">
+                    <h4>Client Services</h4>
+                    <ul>
+                        <li><a href="/client-app">Recovery Portal Login</a></li>
+                        <li><a href="/insurance-verification">Insurance Verification</a></li>
+                        <li><a href="/contact-us">Schedule a Tour</a></li>
+                        <li><a href="/contact-us">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap-column">
+                    <h4>Service Area</h4>
+                    <ul>
+                        <li>Rio Rancho, NM</li>
+                        <li>Albuquerque, NM</li>
+                        <li>Corrales, NM</li>
+                        <li>Bernalillo, NM</li>
+                        <li>Sandoval County</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+            <div class="badge">✓ Licensed Treatment Facility</div>
+            <div class="badge">✓ Evidence-Based Care</div>
+            <div class="badge">✓ Insurance Accepted</div>
+            <div class="badge">✓ Medicaid Approved</div>
+            <div class="badge">✓ HIPAA Compliant</div>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="footer-legal">
             <p>&copy; 2022 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
+            <ul class="legal-links">
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/terms-of-service">Terms of Service</a></li>
+                <li><a href="/hipaa-notice">HIPAA Notice</a></li>
+            </ul>
+        </div>
+
+        <!-- Emergency Banner -->
+        <div class="emergency-banner">
+            🚨 <strong>CRISIS SUPPORT:</strong> If you or someone you know is in immediate danger, call 911 or the National Suicide Prevention Lifeline at <a href="tel:988">988</a>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+            <p>Desert Mountain Healing IOP is a licensed substance abuse treatment facility serving the greater Albuquerque metro area. We accept most major insurance plans and offer same-week admissions.</p>
         </div>
     </footer>
 
     <script>
-        // Form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Form handling with Formspree
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const formMessage = document.getElementById('formMessage');
             const form = this;
+            const submitBtn = form.querySelector('.submit-btn');
             
-            // Simulate form submission (replace with actual form handling)
-            formMessage.textContent = 'Thank you for your message! We will get back to you within 24 hours.';
-            formMessage.className = 'form-message success';
-            formMessage.style.display = 'block';
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
             
-            // Reset form
-            form.reset();
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formMessage.textContent = '✓ Thank you for your message! We will get back to you within 24 hours.';
+                    formMessage.className = 'form-message success';
+                    formMessage.style.display = 'block';
+                    form.reset();
+                    
+                    // Hide message after 8 seconds
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 8000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                formMessage.textContent = '✗ There was an error sending your message. Please try calling us at (505) 270-0840.';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+                
+                // Hide error message after 8 seconds
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 8000);
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
         });
     </script>
 </body>
