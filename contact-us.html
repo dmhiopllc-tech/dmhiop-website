@@ -248,10 +248,27 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--teal-deep) 0%, var(--teal-dark) 100%);
-            color: var(--white);
+            position: relative;
+            min-height: 720px;
+            isolation: isolate;
+            overflow: hidden;
+            color: #fff;
+            background:
+                linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%),
+                url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
             padding: 4rem 2rem;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero::after {
+            position: absolute;
+            inset: auto 0 0;
+            height: 170px;
+            z-index: -1;
+            content: "";
+            background: linear-gradient(to top,rgba(4,32,39,.65),transparent);
         }
 
         .hero h1 {
