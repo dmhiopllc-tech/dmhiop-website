@@ -177,6 +177,16 @@
             margin-top: 0.5rem;
             z-index: 1001;
         }
+        
+        /* Add padding-top to create hover bridge */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: -0.5rem;
+            left: 0;
+            right: 0;
+            height: 0.5rem;
+        }
 
         .nav-item:hover .dropdown {
             display: block;
