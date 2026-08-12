@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HIPAA Notice of Privacy Practices | Desert Mountain Healing IOP</title>
+  <meta name="description" content="HIPAA Notice of Privacy Practices for Desert Mountain Healing IOP. Learn about your health information rights and how we protect your privacy.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://dmhiop.com/hipaa-notice.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --teal-deep:#063743;
+      --teal:#1ba3bd;
+      --teal-dark:#117d91;
+      --teal-light:#a7e3eb;
+      --gold:#ef8b22;
+      --gold-dark:#d4710a;
+      --sand:#f3eadf;
+      --sand-dark:#d8c4ae;
+      --earth:#805d4f;
+      --earth-dark:#563c34;
+      --ink:#17323a;
+      --text:#42565d;
+      --white:#ffffff;
+      --mist:#f5fafb;
+      --line:rgba(23,50,58,.12);
+      --shadow-sm:0 10px 30px rgba(18,56,66,.08);
+      --shadow-lg:0 26px 70px rgba(18,56,66,.16);
+      --radius:24px;
+      --transition:all .3s ease;
+      --max:1220px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Open Sans',sans-serif;
+      color:var(--ink);
+      background:var(--white);
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    h1,h2,h3,h4{
+      margin:0 0 .85rem;
+      color:var(--earth-dark);
+      font-family:"Merriweather",Georgia,serif;
+      line-height:1.15;
+    }
+    h1{font-size:clamp(2.5rem,5vw,4rem);letter-spacing:-.035em}
+    h2{font-size:clamp(1.8rem,3.5vw,2.5rem);letter-spacing:-.025em;margin-top:2.5rem}
+    h3{font-size:1.35rem;margin-top:2rem}
+    p{margin:0 0 1rem;color:var(--text)}
+    ul,ol{margin:0 0 1rem 1.5rem;color:var(--text)}
+    li{margin-bottom:.5rem}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .section{padding:96px 0}
+    
+    .topbar{
+      background:linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
+      color:white;
+      padding:.75rem 2rem;
+      text-align:center;
+    }
+    .topbar-inner{
+      max-width:1400px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5rem;
+      font-weight:700;
+      font-size:.92rem;
+    }
+    .topbar-inner::before{content:"🌅";font-size:1.1rem}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.97);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 2px 12px rgba(6,55,67,.06);
+    }
+    .header-container{
+      max-width:1400px;
+      margin:auto;
+      padding:1rem 2rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:2rem;
+    }
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:.8rem;
+      text-decoration:none;
+      font-family:'Merriweather',serif;
+      font-weight:700;
+      color:var(--earth-dark);
+      min-width:max-content;
+    }
+    .logo img{width:70px;height:70px;object-fit:contain}
+    .header-right{
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:2rem;
+    }
+
+    .primary-nav{
+      display:flex;
+      align-items:center;
+      gap:1.5rem;
+    }
+    .nav-item{position:relative}
+    .nav-link,.nav-button{
+      display:block;
+      padding:.6rem .2rem;
+      font-size:.95rem;
+      font-weight:700;
+      color:var(--ink);
+      border-bottom:2px solid transparent;
+      transition:var(--transition);
+      background:none;
+      border:none;
+      cursor:pointer;
+    }
+    .nav-link:hover,
+    .nav-button:hover{
+      color:var(--teal-dark);
+      border-color:var(--teal);
+    }
+    .nav-button{
+      display:flex;
+      align-items:center;
+      gap:.3rem;
+    }
+    .nav-button::after{
+      content:"▾";
+      font-size:.75rem;
+      transition:transform .3s ease;
+    }
+    .nav-item:hover .nav-button::after{transform:rotate(180deg)}
+    .dropdown{
+      position:absolute;
+      top:100%;
+      left:50%;
+      transform:translateX(-50%);
+      min-width:220px;
+      margin-top:.5rem;
+      padding:.5rem 0;
+      background:white;
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow:var(--shadow-lg);
+      opacity:0;
+      visibility:hidden;
+      transition:var(--transition);
+    }
+    .nav-item:hover .dropdown{
+      opacity:1;
+      visibility:visible;
+    }
+    .dropdown a{
+      display:block;
+      padding:.7rem 1.2rem;
+      color:var(--text);
+      font-size:.92rem;
+      transition:var(--transition);
+    }
+    .dropdown a:hover{
+      background:var(--mist);
+      color:var(--teal-dark);
+    }
+
+    .header-cta{
+      display:flex;
+      align-items:center;
+      gap:.8rem;
+    }
+    .btn-header-primary{
+      padding:.65rem 1.2rem;
+      border-radius:999px;
+      background:var(--teal);
+      color:white;
+      font-weight:800;
+      font-size:.92rem;
+      transition:var(--transition);
+    }
+    .btn-header-primary:hover{
+      background:var(--teal-dark);
+      transform:translateY(-2px);
+    }
+    .btn-header-secondary{
+      padding:.65rem 1.2rem;
+      border-radius:999px;
+      border:2px solid var(--gold);
+      color:var(--gold-dark);
+      font-weight:800;
+      font-size:.92rem;
+      transition:var(--transition);
+    }
+    .btn-header-secondary:hover{
+      background:var(--gold);
+      color:white;
+    }
+
+    .page-hero{
+      position:relative;
+      min-height:420px;
+      isolation:isolate;
+      overflow:hidden;
+      color:#fff;
+      background:
+        linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%),
+        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
+      padding:5rem 2rem;
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+    }
+    .page-hero h1{color:#fff;margin-bottom:1rem}
+    .page-hero p{color:rgba(255,255,255,.88);font-size:1.15rem;max-width:700px;margin:0 auto}
+
+    .content-section{
+      padding:72px 0;
+      background:var(--white);
+    }
+    .content-section:nth-child(even){
+      background:var(--mist);
+    }
+    .legal-content{
+      max-width:900px;
+      margin:0 auto;
+    }
+    .last-updated{
+      color:var(--teal-dark);
+      font-weight:700;
+      font-size:.95rem;
+      margin-bottom:2rem;
+    }
+    .notice-box{
+      padding:2rem;
+      margin:2rem 0;
+      border-left:4px solid var(--gold);
+      background:var(--sand);
+      border-radius:12px;
+    }
+    .notice-box h3{
+      color:var(--gold-dark);
+      margin-top:0;
+    }
+
+    footer{
+      background:var(--teal-deep);
+      color:white;
+      padding:3rem 2rem 2rem;
+    }
+    .footer-simple{
+      max-width:1400px;
+      margin:auto;
+      text-align:center;
+    }
+    .footer-simple p{
+      color:rgba(255,255,255,.75);
+      margin-bottom:1rem;
+    }
+    .footer-simple a{
+      color:var(--teal-light);
+      font-weight:700;
+    }
+    .footer-simple a:hover{
+      color:white;
+    }
+
+    @media(max-width:1080px){
+      .header-container{flex-direction:column;gap:1.5rem}
+      .header-right{width:100%;flex-direction:column;gap:1.5rem}
+      .primary-nav{width:100%;justify-content:center;flex-wrap:wrap;gap:1rem}
+      .header-cta{width:100%;justify-content:center}
+    }
+
+    @media(max-width:760px){
+      .topbar{padding:.6rem 1rem;font-size:.85rem}
+      .header-container{padding:.8rem 1rem}
+      .logo img{width:56px;height:56px}
+      .container{width:min(100% - 26px,var(--max))}
+      .section{padding:72px 0}
+      .content-section{padding:48px 0}
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topbar">
+<div class="topbar-inner">Hope. Healing. Recovery. Every Day.</div>
+</div>
+
+<header>
+<div class="header-container">
+<a aria-label='Desert Mountain Healing IOP - Home' class='logo' href='/'>
+<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
+<span>Desert Mountain Healing IOP</span>
+</a>
+
+<div class="header-right">
+<nav class="primary-nav" aria-label="Main navigation">
+<a class='nav-link' href='/'>Home</a>
+
+<div class="nav-item">
+<button class="nav-button" aria-haspopup="true" aria-expanded="false">Treatment</button>
+<div class="dropdown">
+<a href='/iop-benefits'>IOP Benefits</a>
+<a href='/mat'>Medication-Assisted Treatment</a>
+<a href='/medical-detox-assistance'>Medical Detox Assistance</a>
+<a href='/reliable-substance-abuse-treatments'>All Services</a>
+</div>
+</div>
+
+<div class="nav-item">
+<button class="nav-button" aria-haspopup="true" aria-expanded="false">About Us</button>
+<div class="dropdown">
+<a href='/team'>Our Team</a>
+<a href='/reviews'>Client Reviews</a>
+<a href='/faq'>FAQ</a>
+<a href='/blog'>Blog</a>
+</div>
+</div>
+
+<div class="nav-item">
+<button class="nav-button" aria-haspopup="true" aria-expanded="false">Client Resources</button>
+<div class="dropdown">
+<a href='/client-app'>Recovery Portal</a>
+<a href='/insurance-verification'>Insurance Verification</a>
+<a href='/contact-us'>Contact Us</a>
+</div>
+</div>
+</nav>
+
+<div class="header-cta">
+<a class='btn-header-primary' href='/insurance-verification'>Verify Insurance</a>
+<a class="btn-header-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
+</div>
+</div>
+</div>
+</header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>HIPAA Notice of Privacy Practices</h1>
+        <p>Understanding your health information rights</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container legal-content">
+        <p class="last-updated">Effective Date: January 1, 2026</p>
+
+        <div class="notice-box">
+          <h3>THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.</h3>
+        </div>
+
+        <h2>Our Commitment to Your Privacy</h2>
+        <p>Desert Mountain Healing IOP is committed to protecting the privacy of your health information. We are required by law to:</p>
+        <ul>
+          <li>Maintain the privacy of your protected health information (PHI)</li>
+          <li>Provide you with this notice of our legal duties and privacy practices</li>
+          <li>Follow the terms of the notice currently in effect</li>
+          <li>Notify you if we are unable to agree to a requested restriction</li>
+          <li>Accommodate reasonable requests to communicate health information by alternative means or locations</li>
+        </ul>
+
+        <h2>How We May Use and Disclose Your Health Information</h2>
+        
+        <h3>Treatment</h3>
+        <p>We may use and disclose your health information to provide, coordinate, or manage your treatment and related services. This includes coordination of care with other healthcare providers.</p>
+        <p><strong>Example:</strong> We may share information with your primary care physician or psychiatrist to coordinate comprehensive care.</p>
+
+        <h3>Payment</h3>
+        <p>We may use and disclose your health information to obtain payment for services we provide. This includes billing and collections activities.</p>
+        <p><strong>Example:</strong> We may submit claims to your health insurance company containing information about your diagnosis and treatment.</p>
+
+        <h3>Healthcare Operations</h3>
+        <p>We may use and disclose your health information for healthcare operations, including quality improvement, staff training, business planning, and compliance activities.</p>
+        <p><strong>Example:</strong> We may use your information to assess treatment effectiveness or train staff members.</p>
+
+        <h3>Disclosures Required or Permitted by Law</h3>
+        <p>We may use or disclose your health information when required or permitted by law, including:</p>
+        <ul>
+          <li>When required by court order, subpoena, or other legal process</li>
+          <li>To public health authorities for disease prevention and reporting</li>
+          <li>To report suspected abuse, neglect, or domestic violence when required by law</li>
+          <li>To health oversight agencies for authorized investigations and audits</li>
+          <li>For law enforcement purposes in specific circumstances</li>
+          <li>To prevent or lessen a serious and imminent threat to health or safety</li>
+          <li>For workers' compensation and similar programs</li>
+        </ul>
+
+        <h2>Your Rights Regarding Your Health Information</h2>
+
+        <h3>Right to Access</h3>
+        <p>You have the right to inspect and obtain a copy of your health information. To request access, submit a written request to our Privacy Officer. We may charge a reasonable fee for copying and mailing costs.</p>
+
+        <h3>Right to Amend</h3>
+        <p>You have the right to request that we amend your health information if you believe it is incorrect or incomplete. We may deny your request in certain circumstances, such as if the information was not created by us or if it is already accurate and complete.</p>
+
+        <h3>Right to an Accounting of Disclosures</h3>
+        <p>You have the right to receive a list of disclosures we have made of your health information, excluding disclosures for treatment, payment, healthcare operations, and certain other disclosures.</p>
+
+        <h3>Right to Request Restrictions</h3>
+        <p>You have the right to request restrictions on certain uses and disclosures of your health information. We are not required to agree to all restrictions, but if we do, we will comply unless the information is needed for emergency treatment.</p>
+
+        <h3>Right to Request Confidential Communications</h3>
+        <p>You have the right to request that we communicate with you about health matters by alternative means or at alternative locations. We will accommodate reasonable requests.</p>
+
+        <h3>Right to a Paper Copy of This Notice</h3>
+        <p>You have the right to receive a paper copy of this notice at any time, even if you have agreed to receive it electronically.</p>
+
+        <h2>Special Protections for Substance Use Disorder Records</h2>
+        <p>Information about substance use disorder treatment is protected by federal regulations (42 CFR Part 2) in addition to HIPAA. These records generally cannot be disclosed without your written consent except in specific circumstances permitted by law.</p>
+
+        <h2>Complaints</h2>
+        <p>If you believe your privacy rights have been violated, you may file a complaint with:</p>
+        <ul>
+          <li><strong>Desert Mountain Healing IOP Privacy Officer</strong><br>
+          3301 Southern Blvd SE, Suite 105<br>
+          Rio Rancho, NM 87124<br>
+          Phone: (505) 270-0840</li>
+          <li><strong>U.S. Department of Health and Human Services</strong><br>
+          Office for Civil Rights<br>
+          200 Independence Avenue, S.W.<br>
+          Washington, D.C. 20201<br>
+          Phone: 1-877-696-6775<br>
+          Website: www.hhs.gov/ocr/privacy</li>
+        </ul>
+        <p>You will not be penalized or retaliated against for filing a complaint.</p>
+
+        <h2>Changes to This Notice</h2>
+        <p>We reserve the right to change this notice and make the new provisions effective for all protected health information we maintain. If we make material changes, we will provide you with a revised notice.</p>
+
+        <h2>Contact Information</h2>
+        <p>If you have questions about this notice or need assistance exercising your rights, please contact our Privacy Officer:</p>
+        <p>
+          <strong>Desert Mountain Healing IOP</strong><br>
+          Privacy Officer<br>
+          3301 Southern Blvd SE, Suite 105<br>
+          Rio Rancho, NM 87124<br>
+          Phone: <a href="tel:+15052700840">(505) 270-0840</a><br>
+          Email: sean_roberts@dmhiop.com
+        </p>
+      </div>
+    </section>
+  </main>
+
+<footer>
+<div class="footer-simple">
+<p>© 2026 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
+<p>
+<a href="/privacy-policy.html">Privacy Policy</a> | 
+<a href="/terms-of-service.html">Terms of Service</a> | 
+<a href="/hipaa-notice.html">HIPAA Notice</a>
+</p>
+<p><a href="/">Return to Home</a> | <a href="/contact-us">Contact Us</a></p>
+</div>
+</footer>
+
+</body>
+</html>
