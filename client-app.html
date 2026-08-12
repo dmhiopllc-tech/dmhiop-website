@@ -233,32 +233,26 @@
     /* APPLE-STYLE HERO */
     .hero-app{
       position:relative;
-      min-height:95vh;
+      min-height:720px;
       display:flex;
       align-items:center;
       justify-content:center;
-      background:linear-gradient(135deg,#FFFBEB 0%,#FEF3C7 25%,#FED7AA 60%,#FDBA74 100%);
+      isolation:isolate;
       overflow:hidden;
+      color:#fff;
+      background:
+        linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%),
+        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
       text-align:center;
       padding:120px 0 80px;
     }
-    .hero-app::before{
-      content:"";
-      position:absolute;
-      width:800px;height:800px;
-      top:-200px;right:-200px;
-      background:radial-gradient(circle,rgba(251,191,36,.3),transparent 70%);
-      border-radius:50%;
-      animation:float 20s ease-in-out infinite;
-    }
     .hero-app::after{
-      content:"";
       position:absolute;
-      width:600px;height:600px;
-      bottom:-150px;left:-150px;
-      background:radial-gradient(circle,rgba(217,119,6,.2),transparent 70%);
-      border-radius:50%;
-      animation:float 15s ease-in-out infinite reverse;
+      inset:auto 0 0;
+      height:170px;
+      z-index:-1;
+      content:"";
+      background:linear-gradient(to top,rgba(4,32,39,.65),transparent);
     }
     
     .hero-app-content{
@@ -270,10 +264,10 @@
     .app-badge{
       display:inline-block;
       padding:10px 22px;
-      background:rgba(217,119,6,.15);
-      border:2px solid rgba(217,119,6,.3);
+      background:rgba(255,255,255,.15);
+      border:2px solid rgba(255,255,255,.3);
       border-radius:999px;
-      color:#92400E;
+      color:#fff;
       font-size:.88rem;
       font-weight:800;
       letter-spacing:.12em;
@@ -282,7 +276,7 @@
     }
     
     .hero-app h1{
-      color:var(--earth-dark);
+      color:#fff;
       font-size:clamp(3.5rem,7vw,6.5rem);
       font-weight:900;
       margin-bottom:1.5rem;
@@ -291,7 +285,7 @@
     
     .hero-app-tagline{
       font-size:clamp(1.3rem,2.5vw,2rem);
-      color:var(--teal-dark);
+      color:rgba(255,255,255,.9);
       font-weight:500;
       max-width:850px;
       margin:0 auto 3rem;
