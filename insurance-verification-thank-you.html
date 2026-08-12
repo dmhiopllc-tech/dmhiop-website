@@ -10,333 +10,824 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --primary-color: #815956;
-            --secondary-color: #62f5e7;
-            --text-dark: #333333;
-            --text-light: #666666;
-            --background-light: #f8f9fa;
-            --white: #ffffff;
-            --success-green: #5cb85c;
+        :root{
+          --teal-deep:#063743;
+          --teal:#1ba3bd;
+          --teal-dark:#117d91;
+          --teal-light:#a7e3eb;
+          --gold:#ef8b22;
+          --gold-dark:#d4710a;
+          --sand:#f3eadf;
+          --sand-dark:#d8c4ae;
+          --earth:#805d4f;
+          --earth-dark:#563c34;
+          --ink:#17323a;
+          --text:#42565d;
+          --white:#ffffff;
+          --mist:#f5fafb;
+          --line:rgba(23,50,58,.12);
+          --shadow-sm:0 10px 30px rgba(18,56,66,.08);
+          --shadow-lg:0 26px 70px rgba(18,56,66,.16);
+          --radius:24px;
+          --transition:all .3s ease;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+
+        *{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{
+          font-family:'Open Sans',sans-serif;
+          color:var(--ink);
+          background:var(--white);
+          line-height:1.65;
+          overflow-x:hidden;
         }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: var(--background-light);
+        img{max-width:100%;display:block}
+        a{color:inherit;text-decoration:none}
+        button{font:inherit}
+        h1,h2,h3,h4{
+          margin:0 0 .85rem;
+          color:var(--earth-dark);
+          font-family:"Merriweather",Georgia,serif;
+          line-height:1.15;
         }
-        
-        /* Hero Section with Background Image */
-        .hero {
-            position: relative;
-            min-height: 400px;
-            isolation: isolate;
-            overflow: hidden;
-            background:
-                linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%),
-                url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 3rem 2rem;
-            text-align: center;
+        h1{font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.04em}
+        h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.035em}
+        h3{font-size:1.5rem}
+        p{margin:0 0 1rem;color:var(--text)}
+
+        /* ===== TOPBAR ===== */
+        .topbar{
+          background:linear-gradient(135deg,#5cb85c,#4cae4c);
+          color:white;
+          padding:.75rem 2rem;
+          text-align:center;
         }
-        
-        .hero::after {
-            position: absolute;
-            inset: auto 0 0;
-            height: 170px;
-            z-index: -1;
-            content: "";
-            background: linear-gradient(to top,rgba(4,32,39,.65),transparent);
+        .topbar-inner{
+          max-width:1400px;
+          margin:auto;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          gap:.5rem;
+          font-weight:700;
+          font-size:.92rem;
         }
-        
-        .logo-header {
-            margin-bottom: 2rem;
+        .topbar-inner::before{content:"✓";font-size:1.1rem}
+
+        /* ===== HEADER ===== */
+        header{
+          position:sticky;
+          top:0;
+          z-index:1000;
+          background:rgba(255,255,255,.97);
+          backdrop-filter:blur(14px);
+          border-bottom:1px solid var(--line);
+          box-shadow:0 2px 12px rgba(6,55,67,.06);
         }
-        
-        .logo-header img {
-            width: 120px;
-            height: auto;
-            filter: brightness(0) invert(1);
+        .header-container{
+          max-width:1400px;
+          margin:auto;
+          padding:1rem 2rem;
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          gap:2rem;
         }
-        
-        .hero h1 {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .logo{
+          display:flex;
+          align-items:center;
+          gap:.8rem;
+          text-decoration:none;
+          font-family:'Merriweather',serif;
+          font-weight:700;
+          color:var(--earth-dark);
+          min-width:max-content;
         }
-        
-        .hero .subtitle {
-            color: rgba(255,255,255,0.95);
-            font-size: 1.3rem;
+        .logo img{width:70px;height:70px;object-fit:contain}
+        .header-right{
+          flex:1;
+          display:flex;
+          align-items:center;
+          justify-content:flex-end;
+          gap:2rem;
         }
-        
-        .container {
-            max-width: 800px;
-            margin: -80px auto 0;
-            padding: 0 2rem 2rem;
-            position: relative;
-            z-index: 10;
+
+        /* ===== NAVIGATION WITH DROPDOWNS ===== */
+        .primary-nav{
+          display:flex;
+          align-items:center;
+          gap:1.5rem;
         }
-        
-        .success-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 3rem 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            text-align: center;
+        .nav-item{position:relative}
+        .nav-link,.nav-button{
+          display:block;
+          padding:.6rem .2rem;
+          font-size:.95rem;
+          font-weight:700;
+          color:var(--ink);
+          border-bottom:2px solid transparent;
+          transition:var(--transition);
+          background:none;
+          border:none;
+          cursor:pointer;
         }
-        
-        .success-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--success-green);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 3rem;
-            color: white;
+        .nav-link:hover,
+        .nav-button:hover,
+        .nav-link[aria-current="page"]{
+          color:var(--teal-dark);
+          border-color:var(--teal);
         }
-        
-        .success-card h1 {
-            color: var(--primary-color);
-            font-size: 2rem;
-            margin-bottom: 1rem;
+        .nav-button{
+          display:flex;
+          align-items:center;
+          gap:.3rem;
         }
-        
-        .success-card .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
+        .nav-button::after{
+          content:"▾";
+          font-size:.75rem;
+          transition:transform .3s ease;
         }
-        
-        .info-section {
-            background: var(--background-light);
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
-            text-align: left;
+        .nav-item:hover .nav-button::after{transform:rotate(180deg)}
+        .dropdown{
+          position:absolute;
+          top:100%;
+          left:50%;
+          transform:translateX(-50%);
+          min-width:220px;
+          margin-top:.5rem;
+          padding:.5rem 0;
+          background:white;
+          border:1px solid var(--line);
+          border-radius:16px;
+          box-shadow:var(--shadow-lg);
+          opacity:0;
+          visibility:hidden;
+          transition:var(--transition);
         }
-        
-        .info-section h2 {
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .nav-item:hover .dropdown{
+          opacity:1;
+          visibility:visible;
         }
-        
-        .info-section ul {
-            list-style: none;
-            padding: 0;
+        .dropdown a{
+          display:block;
+          padding:.7rem 1.2rem;
+          color:var(--text);
+          font-size:.92rem;
+          transition:var(--transition);
         }
-        
-        .info-section li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #ddd;
+        .dropdown a:hover{
+          background:var(--mist);
+          color:var(--teal-dark);
         }
-        
-        .info-section li:last-child {
-            border-bottom: none;
+
+        .header-cta{
+          display:flex;
+          align-items:center;
+          gap:.8rem;
         }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, var(--secondary-color), #4ed8c9);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2rem 0;
+        .btn-header-primary{
+          padding:.65rem 1.2rem;
+          border-radius:999px;
+          background:var(--teal);
+          color:white;
+          font-weight:800;
+          font-size:.92rem;
+          transition:var(--transition);
         }
-        
-        .highlight-box h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+        .btn-header-primary:hover{
+          background:var(--teal-dark);
+          transform:translateY(-2px);
         }
-        
-        .highlight-box p {
-            font-size: 1.1rem;
-            margin: 0;
+        .btn-header-secondary{
+          padding:.65rem 1.2rem;
+          border-radius:999px;
+          border:2px solid var(--gold);
+          color:var(--gold-dark);
+          font-weight:800;
+          font-size:.92rem;
+          transition:var(--transition);
         }
-        
-        .contact-box {
-            background: white;
-            border: 2px solid var(--primary-color);
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
+        .btn-header-secondary:hover{
+          background:var(--gold);
+          color:white;
         }
-        
-        .contact-box h3 {
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+
+        /* ===== HERO ===== */
+        .page-hero{
+          position:relative;
+          min-height:500px;
+          isolation:isolate;
+          overflow:hidden;
+          color:#fff;
+          background:
+            linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%),
+            url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
+          padding:4rem 2rem;
+          text-align:center;
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          justify-content:center;
         }
-        
-        .contact-box .phone {
-            font-size: 2rem;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin: 1rem 0;
-            display: block;
-            text-decoration: none;
+        .page-hero::after{
+          position:absolute;inset:auto 0 0;height:170px;z-index:-1;content:"";
+          background:linear-gradient(to top,rgba(4,32,39,.65),transparent);
         }
-        
-        .contact-box .phone:hover {
-            color: var(--secondary-color);
+        .page-hero h1{
+          color:white;
+          font-size:clamp(2.5rem,5vw,3.5rem);
+          margin-bottom:1rem;
         }
-        
-        .contact-box .hours {
-            color: var(--text-light);
-            font-size: 1rem;
+        .page-hero p{
+          font-size:clamp(1.1rem,1.8vw,1.35rem);
+          color:rgba(255,255,255,.95);
+          max-width:700px;
+          margin:0 auto;
+          line-height:1.6;
         }
-        
-        .cta-button {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 1rem;
-            transition: all 0.3s ease;
+        .success-icon{
+          width:80px;
+          height:80px;
+          background:#5cb85c;
+          border-radius:50%;
+          display:inline-flex;
+          align-items:center;
+          justify-content:center;
+          margin-bottom:1.5rem;
+          font-size:3rem;
         }
-        
-        .cta-button:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+        /* ===== MAIN CONTENT ===== */
+        main{
+          max-width:900px;
+          margin:0 auto;
+          padding:4rem 2rem;
         }
-        
-        .footer-note {
-            text-align: center;
-            color: var(--text-light);
-            margin-top: 3rem;
-            padding: 2rem;
-            border-top: 1px solid #ddd;
+
+        .thank-you-card{
+          background:white;
+          padding:3rem;
+          border-radius:var(--radius);
+          box-shadow:var(--shadow-lg);
+          border:1px solid var(--line);
+          margin-bottom:3rem;
         }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .success-card {
-                padding: 2rem 1rem;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .container {
-                margin-top: -60px;
-            }
-            
-            .contact-box .phone {
-                font-size: 1.5rem;
-            }
+
+        .info-section{
+          background:var(--mist);
+          border-radius:16px;
+          padding:2rem;
+          margin:2rem 0;
+        }
+        .info-section h2{
+          color:var(--earth-dark);
+          margin-bottom:1.5rem;
+          font-size:1.5rem;
+          display:flex;
+          align-items:center;
+          gap:.5rem;
+        }
+        .info-section ul{
+          list-style:none;
+          padding:0;
+        }
+        .info-section li{
+          padding:1rem 0;
+          border-bottom:1px solid var(--line);
+        }
+        .info-section li:last-child{
+          border-bottom:none;
+        }
+        .info-section strong{
+          color:var(--earth-dark);
+          display:block;
+          margin-bottom:.3rem;
+        }
+
+        .highlight-box{
+          background:linear-gradient(135deg,var(--teal),var(--teal-light));
+          color:white;
+          padding:2rem;
+          border-radius:16px;
+          margin:2rem 0;
+        }
+        .highlight-box h3{
+          font-size:1.3rem;
+          margin-bottom:1rem;
+          color:white;
+        }
+        .highlight-box p{
+          margin-bottom:.5rem;
+          color:rgba(255,255,255,.95);
+        }
+
+        .contact-box{
+          background:white;
+          border:3px solid var(--teal);
+          border-radius:16px;
+          padding:2.5rem;
+          margin:2rem 0;
+          text-align:center;
+        }
+        .contact-box h3{
+          color:var(--teal-dark);
+          font-size:1.5rem;
+          margin-bottom:1rem;
+        }
+        .contact-box .phone{
+          font-size:2.5rem;
+          color:var(--teal-dark);
+          font-weight:800;
+          margin:1.5rem 0;
+          display:block;
+          text-decoration:none;
+          font-family:'Merriweather',serif;
+        }
+        .contact-box .phone:hover{
+          color:var(--teal);
+        }
+        .contact-box .hours{
+          color:var(--text);
+          font-size:1.05rem;
+        }
+
+        .cta-buttons{
+          display:flex;
+          gap:1rem;
+          justify-content:center;
+          flex-wrap:wrap;
+          margin:2rem 0;
+        }
+        .btn-primary{
+          padding:1rem 2rem;
+          border-radius:999px;
+          background:var(--teal);
+          color:white;
+          font-weight:700;
+          font-size:1.05rem;
+          transition:var(--transition);
+          display:inline-block;
+        }
+        .btn-primary:hover{
+          background:var(--teal-dark);
+          transform:translateY(-2px);
+        }
+        .btn-secondary{
+          padding:1rem 2rem;
+          border-radius:999px;
+          border:2px solid var(--gold);
+          color:var(--gold-dark);
+          background:white;
+          font-weight:700;
+          font-size:1.05rem;
+          transition:var(--transition);
+          display:inline-block;
+        }
+        .btn-secondary:hover{
+          background:var(--gold);
+          color:white;
+        }
+
+        .footer-note{
+          background:var(--mist);
+          padding:2.5rem;
+          border-radius:16px;
+          margin-top:3rem;
+          text-align:center;
+        }
+        .footer-note h3{
+          color:var(--earth-dark);
+          margin-bottom:1rem;
+        }
+        .footer-note p{
+          margin-bottom:.8rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer{
+          background:var(--teal-deep);
+          color:white;
+          padding:5rem 2rem 2rem;
+        }
+        .footer-grid{
+          max-width:1400px;
+          margin:auto;
+          display:grid;
+          grid-template-columns:1.3fr 1fr 1fr 1fr;
+          gap:3rem;
+          margin-bottom:3rem;
+        }
+        .footer-brand img{
+          max-width:140px;
+          margin-bottom:1.2rem;
+        }
+        .footer-brand p{
+          color:rgba(255,255,255,.75);
+          line-height:1.7;
+          margin-bottom:.8rem;
+        }
+        .footer-section h4{
+          color:var(--gold);
+          font-size:1.05rem;
+          margin-bottom:1.2rem;
+          font-weight:800;
+        }
+        .footer-links{
+          list-style:none;
+        }
+        .footer-links li{
+          margin-bottom:.6rem;
+        }
+        .footer-links a{
+          color:rgba(255,255,255,.8);
+          transition:var(--transition);
+        }
+        .footer-links a:hover{
+          color:white;
+          padding-left:.3rem;
+        }
+        .footer-contact p{
+          color:rgba(255,255,255,.8);
+          margin-bottom:.8rem;
+        }
+        .footer-contact a{
+          color:var(--teal-light);
+          font-weight:700;
+        }
+
+        .footer-sitemap{
+          max-width:1400px;
+          margin:auto;
+          padding:2.5rem 0;
+          border-top:1px solid rgba(255,255,255,.15);
+        }
+        .footer-sitemap h4{
+          color:var(--gold);
+          font-size:.95rem;
+          margin-bottom:1rem;
+          font-weight:800;
+          text-transform:uppercase;
+          letter-spacing:.08em;
+        }
+        .sitemap-grid{
+          display:grid;
+          grid-template-columns:repeat(4,1fr);
+          gap:2rem;
+        }
+        .sitemap-section ul{
+          list-style:none;
+        }
+        .sitemap-section li{
+          margin-bottom:.5rem;
+        }
+        .sitemap-section a{
+          color:rgba(255,255,255,.75);
+          font-size:.92rem;
+          transition:var(--transition);
+        }
+        .sitemap-section a:hover{
+          color:white;
+        }
+        .sitemap-section strong{
+          color:var(--teal-light);
+          display:block;
+          margin-bottom:.7rem;
+        }
+
+        .footer-trust{
+          max-width:1400px;
+          margin:auto;
+          padding:2rem 0;
+          border-top:1px solid rgba(255,255,255,.15);
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          gap:2rem;
+        }
+        .trust-badges{
+          display:flex;
+          gap:1.5rem;
+        }
+        .trust-badge{
+          padding:.6rem 1.2rem;
+          border-radius:12px;
+          background:rgba(255,255,255,.1);
+          border:1px solid rgba(255,255,255,.2);
+          color:rgba(255,255,255,.85);
+          font-size:.85rem;
+          font-weight:700;
+        }
+        .footer-legal{
+          display:flex;
+          gap:1.5rem;
+        }
+        .footer-legal a{
+          color:rgba(255,255,255,.7);
+          font-size:.88rem;
+        }
+        .footer-legal a:hover{
+          color:white;
+        }
+
+        .footer-bottom{
+          max-width:1400px;
+          margin:auto;
+          padding-top:2rem;
+          border-top:1px solid rgba(255,255,255,.15);
+          text-align:center;
+          color:rgba(255,255,255,.6);
+          font-size:.9rem;
+        }
+        .footer-emergency{
+          max-width:1400px;
+          margin:auto;
+          padding:2rem 0;
+          border-top:1px solid rgba(255,255,255,.15);
+          text-align:center;
+        }
+        .footer-emergency p{
+          color:rgba(255,255,255,.7);
+          margin-bottom:.5rem;
+        }
+        .footer-emergency strong{
+          color:var(--gold);
+          font-size:1.1rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width:1080px){
+          .header-container{flex-direction:column;gap:1.5rem}
+          .header-right{width:100%;flex-direction:column;gap:1.5rem}
+          .primary-nav{width:100%;justify-content:center;flex-wrap:wrap;gap:1rem}
+          .header-cta{width:100%;justify-content:center}
+          .footer-grid{grid-template-columns:repeat(2,1fr)}
+          .sitemap-grid{grid-template-columns:repeat(2,1fr)}
+        }
+
+        @media(max-width:760px){
+          .topbar{padding:.6rem 1rem;font-size:.85rem}
+          .header-container{padding:.8rem 1rem}
+          .logo img{width:56px;height:56px}
+          .page-hero{padding:3rem 1.5rem;min-height:400px}
+          .page-hero h1{font-size:2rem}
+          main{padding:3rem 1.2rem}
+          .thank-you-card{padding:2rem 1.5rem}
+          .contact-box .phone{font-size:1.8rem}
+          .cta-buttons{flex-direction:column}
+          .footer-grid{grid-template-columns:1fr}
+          .sitemap-grid{grid-template-columns:1fr}
+          .footer-trust{flex-direction:column;text-align:center}
+          .trust-badges,.footer-legal{flex-direction:column;align-items:center}
+        }
+
+        @media(prefers-reduced-motion:reduce){
+          html{scroll-behavior:auto}
+          *{transition:none!important}
         }
     </style>
 </head>
 <body>
-    <section class="hero">
-        <div class="logo-header">
-            <a href="/">
-                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP">
-            </a>
-        </div>
-        <h1>✓ Request Received!</h1>
-        <p class="subtitle">We're Verifying Your Coverage Now</p>
+
+<div class="topbar">
+<div class="topbar-inner">Request Received Successfully — We'll Call You Within 24 Hours!</div>
+</div>
+
+<header>
+<div class="header-container">
+<a aria-label='Desert Mountain Healing IOP - Home' class='logo' href='/'>
+<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
+<span>Desert Mountain Healing IOP</span>
+</a>
+
+<div class="header-right">
+<nav class="primary-nav" aria-label="Main navigation">
+<a class='nav-link' href='/'>Home</a>
+
+<div class="nav-item">
+<button class="nav-button" aria-haspopup="true" aria-expanded="false">Treatment</button>
+<div class="dropdown">
+<a href='/iop-benefits'>IOP Benefits</a>
+<a href='/mat'>Medication-Assisted Treatment</a>
+<a href='/medical-detox-assistance'>Medical Detox Assistance</a>
+<a href='/reliable-substance-abuse-treatments'>All Services</a>
+</div>
+</div>
+
+<div class="nav-item">
+<button class="nav-button" aria-haspopup="true" aria-expanded="false">About Us</button>
+<div class="dropdown">
+<a href='/team'>Our Team</a>
+<a href='/reviews'>Client Reviews</a>
+<a href='/faq'>FAQ</a>
+<a href='/blog'>Blog</a>
+</div>
+</div>
+
+<div class="nav-item">
+<button class="nav-button" aria-haspopup="true" aria-expanded="false">Client Resources</button>
+<div class="dropdown">
+<a href='/client-app'>Recovery Portal</a>
+<a href='/insurance-verification'>Insurance Verification</a>
+<a href='/contact-us'>Contact Us</a>
+</div>
+</div>
+</nav>
+
+<div class="header-cta">
+<a class='btn-header-primary' href='/insurance-verification'>Verify Insurance</a>
+<a class="btn-header-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
+</div>
+</div>
+</div>
+</header>
+
+    <section class="page-hero">
+        <div class="success-icon">✓</div>
+        <h1>Request Received!</h1>
+        <p>Thank you, <strong id="clientName">friend</strong>! We're verifying your coverage now.</p>
     </section>
-    
-    <div class="container">
-        <div class="success-card">
-            
-            <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 2rem;">
-                Thank you, <strong id="clientName">friend</strong>! Your insurance verification request has been received.
-            </p>
-            
+
+    <main>
+        <div class="thank-you-card">
             <div class="info-section">
                 <h2>📋 Next Steps</h2>
                 <ul>
                     <li>
                         <strong>1. We're verifying your coverage</strong><br>
-                        <span style="color: var(--text-light);">Our team is contacting <span id="insuranceProvider">your insurance provider</span> to verify your benefits</span>
+                        <span style="color:var(--text);">Our team is contacting <span id="insuranceProvider">your insurance provider</span> to verify your benefits</span>
                     </li>
                     <li>
                         <strong>2. Expect our call within 24 hours</strong><br>
-                        <span style="color: var(--text-light);">We'll call you at <span id="phoneNumber">your number</span> during business hours (Monday-Friday, 8am-5pm MST)</span>
+                        <span style="color:var(--text);">We'll call you at <span id="phoneNumber">your number</span> during business hours (Monday-Friday, 8am-5pm MST)</span>
                     </li>
                     <li>
                         <strong>3. We'll discuss your options</strong><br>
-                        <span style="color: var(--text-light);">• Your exact coverage details<br>
+                        <span style="color:var(--text);">
+                        • Your exact coverage details<br>
                         • Out-of-pocket costs (if any)<br>
                         • Available treatment programs<br>
-                        • Next steps to get started</span>
+                        • Next steps to get started
+                        </span>
                     </li>
                 </ul>
             </div>
-            
+
             <div class="highlight-box">
                 <h3>⏰ When to Expect Our Call</h3>
                 <p>Request submitted: <strong id="submissionTime">Today</strong></p>
                 <p>You'll hear from us by: <strong id="deadlineTime">Next business day by 5:00 PM MST</strong></p>
-                <p style="margin-top: 0.5rem;">Preferred callback time: <strong id="callbackTime">Anytime</strong></p>
+                <p style="margin-top:.5rem;">Preferred callback time: <strong id="callbackTime">Anytime</strong></p>
             </div>
-            
+
             <div class="info-section">
                 <h2>📧 Confirmation Email Sent</h2>
-                <p style="color: var(--text-light);">
+                <p style="color:var(--text);">
                     We've sent a confirmation email to:<br>
-                    <strong style="color: var(--text-dark);" id="emailAddress">your email</strong>
+                    <strong style="color:var(--earth-dark);" id="emailAddress">your email</strong>
                 </p>
-                <p style="margin-top: 1rem; color: var(--text-light);">
+                <p style="margin-top:1rem;color:var(--text);">
                     Check your inbox for details and our contact information.
                 </p>
             </div>
-            
+
             <div class="contact-box">
                 <h3>📞 Can't Wait? Call Us Now</h3>
                 <p>Need to speak with someone immediately?</p>
                 <a href="tel:+15052700840" class="phone">(505) 270-0840</a>
                 <p class="hours">Monday-Friday: 8:00 AM - 8:00 PM MST</p>
             </div>
-            
-            <div style="margin-top: 2rem;">
-                <a href="/" class="cta-button">← Return to Homepage</a>
-                <a href="/iop-benefits/" class="cta-button">Learn About IOP</a>
+
+            <div class="cta-buttons">
+                <a href="/" class="btn-primary">← Return to Homepage</a>
+                <a href="/iop-benefits" class="btn-secondary">Learn About IOP</a>
             </div>
         </div>
-        
+
         <div class="footer-note">
-            <p><strong>What happens after the call?</strong></p>
-            <p style="margin-top: 0.5rem;">
+            <h3>What happens after the call?</h3>
+            <p>
                 If your insurance covers treatment, we can schedule an intake assessment at your convenience. 
                 We'll work with you to find the best program that fits your needs and schedule.
             </p>
-            <p style="margin-top: 1rem; font-size: 0.9rem;">
+            <p style="margin-top:1rem;font-size:.95rem;">
                 <strong>Questions?</strong> Email us at 
-                <a href="mailto:sean_roberts@dmhiop.com" style="color: var(--primary-color);">sean_roberts@dmhiop.com</a>
+                <a href="mailto:sean_roberts@dmhiop.com" style="color:var(--teal-dark);font-weight:700;">sean_roberts@dmhiop.com</a>
             </p>
         </div>
-    </div>
-    
+    </main>
+
+<footer>
+<div class="footer-grid">
+<div class="footer-brand">
+<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
+<p>Compassionate, evidence-based outpatient addiction treatment serving Rio Rancho and Albuquerque, New Mexico.</p>
+<p><strong>Hope. Healing. Recovery. Every Day.</strong></p>
+</div>
+
+<div class="footer-section">
+<h4>Contact</h4>
+<div class="footer-contact">
+<p><strong>Phone:</strong><br/><a href="tel:+15052700840">(505) 270-0840</a></p>
+<p><strong>Address:</strong><br/>3301 Southern Blvd SE, Suite 105<br/>Rio Rancho, NM 87124</p>
+<p><strong>Hours:</strong><br/>Mon-Fri: 8:00 AM - 8:00 PM<br/>Sat: By appointment</p>
+</div>
+</div>
+
+<div class="footer-section">
+<h4>Quick Links</h4>
+<ul class="footer-links">
+<li><a href='/'>Home</a></li>
+<li><a href='/iop-benefits'>IOP Benefits</a></li>
+<li><a href='/mat'>Medication-Assisted Treatment</a></li>
+<li><a href='/reliable-substance-abuse-treatments'>All Services</a></li>
+<li><a href='/team'>Our Team</a></li>
+<li><a href='/reviews'>Reviews</a></li>
+</ul>
+</div>
+
+<div class="footer-section">
+<h4>Resources</h4>
+<ul class="footer-links">
+<li><a href='/insurance-verification'>Insurance Verification</a></li>
+<li><a href='/client-app'>Recovery Portal</a></li>
+<li><a href='/faq'>FAQ</a></li>
+<li><a href='/blog'>Blog</a></li>
+<li><a href='/contact-us'>Contact Us</a></li>
+<li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM</a></li>
+</ul>
+</div>
+</div>
+
+<div class="footer-sitemap">
+<h4>Complete Site Directory</h4>
+<div class="sitemap-grid">
+<div class="sitemap-section">
+<strong>Treatment Programs</strong>
+<ul>
+<li><a href='/iop-benefits'>IOP Benefits</a></li>
+<li><a href='/mat'>Medication-Assisted Treatment</a></li>
+<li><a href='/medical-detox-assistance'>Medical Detox Assistance</a></li>
+<li><a href='/reliable-substance-abuse-treatments'>All Services</a></li>
+</ul>
+</div>
+
+<div class="sitemap-section">
+<strong>About Us</strong>
+<ul>
+<li><a href='/team'>Our Team</a></li>
+<li><a href='/reviews'>Client Reviews</a></li>
+<li><a href='/faq'>Frequently Asked Questions</a></li>
+<li><a href='/blog'>Recovery Blog</a></li>
+</ul>
+</div>
+
+<div class="sitemap-section">
+<strong>Client Resources</strong>
+<ul>
+<li><a href='/insurance-verification'>Insurance Verification</a></li>
+<li><a href='/client-app'>Recovery Portal</a></li>
+<li><a href='/contact-us'>Contact Us</a></li>
+<li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM Scholarships</a></li>
+</ul>
+</div>
+
+<div class="sitemap-section">
+<strong>Service Area</strong>
+<ul>
+<li><a href='/'>Rio Rancho Treatment</a></li>
+<li><a href='/'>Albuquerque IOP</a></li>
+<li><a href='/'>New Mexico Recovery</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="footer-trust">
+<div class="trust-badges">
+<div class="trust-badge">🏥 Licensed Treatment Provider</div>
+<div class="trust-badge">✓ Insurance Accepted</div>
+<div class="trust-badge">🌟 Experienced Team</div>
+</div>
+<div class="footer-legal">
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms-of-service.html">Terms of Service</a>
+<a href="/hipaa-notice.html">HIPAA Notice</a>
+</div>
+</div>
+
+<div class="footer-emergency">
+<p><strong>Crisis Support Available 24/7</strong></p>
+<p>If you or someone you know is in crisis, call <strong>988</strong> (Suicide & Crisis Lifeline) or <strong>911</strong> for immediate help.</p>
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
+</div>
+</footer>
+
     <script>
         // Populate page with submitted data
         document.addEventListener('DOMContentLoaded', function() {
@@ -382,7 +873,7 @@
             
             // If submitted Friday after hours, deadline is Monday
             if (now.getDay() === 5 && now.getHours() >= 17) {
-                deadline.setDate(deadline.getDate() + 2); // Skip to Monday
+                deadline.setDate(deadline.getDate() + 2);
             }
             // If submitted on Saturday, deadline is Tuesday
             else if (now.getDay() === 6) {
@@ -393,7 +884,7 @@
                 deadline.setDate(deadline.getDate() + 1);
             }
             
-            deadline.setHours(17, 0, 0, 0); // Set to 5pm
+            deadline.setHours(17, 0, 0, 0);
             
             const deadlineOptions = {
                 weekday: 'long',
