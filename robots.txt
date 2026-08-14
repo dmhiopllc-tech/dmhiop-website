@@ -15,6 +15,9 @@ Allow: /reviews/
 Allow: /contact-us/
 Allow: /blog/
 Allow: /client-app/
+Allow: /individual-counseling/
+Allow: /case-management/
+Allow: /insurance-verification/
 
 # Block client portal and admin pages from search engines
 Disallow: /admin-portal.html
@@ -65,32 +68,42 @@ Disallow: /UPLOAD-*
 Disallow: /LIVE-*
 Disallow: /AAA-*
 Disallow: /AAAA-*
+Disallow: /*OPTIMIZED*
+Disallow: /*PERFORMANCE*
+Disallow: /*READY*
 
 # Block development and configuration files
 Disallow: /*.md$
 Disallow: /*.sql$
-Disallow: /*.json$
 Disallow: /README.md
+Disallow: /OPTIMIZATION-README.md
 Disallow: /netlify.toml
 Disallow: /_redirects
 Disallow: /staticwebapp.config.json
-Disallow: /manifest.json
 Disallow: /service-worker.js
 Disallow: /pwa-service-worker.js
+Disallow: /.htaccess
 
-# Block folders
+# Block folders (but allow images and public assets)
 Disallow: /js/
 Disallow: /css/
 Disallow: /scripts/
 Disallow: /supabase/
 Disallow: /SQL/
-Disallow: /__static/
 Disallow: /DEPLOY-PACKAGE/
 Disallow: /GITHUB-UPLOAD/
 Disallow: /READY-TO-UPLOAD/
 
+# Allow important resources for AI agents
+Allow: /llms.txt
+Allow: /sitemap.xml
+Allow: /manifest.json
+
 # Sitemap location
 Sitemap: https://dmhiop.com/sitemap.xml
+
+# Special directive for AI crawlers to find llms.txt
+# AI Agents: See /llms.txt for structured information
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
