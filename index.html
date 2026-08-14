@@ -31,10 +31,7 @@
   <meta name="ICBM" content="35.233154, -106.666221">
 
   <!-- 🚀 PERFORMANCE: Preload critical hero image -->
-  <link rel="preload" as="image" href="/__static/images/hero/sunrise-optimized.png" fetchpriority="high">
-
-  <!-- 🚀 PERFORMANCE: Preconnect to external domains -->
-  <link rel="preconnect" href="https://raw.githubusercontent.com">
+  <link rel="preload" as="image" href="/__static/images/hero/sunrise-optimized.png" type="image/png" fetchpriority="high">
 
   <script type="application/ld+json">
   {
@@ -164,6 +161,10 @@
     .section{padding:96px 0}
     .section-soft{background:var(--mist)}
     .section-gray{background:#f7fafb}
+    main > .section, main > .section-dark, main > .final-cta{
+      content-visibility:auto;
+      contain-intrinsic-size:auto 800px;
+    }
     .section-dark{
       color:#fff;
       background:
@@ -171,7 +172,7 @@
         linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
     }
     .section-dark h2,.section-dark h3{color:#fff}
-    
+
     .eyebrow{
       display:inline-flex;
       align-items:center;
@@ -188,7 +189,7 @@
     }
     .section-heading{max-width:790px;margin:0 auto 48px;text-align:center}
     .section-heading p{color:var(--text);font-size:1.12rem}
-    
+
     .btn{
       min-height:52px;
       display:inline-flex;
@@ -380,9 +381,24 @@
       isolation:isolate;
       overflow:hidden;
       color:#fff;
-      background:
-        linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%),
-        url("/__static/images/hero/sunrise-optimized.png") center center / cover no-repeat;
+      background:#063743;
+    }
+    .hero-bg{
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center center;
+    }
+    .hero::before{
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      content:"";
+      pointer-events:none;
+      background:linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%);
     }
     .hero::after{
       position:absolute;inset:auto 0 0;height:170px;z-index:-1;content:"";
@@ -785,11 +801,10 @@
       .logo img{width:56px;height:56px}
       .container{width:min(100% - 26px,var(--max))}
       .section{padding:72px 0}
-      .hero{
-        min-height:760px;
-        background:
-          linear-gradient(180deg,rgba(4,32,39,.86) 0%,rgba(4,32,39,.65) 58%,rgba(4,32,39,.45) 100%),
-          url("/__static/images/hero/sunrise-optimized.png") 62% center / cover no-repeat;
+      .hero{min-height:760px}
+      .hero-bg{object-position:62% center}
+      .hero::before{
+        background:linear-gradient(180deg,rgba(4,32,39,.86) 0%,rgba(4,32,39,.65) 58%,rgba(4,32,39,.45) 100%);
       }
       .hero-inner{min-height:760px;padding-top:48px}
       .hero-actions{flex-direction:column}
@@ -824,7 +839,7 @@
 <header>
 <div class="header-container">
 <a aria-label='Desert Mountain Healing IOP - Home' class='logo' href='/'>
-<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
+<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" width="70" height="70" decoding="async"/>
 <span>Desert Mountain Healing IOP</span>
 </a>
 
@@ -872,6 +887,7 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-bg" src="/__static/images/hero/sunrise-optimized.png" alt="" fetchpriority="high" loading="eager" decoding="async" aria-hidden="true">
       <div class="container hero-inner">
         <div class="hero-copy reveal">
           <span class="eyebrow">Outpatient addiction treatment in Rio Rancho</span>
@@ -1057,7 +1073,7 @@
         </div>
 
         <div class="portal-image reveal">
-          <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/recovery-portal.png" alt="Desert Mountain Healing Recovery Portal displayed across desktop, laptop, tablet, and mobile devices">
+          <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/recovery-portal.png" alt="Desert Mountain Healing Recovery Portal displayed across desktop, laptop, tablet, and mobile devices" width="1536" height="1024" loading="lazy" decoding="async" fetchpriority="low">
         </div>
       </div>
     </section>
@@ -1108,7 +1124,7 @@
     <section class="section">
       <div class="container team-layout">
         <div class="team-photo reveal">
-          <img src="__static/team/tatiana-schnierow.jpg" alt="Tatiana Schnierow of Desert Mountain Healing IOP">
+          <img src="__static/team/tatiana-schnierow.jpg" alt="Tatiana Schnierow of Desert Mountain Healing IOP" loading="lazy" decoding="async">
         </div>
 
         <div class="reveal">
@@ -1274,7 +1290,7 @@
 <footer>
 <div class="footer-grid">
 <div class="footer-brand">
-<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
+<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" loading="lazy" decoding="async"/>
 <p>Compassionate, evidence-based outpatient addiction treatment serving Rio Rancho and Albuquerque, New Mexico.</p>
 <p><strong>Hope. Healing. Recovery. Every Day.</strong></p>
 </div>
@@ -1364,9 +1380,9 @@
 <div class="trust-badge">🌟 Experienced Team</div>
 </div>
 <div class="footer-legal">
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms-of-service.html">Terms of Service</a>
-<a href="/hipaa-notice.html">HIPAA Notice</a>
+<a href='/privacy-policy'>Privacy Policy</a>
+<a href='/terms-of-service'>Terms of Service</a>
+<a href='/hipaa-notice'>HIPAA Notice</a>
 </div>
 </div>
 
