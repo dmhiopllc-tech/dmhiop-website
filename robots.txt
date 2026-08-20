@@ -5,6 +5,7 @@ User-agent: *
 Allow: /
 
 # Allow all main public pages
+Allow: /virtual-iop
 Allow: /team/
 Allow: /iop-benefits/
 Allow: /reliable-substance-abuse-treatments/
