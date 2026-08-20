@@ -16,14 +16,14 @@
   <meta property="og:description" content="Compassionate outpatient addiction treatment, MAT, medical detox assistance, counseling, and long-term recovery support.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dmhiop.com/">
-  <meta property="og:image" content="/__static/images/hero/sunrise-optimized.png">
+  <meta property="og:image" content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Desert Mountain Healing IOP">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Desert Mountain Healing IOP">
   <meta name="twitter:description" content="Recovery support that continues beyond the treatment room.">
-  <meta name="twitter:image" content="/__static/images/hero/sunrise-optimized.png">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png">
 
   <meta name="geo.region" content="US-NM">
   <meta name="geo.placename" content="Rio Rancho">
@@ -31,7 +31,10 @@
   <meta name="ICBM" content="35.233154, -106.666221">
 
   <!-- 🚀 PERFORMANCE: Preload critical hero image -->
-  <link rel="preload" as="image" href="/__static/images/hero/sunrise-optimized.png" type="image/png" fetchpriority="high">
+  <link rel="preload" as="image" href="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png" fetchpriority="high">
+
+  <!-- 🚀 PERFORMANCE: Preconnect to external domains -->
+  <link rel="preconnect" href="https://raw.githubusercontent.com">
 
   <script type="application/ld+json">
   {
@@ -74,7 +77,7 @@
         "@type": "LocalBusiness",
         "@id": "https://dmhiop.com/#localbusiness",
         "name": "Desert Mountain Healing IOP",
-        "image": "/__static/images/hero/sunrise-optimized.png",
+        "image": "https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "3301 Southern Blvd SE, Suite 105",
@@ -145,17 +148,6 @@
       overflow-x:hidden;
     }
     img{display:block;max-width:100%}
-    .sr-only{
-      position:absolute!important;
-      width:1px!important;
-      height:1px!important;
-      padding:0!important;
-      margin:-1px!important;
-      overflow:hidden!important;
-      clip:rect(0,0,0,0)!important;
-      white-space:nowrap!important;
-      border:0!important;
-    }
     a{color:inherit;text-decoration:none}
     button{font:inherit}
     h1,h2,h3,h4{
@@ -172,10 +164,6 @@
     .section{padding:96px 0}
     .section-soft{background:var(--mist)}
     .section-gray{background:#f7fafb}
-    main > .section, main > .section-dark, main > .final-cta{
-      content-visibility:auto;
-      contain-intrinsic-size:auto 800px;
-    }
     .section-dark{
       color:#fff;
       background:
@@ -183,7 +171,7 @@
         linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
     }
     .section-dark h2,.section-dark h3{color:#fff}
-
+    
     .eyebrow{
       display:inline-flex;
       align-items:center;
@@ -200,7 +188,7 @@
     }
     .section-heading{max-width:790px;margin:0 auto 48px;text-align:center}
     .section-heading p{color:var(--text);font-size:1.12rem}
-
+    
     .btn{
       min-height:52px;
       display:inline-flex;
@@ -361,28 +349,27 @@
     .btn-header-primary{
       padding:.65rem 1.2rem;
       border-radius:999px;
-      background:var(--teal-deep);
+      background:var(--teal);
       color:white;
       font-weight:800;
       font-size:.92rem;
       transition:var(--transition);
     }
     .btn-header-primary:hover{
-      background:#0b6372;
+      background:var(--teal-dark);
       transform:translateY(-2px);
     }
     .btn-header-secondary{
       padding:.65rem 1.2rem;
       border-radius:999px;
-      border:2px solid #7a3d00;
-      color:#7a3d00;
+      border:2px solid var(--gold);
+      color:var(--gold-dark);
       font-weight:800;
       font-size:.92rem;
       transition:var(--transition);
     }
     .btn-header-secondary:hover{
-      background:#7a3d00;
-      border-color:#7a3d00;
+      background:var(--gold);
       color:white;
     }
 
@@ -393,24 +380,9 @@
       isolation:isolate;
       overflow:hidden;
       color:#fff;
-      background:#063743;
-    }
-    .hero-bg{
-      position:absolute;
-      inset:0;
-      z-index:-2;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center center;
-    }
-    .hero::before{
-      position:absolute;
-      inset:0;
-      z-index:-1;
-      content:"";
-      pointer-events:none;
-      background:linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%);
+      background:
+        linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%),
+        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
     }
     .hero::after{
       position:absolute;inset:auto 0 0;height:170px;z-index:-1;content:"";
@@ -630,7 +602,7 @@
       text-align:center;
       background:
         linear-gradient(rgba(6,55,67,.9),rgba(6,55,67,.94)),
-        url("/__static/images/hero/sunrise-optimized.png") center 55% / cover no-repeat;
+        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center 55% / cover no-repeat;
     }
     .final-cta h2{color:#fff}
     .final-cta p{
@@ -658,11 +630,11 @@
       margin-bottom:1.2rem;
     }
     .footer-brand p{
-      color:rgba(255,255,255,.92);
+      color:rgba(255,255,255,.75);
       line-height:1.7;
       margin-bottom:.8rem;
     }
-    .footer-section h2{
+    .footer-section h4{
       color:var(--gold);
       font-size:1.05rem;
       margin-bottom:1.2rem;
@@ -675,7 +647,7 @@
       margin-bottom:.6rem;
     }
     .footer-links a{
-      color:rgba(255,255,255,.9);
+      color:rgba(255,255,255,.8);
       transition:var(--transition);
     }
     .footer-links a:hover{
@@ -683,7 +655,7 @@
       padding-left:.3rem;
     }
     .footer-contact p{
-      color:rgba(255,255,255,.9);
+      color:rgba(255,255,255,.8);
       margin-bottom:.8rem;
     }
     .footer-contact a{
@@ -696,13 +668,6 @@
       margin:auto;
       padding:2.5rem 0;
       border-top:1px solid rgba(255,255,255,.15);
-    }
-    .footer-sitemap h2{
-      color:#fff;
-      font-size:1.05rem;
-      margin-bottom:1.2rem;
-      font-weight:800;
-      letter-spacing:.02em;
     }
     .footer-sitemap h4{
       color:var(--gold);
@@ -724,7 +689,7 @@
       margin-bottom:.5rem;
     }
     .sitemap-section a{
-      color:rgba(255,255,255,.88);
+      color:rgba(255,255,255,.75);
       font-size:.92rem;
       transition:var(--transition);
     }
@@ -820,10 +785,11 @@
       .logo img{width:56px;height:56px}
       .container{width:min(100% - 26px,var(--max))}
       .section{padding:72px 0}
-      .hero{min-height:760px}
-      .hero-bg{object-position:62% center}
-      .hero::before{
-        background:linear-gradient(180deg,rgba(4,32,39,.86) 0%,rgba(4,32,39,.65) 58%,rgba(4,32,39,.45) 100%);
+      .hero{
+        min-height:760px;
+        background:
+          linear-gradient(180deg,rgba(4,32,39,.86) 0%,rgba(4,32,39,.65) 58%,rgba(4,32,39,.45) 100%),
+          url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") 62% center / cover no-repeat;
       }
       .hero-inner{min-height:760px;padding-top:48px}
       .hero-actions{flex-direction:column}
@@ -846,10 +812,111 @@
       .reveal{opacity:1;transform:none;transition:none}
       .btn,.card{transition:none}
     }
+
+    /* ===== VIRTUAL IOP PROMO BANNER ===== */
+    .viop-promo-banner{
+      background:linear-gradient(135deg,#ef8b22,#d4710a);
+      color:#fff;
+      padding:1rem 1.5rem;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 2px 12px rgba(239,139,34,.25);
+      display:block;
+      text-decoration:none;
+      transition:transform .3s ease;
+    }
+    .viop-promo-banner:hover{
+      transform:translateY(-2px);
+    }
+    .viop-promo-banner::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:100%;
+      height:100%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);
+      animation:viop-shine 3s infinite;
+    }
+    @keyframes viop-shine{
+      0%{left:-100%}
+      50%{left:100%}
+      100%{left:100%}
+    }
+    .viop-promo-inner{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:1rem;
+      flex-wrap:wrap;
+      position:relative;
+      z-index:1;
+    }
+    .viop-promo-text{
+      display:flex;
+      align-items:center;
+      gap:.5rem;
+      font-weight:700;
+      font-size:.95rem;
+    }
+    .viop-promo-emoji{
+      font-size:1.3rem;
+      animation:viop-bounce 2s infinite;
+    }
+    @keyframes viop-bounce{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-5px)}
+    }
+    .viop-promo-countdown{
+      display:flex;
+      gap:.6rem;
+      font-weight:800;
+      font-size:.9rem;
+    }
+    .viop-promo-cta{
+      padding:.5rem 1.2rem;
+      background:#fff;
+      color:#d4710a;
+      border-radius:999px;
+      font-weight:800;
+      font-size:.85rem;
+      transition:all .3s ease;
+      border:2px solid #fff;
+    }
+    .viop-promo-banner:hover .viop-promo-cta{
+      background:#d4710a;
+      color:#fff;
+      transform:scale(1.05);
+    }
+    @media(max-width:768px){
+      .viop-promo-banner{padding:.8rem 1rem}
+      .viop-promo-inner{flex-direction:column;gap:.5rem}
+      .viop-promo-text{font-size:.85rem}
+      .viop-promo-countdown{font-size:.8rem;gap:.4rem}
+      .viop-promo-cta{font-size:.8rem;padding:.4rem 1rem}
+    }
   </style>
 </head>
 
 <body>
+
+<a href="/virtual-iop" class="viop-promo-banner" aria-label="Learn about Virtual IOP launching September 16th">
+  <div class="viop-promo-inner">
+    <div class="viop-promo-text">
+      <span class="viop-promo-emoji">🎉</span>
+      <span><strong>NEW!</strong> Virtual IOP Launching Sept 16th</span>
+    </div>
+    <div class="viop-promo-countdown" id="viop-mini-countdown">
+      <span>⏰ <span id="viop-days">--</span>d</span>
+      <span><span id="viop-hours">--</span>h</span>
+      <span><span id="viop-minutes">--</span>m</span>
+    </div>
+    <span class="viop-promo-cta">Learn More →</span>
+  </div>
+</a>
 
 <div class="topbar">
 <div class="topbar-inner">Hope. Healing. Recovery. Every Day.</div>
@@ -858,7 +925,7 @@
 <header>
 <div class="header-container">
 <a aria-label='Desert Mountain Healing IOP - Home' class='logo' href='/'>
-<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" width="70" height="70" decoding="async"/>
+<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
 <span>Desert Mountain Healing IOP</span>
 </a>
 
@@ -906,7 +973,6 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-bg" src="/__static/images/hero/sunrise-optimized.png" alt="" fetchpriority="high" loading="eager" decoding="async" aria-hidden="true">
       <div class="container hero-inner">
         <div class="hero-copy reveal">
           <span class="eyebrow">Outpatient addiction treatment in Rio Rancho</span>
@@ -946,8 +1012,7 @@
       </div>
     </section>
 
-    <section class="feature-strip" aria-labelledby="why-choose-title">
-      <h2 id="why-choose-title" class="sr-only">Why Choose Desert Mountain Healing</h2>
+    <section class="feature-strip" aria-label="Why choose Desert Mountain Healing">
       <div class="container feature-grid reveal">
         <article class="feature">
           <div class="icon">♥</div>
@@ -1093,7 +1158,7 @@
         </div>
 
         <div class="portal-image reveal">
-          <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/recovery-portal.png" alt="Desert Mountain Healing Recovery Portal displayed across desktop, laptop, tablet, and mobile devices" width="1536" height="1024" loading="lazy" decoding="async" fetchpriority="low">
+          <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/recovery-portal.png" alt="Desert Mountain Healing Recovery Portal displayed across desktop, laptop, tablet, and mobile devices">
         </div>
       </div>
     </section>
@@ -1144,7 +1209,7 @@
     <section class="section">
       <div class="container team-layout">
         <div class="team-photo reveal">
-          <img src="__static/team/tatiana-schnierow.jpg" alt="Tatiana Schnierow of Desert Mountain Healing IOP" loading="lazy" decoding="async">
+          <img src="__static/team/tatiana-schnierow.jpg" alt="Tatiana Schnierow of Desert Mountain Healing IOP">
         </div>
 
         <div class="reveal">
@@ -1310,13 +1375,13 @@
 <footer>
 <div class="footer-grid">
 <div class="footer-brand">
-<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo" width="140" height="140" loading="lazy" decoding="async"/>
+<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
 <p>Compassionate, evidence-based outpatient addiction treatment serving Rio Rancho and Albuquerque, New Mexico.</p>
 <p><strong>Hope. Healing. Recovery. Every Day.</strong></p>
 </div>
 
 <div class="footer-section">
-<h2>Contact</h2>
+<h4>Contact</h4>
 <div class="footer-contact">
 <p><strong>Phone:</strong><br/><a href="tel:+15052700840">(505) 270-0840</a></p>
 <p><strong>Address:</strong><br/>3301 Southern Blvd SE, Suite 105<br/>Rio Rancho, NM 87124</p>
@@ -1325,7 +1390,7 @@
 </div>
 
 <div class="footer-section">
-<h2>Quick Links</h2>
+<h4>Quick Links</h4>
 <ul class="footer-links">
 <li><a href='/'>Home</a></li>
 <li><a href='/iop-benefits'>IOP Benefits</a></li>
@@ -1337,7 +1402,7 @@
 </div>
 
 <div class="footer-section">
-<h2>Resources</h2>
+<h4>Resources</h4>
 <ul class="footer-links">
 <li><a href='/insurance-verification'>Insurance Verification</a></li>
 <li><a href='/client-app'>Recovery Portal</a></li>
@@ -1350,7 +1415,7 @@
 </div>
 
 <div class="footer-sitemap">
-<h2>Complete Site Directory</h2>
+<h4>Complete Site Directory</h4>
 <div class="sitemap-grid">
 <div class="sitemap-section">
 <strong>Treatment Programs</strong>
@@ -1400,9 +1465,9 @@
 <div class="trust-badge">🌟 Experienced Team</div>
 </div>
 <div class="footer-legal">
-<a href='/privacy-policy'>Privacy Policy</a>
-<a href='/terms-of-service'>Terms of Service</a>
-<a href='/hipaa-notice'>HIPAA Notice</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms-of-service.html">Terms of Service</a>
+<a href="/hipaa-notice.html">HIPAA Notice</a>
 </div>
 </div>
 
@@ -1417,6 +1482,40 @@
 </footer>
 
   <script>
+    // Virtual IOP Countdown (Mini Version)
+    (function(){
+      const launchDate = new Date('2026-09-16T08:00:00-06:00').getTime();
+      
+      function updateViOPCountdown() {
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        if (distance < 0) {
+          const countdownEl = document.getElementById('viop-mini-countdown');
+          if (countdownEl) {
+            countdownEl.innerHTML = '<span style="color:#fff;font-weight:900">🎉 NOW LIVE!</span>';
+          }
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        const daysEl = document.getElementById('viop-days');
+        const hoursEl = document.getElementById('viop-hours');
+        const minutesEl = document.getElementById('viop-minutes');
+        
+        if (daysEl) daysEl.textContent = days;
+        if (hoursEl) hoursEl.textContent = hours;
+        if (minutesEl) minutesEl.textContent = minutes;
+      }
+
+      updateViOPCountdown();
+      setInterval(updateViOPCountdown, 60000); // Update every minute
+    })();
+
+    // FAQ Accordion
     document.querySelectorAll(".faq-question").forEach(button => {
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
@@ -1425,6 +1524,7 @@
       });
     });
 
+    // Reveal Animation
     const revealElements = document.querySelectorAll(".reveal");
 
     if ("IntersectionObserver" in window) {
