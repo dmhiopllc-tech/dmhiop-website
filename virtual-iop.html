@@ -8,7 +8,7 @@
   <meta name="description" content="Flexible virtual IOP services in New Mexico. Morning and evening programs via Zoom. Evidence-based online addiction treatment. Call (505) 270-0840.">
   <meta name="keywords" content="virtual IOP, online addiction treatment, telehealth IOP, remote substance abuse treatment, virtual outpatient rehab, New Mexico online IOP, Zoom addiction treatment">
   <meta name="author" content="Desert Mountain Healing IOP">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dmhiop.com/virtual-iop">
   <meta name="theme-color" content="#1ba3bd">
 
@@ -183,6 +183,106 @@
         linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
     }
     .section-dark h2,.section-dark h3{color:#fff}
+
+    /* ===== LAUNCH COUNTDOWN BANNER ===== */
+    .launch-banner{
+      background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+      color:#fff;
+      padding:1.5rem 2rem;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 4px 20px rgba(239,139,34,.3);
+    }
+    .launch-banner::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:100%;
+      height:100%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);
+      animation:shine 3s infinite;
+    }
+    @keyframes shine{
+      0%{left:-100%}
+      50%{left:100%}
+      100%{left:100%}
+    }
+    .launch-banner-inner{
+      max-width:1200px;
+      margin:auto;
+      position:relative;
+      z-index:1;
+    }
+    .launch-emoji{
+      font-size:2rem;
+      display:inline-block;
+      animation:bounce 2s infinite;
+    }
+    @keyframes bounce{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+    .launch-title{
+      font-family:'Merriweather',serif;
+      font-size:clamp(1.8rem,3.5vw,2.8rem);
+      font-weight:900;
+      margin:.5rem 0;
+      color:#fff;
+      text-shadow:0 2px 10px rgba(0,0,0,.2);
+    }
+    .launch-date{
+      font-size:clamp(1rem,1.8vw,1.3rem);
+      font-weight:700;
+      margin:.5rem 0 1rem;
+      color:rgba(255,255,255,.95);
+    }
+    .countdown{
+      display:flex;
+      justify-content:center;
+      gap:1.5rem;
+      margin:1.2rem 0;
+      flex-wrap:wrap;
+    }
+    .countdown-item{
+      background:rgba(255,255,255,.15);
+      backdrop-filter:blur(10px);
+      border:2px solid rgba(255,255,255,.3);
+      border-radius:12px;
+      padding:1rem 1.5rem;
+      min-width:100px;
+      text-align:center;
+    }
+    .countdown-number{
+      display:block;
+      font-size:2.5rem;
+      font-weight:900;
+      line-height:1;
+      color:#fff;
+    }
+    .countdown-label{
+      display:block;
+      font-size:.85rem;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      margin-top:.3rem;
+      color:rgba(255,255,255,.9);
+      font-weight:700;
+    }
+    .urgency-text{
+      font-size:clamp(1rem,1.5vw,1.2rem);
+      font-weight:800;
+      margin:.8rem 0 0;
+      color:#fff;
+      text-shadow:0 2px 8px rgba(0,0,0,.2);
+    }
+    @media(max-width:768px){
+      .launch-banner{padding:1.2rem 1rem}
+      .countdown{gap:1rem}
+      .countdown-item{padding:.8rem 1rem;min-width:80px}
+      .countdown-number{font-size:2rem}
+    }
 
     .eyebrow{
       display:inline-flex;
@@ -844,6 +944,31 @@
 
 <body>
 
+<div class="launch-banner">
+  <div class="launch-banner-inner">
+    <span class="launch-emoji">🎉</span>
+    <h2 class="launch-title">Virtual IOP Launching Soon!</h2>
+    <p class="launch-date">First Sessions Start: Monday, September 16th, 2026</p>
+    
+    <div class="countdown" id="countdown">
+      <div class="countdown-item">
+        <span class="countdown-number" id="days">--</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="hours">--</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="minutes">--</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+    </div>
+
+    <p class="urgency-text">⚡ Limited Spots Available - Enroll Now to Secure Your Place!</p>
+  </div>
+</div>
+
 <div class="topbar">
 <div class="topbar-inner">Hope. Healing. Recovery. Every Day.</div>
 </div>
@@ -862,6 +987,7 @@
 <div class="nav-item">
 <button class="nav-button" aria-haspopup="true" aria-expanded="false">Treatment</button>
 <div class="dropdown">
+<a href='/virtual-iop' style="background:linear-gradient(135deg,#ef8b22,#d4710a);color:#fff;font-weight:800">🎉 Virtual IOP (NEW!)</a>
 <a href='/iop-benefits'>IOP Benefits</a>
 <a href='/mat'>Medication-Assisted Treatment</a>
 <a href='/medical-detox-assistance'>Medical Detox Assistance</a>
@@ -1290,6 +1416,31 @@
 </footer>
 
   <script>
+    // Countdown Timer
+    const launchDate = new Date('2026-09-16T08:00:00-06:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        document.getElementById('countdown').innerHTML = '<p style="font-size:1.8rem;font-weight:900;color:#fff">🎉 NOW LIVE! Enroll Today! 🎉</p>';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = hours;
+      document.getElementById('minutes').textContent = minutes;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000); // Update every minute
+
+    // FAQ Accordion
     document.querySelectorAll(".faq-question").forEach(button => {
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
@@ -1298,6 +1449,7 @@
       });
     });
 
+    // Reveal Animation
     const revealElements = document.querySelectorAll(".reveal");
 
     if ("IntersectionObserver" in window) {
