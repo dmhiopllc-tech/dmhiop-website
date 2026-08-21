@@ -1,0 +1,58 @@
+<!-- Virtual IOP Promotional Banner Component -->
+<a href="/virtual-iop" class="viop-promo-banner" aria-label="Learn about Virtual IOP launching September 16th">
+  <div class="viop-promo-inner">
+    <div class="viop-promo-text">
+      <span class="viop-promo-emoji">🎉</span>
+      <span><strong>NEW!</strong> Virtual IOP Launching Sept 16th</span>
+    </div>
+    <div class="viop-promo-countdown" id="viop-mini-countdown">
+      <span>⏰ <span id="viop-days">--</span>d</span>
+      <span><span id="viop-hours">--</span>h</span>
+      <span><span id="viop-minutes">--</span>m</span>
+    </div>
+    <span class="viop-promo-cta">Learn More →</span>
+  </div>
+</a>
+
+<style>
+/* Virtual IOP Promo Banner */
+.viop-promo-banner{background:linear-gradient(135deg,#ef8b22,#d4710a);color:#fff;padding:1rem 1.5rem;text-align:center;position:relative;overflow:hidden;box-shadow:0 2px 12px rgba(239,139,34,.25);display:block;text-decoration:none;transition:transform .3s ease}
+.viop-promo-banner:hover{transform:translateY(-2px)}
+.viop-promo-banner::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);animation:viop-shine 3s infinite}
+@keyframes viop-shine{0%{left:-100%}50%{left:100%}100%{left:100%}}
+.viop-promo-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;position:relative;z-index:1}
+.viop-promo-text{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:.95rem}
+.viop-promo-emoji{font-size:1.3rem;animation:viop-bounce 2s infinite}
+@keyframes viop-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.viop-promo-countdown{display:flex;gap:.6rem;font-weight:800;font-size:.9rem}
+.viop-promo-cta{padding:.5rem 1.2rem;background:#fff;color:#d4710a;border-radius:999px;font-weight:800;font-size:.85rem;transition:all .3s ease;border:2px solid #fff}
+.viop-promo-banner:hover .viop-promo-cta{background:#d4710a;color:#fff;transform:scale(1.05)}
+@media(max-width:768px){.viop-promo-banner{padding:.8rem 1rem}.viop-promo-inner{flex-direction:column;gap:.5rem}.viop-promo-text{font-size:.85rem}.viop-promo-countdown{font-size:.8rem;gap:.4rem}.viop-promo-cta{font-size:.8rem;padding:.4rem 1rem}}
+</style>
+
+<script>
+// Virtual IOP Countdown Timer
+(function(){
+  const launchDate = new Date('2026-09-16T08:00:00-06:00').getTime();
+  function updateViOPCountdown() {
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+    if (distance < 0) {
+      const countdownEl = document.getElementById('viop-mini-countdown');
+      if (countdownEl) countdownEl.innerHTML = '<span style="color:#fff;font-weight:900">🎉 NOW LIVE!</span>';
+      return;
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const daysEl = document.getElementById('viop-days');
+    const hoursEl = document.getElementById('viop-hours');
+    const minutesEl = document.getElementById('viop-minutes');
+    if (daysEl) daysEl.textContent = days;
+    if (hoursEl) hoursEl.textContent = hours;
+    if (minutesEl) minutesEl.textContent = minutes;
+  }
+  updateViOPCountdown();
+  setInterval(updateViOPCountdown, 60000);
+})();
+</script>
