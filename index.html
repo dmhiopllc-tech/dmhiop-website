@@ -216,162 +216,7 @@
     }
     .btn-warm{color:#fff;background:var(--gold);box-shadow:0 12px 28px rgba(239,139,34,.3)}
 
-    /* ===== TOPBAR ===== */
-    .topbar{
-      background:linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
-      color:white;
-      padding:.75rem 2rem;
-      text-align:center;
-    }
-    .topbar-inner{
-      max-width:1400px;
-      margin:auto;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:.5rem;
-      font-weight:700;
-      font-size:.92rem;
-    }
-    .topbar-inner::before{content:"🌅";font-size:1.1rem}
-
-    /* ===== HEADER WITH DROPDOWNS ===== */
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,.97);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--line);
-      box-shadow:0 2px 12px rgba(6,55,67,.06);
-    }
-    .header-container{
-      max-width:1400px;
-      margin:auto;
-      padding:1rem 2rem;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:2rem;
-    }
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:.8rem;
-      text-decoration:none;
-      font-family:'Merriweather',serif;
-      font-weight:700;
-      color:var(--earth-dark);
-      min-width:max-content;
-    }
-    .logo img{width:70px;height:70px;object-fit:contain}
-    .header-right{
-      flex:1;
-      display:flex;
-      align-items:center;
-      justify-content:flex-end;
-      gap:2rem;
-    }
-
-    /* ===== NAVIGATION WITH DROPDOWNS ===== */
-    .primary-nav{
-      display:flex;
-      align-items:center;
-      gap:1.5rem;
-    }
-    .nav-item{position:relative}
-    .nav-link,.nav-button{
-      display:block;
-      padding:.6rem .2rem;
-      font-size:.95rem;
-      font-weight:700;
-      color:var(--ink);
-      border-bottom:2px solid transparent;
-      transition:var(--transition);
-      background:none;
-      border:none;
-      cursor:pointer;
-    }
-    .nav-link:hover,
-    .nav-button:hover,
-    .nav-link[aria-current="page"]{
-      color:var(--teal-dark);
-      border-color:var(--teal);
-    }
-    .nav-button{
-      display:flex;
-      align-items:center;
-      gap:.3rem;
-    }
-    .nav-button::after{
-      content:"▾";
-      font-size:.75rem;
-      transition:transform .3s ease;
-    }
-    .nav-item:hover .nav-button::after{transform:rotate(180deg)}
-    .dropdown{
-      position:absolute;
-      top:100%;
-      left:50%;
-      transform:translateX(-50%);
-      min-width:220px;
-      margin-top:.5rem;
-      padding:.5rem 0;
-      background:white;
-      border:1px solid var(--line);
-      border-radius:16px;
-      box-shadow:var(--shadow-lg);
-      opacity:0;
-      visibility:hidden;
-      transition:var(--transition);
-    }
-    .nav-item:hover .dropdown{
-      opacity:1;
-      visibility:visible;
-    }
-    .dropdown a{
-      display:block;
-      padding:.7rem 1.2rem;
-      color:var(--text);
-      font-size:.92rem;
-      transition:var(--transition);
-    }
-    .dropdown a:hover{
-      background:var(--mist);
-      color:var(--teal-dark);
-    }
-
-    .header-cta{
-      display:flex;
-      align-items:center;
-      gap:.8rem;
-    }
-    .btn-header-primary{
-      padding:.65rem 1.2rem;
-      border-radius:999px;
-      background:var(--teal);
-      color:white;
-      font-weight:800;
-      font-size:.92rem;
-      transition:var(--transition);
-    }
-    .btn-header-primary:hover{
-      background:var(--teal-dark);
-      transform:translateY(-2px);
-    }
-    .btn-header-secondary{
-      padding:.65rem 1.2rem;
-      border-radius:999px;
-      border:2px solid var(--gold);
-      color:var(--gold-dark);
-      font-weight:800;
-      font-size:.92rem;
-      transition:var(--transition);
-    }
-    .btn-header-secondary:hover{
-      background:var(--gold);
-      color:white;
-    }
+    /* ===== HOMEPAGE-SPECIFIC STYLES (NO header/footer/promo - those come from components) ===== */
 
     /* ===== HERO ===== */
     .hero{
@@ -611,178 +456,18 @@
     }
     .final-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:.85rem}
 
-    /* ===== FOOTER ===== */
-    footer{
-      background:var(--teal-deep);
-      color:white;
-      padding:5rem 2rem 2rem;
-    }
-    .footer-grid{
-      max-width:1400px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:1.3fr 1fr 1fr 1fr;
-      gap:3rem;
-      margin-bottom:3rem;
-    }
-    .footer-brand img{
-      max-width:140px;
-      margin-bottom:1.2rem;
-    }
-    .footer-brand p{
-      color:rgba(255,255,255,.75);
-      line-height:1.7;
-      margin-bottom:.8rem;
-    }
-    .footer-section h4{
-      color:var(--gold);
-      font-size:1.05rem;
-      margin-bottom:1.2rem;
-      font-weight:800;
-    }
-    .footer-links{
-      list-style:none;
-    }
-    .footer-links li{
-      margin-bottom:.6rem;
-    }
-    .footer-links a{
-      color:rgba(255,255,255,.8);
-      transition:var(--transition);
-    }
-    .footer-links a:hover{
-      color:white;
-      padding-left:.3rem;
-    }
-    .footer-contact p{
-      color:rgba(255,255,255,.8);
-      margin-bottom:.8rem;
-    }
-    .footer-contact a{
-      color:var(--teal-light);
-      font-weight:700;
-    }
-
-    .footer-sitemap{
-      max-width:1400px;
-      margin:auto;
-      padding:2.5rem 0;
-      border-top:1px solid rgba(255,255,255,.15);
-    }
-    .footer-sitemap h4{
-      color:var(--gold);
-      font-size:.95rem;
-      margin-bottom:1rem;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-    }
-    .sitemap-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:2rem;
-    }
-    .sitemap-section ul{
-      list-style:none;
-    }
-    .sitemap-section li{
-      margin-bottom:.5rem;
-    }
-    .sitemap-section a{
-      color:rgba(255,255,255,.75);
-      font-size:.92rem;
-      transition:var(--transition);
-    }
-    .sitemap-section a:hover{
-      color:white;
-    }
-    .sitemap-section strong{
-      color:var(--teal-light);
-      display:block;
-      margin-bottom:.7rem;
-    }
-
-    .footer-trust{
-      max-width:1400px;
-      margin:auto;
-      padding:2rem 0;
-      border-top:1px solid rgba(255,255,255,.15);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:2rem;
-    }
-    .trust-badges{
-      display:flex;
-      gap:1.5rem;
-    }
-    .trust-badge{
-      padding:.6rem 1.2rem;
-      border-radius:12px;
-      background:rgba(255,255,255,.1);
-      border:1px solid rgba(255,255,255,.2);
-      color:rgba(255,255,255,.85);
-      font-size:.85rem;
-      font-weight:700;
-    }
-    .footer-legal{
-      display:flex;
-      gap:1.5rem;
-    }
-    .footer-legal a{
-      color:rgba(255,255,255,.7);
-      font-size:.88rem;
-    }
-    .footer-legal a:hover{
-      color:white;
-    }
-
-    .footer-bottom{
-      max-width:1400px;
-      margin:auto;
-      padding-top:2rem;
-      border-top:1px solid rgba(255,255,255,.15);
-      text-align:center;
-      color:rgba(255,255,255,.6);
-      font-size:.9rem;
-    }
-    .footer-emergency{
-      max-width:1400px;
-      margin:auto;
-      padding:2rem 0;
-      border-top:1px solid rgba(255,255,255,.15);
-      text-align:center;
-    }
-    .footer-emergency p{
-      color:rgba(255,255,255,.7);
-      margin-bottom:.5rem;
-    }
-    .footer-emergency strong{
-      color:var(--gold);
-      font-size:1.1rem;
-    }
-
     .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
     .reveal.visible{opacity:1;transform:none}
 
     /* ===== RESPONSIVE ===== */
     @media(max-width:1080px){
-      .header-container{flex-direction:column;gap:1.5rem}
-      .header-right{width:100%;flex-direction:column;gap:1.5rem}
-      .primary-nav{width:100%;justify-content:center;flex-wrap:wrap;gap:1rem}
-      .header-cta{width:100%;justify-content:center}
       .journey-grid{grid-template-columns:repeat(4,1fr);gap:2rem 1rem}
       .journey-grid::before{display:none}
       .difference-grid,.program-grid,.testimonial-grid{grid-template-columns:repeat(2,1fr)}
       .portal-layout,.team-layout{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:repeat(2,1fr)}
-      .sitemap-grid{grid-template-columns:repeat(2,1fr)}
     }
 
     @media(max-width:760px){
-      .topbar{padding:.6rem 1rem;font-size:.85rem}
-      .header-container{padding:.8rem 1rem}
-      .logo img{width:56px;height:56px}
       .container{width:min(100% - 26px,var(--max))}
       .section{padding:72px 0}
       .hero{
@@ -801,10 +486,6 @@
       .portal-features{grid-template-columns:1fr}
       .insurance-box{grid-template-columns:1fr;padding:30px}
       .insurance-box .btn{width:100%}
-      .footer-grid{grid-template-columns:1fr}
-      .sitemap-grid{grid-template-columns:1fr}
-      .footer-trust{flex-direction:column;text-align:center}
-      .trust-badges,.footer-legal{flex-direction:column;align-items:center}
     }
 
     @media(prefers-reduced-motion:reduce){
@@ -812,165 +493,16 @@
       .reveal{opacity:1;transform:none;transition:none}
       .btn,.card{transition:none}
     }
-
-    /* ===== VIRTUAL IOP PROMO BANNER ===== */
-    .viop-promo-banner{
-      background:linear-gradient(135deg,#ef8b22,#d4710a);
-      color:#fff;
-      padding:1rem 1.5rem;
-      text-align:center;
-      position:relative;
-      overflow:hidden;
-      box-shadow:0 2px 12px rgba(239,139,34,.25);
-      display:block;
-      text-decoration:none;
-      transition:transform .3s ease;
-    }
-    .viop-promo-banner:hover{
-      transform:translateY(-2px);
-    }
-    .viop-promo-banner::before{
-      content:"";
-      position:absolute;
-      top:0;
-      left:-100%;
-      width:100%;
-      height:100%;
-      background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);
-      animation:viop-shine 3s infinite;
-    }
-    @keyframes viop-shine{
-      0%{left:-100%}
-      50%{left:100%}
-      100%{left:100%}
-    }
-    .viop-promo-inner{
-      max-width:1200px;
-      margin:auto;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:1rem;
-      flex-wrap:wrap;
-      position:relative;
-      z-index:1;
-    }
-    .viop-promo-text{
-      display:flex;
-      align-items:center;
-      gap:.5rem;
-      font-weight:700;
-      font-size:.95rem;
-    }
-    .viop-promo-emoji{
-      font-size:1.3rem;
-      animation:viop-bounce 2s infinite;
-    }
-    @keyframes viop-bounce{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-5px)}
-    }
-    .viop-promo-countdown{
-      display:flex;
-      gap:.6rem;
-      font-weight:800;
-      font-size:.9rem;
-    }
-    .viop-promo-cta{
-      padding:.5rem 1.2rem;
-      background:#fff;
-      color:#d4710a;
-      border-radius:999px;
-      font-weight:800;
-      font-size:.85rem;
-      transition:all .3s ease;
-      border:2px solid #fff;
-    }
-    .viop-promo-banner:hover .viop-promo-cta{
-      background:#d4710a;
-      color:#fff;
-      transform:scale(1.05);
-    }
-    @media(max-width:768px){
-      .viop-promo-banner{padding:.8rem 1rem}
-      .viop-promo-inner{flex-direction:column;gap:.5rem}
-      .viop-promo-text{font-size:.85rem}
-      .viop-promo-countdown{font-size:.8rem;gap:.4rem}
-      .viop-promo-cta{font-size:.8rem;padding:.4rem 1rem}
-    }
   </style>
 </head>
 
 <body>
 
-<a href="/virtual-iop" class="viop-promo-banner" aria-label="Learn about Virtual IOP launching September 16th">
-  <div class="viop-promo-inner">
-    <div class="viop-promo-text">
-      <span class="viop-promo-emoji">🎉</span>
-      <span><strong>NEW!</strong> Virtual IOP Launching Sept 16th</span>
-    </div>
-    <div class="viop-promo-countdown" id="viop-mini-countdown">
-      <span>⏰ <span id="viop-days">--</span>d</span>
-      <span><span id="viop-hours">--</span>h</span>
-      <span><span id="viop-minutes">--</span>m</span>
-    </div>
-    <span class="viop-promo-cta">Learn More →</span>
-  </div>
-</a>
+<!-- 🎉 Virtual IOP Promo Banner Component -->
+<dmh-viop-promo></dmh-viop-promo>
 
-<div class="topbar">
-<div class="topbar-inner">Hope. Healing. Recovery. Every Day.</div>
-</div>
-
-<header>
-<div class="header-container">
-<a aria-label='Desert Mountain Healing IOP - Home' class='logo' href='/'>
-<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
-<span>Desert Mountain Healing IOP</span>
-</a>
-
-<div class="header-right">
-<nav class="primary-nav" aria-label="Main navigation">
-<a class='nav-link' href='/' aria-current="page">Home</a>
-
-<div class="nav-item">
-<button class="nav-button" aria-haspopup="true" aria-expanded="false">Treatment</button>
-<div class="dropdown">
-<a href='/virtual-iop' style="background:linear-gradient(135deg,#ef8b22,#d4710a);color:#fff;font-weight:800">🎉 Virtual IOP (NEW!)</a>
-<a href='/iop-benefits'>IOP Benefits</a>
-<a href='/mat'>Medication-Assisted Treatment</a>
-<a href='/medical-detox-assistance'>Medical Detox Assistance</a>
-<a href='/reliable-substance-abuse-treatments'>All Services</a>
-</div>
-</div>
-
-<div class="nav-item">
-<button class="nav-button" aria-haspopup="true" aria-expanded="false">About Us</button>
-<div class="dropdown">
-<a href='/team'>Our Team</a>
-<a href='/reviews'>Client Reviews</a>
-<a href='/faq'>FAQ</a>
-<a href='/blog'>Blog</a>
-</div>
-</div>
-
-<div class="nav-item">
-<button class="nav-button" aria-haspopup="true" aria-expanded="false">Client Resources</button>
-<div class="dropdown">
-<a href='/client-app'>Recovery Portal</a>
-<a href='/insurance-verification'>Insurance Verification</a>
-<a href='/contact-us'>Contact Us</a>
-</div>
-</div>
-</nav>
-
-<div class="header-cta">
-<a class='btn-header-primary' href='/insurance-verification'>Verify Insurance</a>
-<a class="btn-header-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
-</div>
-</div>
-</div>
-</header>
+<!-- 🎨 V4 Header & Navigation Component -->
+<dmh-header-nav></dmh-header-nav>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
@@ -1373,151 +905,11 @@
     </section>
   </main>
 
-<footer>
-<div class="footer-grid">
-<div class="footer-brand">
-<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
-<p>Compassionate, evidence-based outpatient addiction treatment serving Rio Rancho and Albuquerque, New Mexico.</p>
-<p><strong>Hope. Healing. Recovery. Every Day.</strong></p>
-</div>
-
-<div class="footer-section">
-<h4>Contact</h4>
-<div class="footer-contact">
-<p><strong>Phone:</strong><br/><a href="tel:+15052700840">(505) 270-0840</a></p>
-<p><strong>Address:</strong><br/>3301 Southern Blvd SE, Suite 105<br/>Rio Rancho, NM 87124</p>
-<p><strong>Hours:</strong><br/>Mon-Fri: 8:00 AM - 8:00 PM<br/>Sat: By appointment</p>
-</div>
-</div>
-
-<div class="footer-section">
-<h4>Quick Links</h4>
-<ul class="footer-links">
-<li><a href='/'>Home</a></li>
-<li><a href='/iop-benefits'>IOP Benefits</a></li>
-<li><a href='/mat'>Medication-Assisted Treatment</a></li>
-<li><a href='/reliable-substance-abuse-treatments'>All Services</a></li>
-<li><a href='/team'>Our Team</a></li>
-<li><a href='/reviews'>Reviews</a></li>
-</ul>
-</div>
-
-<div class="footer-section">
-<h4>Resources</h4>
-<ul class="footer-links">
-<li><a href='/insurance-verification'>Insurance Verification</a></li>
-<li><a href='/client-app'>Recovery Portal</a></li>
-<li><a href='/faq'>FAQ</a></li>
-<li><a href='/blog'>Blog</a></li>
-<li><a href='/contact-us'>Contact Us</a></li>
-<li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM</a></li>
-</ul>
-</div>
-</div>
-
-<div class="footer-sitemap">
-<h4>Complete Site Directory</h4>
-<div class="sitemap-grid">
-<div class="sitemap-section">
-<strong>Treatment Programs</strong>
-<ul>
-<li><a href='/iop-benefits'>IOP Benefits</a></li>
-<li><a href='/mat'>Medication-Assisted Treatment</a></li>
-<li><a href='/medical-detox-assistance'>Medical Detox Assistance</a></li>
-<li><a href='/reliable-substance-abuse-treatments'>All Services</a></li>
-</ul>
-</div>
-
-<div class="sitemap-section">
-<strong>About Us</strong>
-<ul>
-<li><a href='/team'>Our Team</a></li>
-<li><a href='/reviews'>Client Reviews</a></li>
-<li><a href='/faq'>Frequently Asked Questions</a></li>
-<li><a href='/blog'>Recovery Blog</a></li>
-</ul>
-</div>
-
-<div class="sitemap-section">
-<strong>Client Resources</strong>
-<ul>
-<li><a href='/insurance-verification'>Insurance Verification</a></li>
-<li><a href='/client-app'>Recovery Portal</a></li>
-<li><a href='/contact-us'>Contact Us</a></li>
-<li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM Scholarships</a></li>
-</ul>
-</div>
-
-<div class="sitemap-section">
-<strong>Service Area</strong>
-<ul>
-<li><a href='/'>Rio Rancho Treatment</a></li>
-<li><a href='/'>Albuquerque IOP</a></li>
-<li style="color:#ef8b22;font-weight:700"><a href='/virtual-iop' style="color:#ef8b22">Statewide Virtual IOP</a></li>
-<li style="color:#ef8b22;font-weight:700"><a href='/virtual-iop' style="color:#ef8b22">All of New Mexico</a></li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="footer-trust">
-<div class="trust-badges">
-<div class="trust-badge">🏥 Licensed Treatment Provider</div>
-<div class="trust-badge">✓ Insurance Accepted</div>
-<div class="trust-badge">🌟 Experienced Team</div>
-</div>
-<div class="footer-legal">
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms-of-service.html">Terms of Service</a>
-<a href="/hipaa-notice.html">HIPAA Notice</a>
-</div>
-</div>
-
-<div class="footer-emergency">
-<p><strong>Crisis Support Available 24/7</strong></p>
-<p>If you or someone you know is in crisis, call <strong>988</strong> (Suicide & Crisis Lifeline) or <strong>911</strong> for immediate help.</p>
-</div>
-
-<div class="footer-bottom">
-<p>© 2026 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
-</div>
-</footer>
+<!-- 🎨 V4 Footer Component -->
+<dmh-footer></dmh-footer>
 
   <script>
-    // Virtual IOP Countdown (Mini Version)
-    (function(){
-      const launchDate = new Date('2026-09-16T08:00:00-06:00').getTime();
-      
-      function updateViOPCountdown() {
-        const now = new Date().getTime();
-        const distance = launchDate - now;
-
-        if (distance < 0) {
-          const countdownEl = document.getElementById('viop-mini-countdown');
-          if (countdownEl) {
-            countdownEl.innerHTML = '<span style="color:#fff;font-weight:900">🎉 NOW LIVE!</span>';
-          }
-          return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-        const daysEl = document.getElementById('viop-days');
-        const hoursEl = document.getElementById('viop-hours');
-        const minutesEl = document.getElementById('viop-minutes');
-        
-        if (daysEl) daysEl.textContent = days;
-        if (hoursEl) hoursEl.textContent = hours;
-        if (minutesEl) minutesEl.textContent = minutes;
-      }
-
-      updateViOPCountdown();
-      setInterval(updateViOPCountdown, 60000); // Update every minute
-    })();
-
-    // FAQ Accordion
+    // FAQ Accordion (homepage-specific)
     document.querySelectorAll(".faq-question").forEach(button => {
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
@@ -1526,7 +918,7 @@
       });
     });
 
-    // Reveal Animation
+    // Reveal Animation (homepage-specific)
     const revealElements = document.querySelectorAll(".reveal");
 
     if ("IntersectionObserver" in window) {
@@ -1544,5 +936,8 @@
       revealElements.forEach(element => element.classList.add("visible"));
     }
   </script>
+
+  <!-- 🔧 Component Loader: Injects header, footer, SEO, promo banner -->
+  <script src="https://dmhiop.com/components/dmh-components.js"></script>
 </body>
 </html>
