@@ -11,21 +11,22 @@
 (function() {
   'use strict';
 
-  // Component configuration
+  // Component configuration - using full absolute URLs
+  const SITE_URL = 'https://dmhiop.com';
   const components = {
-    'dmh-viop-promo': '/components/viop-promo-banner.html',
-    'dmh-treatment-menu': '/components/v4-treatment-dropdown.html',
-    'dmh-header-nav': '/components/v4-header-nav.html',
-    'dmh-footer': '/components/v4-footer.html',
-    'dmh-seo-virtual-statewide': '/components/seo-virtual-iop-statewide.html',
-    'dmh-seo-inperson-metro': '/components/seo-in-person-iop-metro.html'
+    'dmh-viop-promo': `${SITE_URL}/components/viop-promo-banner.html`,
+    'dmh-treatment-menu': `${SITE_URL}/components/v4-treatment-dropdown.html`,
+    'dmh-header-nav': `${SITE_URL}/components/v4-header-nav.html`,
+    'dmh-footer': `${SITE_URL}/components/v4-footer.html`,
+    'dmh-seo-virtual-statewide': `${SITE_URL}/components/seo-virtual-iop-statewide.html`,
+    'dmh-seo-inperson-metro': `${SITE_URL}/components/seo-in-person-iop-metro.html`
   };
 
   /**
    * Load a component from a URL and insert it into a placeholder
    */
   async function loadComponent(placeholder) {
-    const componentName = placeholder.getAttribute('data-component');
+    const componentName = placeholder.tagName.toLowerCase();
     const componentUrl = components[componentName];
 
     if (!componentUrl) {
@@ -76,7 +77,7 @@
 
     } catch (error) {
       console.error(`Error loading component ${componentName}:`, error);
-      placeholder.innerHTML = `<!-- Component ${componentName} failed to load -->`;
+      placeholder.innerHTML = `<!-- Component ${componentName} failed to load: ${error.message} -->`;
     }
   }
 
@@ -84,8 +85,14 @@
    * Initialize component system when DOM is ready
    */
   function init() {
-    // Find all component placeholders
-    const placeholders = document.querySelectorAll('[data-component]');
+    // Find all component placeholders by tag name
+    const componentNames = Object.keys(components);
+    const placeholders = [];
+    
+    componentNames.forEach(name => {
+      const elements = document.getElementsByTagName(name);
+      placeholders.push(...Array.from(elements));
+    });
     
     // Load each component
     placeholders.forEach(placeholder => {
@@ -95,7 +102,7 @@
     // Mark active navigation links based on current page
     setTimeout(() => {
       markActiveNavLinks();
-    }, 100);
+    }, 500);
   }
 
   /**
