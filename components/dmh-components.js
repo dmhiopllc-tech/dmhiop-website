@@ -46,9 +46,19 @@
       const temp = document.createElement('div');
       temp.innerHTML = html;
 
-      // Extract scripts to execute them
+      // Extract EXECUTABLE scripts (NOT JSON-LD or other data scripts)
       const scripts = temp.querySelectorAll('script');
-      const scriptCode = Array.from(scripts).map(s => s.textContent).join('\n');
+      const executableScripts = [];
+      
+      scripts.forEach(script => {
+        const scriptType = script.getAttribute('type');
+        // Only execute scripts that are JavaScript (no type or type="text/javascript" or type="module")
+        if (!scriptType || scriptType === 'text/javascript' || scriptType === 'module') {
+          executableScripts.push(script.textContent);
+          script.remove(); // Remove from HTML
+        }
+        // Leave JSON-LD and other data scripts in the HTML to be inserted
+      });
 
       // Extract styles
       const styles = temp.querySelectorAll('style');
@@ -59,17 +69,15 @@
           newStyle.textContent = style.textContent;
           document.head.appendChild(newStyle);
         }
+        style.remove(); // Remove from HTML after copying to head
       });
-
-      // Remove script and style tags from HTML
-      scripts.forEach(s => s.remove());
-      styles.forEach(s => s.remove());
 
       // Replace placeholder with component content
       placeholder.outerHTML = temp.innerHTML;
 
-      // Execute scripts
-      if (scriptCode) {
+      // Execute only the executable scripts
+      if (executableScripts.length > 0) {
+        const scriptCode = executableScripts.join('\n');
         const script = document.createElement('script');
         script.textContent = scriptCode;
         document.body.appendChild(script);
