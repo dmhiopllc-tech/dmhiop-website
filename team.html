@@ -54,7 +54,9 @@
 </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<!-- 🚀 PERFORMANCE: Async font loading to prevent render blocking -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap"></noscript>
 
 <style>
 /* ===== TEAM PAGE-SPECIFIC STYLES ONLY (Header/Footer styles come from components) ===== */
@@ -86,7 +88,7 @@ body{
   margin:0;
   color:var(--ink);
   background:#fff;
-  font-family:"Source Sans 3",Arial,sans-serif;
+  font-family:"Open Sans",Arial,sans-serif;
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
