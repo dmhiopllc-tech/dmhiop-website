@@ -13,207 +13,86 @@
   <meta name="theme-color" content="#1ba3bd">
 
   <meta property="og:title" content="Recovery Blog | Desert Mountain Healing IOP">
-  <meta property="og:description" content="Expert insights on addiction recovery, IOP treatment, and mental health support in Rio Rancho, NM.">
+  <meta property="og:description" content="Expert addiction recovery insights from Rio Rancho IOP. Learn about treatment options, recovery tips, insurance, and building lasting sobriety.">
   <meta property="og:url" content="https://dmhiop.com/blog/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dmhiop.com/__static/images/og/dmh-iop-og-image.png">
 
-  <meta name="geo.region" content="US-NM">
-  <meta name="geo.placename" content="Rio Rancho">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recovery Blog | Desert Mountain Healing IOP">
+  <meta name="twitter:description" content="Evidence-based addiction recovery resources from Rio Rancho's trusted IOP program">
+  <meta name="twitter:image" content="https://dmhiop.com/__static/images/og/dmh-iop-og-image.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Favicon -->
+  <link rel="icon" href="/__static/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/__static/images/favicon/apple-touch-icon.png">
+
+  <!-- Async Font Loading (Open Sans + Merriweather) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"></noscript>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Desert Mountain Healing IOP",
+    "description": "Evidence-based intensive outpatient program specializing in addiction treatment and dual diagnosis care in Rio Rancho, New Mexico",
+    "url": "https://dmhiop.com",
+    "logo": "https://dmhiop.com/__static/images/logo/dmh-logo.png",
+    "telephone": "+15052700840",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1400 Golf Course Rd SE",
+      "addressLocality": "Rio Rancho",
+      "addressRegion": "NM",
+      "postalCode": "87124",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.2528,
+      "longitude": -106.6630
+    },
+    "medicalSpecialty": ["Addiction Medicine", "Psychiatry", "Mental Health"],
+    "priceRange": "$$"
+  }
+  </script>
 
   <style>
+    *{margin:0;padding:0;box-sizing:border-box}
     :root{
       --teal-deep:#063743;
+      --teal-dark:#0d4f5c;
       --teal:#1ba3bd;
-      --teal-dark:#117d91;
-      --teal-light:#a7e3eb;
+      --teal-light:#57d9f1;
+      --gold-dark:#d87d0a;
       --gold:#ef8b22;
-      --gold-dark:#d4710a;
-      --sand:#f3eadf;
-      --sand-dark:#d8c4ae;
-      --earth:#805d4f;
-      --earth-dark:#563c34;
-      --ink:#17323a;
-      --text:#42565d;
-      --white:#ffffff;
-      --mist:#f5fafb;
-      --line:rgba(23,50,58,.12);
-      --shadow-sm:0 10px 30px rgba(18,56,66,.08);
-      --shadow-lg:0 26px 70px rgba(18,56,66,.16);
-      --radius:24px;
-      --transition:all .3s ease;
+      --sand:#fef8f0;
+      --mist:#f4f9fa;
+      --earth-dark:#2f3b42;
+      --earth:#4a5a64;
+      --ink:#1e2a31;
+      --text:#3e4c56;
+      --line:#dfe5e8;
+      --radius:20px;
+      --shadow-sm:0 4px 16px rgba(0,0,0,.06);
+      --shadow-md:0 8px 24px rgba(0,0,0,.1);
+      --shadow-lg:0 16px 48px rgba(0,0,0,.14);
+      --transition:all .28s cubic-bezier(.4,0,.2,1);
     }
-
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
     body{
       font-family:'Open Sans',sans-serif;
-      color:var(--ink);
-      background:var(--white);
-      line-height:1.65;
-      overflow-x:hidden;
-    }
-    img{max-width:100%;display:block}
-    a{color:inherit;text-decoration:none}
-
-    /* ===== TOPBAR ===== */
-    .topbar{
-      background:linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
-      color:white;
-      padding:.75rem 2rem;
-      text-align:center;
-    }
-    .topbar-inner{
-      max-width:1400px;
-      margin:auto;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:.5rem;
-      font-weight:700;
-      font-size:.92rem;
-    }
-    .topbar-inner::before{content:"🌅";font-size:1.1rem}
-
-    /* ===== HEADER ===== */
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,.97);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--line);
-      box-shadow:0 2px 12px rgba(6,55,67,.06);
-    }
-    .header-container{
-      max-width:1400px;
-      margin:auto;
-      padding:1rem 2rem;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:2rem;
-    }
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:.8rem;
-      text-decoration:none;
-      font-family:'Merriweather',serif;
-      font-weight:700;
-      color:var(--earth-dark);
-      min-width:max-content;
-    }
-    .logo img{width:70px;height:70px;object-fit:contain}
-    .header-right{
-      flex:1;
-      display:flex;
-      align-items:center;
-      justify-content:flex-end;
-      gap:2rem;
-    }
-
-    /* ===== NAVIGATION WITH DROPDOWNS ===== */
-    .primary-nav{
-      display:flex;
-      align-items:center;
-      gap:1.5rem;
-    }
-    .nav-item{position:relative}
-    .nav-link,.nav-button{
-      display:block;
-      padding:.6rem .2rem;
-      font-size:.95rem;
-      font-weight:700;
-      color:var(--ink);
-      border-bottom:2px solid transparent;
-      transition:var(--transition);
-      background:none;
-      border:none;
-      cursor:pointer;
-    }
-    .nav-link:hover,
-    .nav-button:hover,
-    .nav-link[aria-current="page"]{
-      color:var(--teal-dark);
-      border-color:var(--teal);
-    }
-    .nav-button{
-      display:flex;
-      align-items:center;
-      gap:.3rem;
-    }
-    .nav-button::after{
-      content:"▾";
-      font-size:.75rem;
-      transition:transform .3s ease;
-    }
-    .nav-item:hover .nav-button::after{transform:rotate(180deg)}
-    .dropdown{
-      position:absolute;
-      top:100%;
-      left:50%;
-      transform:translateX(-50%);
-      min-width:220px;
-      margin-top:.5rem;
-      padding:.5rem 0;
-      background:white;
-      border:1px solid var(--line);
-      border-radius:16px;
-      box-shadow:var(--shadow-lg);
-      opacity:0;
-      visibility:hidden;
-      transition:var(--transition);
-    }
-    .nav-item:hover .dropdown{
-      opacity:1;
-      visibility:visible;
-    }
-    .dropdown a{
-      display:block;
-      padding:.7rem 1.2rem;
+      font-size:16px;
+      line-height:1.6;
       color:var(--text);
-      font-size:.92rem;
-      transition:var(--transition);
+      background:white;
     }
-    .dropdown a:hover{
-      background:var(--mist);
-      color:var(--teal-dark);
-    }
-
-    .header-cta{
-      display:flex;
-      align-items:center;
-      gap:.8rem;
-    }
-    .btn-header-primary{
-      padding:.65rem 1.2rem;
-      border-radius:999px;
-      background:var(--teal);
-      color:white;
-      font-weight:800;
-      font-size:.92rem;
-      transition:var(--transition);
-    }
-    .btn-header-primary:hover{
-      background:var(--teal-dark);
-      transform:translateY(-2px);
-    }
-    .btn-header-secondary{
-      padding:.65rem 1.2rem;
-      border-radius:999px;
-      border:2px solid var(--gold);
-      color:var(--gold-dark);
-      font-weight:800;
-      font-size:.92rem;
-      transition:var(--transition);
-    }
-    .btn-header-secondary:hover{
-      background:var(--gold);
-      color:white;
+    a{
+      text-decoration:none;
+      color:inherit;
     }
 
     /* ===== HERO ===== */
@@ -461,177 +340,11 @@
       transform:translateY(-2px);
     }
 
-    /* ===== FOOTER ===== */
-    footer{
-      background:var(--teal-deep);
-      color:white;
-      padding:5rem 2rem 2rem;
-    }
-    .footer-grid{
-      max-width:1400px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:1.3fr 1fr 1fr 1fr;
-      gap:3rem;
-      margin-bottom:3rem;
-    }
-    .footer-brand img{
-      max-width:140px;
-      margin-bottom:1.2rem;
-    }
-    .footer-brand p{
-      color:rgba(255,255,255,.75);
-      line-height:1.7;
-      margin-bottom:.8rem;
-    }
-    .footer-section h4{
-      color:var(--gold);
-      font-size:1.05rem;
-      margin-bottom:1.2rem;
-      font-weight:800;
-    }
-    .footer-links{
-      list-style:none;
-    }
-    .footer-links li{
-      margin-bottom:.6rem;
-    }
-    .footer-links a{
-      color:rgba(255,255,255,.8);
-      transition:var(--transition);
-    }
-    .footer-links a:hover{
-      color:white;
-      padding-left:.3rem;
-    }
-    .footer-contact p{
-      color:rgba(255,255,255,.8);
-      margin-bottom:.8rem;
-    }
-    .footer-contact a{
-      color:var(--teal-light);
-      font-weight:700;
-    }
-
-    .footer-sitemap{
-      max-width:1400px;
-      margin:auto;
-      padding:2.5rem 0;
-      border-top:1px solid rgba(255,255,255,.15);
-    }
-    .footer-sitemap h4{
-      color:var(--gold);
-      font-size:.95rem;
-      margin-bottom:1rem;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-    }
-    .sitemap-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:2rem;
-    }
-    .sitemap-section ul{
-      list-style:none;
-    }
-    .sitemap-section li{
-      margin-bottom:.5rem;
-    }
-    .sitemap-section a{
-      color:rgba(255,255,255,.75);
-      font-size:.92rem;
-      transition:var(--transition);
-    }
-    .sitemap-section a:hover{
-      color:white;
-    }
-    .sitemap-section strong{
-      color:var(--teal-light);
-      display:block;
-      margin-bottom:.7rem;
-    }
-
-    .footer-trust{
-      max-width:1400px;
-      margin:auto;
-      padding:2rem 0;
-      border-top:1px solid rgba(255,255,255,.15);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:2rem;
-    }
-    .trust-badges{
-      display:flex;
-      gap:1.5rem;
-    }
-    .trust-badge{
-      padding:.6rem 1.2rem;
-      border-radius:12px;
-      background:rgba(255,255,255,.1);
-      border:1px solid rgba(255,255,255,.2);
-      color:rgba(255,255,255,.85);
-      font-size:.85rem;
-      font-weight:700;
-    }
-    .footer-legal{
-      display:flex;
-      gap:1.5rem;
-    }
-    .footer-legal a{
-      color:rgba(255,255,255,.7);
-      font-size:.88rem;
-    }
-    .footer-legal a:hover{
-      color:white;
-    }
-
-    .footer-bottom{
-      max-width:1400px;
-      margin:auto;
-      padding-top:2rem;
-      border-top:1px solid rgba(255,255,255,.15);
-      text-align:center;
-      color:rgba(255,255,255,.6);
-      font-size:.9rem;
-    }
-    .footer-emergency{
-      max-width:1400px;
-      margin:auto;
-      padding:2rem 0;
-      border-top:1px solid rgba(255,255,255,.15);
-      text-align:center;
-    }
-    .footer-emergency p{
-      color:rgba(255,255,255,.7);
-      margin-bottom:.5rem;
-    }
-    .footer-emergency strong{
-      color:var(--gold);
-      font-size:1.1rem;
-    }
-
     .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
     .reveal.visible{opacity:1;transform:none}
 
     /* ===== RESPONSIVE ===== */
-    @media(max-width:1080px){
-      .footer-grid{grid-template-columns:repeat(2,1fr)}
-      .sitemap-grid{grid-template-columns:repeat(2,1fr)}
-    }
-
-    @media(max-width:900px){
-      .header-container{flex-direction:column;gap:1.5rem}
-      .header-right{width:100%;flex-direction:column;gap:1.5rem}
-      .primary-nav{width:100%;justify-content:center;flex-wrap:wrap;gap:1rem}
-      .header-cta{width:100%;justify-content:center}
-    }
-
     @media(max-width:760px){
-      .topbar{padding:.6rem 1rem;font-size:.85rem}
-      .header-container{padding:.8rem 1rem}
-      .logo img{width:56px;height:56px}
       .hero{min-height:400px}
       .hero-inner{padding:4rem 0}
       .section{padding:4.5rem 1.2rem}
@@ -640,73 +353,20 @@
       .cta-blog{padding:2rem}
       .cta-actions{flex-direction:column}
       .cta-actions .btn{width:100%}
-      .footer-grid{grid-template-columns:1fr}
-      .sitemap-grid{grid-template-columns:1fr}
-      .footer-trust{flex-direction:column;text-align:center}
-      .trust-badges,.footer-legal{flex-direction:column;align-items:center}
     }
 
     @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      .reveal{opacity:1;transform:none;transition:none}
+      *{animation:none!important;transition:none!important}
     }
   </style>
 </head>
-
 <body>
 
-<div class="topbar">
-<div class="topbar-inner">Hope. Healing. Recovery. Every Day.</div>
-</div>
+  <!-- V4 VIOP Promo Banner Component -->
+  <dmh-viop-promo></dmh-viop-promo>
 
-<header>
-<div class="header-container">
-<a aria-label='Desert Mountain Healing IOP - Home' class='logo' href='/'>
-<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
-<span>Desert Mountain Healing IOP</span>
-</a>
-
-<div class="header-right">
-<nav class="primary-nav" aria-label="Main navigation">
-<a class='nav-link' href='/'>Home</a>
-
-<div class="nav-item">
-<button class="nav-button" aria-haspopup="true" aria-expanded="false">Treatment</button>
-<div class="dropdown">
-<a href='/iop-benefits'>IOP Benefits</a>
-<a href='/mat'>Medication-Assisted Treatment</a>
-<a href='/medical-detox-assistance'>Medical Detox Assistance</a>
-<a href='/reliable-substance-abuse-treatments'>All Services</a>
-</div>
-</div>
-
-<div class="nav-item">
-<button class="nav-button" aria-haspopup="true" aria-expanded="false">About Us</button>
-<div class="dropdown">
-<a href='/team'>Our Team</a>
-<a href='/reviews'>Client Reviews</a>
-<a href='/faq'>FAQ</a>
-<a href='/blog'>Blog</a>
-</div>
-</div>
-
-<div class="nav-item">
-<button class="nav-button" aria-haspopup="true" aria-expanded="false">Client Resources</button>
-<div class="dropdown">
-<a href='/client-app'>Recovery Portal</a>
-<a href='/insurance-verification'>Insurance Verification</a>
-<a href='/contact-us'>Contact Us</a>
-</div>
-</div>
-</nav>
-
-<div class="header-cta">
-<a class='btn-header-primary' href='/insurance-verification'>Verify Insurance</a>
-<a class="btn-header-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
-</div>
-</div>
-</div>
-</header>
+  <!-- V4 Header Component -->
+  <dmh-header-nav></dmh-header-nav>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
@@ -897,160 +557,129 @@
           </div>
         </div>
 
-        <!-- Condensed versions of remaining articles -->
+        <!-- Article 3 -->
         <article id="article-3" class="article-card reveal">
           <h2>💰 How Much Does IOP Cost in New Mexico?</h2>
           <div class="article-meta">Published January 2024</div>
           <p>IOP costs in Rio Rancho/Albuquerque typically range from $3,000-$10,000 for a complete 6-12 week program. Most insurance plans cover 60-80% of costs. We accept Medicaid, Medicare, and most major insurance. Call (505) 270-0840 for free insurance verification.</p>
         </article>
 
+        <!-- Article 4 -->
         <article id="article-4" class="article-card reveal">
           <h2>⚠️ 10 Signs You or a Loved One Needs IOP</h2>
           <div class="article-meta">Published January 2024</div>
-          <p>Signs include: unsuccessful attempts to quit, substance use affecting work/relationships, legal/financial problems due to use, needing more to achieve same effect, withdrawal symptoms, continued use despite negative consequences, hiding or lying about use, loss of interest in activities, mood swings, and neglecting responsibilities. Call (505) 270-0840 for confidential assessment.</p>
+          <p><strong>Key warning signs include:</strong> 1) Substance use interfering with work/family, 2) Failed attempts to quit alone, 3) Withdrawal symptoms, 4) Risky behaviors while using, 5) Neglecting responsibilities, 6) Relationship problems, 7) Financial difficulties, 8) Legal issues, 9) Health decline, 10) Loss of interest in activities. If you recognize 3+ signs, call (505) 270-0840 for a free assessment.</p>
+        </article>
+
+        <!-- Article 5 -->
+        <article id="article-5" class="article-card reveal">
+          <h2>🧠 Evidence-Based Therapies Used in Our IOP</h2>
+          <div class="article-meta">Published January 2024</div>
+          <p>Our IOP uses proven therapies: <strong>Cognitive Behavioral Therapy (CBT)</strong> to change negative thought patterns, <strong>Dialectical Behavior Therapy (DBT)</strong> for emotional regulation, <strong>Motivational Interviewing</strong> to build commitment, <strong>Trauma-Informed Care</strong> for past trauma, and <strong>12-Step Facilitation</strong> for peer support. We also offer individual therapy, group counseling, and family sessions. Learn more at (505) 270-0840.</p>
+        </article>
+
+        <!-- Article 6 -->
+        <article id="article-6" class="article-card reveal">
+          <h2>👨‍💼 Balancing Work, Family, and IOP Treatment</h2>
+          <div class="article-meta">Published January 2024</div>
+          <p>IOP is designed for people who need treatment but can't leave their responsibilities. We offer <strong>flexible scheduling</strong> (morning 9am-12pm, evening 5pm-8pm), allowing you to maintain your job and family commitments. Most clients attend 3 days/week for 3 hours per session. We provide documentation for FMLA if needed. Recovery doesn't require putting your life on hold. Call (505) 270-0840 to discuss scheduling.</p>
+        </article>
+
+        <!-- Article 7 -->
+        <article id="article-7" class="article-card reveal">
+          <h2>🩺 IOP for Dual Diagnosis: Treating Co-Occurring Disorders</h2>
+          <div class="article-meta">Published January 2024</div>
+          <p><strong>Dual diagnosis</strong> means treating both addiction and mental health conditions (depression, anxiety, PTSD, bipolar) simultaneously. Our IOP specializes in integrated treatment, addressing both conditions together for better outcomes. Our Harvard-trained clinical director leads comprehensive assessments and personalized treatment plans. We coordinate with psychiatrists for medication management when needed. Call (505) 270-0840 for dual diagnosis assessment.</p>
+        </article>
+
+        <!-- Article 8 -->
+        <article id="article-8" class="article-card reveal">
+          <h2>🌟 Life After IOP: Maintaining Long-Term Recovery</h2>
+          <div class="article-meta">Published January 2024</div>
+          <p>Completing IOP is just the beginning. Our graduates receive <strong>lifetime access to Own Today</strong>, our recovery app with daily tools, community support, and relapse prevention strategies. We recommend ongoing aftercare: weekly alumni groups, 12-step meetings, individual therapy as needed, and staying connected with your recovery community. Recovery is a journey, not a destination. We're here for life. Call (505) 270-0840 to learn about our aftercare support.</p>
+        </article>
+
+        <!-- Article 9 -->
+        <article id="article-9" class="article-card reveal">
+          <h2>🏆 Why Choose Desert Mountain Healing IOP in Rio Rancho?</h2>
+          <div class="article-meta">Published January 2024</div>
+          
+          <p>What makes Desert Mountain Healing different from other IOP programs in New Mexico?</p>
+
+          <h3>Founded by People in Long-Term Recovery</h3>
+          <p>Our founders, Sean Roberts (37+ years sober) and Karla Wood (9+ years sober), built this program from lived experience. We're not a corporate chain — we're locals who understand what works because recovery saved our lives.</p>
+
+          <h3>Harvard-Trained Clinical Leadership</h3>
+          <p>Clinical Director Bob Galligan, M.Ed., brings elite training and compassionate, evidence-based care to every client. Our entire team combines professional expertise with personal understanding of recovery.</p>
+
+          <h3>Flexible, Real-Life Integration</h3>
+          <p>We offer morning and evening programs so you can maintain your job, care for family, and build recovery simultaneously. Recovery shouldn't require abandoning your responsibilities.</p>
+
+          <h3>Lifetime Recovery Support</h3>
+          <p>Every graduate gets lifetime access to our Own Today recovery app, alumni community, and ongoing support. We're invested in your long-term success, not just program completion.</p>
+
+          <h3>Comprehensive Services Under One Roof</h3>
+          <ul>
+            <li>Medication-Assisted Treatment (MAT)</li>
+            <li>Outpatient Detox Assistance</li>
+            <li>Dual Diagnosis Treatment</li>
+            <li>Individual & Group Therapy</li>
+            <li>Family Support Services</li>
+            <li>Insurance Verification & Financial Assistance</li>
+          </ul>
+
+          <h3>Proven Results, Real People</h3>
+          <p>Read our 5-star reviews from real clients and families. We measure success not by admissions, but by lives transformed and families restored.</p>
+
+          <div class="cta-blog">
+            <h3>Ready to Experience the Desert Mountain Healing Difference?</h3>
+            <p>Start your recovery journey with Rio Rancho's most trusted IOP program</p>
+            <div class="cta-actions">
+              <a href="tel:5052700840" class="btn btn-warm">Call (505) 270-0840</a>
+              <a href="/contact-us/" class="btn btn-secondary">Schedule Free Assessment</a>
+            </div>
+          </div>
         </article>
 
         <!-- Final CTA -->
         <div class="cta-blog reveal">
-          <h3>🌟 Take the First Step Toward Recovery Today</h3>
-          <p>Our compassionate team is available to answer your questions and help you get started</p>
+          <h3>🌄 Your Recovery Journey Starts Today</h3>
+          <p>Join the Desert Mountain Healing family and build the life you deserve</p>
           <div class="cta-actions">
-            <a href="tel:5052700840" class="btn btn-warm">📞 Call (505) 270-0840</a>
-            <a href="/contact-us/" class="btn btn-secondary">✉️ Contact Us Online</a>
+            <a href="tel:5052700840" class="btn btn-warm">Call (505) 270-0840 Now</a>
+            <a href="/contact-us/" class="btn btn-secondary">Contact Us Online</a>
           </div>
-          <p style="margin-top:1.5rem;font-size:.9rem;color:rgba(255,255,255,.8)">All inquiries are 100% confidential</p>
         </div>
 
       </div>
     </section>
   </main>
 
-<footer>
-<div class="footer-grid">
-<div class="footer-brand">
-<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
-<p>Compassionate, evidence-based outpatient addiction treatment serving Rio Rancho and Albuquerque, New Mexico.</p>
-<p><strong>Hope. Healing. Recovery. Every Day.</strong></p>
-</div>
+  <!-- V4 Footer Component -->
+  <dmh-footer></dmh-footer>
 
-<div class="footer-section">
-<h4>Contact</h4>
-<div class="footer-contact">
-<p><strong>Phone:</strong><br/><a href="tel:+15052700840">(505) 270-0840</a></p>
-<p><strong>Address:</strong><br/>3301 Southern Blvd SE, Suite 105<br/>Rio Rancho, NM 87124</p>
-<p><strong>Hours:</strong><br/>Mon-Fri: 8:00 AM - 8:00 PM<br/>Sat: By appointment</p>
-</div>
-</div>
+  <!-- Component Loader -->
+  <script src="/components/dmh-components.js"></script>
 
-<div class="footer-section">
-<h4>Quick Links</h4>
-<ul class="footer-links">
-<li><a href='/'>Home</a></li>
-<li><a href='/iop-benefits'>IOP Benefits</a></li>
-<li><a href='/mat'>Medication-Assisted Treatment</a></li>
-<li><a href='/reliable-substance-abuse-treatments'>All Services</a></li>
-<li><a href='/team'>Our Team</a></li>
-<li><a href='/reviews'>Reviews</a></li>
-</ul>
-</div>
-
-<div class="footer-section">
-<h4>Resources</h4>
-<ul class="footer-links">
-<li><a href='/insurance-verification'>Insurance Verification</a></li>
-<li><a href='/client-app'>Recovery Portal</a></li>
-<li><a href='/faq'>FAQ</a></li>
-<li><a href='/blog'>Blog</a></li>
-<li><a href='/contact-us'>Contact Us</a></li>
-<li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM</a></li>
-</ul>
-</div>
-</div>
-
-<div class="footer-sitemap">
-<h4>Complete Site Directory</h4>
-<div class="sitemap-grid">
-<div class="sitemap-section">
-<strong>Treatment Programs</strong>
-<ul>
-<li><a href='/iop-benefits'>IOP Benefits</a></li>
-<li><a href='/mat'>Medication-Assisted Treatment</a></li>
-<li><a href='/medical-detox-assistance'>Medical Detox Assistance</a></li>
-<li><a href='/reliable-substance-abuse-treatments'>All Services</a></li>
-</ul>
-</div>
-
-<div class="sitemap-section">
-<strong>About Us</strong>
-<ul>
-<li><a href='/team'>Our Team</a></li>
-<li><a href='/reviews'>Client Reviews</a></li>
-<li><a href='/faq'>Frequently Asked Questions</a></li>
-<li><a href='/blog'>Recovery Blog</a></li>
-</ul>
-</div>
-
-<div class="sitemap-section">
-<strong>Client Resources</strong>
-<ul>
-<li><a href='/insurance-verification'>Insurance Verification</a></li>
-<li><a href='/client-app'>Recovery Portal</a></li>
-<li><a href='/contact-us'>Contact Us</a></li>
-<li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM Scholarships</a></li>
-</ul>
-</div>
-
-<div class="sitemap-section">
-<strong>Service Area</strong>
-<ul>
-<li><a href='/'>Rio Rancho Treatment</a></li>
-<li><a href='/'>Albuquerque IOP</a></li>
-<li><a href='/'>New Mexico Recovery</a></li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="footer-trust">
-<div class="trust-badges">
-<div class="trust-badge">🏥 Licensed Treatment Provider</div>
-<div class="trust-badge">✓ Insurance Accepted</div>
-<div class="trust-badge">🌟 Experienced Team</div>
-</div>
-<div class="footer-legal">
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms-of-service.html">Terms of Service</a>
-<a href="/hipaa-notice.html">HIPAA Notice</a>
-</div>
-</div>
-
-<div class="footer-emergency">
-<p><strong>Crisis Support Available 24/7</strong></p>
-<p>If you or someone you know is in crisis, call <strong>988</strong> (Suicide & Crisis Lifeline) or <strong>911</strong> for immediate help.</p>
-</div>
-
-<div class="footer-bottom">
-<p>© 2026 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
-</div>
-</footer>
-
+  <!-- Reveal Animation -->
   <script>
-    const revealElements = document.querySelectorAll(".reveal");
-
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
+  document.addEventListener('DOMContentLoaded', function () {
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
         });
       }, { threshold: 0.12 });
-
-      revealElements.forEach(element => observer.observe(element));
+      revealItems.forEach(function (item) { observer.observe(item); });
     } else {
-      revealElements.forEach(element => element.classList.add("visible"));
+      revealItems.forEach(function (item) { item.classList.add('visible'); });
     }
+  });
   </script>
+
 </body>
 </html>
