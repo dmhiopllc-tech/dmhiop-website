@@ -257,92 +257,160 @@
       border:1px solid rgba(27,163,189,.18);
       border-radius:26px;
       background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(242,251,252,.92));
-      backdrop-filter:blur(9px);
-      box-shadow:var(--shadow-md);
-    }
-    .service-showcase{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2rem}
-    .service-showcase.reverse .service-content{order:1}
-    .service-showcase.reverse .service-visual{order:2}
-    .service-visual{
-      position:relative;
-      isolation:isolate;
-      border-radius:28px;
-      overflow:hidden;
-      min-height:450px;
-    }
-    .service-visual img{width:100%;height:100%;object-fit:cover;min-height:450px}
-    .service-content{
-      padding:3rem 2.5rem;
-      border:1px solid var(--line);
-      border-radius:28px;
-      background:#fff;
       box-shadow:var(--shadow-sm);
     }
-    .service-content h2{margin-bottom:1rem}
-    .checklist{margin:1.5rem 0}
-    .checklist li{
-      display:flex;
-      align-items:flex-start;
-      gap:.8rem;
-      margin-bottom:.75rem;
-      color:var(--ink);
-    }
-    .checklist li::before{
-      content:"✓";
-      flex-shrink:0;
-      width:26px;height:26px;
-      display:grid;place-items:center;
-      border-radius:50%;
-      color:var(--gold);
+    .quote{
+      margin-top:1.4rem;
+      padding:18px 20px;
+      border-left:4px solid var(--gold);
+      border-radius:0 14px 14px 0;
+      color:var(--teal-800);
       background:var(--gold-soft);
+      font-style:italic;
+      font-weight:700;
+    }
+
+    .service-showcase{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:0;
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:white;
+      box-shadow:var(--shadow-md);
+      margin-bottom:2.5rem;
+      border:1px solid var(--line);
+    }
+    .service-showcase.reverse .service-visual{order:2}
+    .service-showcase.reverse .service-content{order:1}
+    .service-visual{
+      min-height:480px;
+      position:relative;
+    }
+    .service-visual img{
+      width:100%;
+      height:100%;
+      min-height:480px;
+      object-fit:cover;
+    }
+    .service-number{
+      position:absolute;
+      top:24px;
+      right:24px;
+      width:62px;
+      height:62px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:rgba(27,163,189,.95);
+      color:#fff;
+      font-family:"Merriweather",serif;
+      font-weight:900;
+      font-size:1.45rem;
+      box-shadow:0 8px 22px rgba(27,163,189,.35);
+    }
+    .service-content{
+      padding:3.5rem;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .service-content h3{
+      font-size:2.2rem;
+      margin-bottom:1rem;
+    }
+    .service-content p{
+      color:var(--muted);
+      margin-bottom:1rem;
+    }
+    .service-content ul{
+      list-style:none;
+      margin:1.2rem 0;
+      padding:0;
+      display:grid;
+      gap:.7rem;
+    }
+    .service-content li{
+      position:relative;
+      padding-left:1.7rem;
+      color:var(--ink);
+      font-weight:600;
+    }
+    .service-content li::before{
+      position:absolute;
+      left:0;
+      top:.15rem;
+      content:"✓";
+      color:var(--gold);
       font-weight:900;
     }
-    .support-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:1.5rem;
+    .text-link{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      color:var(--teal-700);
+      text-decoration:none;
+      font-weight:800;
+      margin-top:1rem;
     }
+    .text-link:hover{color:var(--teal-950)}
+    .text-link::after{content:"→"}
+
+    .support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
     .support-card{
-      padding:2rem;
+      padding:30px;
       border:1px solid var(--line);
       border-radius:22px;
       background:#fff;
       box-shadow:var(--shadow-sm);
       transition:transform .2s ease,box-shadow .2s ease;
     }
-    .support-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-    .support-card .icon{margin-bottom:1.2rem}
-    .support-card h3{margin-bottom:.9rem}
-    .support-card p{color:var(--muted)}
-    .difference-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:1.8rem;
+    .support-card:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow-md);
     }
+    .support-icon{
+      width:52px;
+      height:52px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      background:var(--teal-100);
+      color:var(--teal-700);
+      font-weight:900;
+      font-size:1.05rem;
+      margin-bottom:1.2rem;
+    }
+    .support-card h3{
+      font-size:1.2rem;
+      margin-bottom:.6rem;
+    }
+    .support-card p{
+      color:var(--muted);
+      font-size:.98rem;
+    }
+
+    .difference-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
     .card{
-      padding:2rem;
-      border:1px solid var(--line);
+      padding:30px;
+      border:1px solid rgba(6,55,67,.09);
       border-radius:var(--radius);
       background:#fff;
       box-shadow:var(--shadow-sm);
-      transition:transform .2s ease,box-shadow .2s ease;
+      transition:transform .18s ease,box-shadow .18s ease;
     }
-    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-    .card .icon{margin-bottom:1rem}
-    .card h3{margin-bottom:.6rem}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+    .card .icon{margin-left:0}
     .card p{color:var(--muted)}
 
     .insurance-box{
       display:grid;
-      grid-template-columns:1.4fr 1fr;
-      gap:2rem;
+      grid-template-columns:1.2fr .8fr;
+      gap:40px;
       align-items:center;
-      padding:64px;
-      border-radius:32px;
-      color:#fff;
-      background:
-        radial-gradient(ellipse at 70% 35%,rgba(27,163,189,.3),transparent 52%),
-        linear-gradient(135deg,var(--teal-800),var(--teal-950));
+      padding:48px;
+      border-radius:30px;
+      background:linear-gradient(135deg,var(--teal-950),var(--teal-700));
       box-shadow:var(--shadow-md);
     }
     .insurance-box h2,.insurance-box p{color:#fff}
@@ -387,6 +455,36 @@
     }
   </style>
 
+<style>
+.prefooter-cta{
+  padding:78px 0;
+  color:#fff;
+  text-align:center;
+  background:
+    linear-gradient(rgba(6,55,67,.90),rgba(6,55,67,.94)),
+    url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center 55% / cover no-repeat;
+}
+.prefooter-cta h2{color:#fff}
+.prefooter-cta p{
+  max-width:760px;
+  margin:0 auto 1.5rem;
+  color:rgba(255,255,255,.86);
+  font-size:1.12rem;
+}
+.prefooter-actions{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:.85rem;
+}
+
+@media(max-width:760px){
+  .prefooter-cta{padding:64px 0}
+  .prefooter-actions{flex-direction:column}
+  .prefooter-actions .btn{width:100%}
+}
+</style>
+
 </head>
 <body>
 
@@ -409,27 +507,27 @@
       <p class="hero-lead">Coordinated outpatient treatment for adults in Rio Rancho and Albuquerque—including IOP, medication-assisted treatment, outpatient medical detox assistance, counseling, case management, and ongoing recovery support.</p>
       <div class="hero-actions">
         <a class="btn btn-warm" href="/insurance-verification.html">Verify Insurance &amp; Get Started</a>
+        <a class="btn btn-primary" href="/contact-us.html">Talk With Our Team</a>
         <a class="btn btn-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
       </div>
       <div class="hero-trust">
-        <span>Compassionate Care</span>
-        <span>Insurance Accepted</span>
-        <span>Evidence-Based</span>
+        <span>Morning & evening IOP</span>
+        <span>Medical & clinical coordination</span>
+        <span>Evidence-based, compassionate care</span>
       </div>
     </div>
-
     <div class="hero-contact">
       <div class="hero-contact-item">
-        <strong>Main Office</strong>
+        <strong>Call Anytime</strong>
         <small>(505) 270-0840</small>
       </div>
       <div class="hero-contact-item">
-        <strong>Hours</strong>
-        <small>M-F: 8 AM-8 PM</small>
+        <strong>Rio Rancho, NM</strong>
+        <small>Serving Albuquerque Metro</small>
       </div>
       <div class="hero-contact-item">
-        <strong>Rio Rancho</strong>
-        <small>3301 Southern Blvd SE #105</small>
+        <strong>Start Today</strong>
+        <small>Same-day assessments available</small>
       </div>
     </div>
   </div>
@@ -438,213 +536,282 @@
 <section class="feature-strip">
   <div class="container">
     <div class="feature-grid">
-      <div class="feature reveal">
-        <div class="icon">💊</div>
-        <h3>MAT</h3>
-        <p>Medication-Assisted Treatment</p>
-      </div>
-      <div class="feature reveal">
-        <div class="icon">🧑‍⚕️</div>
-        <h3>IOP</h3>
-        <p>Intensive Outpatient Program</p>
-      </div>
-      <div class="feature reveal">
-        <div class="icon">💬</div>
-        <h3>Counseling</h3>
-        <p>Individual &amp; Group</p>
-      </div>
-      <div class="feature reveal">
-        <div class="icon">📋</div>
-        <h3>Case Management</h3>
-        <p>Coordinated Care</p>
-      </div>
+      <article class="feature">
+        <div class="icon">♡</div>
+        <h3>Dignity & Respect</h3>
+        <p>Every person deserves to be seen—not just as a diagnosis.</p>
+      </article>
+      <article class="feature">
+        <div class="icon">◎</div>
+        <h3>Coordinated Care</h3>
+        <p>One treatment plan connecting medical, clinical, and recovery support.</p>
+      </article>
+      <article class="feature">
+        <div class="icon">◇</div>
+        <h3>Evidence-Based</h3>
+        <p>Clinical excellence grounded in proven treatment practices.</p>
+      </article>
+      <article class="feature">
+        <div class="icon">✓</div>
+        <h3>Hope & Accountability</h3>
+        <p>Recovery is possible—we're here to walk with you.</p>
+      </article>
     </div>
   </div>
 </section>
-
-<!-- =========================================================
-     INTENSIVE OUTPATIENT PROGRAM SHOWCASE
-========================================================= -->
-
-<section class="section">
-  <div class="container">
-    <div class="service-showcase reveal">
-      <div class="service-visual">
-        <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/iop-therapy-session.png" alt="Intensive Outpatient Program therapy session" loading="lazy">
-      </div>
-      <div class="service-content">
-        <span class="eyebrow">Treatment that fits your life</span>
-        <h2>Intensive Outpatient Program (IOP)</h2>
-        <p>Our IOP delivers structured, evidence-based treatment while allowing you to maintain work, school, and family responsibilities. You participate in 9-12 hours of group therapy and individual counseling per week, all while living at home.</p>
-        <ul class="checklist">
-          <li>Flexible scheduling: evening and daytime options</li>
-          <li>Evidence-based group therapy and individual counseling</li>
-          <li>Relapse prevention and coping skills training</li>
-          <li>Ongoing support from licensed clinicians</li>
-        </ul>
-        <a class="btn btn-primary" href="/iop-benefits.html">Learn About IOP</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =========================================================
-     MEDICATION-ASSISTED TREATMENT SHOWCASE
-========================================================= -->
 
 <section class="section section-soft">
-  <div class="container">
-    <div class="service-showcase reverse reveal">
-      <div class="service-visual">
-        <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/mat-medical-provider.png" alt="Medication-Assisted Treatment medical provider consultation" loading="lazy">
-      </div>
-      <div class="service-content">
-        <span class="eyebrow">Evidence-based, FDA-approved</span>
-        <h2>Medication-Assisted Treatment (MAT)</h2>
-        <p>MAT combines FDA-approved medications—such as buprenorphine (Suboxone), naltrexone (Vivitrol), or methadone—with counseling and therapy to treat opioid or alcohol use disorders. Our medical team closely monitors your progress and adjusts your treatment plan as needed.</p>
-        <ul class="checklist">
-          <li>Reduces cravings and withdrawal symptoms</li>
-          <li>Increases treatment retention and long-term recovery</li>
-          <li>Medical oversight by licensed providers</li>
-          <li>Integrated with counseling and case management</li>
-        </ul>
-        <a class="btn btn-primary" href="/mat.html">Explore MAT Services</a>
-      </div>
+  <div class="container split">
+    <div class="reveal">
+      <span class="eyebrow">Our story</span>
+      <h2>Founded by People Who Understand Recovery</h2>
+      <p>Desert Mountain Healing IOP was founded by Sean Roberts and Gary Gamboa because they believed addiction treatment could be delivered with greater compassion, integrity, accountability, and hope.</p>
+      <p>After experiencing recovery firsthand, they recognized that lasting recovery requires more than simply treating addiction. It requires hope, accountability, evidence-based care, and a treatment team that truly sees the person behind the diagnosis.</p>
+      <p>That belief became the foundation of Desert Mountain Healing IOP.</p>
+      <div class="quote">Today, every client who walks through our doors is treated as an individual—not a number. We believe recovery is possible for everyone, and our mission is to provide compassionate, evidence-based treatment that empowers people to rebuild their lives.</div>
+    </div>
+    <div class="glass-card reveal">
+      <h3>Recovery begins with hope</h3>
+      <p>Whether someone is seeking help for the first time or returning after a relapse, they will be welcomed without judgment and supported every step of the way.</p>
+      <p style="margin-bottom:0"><strong>Recovery begins with hope, grows through connection, and succeeds through compassionate care.</strong></p>
     </div>
   </div>
 </section>
-
-<!-- =========================================================
-     OUTPATIENT MEDICAL DETOX ASSISTANCE SHOWCASE
-========================================================= -->
 
 <section class="section">
   <div class="container">
-    <div class="service-showcase reveal">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Core treatment services</span>
+      <h2>Care for Every Stage of Recovery</h2>
+      <p>Our team helps each client identify the combination of services that best supports their needs and recovery goals.</p>
+    </div>
+
+    <article class="service-showcase reveal">
       <div class="service-visual">
-        <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/medical-detox-support.png" alt="Outpatient medical detox assistance and support" loading="lazy">
+        <img alt="Adults participating in supportive IOP group therapy" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/iop-group-session.png"/>
+        <div class="service-number">01</div>
       </div>
       <div class="service-content">
-        <span class="eyebrow">Safe withdrawal support</span>
-        <h2>Outpatient Medical Detox Assistance</h2>
-        <p>If you are experiencing mild to moderate withdrawal symptoms, our outpatient medical detox assistance program provides professional oversight, symptom management, and regular check-ins—all while you remain at home.</p>
-        <ul class="checklist">
-          <li>Physician-supervised withdrawal management</li>
-          <li>Regular monitoring and symptom relief</li>
-          <li>Medication support when clinically appropriate</li>
-          <li>Seamless transition to IOP or MAT services</li>
+        <h3>Intensive Outpatient Program</h3>
+        <p>Structured treatment that includes group counseling, individual support, relapse-prevention education, life-skills development, and recovery planning while clients continue living at home.</p>
+        <p>DMHIOP offers morning and evening IOP programming Monday through Friday to help clients balance recovery with work and family responsibilities.</p>
+        <ul>
+          <li>Group counseling and recovery education</li>
+          <li>Individual clinical support</li>
+          <li>Relapse prevention planning</li>
+          <li>Life skills and coping strategies</li>
+          <li>Morning and evening schedules</li>
         </ul>
-        <a class="btn btn-primary" href="/medical-detox-assistance.html">Get Detox Support</a>
+        <a class="text-link" href="/iop-benefits.html">Explore IOP benefits</a>
       </div>
-    </div>
+    </article>
+
+    <article class="service-showcase reverse reveal">
+      <div class="service-visual">
+        <img alt="Medication-assisted treatment at Desert Mountain Healing IOP" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/mat-hero.png"/>
+        <div class="service-number">02</div>
+      </div>
+      <div class="service-content">
+        <h3>Medication-Assisted Treatment</h3>
+        <p>When clinically appropriate, medication may be combined with counseling, IOP, case management, and ongoing recovery support for opioid or alcohol use disorders.</p>
+        <p>Our approach connects medical care with behavioral health treatment so clients receive support for both the physical and emotional parts of recovery.</p>
+        <ul>
+          <li>Nurse Practitioner oversight</li>
+          <li>Medication management & monitoring</li>
+          <li>Integrated with IOP and counseling</li>
+          <li>Individualized treatment plans</li>
+          <li>Long-term recovery support</li>
+        </ul>
+        <a class="text-link" href="/mat.html">Learn about MAT</a>
+      </div>
+    </article>
+
+    <article class="service-showcase reveal">
+      <div class="service-visual">
+        <img alt="Outpatient medical detox assistance and clinical support" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/detox-consultation.png"/>
+        <div class="service-number">03</div>
+      </div>
+      <div class="service-content">
+        <h3>Outpatient Medical Detox Assistance</h3>
+        <p>Nurse Practitioner assessment and outpatient medical support may help clinically appropriate clients manage withdrawal symptoms while beginning counseling and recovery services.</p>
+        <p>Suitability for outpatient detox assistance is based on an individualized medical and clinical assessment.</p>
+        <ul>
+          <li>Medical assessment and monitoring</li>
+          <li>Symptom management support</li>
+          <li>Concurrent counseling services</li>
+          <li>Safe, supervised care</li>
+          <li>Transition planning to ongoing treatment</li>
+        </ul>
+        <a class="text-link" href="/medical-detox-assistance.html">Learn about detox assistance</a>
+      </div>
+    </article>
   </div>
 </section>
-
-<!-- =========================================================
-     COUNSELING & CASE MANAGEMENT
-========================================================= -->
 
 <section class="section section-gray">
   <div class="container">
     <div class="section-heading reveal">
-      <span class="eyebrow">Personalized, whole-person support</span>
-      <h2>Counseling &amp; Case Management</h2>
-      <p>Recovery involves more than just abstinence. Our clinical team addresses co-occurring mental health concerns, life skills, and external barriers to ensure you have the support you need to succeed.</p>
+      <span class="eyebrow">Additional recovery support</span>
+      <h2>More Than a Single Service</h2>
+      <p>Recovery often becomes stronger when clinical care is supported by practical help, healthy connection, and continued skill-building.</p>
     </div>
 
-    <div class="support-grid">
-      <div class="support-card reveal">
-        <div class="icon">💬</div>
+    <div class="support-grid reveal">
+      <article class="support-card">
+        <div class="support-icon">1:1</div>
         <h3>Individual Counseling</h3>
-        <p>One-on-one sessions with a licensed therapist provide a safe space to explore personal challenges, build coping skills, and address co-occurring mental health concerns.</p>
-      </div>
-      <div class="support-card reveal">
-        <div class="icon">👥</div>
-        <h3>Group Therapy</h3>
-        <p>Facilitated group sessions offer peer support, shared learning, and accountability. You gain insights from others facing similar challenges and develop a community of support.</p>
-      </div>
-      <div class="support-card reveal">
-        <div class="icon">📋</div>
+        <p>Address triggers, coping skills, emotional health, relationships, personal goals, and barriers to sustained recovery.</p>
+      </article>
+
+      <article class="support-card">
+        <div class="support-icon">GRP</div>
+        <h3>Group Therapy & Education</h3>
+        <p>Develop recovery skills, communication, accountability, insight, and peer connection in a supportive setting.</p>
+      </article>
+
+      <article class="support-card">
+        <div class="support-icon">CM</div>
         <h3>Case Management</h3>
-        <p>Our case managers help coordinate medical appointments, connect you with community resources, and address practical barriers such as housing, transportation, or employment.</p>
-      </div>
-      <div class="support-card reveal">
-        <div class="icon">🤝</div>
-        <h3>Peer Support</h3>
-        <p>Connect with trained peer recovery support specialists who have lived experience and can offer hope, encouragement, and practical guidance throughout your journey.</p>
-      </div>
+        <p>Receive help addressing employment, benefits, transportation, healthcare, legal obligations, housing, and other practical needs.</p>
+      </article>
+
+      <article class="support-card">
+        <div class="support-icon">RP</div>
+        <h3>Relapse Prevention</h3>
+        <p>Recognize warning signs, identify triggers, strengthen coping strategies, and create practical plans for high-risk situations.</p>
+      </article>
+
+      <article class="support-card">
+        <div class="support-icon">FAM</div>
+        <h3>Family & Recovery Support</h3>
+        <p>When appropriate, families can receive education and support to improve communication and establish healthier boundaries.</p>
+      </article>
+
+      <article class="support-card">
+        <div class="support-icon">PEER</div>
+        <h3>Peer & Community Support</h3>
+        <p>Build healthier connections and participate in recovery-focused activities that support long-term stability.</p>
+      </article>
     </div>
   </div>
 </section>
-
-<!-- =========================================================
-     WHY DESERT MOUNTAIN HEALING IOP
-========================================================= -->
 
 <section class="section section-dark">
   <div class="container">
     <div class="section-heading reveal">
-      <span class="eyebrow">What Sets Us Apart</span>
-      <h2>Why Desert Mountain Healing IOP?</h2>
-      <p>Addiction treatment should be compassionate, effective, and flexible. We combine clinical excellence with personalized care to deliver results that last.</p>
+      <span class="eyebrow" style="color:#bfeef3">Exclusive to DMHIOP clients</span>
+      <h2>Recovery Support Beyond the Therapy Room</h2>
+      <p style="color:rgba(255,255,255,.78)">Recovery happens every day—not only during group or counseling sessions. That is why DMHIOP developed its own client engagement app around the needs of people enrolled in our program.</p>
     </div>
 
-    <div class="difference-grid">
-      <div class="card reveal">
-        <div class="icon">🛡️</div>
-        <h3>Confidential &amp; Safe</h3>
-        <p>Your privacy and dignity are protected every step of the way. We operate in full compliance with HIPAA and provide a judgment-free environment.</p>
+    <div class="difference-grid reveal">
+      <div class="card" style="background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.15)">
+        <div class="icon" style="background:rgba(255,255,255,.12);color:#86e6ef">📱</div>
+        <h3 style="color:#fff">Daily Check-Ins</h3>
+        <p style="color:rgba(255,255,255,.84)">Reflect on progress and current needs every day.</p>
       </div>
-      <div class="card reveal">
-        <div class="icon">🏆</div>
-        <h3>Evidence-Based Treatment</h3>
-        <p>We use proven therapies—cognitive-behavioral therapy (CBT), motivational interviewing, and trauma-informed care—to ensure effective, lasting recovery.</p>
+      <div class="card" style="background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.15)">
+        <div class="icon" style="background:rgba(255,255,255,.12);color:#86e6ef">🎯</div>
+        <h3 style="color:#fff">Goals & Milestones</h3>
+        <p style="color:rgba(255,255,255,.84)">Track personal recovery progress over time.</p>
       </div>
-      <div class="card reveal">
-        <div class="icon">📍</div>
-        <h3>Local, Convenient Care</h3>
-        <p>Located in Rio Rancho and serving the Albuquerque metro area, our outpatient programs fit into your daily schedule without requiring inpatient stays.</p>
+      <div class="card" style="background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.15)">
+        <div class="icon" style="background:rgba(255,255,255,.12);color:#86e6ef">📖</div>
+        <h3 style="color:#fff">Journal & Activities</h3>
+        <p style="color:rgba(255,255,255,.84)">Continue recovery work between sessions.</p>
       </div>
-      <div class="card reveal">
-        <div class="icon">❤️</div>
-        <h3>Compassionate Team</h3>
-        <p>Our licensed clinicians, medical providers, and peer support specialists genuinely care about your success and treat every person with respect and dignity.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon">🔗</div>
-        <h3>Coordinated Care</h3>
-        <p>From MAT to IOP to case management, all services are integrated and coordinated under one roof, ensuring continuity and simplicity.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon">✅</div>
-        <h3>Insurance Accepted</h3>
-        <p>We accept most major insurance plans and provide upfront verification so you know your costs before beginning treatment.</p>
-      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem">
+      <a class="btn btn-warm" href="/client-app.html">Explore the DMHIOP Client App</a>
     </div>
   </div>
 </section>
-
-<!-- =========================================================
-     INSURANCE & GET STARTED
-========================================================= -->
 
 <section class="section">
-  <div class="container reveal">
-    <div class="insurance-box">
-      <div>
-        <h2>We Accept Most Insurance</h2>
-        <p>Addiction treatment should be accessible and affordable. We accept most major insurance plans, including Medicaid, Medicare, and private coverage. Our admissions team will verify your benefits at no cost and provide a clear explanation of your coverage.</p>
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow">The DMHIOP difference</span>
+      <h2>Care Designed Around the Whole Person</h2>
+      <p>Our program combines clinical treatment, medical support, practical assistance, and everyday recovery tools in one coordinated setting.</p>
+    </div>
+
+    <div class="difference-grid reveal">
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Coordinated Care</h3>
+        <p>Medical and behavioral health services are organized around one individualized treatment plan.</p>
       </div>
-      <div class="insurance-actions">
-        <a class="btn btn-warm" href="/insurance-verification.html">Verify Your Insurance</a>
-        <a class="btn btn-secondary" href="/contact-us.html">Contact Our Team</a>
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Recovery Starts on Day One</h3>
+        <p>Clients can begin counseling, recovery planning, and supportive services at the beginning of care.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Flexible Programming</h3>
+        <p>Morning and evening IOP options help clients balance recovery with work and family responsibilities.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Practical Case Management</h3>
+        <p>Our team helps address real-life barriers that can interfere with treatment and long-term stability.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Exclusive Client App</h3>
+        <p>Our custom-built app extends engagement, resources, and recovery activities beyond scheduled sessions.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Insurance Verification</h3>
+        <p>Our team can review benefits and explain the next steps before treatment begins.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="prefooter-cta">
-  <div class="container reveal" aria-labelledby="prefooterCtaHeading">
+<section class="section section-soft">
+  <div class="container split-reverse">
+    <div class="reveal">
+      <img alt="Welcoming front desk at Desert Mountain Healing IOP" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/frount-desk.png" style="width:100%;height:500px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-md)"/>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">A real place for real recovery</span>
+      <h2>See Where Treatment Happens</h2>
+      <p>Our Rio Rancho facility is designed to feel professional, comfortable, and welcoming. Clients have space for group discussion, education, individual support, medical care, and practical recovery planning.</p>
+      <p>These are real images from Desert Mountain Healing IOP—not generic stock photos—so prospective clients and families can see the environment before taking the next step.</p>
+      <a class="text-link" href="/contact-us.html">Schedule a conversation with our team</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="insurance-box reveal">
+      <div>
+        <span class="eyebrow" style="color:#bfeef3">Insurance and admissions</span>
+        <h2>Find the Right Level of Support</h2>
+        <p>We work with a range of insurance plans and can review your benefits before admission. Coverage depends on your specific plan, eligibility, authorization requirements, deductibles, copayments, and medical-necessity criteria.</p>
+      </div>
+      <div class="insurance-actions">
+        <a class="btn btn-warm" href="/insurance-verification.html">Verify Insurance</a>
+        <a class="btn btn-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
+        <a class="btn btn-secondary" href="/contact-us.html">Contact Us Online</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PAGE CONTENT END -->
+</main>
+
+<!-- =========================================================
+     UNIVERSAL PRE-FOOTER CALL TO ACTION
+========================================================== -->
+<section class="prefooter-cta" aria-labelledby="prefooterCtaHeading">
+  <div class="container">
+    <span class="eyebrow" style="color:#bceef3">A hopeful next step</span>
     <h2 id="prefooterCtaHeading">Ready to Begin Your Recovery?</h2>
     <p>You do not have to face addiction alone. Whether you are seeking help for yourself or someone you love, our caring team is here to answer your questions, verify your insurance, and help you take the first step toward lasting recovery.</p>
     <div class="prefooter-actions">
@@ -653,8 +820,6 @@
     </div>
   </div>
 </section>
-
-</main>
 
 <!-- Footer Component -->
 <dmh-footer></dmh-footer>
