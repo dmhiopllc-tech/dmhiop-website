@@ -30,9 +30,8 @@
 <meta content="35.233154;-106.666221" name="geo.position"/>
 <meta content="35.233154, -106.666221" name="ICBM"/>
 
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
 <style>
 :root{
@@ -69,235 +68,76 @@ body{
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 
-/* ===== TOPBAR ===== */
-.topbar{
-    background:linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
-    color:white;
-    padding:.75rem 2rem;
-    text-align:center;
-}
-.topbar-inner{
-    max-width:1400px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:.5rem;
-    font-weight:700;
-    font-size:.92rem;
-}
-.topbar-inner::before{content:"🌅";font-size:1.1rem}
-
-/* ===== HEADER ===== */
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.97);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--line);
-    box-shadow:0 2px 12px rgba(6,55,67,.06);
-}
-.header-container{
-    max-width:1400px;
-    margin:auto;
-    padding:1rem 2rem;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:2rem;
-}
-.logo{
-    display:flex;
-    align-items:center;
-    gap:.8rem;
-    text-decoration:none;
-    font-family:'Merriweather',serif;
-    font-weight:700;
-    color:var(--earth-dark);
-    min-width:max-content;
-}
-.logo img{width:70px;height:70px;object-fit:contain}
-.header-right{
-    flex:1;
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    gap:2rem;
-}
-
-/* ===== NAVIGATION WITH DROPDOWNS ===== */
-.primary-nav{
-    display:flex;
-    align-items:center;
-    gap:1.5rem;
-}
-.nav-item{position:relative}
-.nav-link,.nav-button{
-    display:block;
-    padding:.6rem .2rem;
-    font-size:.95rem;
-    font-weight:700;
-    color:var(--ink);
-    border-bottom:2px solid transparent;
-    transition:var(--transition);
-    background:none;
-    border:none;
-    cursor:pointer;
-}
-.nav-link:hover,
-.nav-button:hover,
-.nav-link[aria-current="page"]{
-    color:var(--teal-dark);
-    border-color:var(--teal);
-}
-.nav-button{
-    display:flex;
-    align-items:center;
-    gap:.3rem;
-}
-.nav-button::after{
-    content:"▾";
-    font-size:.75rem;
-    transition:transform .3s ease;
-}
-.nav-item:hover .nav-button::after{transform:rotate(180deg)}
-.dropdown{
-    position:absolute;
-    top:100%;
-    left:50%;
-    transform:translateX(-50%);
-    min-width:220px;
-    margin-top:.5rem;
-    padding:.5rem 0;
-    background:white;
-    border:1px solid var(--line);
-    border-radius:16px;
-    box-shadow:var(--shadow-lg);
-    opacity:0;
-    visibility:hidden;
-    transition:var(--transition);
-}
-.nav-item:hover .dropdown{
-    opacity:1;
-    visibility:visible;
-}
-.dropdown a{
-    display:block;
-    padding:.7rem 1.2rem;
-    color:var(--text);
-    font-size:.92rem;
-    transition:var(--transition);
-}
-.dropdown a:hover{
-    background:var(--mist);
-    color:var(--teal-dark);
-}
-
-.header-cta{
-    display:flex;
-    align-items:center;
-    gap:.8rem;
-}
-.btn-header-primary{
-    padding:.65rem 1.2rem;
-    border-radius:999px;
-    background:var(--teal);
-    color:white;
-    font-weight:800;
-    font-size:.92rem;
-    transition:var(--transition);
-}
-.btn-header-primary:hover{
-    background:var(--teal-dark);
-    transform:translateY(-2px);
-}
-.btn-header-secondary{
-    padding:.65rem 1.2rem;
-    border-radius:999px;
-    border:2px solid var(--gold);
-    color:var(--gold-dark);
-    font-weight:800;
-    font-size:.92rem;
-    transition:var(--transition);
-}
-.btn-header-secondary:hover{
-    background:var(--gold);
-    color:white;
-}
-
 /* ===== HERO ===== */
 .hero{
-    min-height:500px;
-    position:relative;
-    display:flex;
-    align-items:center;
-    background:
-      linear-gradient(90deg,rgba(6,55,67,.92) 0%,rgba(6,55,67,.75) 38%,rgba(6,55,67,.22) 68%,rgba(6,55,67,.05) 100%),
-      url('https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sandias-hero.png') center center/cover no-repeat;
-    color:white;
+position:relative;
+min-height:520px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+background:
+linear-gradient(135deg,rgba(6,55,67,.88),rgba(17,125,145,.75)),
+url('https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sandias-hero.png') center center/cover no-repeat;
+overflow:hidden;
 }
 .hero::after{
-    content:"";
-    position:absolute;
-    inset:auto 0 0;
-    height:160px;
-    background:linear-gradient(to top,rgba(0,0,0,.20),transparent);
+position:absolute;
+inset:0;
+background:radial-gradient(circle at 70% 30%,rgba(239,139,34,.16),transparent 58%);
+z-index:1;
+content:"";
+pointer-events:none;
 }
 .container{
-    width:min(1400px,100%);
-    margin:auto;
-    padding:0 2rem;
+max-width:1400px;
+margin:auto;
+padding:0 2rem;
+position:relative;
+z-index:2;
 }
 .hero-inner{
-    position:relative;
-    z-index:2;
-    padding:6rem 0 5rem;
-    text-align:center;
+max-width:1000px;
+margin:auto;
+text-align:center;
+padding:4.5rem 0;
 }
 .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:.55rem;
-    padding:.55rem .95rem;
-    border:1px solid rgba(255,255,255,.35);
-    border-radius:999px;
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(12px);
-    font-size:.8rem;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    font-weight:800;
-    margin-bottom:1.5rem;
+display:inline-block;
+padding:.5rem 1.2rem;
+border-radius:999px;
+background:rgba(239,139,34,.22);
+color:white;
+font-size:.8rem;
+font-weight:800;
+text-transform:uppercase;
+letter-spacing:.1em;
+margin-bottom:1.5rem;
 }
 .hero h1{
-    font-family:'Merriweather',serif;
-    font-size:clamp(2.8rem,5.5vw,4.5rem);
-    line-height:1.08;
-    letter-spacing:-.03em;
-    margin-bottom:1.5rem;
-    text-shadow:0 4px 24px rgba(0,0,0,.28);
-    max-width:900px;
-    margin-left:auto;
-    margin-right:auto;
+font-family:'Merriweather',serif;
+font-size:clamp(2.6rem,5vw,4.8rem);
+line-height:1.14;
+margin-bottom:1.2rem;
+color:white;
+text-shadow:0 6px 30px rgba(0,0,0,.25);
 }
 .hero h1 span{
-    color:var(--gold);
+color:#ffd799;
+display:block;
 }
 .hero-lead{
-    font-size:clamp(1.08rem,1.6vw,1.22rem);
-    color:rgba(255,255,255,.92);
-    margin-bottom:2rem;
-    line-height:1.6;
-    max-width:800px;
-    margin-left:auto;
-    margin-right:auto;
+max-width:700px;
+margin:0 auto 2.2rem;
+color:rgba(255,255,255,.92);
+font-size:1.15rem;
+line-height:1.7;
 }
 .hero-actions{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:1rem;
+display:flex;
+justify-content:center;
+gap:1rem;
+flex-wrap:wrap;
 }
 .btn{
     display:inline-flex;
@@ -562,201 +402,43 @@ details[open] summary{
     text-align:center;
     border-radius:30px;
     background:white;
-    border:1px solid var(--line);
     box-shadow:var(--shadow-lg);
 }
 .cta-card h2{
-    max-width:800px;
-    margin-left:auto;
-    margin-right:auto;
+    color:var(--earth-dark);
+    font-family:'Merriweather',serif;
+    font-size:clamp(2rem,3.5vw,3.2rem);
+    margin-bottom:1rem;
 }
 .cta-card p{
-    max-width:720px;
-    margin:0 auto 2rem;
     color:var(--text);
-    font-size:1.08rem;
+    font-size:1.12rem;
+    line-height:1.7;
+    max-width:750px;
+    margin:0 auto 2.2rem;
 }
 .cta-actions{
     display:flex;
     justify-content:center;
-    flex-wrap:wrap;
     gap:1rem;
-}
-
-/* ===== FOOTER ===== */
-footer{
-    background:var(--teal-deep);
-    color:white;
-    padding:5rem 2rem 2rem;
-}
-.footer-grid{
-    max-width:1400px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.3fr 1fr 1fr 1fr;
-    gap:3rem;
-    margin-bottom:3rem;
-}
-.footer-brand img{
-    max-width:140px;
-    margin-bottom:1.2rem;
-}
-.footer-brand p{
-    color:rgba(255,255,255,.75);
-    line-height:1.7;
-    margin-bottom:.8rem;
-}
-.footer-section h4{
-    color:var(--gold);
-    font-size:1.05rem;
-    margin-bottom:1.2rem;
-    font-weight:800;
-}
-.footer-links{
-    list-style:none;
-}
-.footer-links li{
-    margin-bottom:.6rem;
-}
-.footer-links a{
-    color:rgba(255,255,255,.8);
-    transition:var(--transition);
-}
-.footer-links a:hover{
-    color:white;
-    padding-left:.3rem;
-}
-.footer-contact p{
-    color:rgba(255,255,255,.8);
-    margin-bottom:.8rem;
-}
-.footer-contact a{
-    color:var(--teal-light);
-    font-weight:700;
-}
-
-.footer-sitemap{
-    max-width:1400px;
-    margin:auto;
-    padding:2.5rem 0;
-    border-top:1px solid rgba(255,255,255,.15);
-}
-.footer-sitemap h4{
-    color:var(--gold);
-    font-size:.95rem;
-    margin-bottom:1rem;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-}
-.sitemap-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:2rem;
-}
-.sitemap-section ul{
-    list-style:none;
-}
-.sitemap-section li{
-    margin-bottom:.5rem;
-}
-.sitemap-section a{
-    color:rgba(255,255,255,.75);
-    font-size:.92rem;
-    transition:var(--transition);
-}
-.sitemap-section a:hover{
-    color:white;
-}
-
-.footer-trust{
-    max-width:1400px;
-    margin:auto;
-    padding:2rem 0;
-    border-top:1px solid rgba(255,255,255,.15);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:2rem;
-}
-.trust-badges{
-    display:flex;
-    gap:1.5rem;
-}
-.trust-badge{
-    padding:.6rem 1.2rem;
-    border-radius:12px;
-    background:rgba(255,255,255,.1);
-    border:1px solid rgba(255,255,255,.2);
-    color:rgba(255,255,255,.85);
-    font-size:.85rem;
-    font-weight:700;
-}
-.footer-legal{
-    display:flex;
-    gap:1.5rem;
-}
-.footer-legal a{
-    color:rgba(255,255,255,.7);
-    font-size:.88rem;
-}
-.footer-legal a:hover{
-    color:white;
-}
-
-.footer-bottom{
-    max-width:1400px;
-    margin:auto;
-    padding-top:2rem;
-    border-top:1px solid rgba(255,255,255,.15);
-    text-align:center;
-    color:rgba(255,255,255,.6);
-    font-size:.9rem;
-}
-.footer-emergency{
-    max-width:1400px;
-    margin:auto;
-    padding:2rem 0;
-    border-top:1px solid rgba(255,255,255,.15);
-    text-align:center;
-}
-.footer-emergency p{
-    color:rgba(255,255,255,.7);
-    margin-bottom:.5rem;
-}
-.footer-emergency strong{
-    color:var(--gold);
-    font-size:1.1rem;
+    flex-wrap:wrap;
 }
 
 /* ===== RESPONSIVE ===== */
-@media(max-width:1080px){
-    .split{grid-template-columns:1fr;gap:3rem}
+@media(max-width:1100px){
     .faq-nav{grid-template-columns:repeat(2,1fr)}
-    .footer-grid{grid-template-columns:repeat(2,1fr)}
-    .sitemap-grid{grid-template-columns:repeat(2,1fr)}
-}
-
-@media(max-width:900px){
-    .header-container{flex-direction:column;gap:1.5rem}
-    .header-right{width:100%;flex-direction:column;gap:1.5rem}
-    .primary-nav{width:100%;justify-content:center;flex-wrap:wrap;gap:1rem}
-    .header-cta{width:100%;justify-content:center}
 }
 
 @media(max-width:760px){
-    .topbar{padding:.6rem 1rem;font-size:.85rem}
-    .header-container{padding:.8rem 1rem}
-    .logo img{width:56px;height:56px}
     .hero{min-height:400px}
     .hero-inner{padding:4rem 0 3rem}
     .section{padding:4.5rem 1.2rem}
     .faq-nav{grid-template-columns:1fr}
     .cta-card{padding:2.5rem 1.5rem}
-    .footer-grid{grid-template-columns:1fr}
-    .sitemap-grid{grid-template-columns:1fr}
-    .footer-trust{flex-direction:column;text-align:center}
-    .trust-badges,.footer-legal{flex-direction:column;align-items:center}
+    .hero-actions{flex-direction:column}
+    .hero-actions .btn{width:100%}
+    .cta-actions{flex-direction:column}
+    .cta-actions .btn{width:100%}
 }
 </style>
 
@@ -796,6 +478,7 @@ footer{
     },
     {
       "@type":"BreadcrumbList",
+      "@id":"https://dmhiop.com/faq.html#breadcrumb",
       "itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://dmhiop.com/"},
         {"@type":"ListItem","position":2,"name":"FAQ","item":"https://dmhiop.com/faq.html"}
@@ -808,58 +491,11 @@ footer{
 
 <body>
 
-<div class="topbar">
-<div class="topbar-inner">Hope. Healing. Recovery. Every Day.</div>
-</div>
+<!-- Virtual IOP Promo Banner -->
+<dmh-viop-promo></dmh-viop-promo>
 
-<header>
-<div class="header-container">
-<a class="logo" href="/index.html" aria-label="Desert Mountain Healing IOP - Home">
-<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
-<span>Desert Mountain Healing IOP</span>
-</a>
-
-<div class="header-right">
-<nav class="primary-nav" aria-label="Main navigation">
-<a class="nav-link" href="/index.html">Home</a>
-
-<div class="nav-item">
-<button class="nav-button" aria-haspopup="true" aria-expanded="false">Treatment</button>
-<div class="dropdown">
-<a href="/iop-benefits.html">IOP Benefits</a>
-<a href="/mat.html">Medication-Assisted Treatment</a>
-<a href="/medical-detox-assistance.html">Medical Detox Assistance</a>
-<a href="/reliable-substance-abuse-treatments.html">All Services</a>
-</div>
-</div>
-
-<div class="nav-item">
-<button class="nav-button" aria-haspopup="true" aria-expanded="false">About Us</button>
-<div class="dropdown">
-<a href="/team.html">Our Team</a>
-<a href="/reviews.html">Client Reviews</a>
-<a href="/faq.html">FAQ</a>
-<a href="/blog.html">Blog</a>
-</div>
-</div>
-
-<div class="nav-item">
-<button class="nav-button" aria-haspopup="true" aria-expanded="false">Client Resources</button>
-<div class="dropdown">
-<a href="/client-app.html">Recovery Portal</a>
-<a href="/insurance-verification.html">Insurance Verification</a>
-<a href="/contact-us.html">Contact Us</a>
-</div>
-</div>
-</nav>
-
-<div class="header-cta">
-<a class="btn-header-primary" href="/insurance-verification.html">Verify Insurance</a>
-<a class="btn-header-secondary" href="tel:+15052700840">Call (505) 270-0840</a>
-</div>
-</div>
-</div>
-</header>
+<!-- Header + Navigation Component -->
+<dmh-header-nav></dmh-header-nav>
 
 <section class="hero">
 <div class="container">
@@ -1022,45 +658,54 @@ footer{
 <ul>
 <li>Depression</li>
 <li>Anxiety disorders</li>
-<li>Post-Traumatic Stress Disorder (PTSD)</li>
+<li>PTSD and trauma-related conditions</li>
 <li>Bipolar disorder</li>
-<li>Other mood and behavioral health conditions</li>
+<li>Personality disorders</li>
 </ul>
-<p>Treating both conditions simultaneously is essential for lasting recovery. Our integrated approach addresses the whole person, not just the addiction.</p>
+<p>Treating both conditions simultaneously leads to better long-term outcomes and reduces the risk of relapse.</p>
 </div>
 </details>
 
 <details>
-<summary>What is the schedule for IOP sessions?</summary>
+<summary>What is the daily schedule like?</summary>
 <div class="faq-answer">
-<p>We offer <strong>flexible morning and evening programs</strong> to accommodate work, school, and family responsibilities:</p>
-<p><strong>Morning Program:</strong> Ideal for clients who work evenings or have afternoon commitments</p>
-<p><strong>Evening Program:</strong> Perfect for clients who work or attend school during the day</p>
-<p>Both programs run <strong>Monday through Friday</strong> and provide the same high-quality clinical care. Sessions typically include group therapy, individual counseling, and recovery education.</p>
-<p>The specific schedule will be discussed during your assessment based on your needs and availability.</p>
-</div>
-</details>
-
-<details>
-<summary>Do you offer family support?</summary>
-<div class="faq-answer">
-<p>Yes! Family involvement is encouraged, and we provide education and support resources to help loved ones understand addiction and recovery.</p>
-<p>When appropriate, families can receive:</p>
+<p>We offer flexible scheduling with both <strong>morning and evening IOP sessions</strong> to fit your life.</p>
+<p><strong>Typical weekly schedule:</strong></p>
 <ul>
-<li>Education about addiction and recovery</li>
-<li>Communication strategies and boundary-setting skills</li>
-<li>Support for understanding the treatment process</li>
-<li>Resources for family members' own well-being</li>
+<li><strong>Monday, Wednesday, Friday:</strong> Group therapy and recovery education sessions</li>
+<li><strong>Tuesday or Thursday:</strong> Individual counseling and treatment planning</li>
+<li><strong>Case management and MAT appointments:</strong> Scheduled as needed throughout the week</li>
 </ul>
-<p>Healthy family relationships can be a powerful source of support during recovery.</p>
+<p>Each session lasts approximately 3 hours. Your exact schedule will be personalized based on your treatment plan and clinical needs.</p>
 </div>
 </details>
 
 <details>
-<summary>Can I work or go to school while in IOP?</summary>
+<summary>Do you offer Medication-Assisted Treatment (MAT)?</summary>
 <div class="faq-answer">
-<p>Absolutely! One of the main benefits of IOP is that you can continue working, attending school, or caring for family while receiving treatment.</p>
-<p>Our flexible morning and evening scheduling is specifically designed to help you balance recovery with your daily responsibilities. Many clients maintain employment, attend classes, or care for children throughout the program.</p>
+<p>Yes! We provide <strong>Medication-Assisted Treatment (MAT)</strong> for individuals with opioid or alcohol use disorders when clinically appropriate.</p>
+<p>MAT combines FDA-approved medications (such as buprenorphine, naltrexone, or methadone) with counseling and behavioral therapies. This integrated approach:</p>
+<ul>
+<li>Reduces cravings and withdrawal symptoms</li>
+<li>Increases treatment retention and success rates</li>
+<li>Decreases the risk of relapse and overdose</li>
+<li>Improves overall quality of life and daily functioning</li>
+</ul>
+<p><a href="/mat.html">Learn more about our MAT program</a></p>
+</div>
+</details>
+
+<details>
+<summary>Is family involvement encouraged?</summary>
+<div class="faq-answer">
+<p>Absolutely! Family support can play an important role in long-term recovery. We offer:</p>
+<ul>
+<li><strong>Family education sessions</strong> to help loved ones understand addiction and recovery</li>
+<li><strong>Communication skills training</strong> to rebuild trust and healthy relationships</li>
+<li><strong>Family therapy</strong> when appropriate and beneficial to your treatment goals</li>
+<li><strong>Support resources</strong> for family members affected by a loved one's substance use</li>
+</ul>
+<p>While family involvement is encouraged, it's not required. Your treatment plan will be tailored to your individual needs and circumstances.</p>
 </div>
 </details>
 </div>
@@ -1072,54 +717,71 @@ footer{
 <details>
 <summary>Do you accept insurance?</summary>
 <div class="faq-answer">
-<p>Absolutely! We accept most major insurance plans, including:</p>
+<p>Yes! We accept most major insurance plans, including:</p>
 <ul>
-<li>Medicaid (New Mexico)</li>
-<li>Commercial insurance providers</li>
-<li>PPO and HMO plans</li>
-<li>Employer-sponsored health insurance</li>
+<li>Medicaid (New Mexico Centennial Care)</li>
+<li>Blue Cross Blue Shield</li>
+<li>United Healthcare</li>
+<li>Aetna</li>
+<li>Cigna</li>
+<li>Humana</li>
+<li>And many other commercial insurance providers</li>
 </ul>
-<p><a href="tel:+15052700840">Contact us at (505) 270-0840</a> or <a href="/insurance-verification.html">verify your insurance online</a> to understand your coverage and benefits.</p>
+<p><strong>We verify your insurance benefits at no cost</strong> before you begin treatment. <a href="/insurance-verification.html">Click here to verify your coverage</a> or call us at <a href="tel:+15052700840">(505) 270-0840</a>.</p>
 </div>
 </details>
 
 <details>
-<summary>How can I verify my insurance coverage?</summary>
+<summary>How much does treatment cost?</summary>
 <div class="faq-answer">
-<p>You can verify your insurance coverage in two ways:</p>
-<p><strong>1. Call us directly:</strong> <a href="tel:+15052700840">(505) 270-0840</a><br/>Our team will review your benefits and help you understand your coverage options.</p>
-<p><strong>2. Online verification:</strong> <a href="/insurance-verification.html">Complete our online insurance verification form</a><br/>We'll contact you with details about your coverage, copays, deductibles, and out-of-pocket costs.</p>
-<p><strong>Important:</strong> Insurance verification does not guarantee payment or authorization, but it helps you understand your financial responsibility before beginning treatment.</p>
+<p>The cost of treatment varies depending on:</p>
+<ul>
+<li>Your insurance plan and coverage level</li>
+<li>Deductibles, copayments, and coinsurance requirements</li>
+<li>Treatment duration and services needed</li>
+<li>Whether you participate in additional services like MAT or case management</li>
+</ul>
+<p>Our admissions team will provide a <strong>clear, upfront cost estimate</strong> after verifying your insurance benefits. We work with most major insurance providers to maximize your coverage and minimize out-of-pocket expenses.</p>
+<p>If you have questions about costs or payment options, <a href="/contact-us.html">contact our admissions team</a>.</p>
 </div>
 </details>
 
 <details>
 <summary>What if I don't have insurance?</summary>
 <div class="faq-answer">
-<p>We want to help everyone who needs treatment, regardless of insurance status. Options include:</p>
-<p><strong>Recovery NM:</strong> A public charity created to help New Mexico residents access substance use treatment when insurance or personal finances do not cover the full cost. Scholarship availability depends on funding, eligibility, program requirements, and treatment-center participation.</p>
-<p><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Visit Recovery NM to learn more</a></p>
-<p><a href="/contact-us.html">Contact our team</a> to discuss payment options, sliding-scale fees, or other financial assistance that may be available.</p>
+<p>If you don't have insurance, we can help you explore:</p>
+<ul>
+<li><strong>Medicaid enrollment</strong> – Our team can assist with application support and eligibility questions</li>
+<li><strong>Self-pay options</strong> – We offer competitive self-pay rates for individuals without insurance coverage</li>
+<li><strong>Payment plans</strong> – Flexible payment arrangements may be available based on individual circumstances</li>
+<li><strong>Community resources</strong> – We can connect you with local scholarships, grants, and financial assistance programs</li>
+</ul>
+<p>Don't let cost be a barrier to getting help. <a href="tel:+15052700840">Call us at (505) 270-0840</a> to discuss your options.</p>
 </div>
 </details>
 
 <details>
-<summary>Is there a waitlist?</summary>
+<summary>How do I verify my insurance?</summary>
 <div class="faq-answer">
-<p>Availability depends on current demand, but we strive to offer prompt admissions for those who need treatment.</p>
-<p><a href="tel:+15052700840">Contact us at (505) 270-0840</a> to check current openings and schedule an assessment. We understand that timing matters in recovery, and we work to connect you with care as quickly as possible.</p>
+<p>Verifying your insurance is quick and easy:</p>
+<p><strong>Option 1: Online</strong><br/><a href="/insurance-verification.html">Fill out our secure online verification form</a>. We'll review your coverage and contact you within 24 hours with your benefits information.</p>
+<p><strong>Option 2: Phone</strong><br/>Call our admissions team at <a href="tel:+15052700840">(505) 270-0840</a>. Have your insurance card handy, and we can verify your benefits while you're on the phone.</p>
+<p>We'll provide a clear explanation of:</p>
+<ul>
+<li>Your coverage level and benefits</li>
+<li>Expected out-of-pocket costs</li>
+<li>Authorization requirements</li>
+<li>Next steps to begin treatment</li>
+</ul>
 </div>
 </details>
 
 <details>
-<summary>How do I enroll in the program?</summary>
+<summary>Do I need a referral to start treatment?</summary>
 <div class="faq-answer">
-<p>Enrollment is a simple process:</p>
-<p><strong>Step 1:</strong> <a href="tel:+15052700840">Call us at (505) 270-0840</a> for a confidential consultation</p>
-<p><strong>Step 2:</strong> Complete an individualized assessment to determine the best treatment plan for your needs</p>
-<p><strong>Step 3:</strong> Verify insurance coverage and discuss financial arrangements</p>
-<p><strong>Step 4:</strong> Begin your journey to recovery with personalized support from our compassionate team</p>
-<p>You can also <a href="/contact-us.html">contact us online</a> or <a href="/insurance-verification.html">verify your insurance</a> to get started.</p>
+<p>Most insurance plans <strong>do not require a referral</strong> for outpatient addiction treatment. However, some plans may require prior authorization before treatment begins.</p>
+<p>Our admissions team will handle all authorization and approval processes with your insurance company. You can contact us directly to start the admissions process—no referral necessary.</p>
+<p>If you're unsure about your plan's requirements, <a href="/insurance-verification.html">verify your insurance online</a> or <a href="tel:+15052700840">call us at (505) 270-0840</a>.</p>
 </div>
 </details>
 </div>
@@ -1129,105 +791,82 @@ footer{
 <h2 class="faq-category-title">🚀 Getting Started</h2>
 
 <details>
+<summary>How do I get started with treatment?</summary>
+<div class="faq-answer">
+<p>Starting treatment is simple:</p>
+<p><strong>Step 1: Contact Us</strong><br/><a href="tel:+15052700840">Call (505) 270-0840</a>, <a href="/contact-us.html">fill out our contact form</a>, or <a href="/insurance-verification.html">verify your insurance online</a>.</p>
+<p><strong>Step 2: Complete an Assessment</strong><br/>We'll schedule a confidential assessment to understand your needs, goals, and the best level of care for your situation.</p>
+<p><strong>Step 3: Verify Insurance & Finalize Admission</strong><br/>Our team will verify your insurance benefits, answer any questions, and help you schedule your first session.</p>
+<p><strong>Step 4: Begin Your Recovery Journey</strong><br/>Attend your first IOP session and start building the foundation for lasting recovery.</p>
+</div>
+</details>
+
+<details>
+<summary>Can I start treatment immediately?</summary>
+<div class="faq-answer">
+<p>In many cases, yes! We understand that waiting for treatment can be difficult, and we work to minimize barriers to care.</p>
+<p>Once your insurance is verified (or payment arrangements are made) and you've completed an initial assessment, we can often schedule your first IOP session within a few days.</p>
+<p><a href="tel:+15052700840">Call us at (505) 270-0840</a> to discuss same-day or next-day admissions if you need to start treatment urgently.</p>
+</div>
+</details>
+
+<details>
+<summary>Is treatment confidential?</summary>
+<div class="faq-answer">
+<p>Yes. Your privacy is protected by federal and state confidentiality laws, including:</p>
+<ul>
+<li><strong>HIPAA</strong> (Health Insurance Portability and Accountability Act)</li>
+<li><strong>42 CFR Part 2</strong> (Federal regulations protecting substance use treatment records)</li>
+</ul>
+<p>We do not disclose any information about your treatment without your written consent, except in specific circumstances required by law (such as imminent danger to yourself or others).</p>
+<p>All client records, communications, and treatment information are kept strictly confidential.</p>
+</div>
+</details>
+
+<details>
 <summary>What should I bring to my first session?</summary>
 <div class="faq-answer">
-<p>Please bring:</p>
+<p>For your first IOP session, please bring:</p>
 <ul>
-<li>✔ A valid photo ID (driver's license, state ID, or passport)</li>
-<li>✔ Insurance information (insurance card and policy details)</li>
-<li>✔ A list of current medications (including dosage and prescribing doctor)</li>
-<li>✔ Any relevant medical or psychiatric records (if available)</li>
-<li>✔ An open mind and willingness to heal and grow</li>
+<li><strong>Photo ID</strong> (driver's license or state ID)</li>
+<li><strong>Insurance card</strong> (if applicable)</li>
+<li><strong>Any relevant medical records</strong> or medication lists</li>
+<li><strong>Completed intake paperwork</strong> (if provided ahead of time)</li>
+<li><strong>An open mind and willingness to participate</strong></li>
 </ul>
-<p>If you have questions about what to bring, our team will provide specific instructions when you schedule your first appointment.</p>
+<p>You don't need to bring anything else. Just come ready to take the first step toward recovery.</p>
 </div>
 </details>
 
 <details>
-<summary>What happens during the assessment?</summary>
+<summary>What if I relapse during or after treatment?</summary>
 <div class="faq-answer">
-<p>The assessment is a confidential conversation designed to understand your needs and create an individualized treatment plan.</p>
-<p><strong>During the assessment, we'll discuss:</strong></p>
+<p>Relapse is sometimes part of the recovery journey—and it doesn't mean you've failed. If you experience a setback:</p>
 <ul>
-<li>Your substance use history and current concerns</li>
-<li>Medical and mental health history</li>
-<li>Previous treatment experiences (if any)</li>
-<li>Current life circumstances, responsibilities, and support system</li>
-<li>Recovery goals and what you hope to achieve</li>
-<li>Appropriate level of care and treatment recommendations</li>
+<li><strong>Reach out immediately</strong> – Contact our team right away so we can provide support and adjust your treatment plan</li>
+<li><strong>Re-engage with treatment</strong> – We welcome clients back without judgment and work with you to identify what led to the relapse</li>
+<li><strong>Learn and grow</strong> – Each setback is an opportunity to strengthen coping skills and build resilience</li>
 </ul>
-<p>The assessment is not judgmental. Our goal is to understand your unique situation and provide the support you need.</p>
+<p>Our goal is to support you through every stage of recovery—including challenges. You're not alone, and help is always available.</p>
 </div>
 </details>
 
 <details>
-<summary>What if I've tried treatment before and relapsed?</summary>
+<summary>Do you offer continuing care after IOP?</summary>
 <div class="faq-answer">
-<p>Relapse is a common part of recovery for many people, and <strong>you will be welcomed back without judgment.</strong></p>
-<p>Our team understands that recovery isn't always linear. What matters most is that you're taking the next right step forward. We'll help you:</p>
+<p>Yes! We believe recovery is a lifelong journey, and ongoing support is essential for lasting success. After completing IOP, we offer:</p>
 <ul>
-<li>Understand what happened and what you can learn from the experience</li>
-<li>Strengthen your recovery plan with new strategies and support</li>
-<li>Connect with appropriate ongoing care (IOP, MAT, counseling, case management)</li>
-<li>Address any new or unmet needs that may have contributed to relapse</li>
+<li><strong>Step-down outpatient counseling</strong> for continued therapy and relapse prevention</li>
+<li><strong>Medication management</strong> for clients on MAT</li>
+<li><strong>Alumni support groups</strong> and peer connection opportunities</li>
+<li><strong>Case management</strong> to help with employment, housing, benefits, and other practical needs</li>
+<li><strong>Referrals to community resources</strong> like 12-step programs, SMART Recovery, and peer support networks</li>
 </ul>
-<p>Every person's recovery journey is different, and we're here to support you wherever you are in that process.</p>
-</div>
-</details>
-
-<details>
-<summary>Will my treatment information be kept confidential?</summary>
-<div class="faq-answer">
-<p>Yes. Your privacy is protected by federal law under HIPAA (Health Insurance Portability and Accountability Act) and 42 CFR Part 2 (federal confidentiality regulations for substance use treatment).</p>
-<p>We will not share your treatment information with anyone without your written consent, except in specific situations required by law (such as immediate safety concerns or court orders).</p>
-<p>Your confidentiality and dignity are always respected at Desert Mountain Healing IOP.</p>
-</div>
-</details>
-
-<details>
-<summary>Can I visit the facility before enrolling?</summary>
-<div class="faq-answer">
-<p>Yes! We welcome prospective clients and their families to visit our facility and meet our team.</p>
-<p><a href="tel:+15052700840">Call us at (505) 270-0840</a> to schedule a tour or to ask any questions about our program, environment, and treatment approach.</p>
-<p>Seeing the facility in person can help you feel more comfortable and confident about taking the next step in your recovery journey.</p>
-</div>
-</details>
-
-<details>
-<summary>How soon can I start treatment?</summary>
-<div class="faq-answer">
-<p>We understand that timing matters in recovery. In many cases, you can begin treatment within a few days of your initial contact, depending on:</p>
-<ul>
-<li>Current program availability</li>
-<li>Completion of the assessment process</li>
-<li>Insurance verification and authorization</li>
-<li>Your personal readiness and schedule</li>
-</ul>
-<p><a href="tel:+15052700840">Call us today at (505) 270-0840</a> to get started as soon as possible.</p>
+<p>We're here for you long after you complete our program.</p>
 </div>
 </details>
 </div>
 
-</div>
-</section>
-
-<section class="section section-soft">
-<div class="container split">
-<div class="reveal">
-<span class="eyebrow">Our philosophy</span>
-<h2>Treatment Built on Compassion and Respect</h2>
-<p>Desert Mountain Healing IOP was founded by Sean Roberts and Gary Gamboa because they believed addiction treatment could be delivered with greater compassion, integrity, accountability, and hope.</p>
-<p>After experiencing recovery firsthand, they recognized that lasting recovery requires more than simply treating addiction. It requires hope, accountability, evidence-based care, and a treatment team that truly sees the person behind the diagnosis.</p>
-<p>That belief became the foundation of Desert Mountain Healing IOP.</p>
-<div class="quote">Today, every client who walks through our doors is treated as an individual—not a number. We believe recovery is possible for everyone, and our mission is to provide compassionate, evidence-based treatment that empowers people to rebuild their lives.</div>
-</div>
-
-<div class="glass-card reveal">
-<h3>You Will Be Welcomed Here</h3>
-<p>Whether you're seeking help for the first time or returning after a relapse, you will be welcomed without judgment.</p>
-<p>Our team understands the courage it takes to ask for help. We know that recovery isn't linear, that setbacks happen, and that what matters most is taking the next right step forward.</p>
-<p style="margin-bottom:0"><strong>Recovery begins with hope, grows through connection, and succeeds through compassionate care.</strong></p>
-</div>
 </div>
 </section>
 
@@ -1246,114 +885,11 @@ footer{
 
 </main>
 
-<footer>
-<div class="footer-grid">
-<div class="footer-brand">
-<img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
-<p>Compassionate, evidence-based outpatient addiction treatment serving Rio Rancho and Albuquerque, New Mexico.</p>
-<p><strong>Hope. Healing. Recovery. Every Day.</strong></p>
-</div>
+<!-- Footer Component -->
+<dmh-footer></dmh-footer>
 
-<div class="footer-section">
-<h4>Contact</h4>
-<div class="footer-contact">
-<p><strong>Phone:</strong><br/><a href="tel:+15052700840">(505) 270-0840</a></p>
-<p><strong>Address:</strong><br/>3301 Southern Blvd SE, Suite 105<br/>Rio Rancho, NM 87124</p>
-<p><strong>Hours:</strong><br/>Mon-Fri: 8:00 AM - 8:00 PM<br/>Sat: By appointment</p>
-</div>
-</div>
-
-<div class="footer-section">
-<h4>Quick Links</h4>
-<ul class="footer-links">
-<li><a href="/index.html">Home</a></li>
-<li><a href="/iop-benefits.html">IOP Benefits</a></li>
-<li><a href="/mat.html">Medication-Assisted Treatment</a></li>
-<li><a href="/reliable-substance-abuse-treatments.html">All Services</a></li>
-<li><a href="/team.html">Our Team</a></li>
-<li><a href="/reviews.html">Reviews</a></li>
-</ul>
-</div>
-
-<div class="footer-section">
-<h4>Resources</h4>
-<ul class="footer-links">
-<li><a href="/insurance-verification.html">Insurance Verification</a></li>
-<li><a href="/client-app.html">Recovery Portal</a></li>
-<li><a href="/faq.html">FAQ</a></li>
-<li><a href="/blog.html">Blog</a></li>
-<li><a href="/contact-us.html">Contact Us</a></li>
-<li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM</a></li>
-</ul>
-</div>
-</div>
-
-<div class="footer-sitemap">
-<h4>Complete Site Directory</h4>
-<div class="sitemap-grid">
-<div class="sitemap-section">
-<strong style="color:var(--teal-light);display:block;margin-bottom:.7rem">Treatment Programs</strong>
-<ul>
-<li><a href="/iop-benefits.html">IOP Benefits</a></li>
-<li><a href="/mat.html">Medication-Assisted Treatment</a></li>
-<li><a href="/medical-detox-assistance.html">Medical Detox Assistance</a></li>
-<li><a href="/reliable-substance-abuse-treatments.html">All Services</a></li>
-</ul>
-</div>
-
-<div class="sitemap-section">
-<strong style="color:var(--teal-light);display:block;margin-bottom:.7rem">About Us</strong>
-<ul>
-<li><a href="/team.html">Our Team</a></li>
-<li><a href="/reviews.html">Client Reviews</a></li>
-<li><a href="/faq.html">Frequently Asked Questions</a></li>
-<li><a href="/blog.html">Recovery Blog</a></li>
-</ul>
-</div>
-
-<div class="sitemap-section">
-<strong style="color:var(--teal-light);display:block;margin-bottom:.7rem">Client Resources</strong>
-<ul>
-<li><a href="/insurance-verification.html">Insurance Verification</a></li>
-<li><a href="/client-app.html">Recovery Portal</a></li>
-<li><a href="/contact-us.html">Contact Us</a></li>
-<li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM Scholarships</a></li>
-</ul>
-</div>
-
-<div class="sitemap-section">
-<strong style="color:var(--teal-light);display:block;margin-bottom:.7rem">Service Area</strong>
-<ul>
-<li><a href="/index.html">Rio Rancho Treatment</a></li>
-<li><a href="/index.html">Albuquerque IOP</a></li>
-<li><a href="/index.html">New Mexico Recovery</a></li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="footer-trust">
-<div class="trust-badges">
-<div class="trust-badge">🏥 Licensed Treatment Provider</div>
-<div class="trust-badge">✓ Insurance Accepted</div>
-<div class="trust-badge">🌟 Experienced Team</div>
-</div>
-<div class="footer-legal">
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms-of-service.html">Terms of Service</a>
-<a href="/hipaa-notice.html">HIPAA Notice</a>
-</div>
-</div>
-
-<div class="footer-emergency">
-<p><strong>Crisis Support Available 24/7</strong></p>
-<p>If you or someone you know is in crisis, call <strong>988</strong> (Suicide & Crisis Lifeline) or <strong>911</strong> for immediate help.</p>
-</div>
-
-<div class="footer-bottom">
-<p>© 2026 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
-</div>
-</footer>
+<!-- Component Loader Script -->
+<script src="https://dmhiop.com/components/dmh-components.js"></script>
 
 </body>
 </html>
