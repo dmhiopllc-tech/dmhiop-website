@@ -9,6 +9,7 @@
     <meta name="description" content="Professional individual counseling at Desert Mountain Healing IOP. Personalized therapy for IOP clients, outpatient clients, and alumni. Evidence-based treatment in Rio Rancho, NM.">
     <meta name="keywords" content="individual counseling Rio Rancho, addiction counseling, therapy Albuquerque, IOP counseling, outpatient therapy, recovery counseling, substance abuse therapy, mental health counseling">
     <meta name="author" content="Desert Mountain Healing IOP">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://dmhiop.com/individual-counseling">
     
     <!-- Open Graph Meta Tags -->
@@ -18,11 +19,46 @@
     <meta property="og:url" content="https://dmhiop.com/individual-counseling">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Desert Mountain Healing IOP">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta property="og:image" content="https://dmhiop.com/__static/images/og/dmh-iop-og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Individual Counseling | Desert Mountain Healing IOP">
+    <meta name="twitter:description" content="Personalized individual counseling for your recovery journey">
+    <meta name="twitter:image" content="https://dmhiop.com/__static/images/og/dmh-iop-og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/__static/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/__static/images/favicon/apple-touch-icon.png">
+
+    <!-- Async Font Loading (Open Sans + Merriweather) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"></noscript>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Desert Mountain Healing IOP",
+      "url": "https://dmhiop.com/",
+      "telephone": "+15052700840",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3301 Southern Blvd SE, Suite 105",
+        "addressLocality": "Rio Rancho",
+        "addressRegion": "NM",
+        "postalCode": "87124",
+        "addressCountry": "US"
+      },
+      "availableService": {
+        "@type": "MedicalProcedure",
+        "name": "Individual Counseling",
+        "description": "One-on-one personalized therapy for IOP clients, outpatient clients, and alumni with licensed therapists"
+      }
+    }
+    </script>
     
     <style>
         :root {
@@ -52,196 +88,6 @@
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Merriweather', serif;
-        }
-
-        /* Topbar */
-        .topbar {
-            background: var(--teal-deep);
-            color: var(--white);
-            text-align: center;
-            padding: 0.75rem 1rem;
-            font-size: 0.95rem;
-        }
-
-        .topbar a {
-            color: var(--gold);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .topbar a:hover {
-            text-decoration: underline;
-        }
-
-        /* Header */
-        header {
-            background: var(--white);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-            color: var(--teal-deep);
-        }
-
-        .logo img {
-            height: 80px;
-            width: auto;
-        }
-
-        .logo span {
-            font-family: 'Merriweather', serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--teal-deep);
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .primary-nav {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 0;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: var(--teal);
-        }
-
-        .nav-item {
-            position: relative;
-        }
-
-        .nav-button {
-            background: none;
-            border: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-size: 1rem;
-            font-family: 'Open Sans', sans-serif;
-            padding: 0.5rem 0;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            transition: color 0.3s;
-        }
-
-        .nav-button:after {
-            content: '▾';
-            font-size: 0.8rem;
-        }
-
-        .nav-button:hover {
-            color: var(--teal);
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: var(--white);
-            min-width: 220px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            border-radius: 4px;
-            padding: 0.5rem 0;
-            margin-top: 0.5rem;
-            z-index: 1001;
-        }
-        
-        .dropdown::before {
-            content: '';
-            position: absolute;
-            top: -0.5rem;
-            left: 0;
-            right: 0;
-            height: 0.5rem;
-        }
-
-        .nav-item:hover .dropdown {
-            display: block;
-        }
-
-        .dropdown a {
-            display: block;
-            padding: 0.75rem 1.5rem;
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: background 0.2s, color 0.2s;
-        }
-
-        .dropdown a:hover {
-            background: var(--mist);
-            color: var(--teal);
-        }
-
-        /* Header CTA */
-        .header-cta {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .btn-header-primary {
-            padding: 0.65rem 1.2rem;
-            border-radius: 999px;
-            background: var(--teal);
-            color: var(--white);
-            font-weight: 700;
-            font-size: 0.92rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .btn-header-primary:hover {
-            background: var(--teal-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-header-secondary {
-            padding: 0.65rem 1.2rem;
-            border-radius: 999px;
-            border: 2px solid var(--gold);
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 0.92rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .btn-header-secondary:hover {
-            background: var(--gold);
-            color: var(--white);
         }
 
         /* Hero Section */
@@ -449,43 +295,49 @@
             line-height: 1.7;
         }
 
-        /* How It Works Section */
-        .how-section {
+        /* Process Steps */
+        .process-section {
             padding: 4rem 2rem;
             background: var(--mist);
         }
 
-        .how-section h2 {
+        .process-section h2 {
             text-align: center;
             color: var(--teal-deep);
             margin-bottom: 3rem;
             font-size: 2.5rem;
         }
 
-        .steps-container {
-            max-width: 900px;
+        .process-steps {
+            max-width: 1000px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
         .step {
             display: flex;
+            align-items: flex-start;
             gap: 2rem;
-            margin-bottom: 3rem;
-            align-items: start;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         .step-number {
-            min-width: 60px;
+            flex-shrink: 0;
+            width: 60px;
             height: 60px;
-            background: var(--gold);
+            background: linear-gradient(135deg, var(--teal), var(--teal-dark));
             color: var(--white);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 1.75rem;
             font-weight: 700;
-            font-family: 'Merriweather', serif;
         }
 
         .step-content h3 {
@@ -497,12 +349,11 @@
         .step-content p {
             color: var(--text-light);
             line-height: 1.7;
-            font-size: 1.05rem;
         }
 
         /* CTA Section */
         .cta-section {
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
             background: linear-gradient(135deg, var(--teal-deep) 0%, var(--teal-dark) 100%);
             color: var(--white);
             text-align: center;
@@ -516,10 +367,9 @@
 
         .cta-section p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
         }
 
         .cta-buttons {
@@ -529,190 +379,40 @@
             flex-wrap: wrap;
         }
 
-        /* Footer */
-        footer {
-            background: var(--teal-deep);
-            color: var(--white);
-        }
-
-        .footer-main {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 4rem 2rem 2rem;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3rem;
-        }
-
-        .footer-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            color: var(--gold);
-        }
-
-        .footer-section p {
-            line-height: 1.8;
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 1rem;
-        }
-
-        .footer-section a {
-            color: rgba(255,255,255,0.85);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-section a:hover {
-            color: var(--gold);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-brand {
-            grid-column: span 1;
-        }
-
-        .footer-brand img {
-            width: 140px;
-            margin-bottom: 1.5rem;
-        }
-
-        .sitemap-section {
-            background: rgba(0,0,0,0.2);
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-
-        .sitemap-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-
-        .sitemap-column h4 {
-            color: var(--gold);
+        .btn-cta {
+            padding: 1rem 2rem;
+            border-radius: 8px;
             font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .sitemap-column ul {
-            list-style: none;
-        }
-
-        .sitemap-column li {
-            margin-bottom: 0.5rem;
-        }
-
-        .sitemap-column a {
-            color: rgba(255,255,255,0.85);
+            font-weight: 700;
             text-decoration: none;
-            transition: color 0.2s;
+            transition: all 0.3s ease;
         }
 
-        .sitemap-column a:hover {
-            color: var(--gold);
-        }
-
-        .trust-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            align-items: center;
-            padding: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .badge {
-            background: rgba(255,255,255,0.1);
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .footer-legal {
-            background: rgba(0,0,0,0.3);
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .legal-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .emergency-banner {
-            background: #dc3545;
+        .btn-cta-primary {
+            background: var(--gold);
             color: var(--white);
-            text-align: center;
-            padding: 1.5rem 2rem;
-            font-weight: 600;
         }
 
-        .emergency-banner a {
-            color: var(--white);
-            text-decoration: underline;
+        .btn-cta-primary:hover {
+            background: #d4710a;
+            transform: translateY(-2px);
         }
 
-        .footer-bottom {
-            text-align: center;
-            padding: 1.5rem 2rem;
-            background: rgba(0,0,0,0.4);
-            color: rgba(255,255,255,0.8);
-            font-size: 0.9rem;
+        .btn-cta-secondary {
+            background: var(--white);
+            color: var(--teal-dark);
         }
+
+        .btn-cta-secondary:hover {
+            background: var(--mist);
+            transform: translateY(-2px);
+        }
+
+        .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+        .reveal.visible{opacity:1;transform:none}
 
         /* Responsive Design */
-        @media (max-width: 1080px) {
-            .footer-main {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .sitemap-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
         @media (max-width: 900px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .header-right {
-                width: 100%;
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .primary-nav {
-                width: 100%;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .header-cta {
-                width: 100%;
-                justify-content: center;
-            }
-
             .step {
                 flex-direction: column;
                 text-align: center;
@@ -724,14 +424,6 @@
         }
 
         @media (max-width: 760px) {
-            .logo img {
-                height: 60px;
-            }
-
-            .logo span {
-                font-size: 1.1rem;
-            }
-
             .hero h1 {
                 font-size: 2rem;
             }
@@ -744,96 +436,37 @@
             .who-cards {
                 grid-template-columns: 1fr;
             }
+        }
 
-            .footer-main {
-                grid-template-columns: 1fr;
-            }
-
-            .sitemap-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-legal {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .legal-links {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
+        @media(prefers-reduced-motion:reduce){
+          html{scroll-behavior:auto}
+          *{transition:none!important}
+          .reveal{opacity:1;transform:none}
         }
     </style>
 </head>
 <body>
-    <!-- Topbar -->
-    <div class="topbar">
-        💬 Personalized Support for Your Recovery Journey | 📞 Call: <a href="tel:5052700840">(505) 270-0840</a>
-    </div>
+    <!-- V4 VIOP Promo Banner Component -->
+    <dmh-viop-promo></dmh-viop-promo>
 
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <a class='logo' href='/'>
-                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP Logo"/>
-                <span>Desert Mountain Healing IOP</span>
-            </a>
-
-            <div class="header-right">
-                <nav class="primary-nav">
-                    <a class='nav-link' href='/'>Home</a>
-
-                    <div class="nav-item">
-                        <button class="nav-button">Treatment</button>
-                        <div class="dropdown">
-                            <a href='/iop-benefits'>IOP Benefits</a>
-                            <a href='/mat'>Medication-Assisted Treatment</a>
-                            <a href='/reliable-substance-abuse-treatments'>Medical Detox Assistance</a>
-                            <a href='/reliable-substance-abuse-treatments'>All Services</a>
-                        </div>
-                    </div>
-
-                    <div class="nav-item">
-                        <button class="nav-button">About Us</button>
-                        <div class="dropdown">
-                            <a href='/team'>Our Team</a>
-                            <a href='/reviews'>Reviews</a>
-                            <a href='/faq'>FAQ</a>
-                            <a href='/blog'>Blog</a>
-                        </div>
-                    </div>
-
-                    <div class="nav-item">
-                        <button class="nav-button">Client Resources</button>
-                        <div class="dropdown">
-                            <a href='/client-app'>Recovery Portal</a>
-                            <a href='/insurance-verification'>Insurance Verification</a>
-                            <a href='/contact-us'>Contact Us</a>
-                        </div>
-                    </div>
-                </nav>
-
-                <div class="header-cta">
-                    <a class='btn-header-primary' href='/insurance-verification'>Verify Insurance</a>
-                    <a class="btn-header-secondary" href="tel:5052700840">Call (505) 270-0840</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- V4 Header Component -->
+    <dmh-header-nav></dmh-header-nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Individual Counseling</h1>
-        <p>One-on-one personalized therapy sessions tailored to your unique recovery needs. Professional support whenever you need it most.</p>
-        <div class="hero-cta">
-            <a href="/insurance-verification" class="btn-hero btn-hero-primary">Schedule a Session</a>
-            <a href="/contact-us" class="btn-hero btn-hero-secondary">Learn More</a>
+        <div>
+            <h1>Individual Counseling</h1>
+            <p>One-on-one personalized therapy sessions tailored to your unique recovery needs. Professional support whenever you need it most.</p>
+            <div class="hero-cta">
+                <a href="/insurance-verification" class="btn-hero btn-hero-primary">Schedule a Session</a>
+                <a href="/contact-us" class="btn-hero btn-hero-secondary">Learn More</a>
+            </div>
         </div>
     </section>
 
     <!-- Intro Section (Subtle 4 Questions) -->
     <section class="container">
-        <div class="intro-section">
+        <div class="intro-section reveal">
             <h2>Personalized Support for Your Journey</h2>
             <p>At Desert Mountain Healing IOP, we're a treatment center founded by people in recovery, for people seeking recovery. We understand that healing isn't one-size-fits-all—that's why we offer individual counseling as a cornerstone of our comprehensive care approach.</p>
             <p>Our licensed therapists provide evidence-based, compassionate one-on-one support because we believe every person deserves personalized attention on their path to wellness. Whether you're currently in our IOP or outpatient program, or you've completed treatment and need ongoing support, we're here for you.</p>
@@ -843,39 +476,39 @@
 
     <!-- Benefits Section -->
     <section class="benefits-section">
-        <h2>Benefits of Individual Counseling</h2>
+        <h2 class="reveal">Benefits of Individual Counseling</h2>
         <div class="benefits-grid">
-            <div class="benefit-card">
+            <div class="benefit-card reveal">
                 <div class="benefit-icon">🎯</div>
                 <h3>Personalized Treatment Plans</h3>
                 <p>Every session is tailored specifically to your goals, challenges, and progress. Your therapist works with you to create a customized roadmap for your recovery journey.</p>
             </div>
 
-            <div class="benefit-card">
+            <div class="benefit-card reveal">
                 <div class="benefit-icon">🔒</div>
                 <h3>Safe, Confidential Space</h3>
                 <p>Private one-on-one sessions provide a judgment-free environment where you can openly discuss your thoughts, feelings, and concerns with complete confidentiality.</p>
             </div>
 
-            <div class="benefit-card">
+            <div class="benefit-card reveal">
                 <div class="benefit-icon">🧠</div>
                 <h3>Evidence-Based Techniques</h3>
                 <p>Our therapists use proven therapeutic approaches including CBT, DBT, motivational interviewing, and trauma-informed care to support your healing.</p>
             </div>
 
-            <div class="benefit-card">
+            <div class="benefit-card reveal">
                 <div class="benefit-icon">⚡</div>
                 <h3>Flexible Scheduling</h3>
                 <p>Sessions scheduled around your life—whether you're in active treatment or need ongoing support after program completion. We work with your schedule.</p>
             </div>
 
-            <div class="benefit-card">
+            <div class="benefit-card reveal">
                 <div class="benefit-icon">💪</div>
                 <h3>Build Coping Skills</h3>
                 <p>Develop practical tools and strategies to manage triggers, cravings, stress, and challenging emotions in healthy, sustainable ways.</p>
             </div>
 
-            <div class="benefit-card">
+            <div class="benefit-card reveal">
                 <div class="benefit-icon">🌱</div>
                 <h3>Long-Term Support</h3>
                 <p>Recovery doesn't end when treatment does. Continue working with your therapist for months or years after completing our programs—we're here for the long haul.</p>
@@ -885,195 +518,101 @@
 
     <!-- Who It's For Section -->
     <section class="who-section">
-        <h2>Who Can Benefit from Individual Counseling?</h2>
+        <h2 class="reveal">Who Can Benefit from Individual Counseling?</h2>
         <div class="who-cards">
-            <div class="who-card">
+            <div class="who-card reveal">
                 <div class="who-card-icon">👥</div>
                 <h3>Current IOP Clients</h3>
                 <p>Supplement your group therapy with personalized one-on-one sessions to address specific issues and accelerate your progress.</p>
             </div>
 
-            <div class="who-card">
+            <div class="who-card reveal">
                 <div class="who-card-icon">🚶</div>
                 <h3>Outpatient Clients</h3>
                 <p>Receive dedicated individual support as part of your outpatient treatment plan, with sessions tailored to your schedule and needs.</p>
             </div>
 
-            <div class="who-card">
+            <div class="who-card reveal">
                 <div class="who-card-icon">🎓</div>
                 <h3>Program Alumni</h3>
-                <p>Continue your growth after completing treatment. Maintain momentum, navigate life's challenges, and prevent relapse with ongoing counseling support.</p>
+                <p>Continue your recovery journey with ongoing individual counseling after completing our IOP or outpatient programs—we're here for life.</p>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="how-section">
-        <h2>How Individual Counseling Works</h2>
-        <div class="steps-container">
-            <div class="step">
+    <!-- Process Section -->
+    <section class="process-section">
+        <h2 class="reveal">How It Works</h2>
+        <div class="process-steps">
+            <div class="step reveal">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <h3>Initial Assessment</h3>
-                    <p>Your first session focuses on understanding your history, current situation, goals, and challenges. Your therapist will work with you to develop a personalized treatment approach that fits your unique needs.</p>
+                    <h3>Schedule Your Session</h3>
+                    <p>Contact us to set up your first individual counseling appointment. We'll work with your schedule to find a time that fits your life.</p>
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step reveal">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3>Regular Sessions</h3>
-                    <p>Meet with your dedicated therapist weekly, bi-weekly, or at a frequency that works for you. Sessions typically last 50-60 minutes and provide focused time to work through challenges and build skills.</p>
+                    <h3>Meet Your Therapist</h3>
+                    <p>Your first session focuses on getting to know you, understanding your goals, and creating a safe, comfortable therapeutic relationship.</p>
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step reveal">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <h3>Skill Development</h3>
-                    <p>Learn and practice evidence-based coping strategies, relapse prevention techniques, emotional regulation skills, and healthy communication patterns that support long-term recovery.</p>
+                    <h3>Personalized Treatment</h3>
+                    <p>Each session is tailored to your unique needs, using evidence-based techniques to help you build skills, process emotions, and work toward your recovery goals.</p>
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step reveal">
                 <div class="step-number">4</div>
                 <div class="step-content">
-                    <h3>Ongoing Support</h3>
-                    <p>As you progress, your sessions evolve to meet your changing needs. Continue as long as you find value—whether that's weeks, months, or years. We're committed to your long-term success.</p>
+                    <h3>Ongoing Progress</h3>
+                    <p>Continue meeting regularly with your therapist, adjusting your treatment plan as you grow, heal, and face new challenges in your recovery journey.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
+    <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Ready to Take the Next Step?</h2>
-        <p>Individual counseling can be a powerful tool in your recovery journey. Our licensed therapists are here to support you with compassion, expertise, and personalized care.</p>
+        <h2>Ready to Start Individual Counseling?</h2>
+        <p>Take the next step in your recovery with personalized, professional support. Our licensed therapists are here to help you build the life you deserve.</p>
         <div class="cta-buttons">
-            <a href="/insurance-verification" class="btn-hero btn-hero-primary">Verify Insurance & Schedule</a>
-            <a href="tel:5052700840" class="btn-hero btn-hero-secondary">Call (505) 270-0840</a>
+            <a href="/insurance-verification" class="btn-cta btn-cta-primary">Verify Insurance & Schedule</a>
+            <a href="tel:5052700840" class="btn-cta btn-cta-secondary">Call (505) 270-0840</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <!-- Main Footer Content -->
-        <div class="footer-main">
-            <!-- Brand Section -->
-            <div class="footer-section footer-brand">
-                <img src="/dmh-logo (1).png" alt="Desert Mountain Healing IOP">
-                <p>Desert Mountain Healing IOP provides compassionate, evidence-based addiction treatment in Rio Rancho, New Mexico. Founded by people in recovery, for people seeking recovery.</p>
-            </div>
+    <!-- V4 Footer Component -->
+    <dmh-footer></dmh-footer>
 
-            <!-- Contact Section -->
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p><strong>Address:</strong><br>
-                3301 Southern Blvd SE, Suite 105<br>
-                Rio Rancho, NM 87124</p>
-                <p><strong>Phone:</strong> <a href="tel:5052700840">(505) 270-0840</a></p>
-                <p><strong>Email:</strong> <a href="mailto:sean_roberts@dmhiop.com">sean_roberts@dmhiop.com</a></p>
-                <p><strong>Hours:</strong> Mon-Fri 8:00 AM - 5:00 PM</p>
-            </div>
+    <!-- Component Loader -->
+    <script src="/components/dmh-components.js"></script>
 
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/team">Our Team</a></li>
-                    <li><a href="/iop-benefits">IOP Benefits</a></li>
-                    <li><a href="/mat">Medication-Assisted Treatment</a></li>
-                    <li><a href="/reliable-substance-abuse-treatments">All Services</a></li>
-                    <li><a href="/insurance-verification">Verify Insurance</a></li>
-                </ul>
-            </div>
+    <!-- Reveal Animation -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const revealItems = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        revealItems.forEach(function (item) { observer.observe(item); });
+      } else {
+        revealItems.forEach(function (item) { item.classList.add('visible'); });
+      }
+    });
+    </script>
 
-            <!-- Resources -->
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul class="footer-links">
-                    <li><a href="/client-app">Recovery Portal App</a></li>
-                    <li><a href="/faq">FAQ</a></li>
-                    <li><a href="/reviews">Client Reviews</a></li>
-                    <li><a href="/blog">Recovery Blog</a></li>
-                    <li><a href="/contact-us">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Complete Sitemap -->
-        <div class="sitemap-section">
-            <div class="sitemap-grid">
-                <div class="sitemap-column">
-                    <h4>Programs</h4>
-                    <ul>
-                        <li><a href="/iop-benefits">Intensive Outpatient (IOP)</a></li>
-                        <li><a href="/reliable-substance-abuse-treatments">Outpatient Programs</a></li>
-                        <li><a href="/mat">Medication-Assisted Treatment</a></li>
-                        <li><a href="/reliable-substance-abuse-treatments">Medical Detox Assistance</a></li>
-                        <li><a href="/individual-counseling">Individual Counseling</a></li>
-                    </ul>
-                </div>
-                <div class="sitemap-column">
-                    <h4>About</h4>
-                    <ul>
-                        <li><a href="/team">Our Team</a></li>
-                        <li><a href="/reviews">Client Success Stories</a></li>
-                        <li><a href="/faq">Frequently Asked Questions</a></li>
-                        <li><a href="/blog">Recovery Blog</a></li>
-                    </ul>
-                </div>
-                <div class="sitemap-column">
-                    <h4>Client Services</h4>
-                    <ul>
-                        <li><a href="/client-app">Recovery Portal Login</a></li>
-                        <li><a href="/insurance-verification">Insurance Verification</a></li>
-                        <li><a href="/contact-us">Schedule a Tour</a></li>
-                        <li><a href="/contact-us">Contact Support</a></li>
-                    </ul>
-                </div>
-                <div class="sitemap-column">
-                    <h4>Service Area</h4>
-                    <ul>
-                        <li>Rio Rancho, NM</li>
-                        <li>Albuquerque, NM</li>
-                        <li>Corrales, NM</li>
-                        <li>Bernalillo, NM</li>
-                        <li>Sandoval County</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Trust Badges -->
-        <div class="trust-badges">
-            <div class="badge">✓ Licensed Treatment Facility</div>
-            <div class="badge">✓ Evidence-Based Care</div>
-            <div class="badge">✓ Insurance Accepted</div>
-            <div class="badge">✓ Medicaid Approved</div>
-            <div class="badge">✓ HIPAA Compliant</div>
-        </div>
-
-        <!-- Legal Links -->
-        <div class="footer-legal">
-            <p>&copy; 2022 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
-            <ul class="legal-links">
-                <li><a href="/privacy-policy">Privacy Policy</a></li>
-                <li><a href="/terms-of-service">Terms of Service</a></li>
-                <li><a href="/hipaa-notice">HIPAA Notice</a></li>
-            </ul>
-        </div>
-
-        <!-- Emergency Banner -->
-        <div class="emergency-banner">
-            🚨 <strong>CRISIS SUPPORT:</strong> If you or someone you know is in immediate danger, call 911 or the National Suicide Prevention Lifeline at <a href="tel:988">988</a>
-        </div>
-
-        <!-- Bottom Copyright -->
-        <div class="footer-bottom">
-            <p>Desert Mountain Healing IOP is a licensed substance abuse treatment facility serving the greater Albuquerque metro area. We accept most major insurance plans and offer same-week admissions.</p>
-        </div>
-    </footer>
 </body>
 </html>
