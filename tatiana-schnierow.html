@@ -2,7 +2,7 @@
 <!-- =========================================================
      DMHIOP WEBSITE FRAMEWORK v4
      Desert Mountain Healing IOP
-     Tatiana Schnierow Bio Page
+     Tatiana Schnierow Bio Page - COMPONENT-BASED ARCHITECTURE
 ========================================================= -->
 
 <html lang="en">
@@ -16,6 +16,19 @@
 <link href="https://dmhiop.com/tatiana-schnierow/" rel="canonical"/>
 <meta content="#0d7485" name="theme-color"/>
 
+<!-- Open Graph -->
+<meta property="og:title" content="Tatiana Schnierow - Office Manager | Desert Mountain Healing IOP"/>
+<meta property="og:description" content="Meet Tatiana Schnierow, Office Manager at Desert Mountain Healing IOP. With personal recovery experience since the organization's founding, she welcomes every client with compassion and hope."/>
+<meta property="og:url" content="https://dmhiop.com/tatiana-schnierow/"/>
+<meta property="og:type" content="profile"/>
+<meta property="og:image" content="https://dmhiop.com/__static/team/tatiana-schnierow.jpg"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Tatiana Schnierow - Office Manager | Desert Mountain Healing IOP"/>
+<meta name="twitter:description" content="Meet Tatiana Schnierow, Office Manager at Desert Mountain Healing IOP. With personal recovery experience since the organization's founding, she welcomes every client with compassion and hope."/>
+<meta name="twitter:image" content="https://dmhiop.com/__static/team/tatiana-schnierow.jpg"/>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -25,13 +38,21 @@
   "worksFor": {
     "@type": "MedicalOrganization",
     "name": "Desert Mountain Healing IOP"
-  }
+  },
+  "knowsAbout": [
+    "Client Admissions",
+    "Office Management",
+    "Client Support",
+    "Recovery Advocacy",
+    "Family Assistance"
+  ]
 }
 </script>
 
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Source+Sans+3:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap"/></noscript>
 
 <style>
     :root{
@@ -62,7 +83,7 @@
       margin:0;
       color:var(--ink);
       background:#fff;
-      font-family:"Source Sans 3",Arial,sans-serif;
+      font-family:"Open Sans",Arial,sans-serif;
       line-height:1.65;
       -webkit-font-smoothing:antialiased;
     }
@@ -125,56 +146,6 @@
       box-shadow:var(--shadow-sm);
     }
     .btn-warm{color:#fff;background:var(--gold);box-shadow:0 12px 28px rgba(239,139,34,.3)}
-    
-    .topbar{color:#fff;background:var(--teal-950);font-size:.9rem}
-    .topbar-inner{
-      min-height:42px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-    }
-    .topbar a{font-weight:700;text-decoration:none}
-    .topbar-actions{display:flex;align-items:center;gap:1rem}
-    
-    .site-header{
-      position:sticky;top:0;z-index:100;
-      background:rgba(255,255,255,.96);
-      border-bottom:1px solid rgba(6,55,67,.08);
-      backdrop-filter:blur(14px);
-    }
-    .nav-wrap{
-      min-height:72px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-    }
-    .brand img{height:auto;width:180px}
-    .menu-toggle{
-      min-width:46px;min-height:46px;
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding:0;
-      border:none;
-      background:none;
-      color:var(--teal-950);
-      font-size:1.55rem;
-      cursor:pointer;
-    }
-    .site-nav{
-      display:flex;
-      align-items:center;
-      gap:.75rem;
-    }
-    .site-nav>a{
-      padding:.65rem 0;
-      color:var(--teal-950);
-      font-weight:700;
-      font-size:.875rem;
-    }
-    .site-nav>a:hover{color:var(--teal-500)}
     
     /* Bio Hero */
     .bio-hero{
@@ -370,90 +341,6 @@
       flex-wrap:wrap;
     }
     
-    /* Footer */
-    .site-footer{
-      background:var(--teal-950);
-      color:rgba(255,255,255,.8);
-      padding:80px 0 40px;
-    }
-    .footer-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:3rem;
-      margin-bottom:3rem;
-    }
-    .footer-col h4{
-      color:#fff;
-      font-size:1.05rem;
-      margin-bottom:1.25rem;
-    }
-    .footer-col ul{list-style:none;padding:0;margin:0}
-    .footer-col ul li{margin-bottom:.65rem}
-    .footer-col a{
-      color:rgba(255,255,255,.75);
-      font-size:.9rem;
-      transition:color .2s;
-    }
-    .footer-col a:hover{color:#fff}
-    
-    .footer-trust{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:.75rem;
-      margin-top:1rem;
-    }
-    .footer-trust-item{
-      padding:.6rem 1rem;
-      border-radius:8px;
-      background:rgba(255,255,255,.08);
-      border-left:3px solid var(--gold);
-      font-size:.82rem;
-      font-weight:700;
-      color:rgba(255,255,255,.9);
-    }
-    
-    .footer-emergency{
-      background:rgba(239,139,34,.12);
-      border:2px solid var(--gold);
-      border-radius:12px;
-      padding:1.5rem;
-      margin-top:1rem;
-    }
-    .footer-emergency strong{
-      display:block;
-      color:var(--gold);
-      font-size:1rem;
-      margin-bottom:.5rem;
-    }
-    .footer-emergency a{
-      color:#fff;
-      font-size:1.2rem;
-      font-weight:800;
-    }
-    
-    .footer-signature{
-      text-align:center;
-      padding-top:2.5rem;
-      border-top:1px solid rgba(255,255,255,.1);
-      margin-top:3rem;
-    }
-    .footer-signature p{
-      color:rgba(255,255,255,.7);
-      font-size:.9rem;
-      margin-bottom:.5rem;
-    }
-    .footer-legal{
-      display:flex;
-      justify-content:center;
-      gap:2rem;
-      margin-top:1rem;
-      flex-wrap:wrap;
-    }
-    .footer-legal a{
-      color:rgba(255,255,255,.6);
-      font-size:.85rem;
-    }
-    
     /* Responsive */
     @media (max-width:1080px){
       .bio-hero-inner{grid-template-columns:320px 1fr;gap:48px}
@@ -467,7 +354,6 @@
       .bio-photo{height:380px}
       .bio-stats{grid-template-columns:1fr}
       .values-grid{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:repeat(2,1fr)}
     }
     
     @media (max-width:760px){
@@ -477,29 +363,6 @@
       .bio-hero{padding:60px 0}
       .bio-lead{font-size:1.1rem}
       blockquote{font-size:1.15rem;padding:1.75rem}
-      .menu-toggle{display:flex}
-      .site-nav{
-        position:fixed;
-        top:0;right:-100%;
-        width:85%;max-width:340px;
-        height:100vh;
-        flex-direction:column;
-        align-items:flex-start;
-        gap:0;
-        padding:80px 24px 24px;
-        background:var(--teal-950);
-        box-shadow:-8px 0 40px rgba(0,0,0,.3);
-        transition:right .3s ease;
-      }
-      .site-nav.active{right:0}
-      .site-nav>a{
-        width:100%;
-        padding:1rem 0;
-        color:#fff;
-        font-size:1.05rem;
-        border-bottom:1px solid rgba(255,255,255,.1);
-      }
-      .footer-grid{grid-template-columns:1fr;gap:2.5rem}
       .cta-actions{flex-direction:column;align-items:center}
       .cta-actions .btn{width:100%;max-width:280px}
     }
@@ -518,33 +381,11 @@
 </head>
 <body>
 
-<!-- Top Bar -->
-<div class="topbar">
-  <div class="container topbar-inner">
-    <div>📞 <a href="tel:505-XXX-XXXX">Call (505) XXX-XXXX</a> for Immediate Support</div>
-    <div class="topbar-actions">
-      <a href="/contact/">Verify Insurance</a>
-    </div>
-  </div>
-</div>
+<dmh-viop-promo></dmh-viop-promo>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a href="/" class="brand">
-      <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/logo/logo-dmhiop-full.png" alt="Desert Mountain Healing IOP"/>
-    </a>
-    <button class="menu-toggle" aria-label="Menu">☰</button>
-    <nav class="site-nav">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/programs/">Programs</a>
-      <a href="/team/">Our Team</a>
-      <a href="/contact/">Contact</a>
-      <a href="/contact/" class="btn btn-primary">Get Started</a>
-    </nav>
-  </div>
-</header>
+<dmh-header-nav></dmh-header-nav>
+
+<main id="main-content">
 
 <!-- Bio Hero -->
 <section class="bio-hero">
@@ -815,103 +656,25 @@
 </section>
 
 <!-- Prefooter CTA -->
-<section class="prefooter">
-  <div class="container reveal">
+<section class="prefooter reveal">
+  <div class="container">
     <span class="eyebrow">Ready to Begin Your Recovery Journey?</span>
     <h2>Take the First Step Today</h2>
     <p>Our compassionate team is here to support you every step of the way.</p>
     <div class="cta-actions">
-      <a href="/contact/" class="btn btn-warm">Contact Us</a>
-      <a href="/programs/" class="btn btn-secondary">View Our Programs</a>
+      <a href="/contact-us/" class="btn btn-warm">Contact Us</a>
+      <a href="/iop-benefits/" class="btn btn-secondary">View Our Programs</a>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About Us</a></li>
-          <li><a href="/programs/">Our Programs</a></li>
-          <li><a href="/team/">Our Team</a></li>
-          <li><a href="/contact/">Contact</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Privacy & Legal</h4>
-        <ul>
-          <li><a href="/privacy/">Privacy Policy</a></li>
-          <li><a href="/hipaa/">HIPAA Notice</a></li>
-          <li><a href="/terms/">Terms of Service</a></li>
-          <li><a href="/consent/">Consent Forms</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Trust & Safety</h4>
-        <div class="footer-trust">
-          <div class="footer-trust-item">✓ Licensed IOP</div>
-          <div class="footer-trust-item">✓ Insurance Accepted</div>
-          <div class="footer-trust-item">✓ HIPAA Compliant</div>
-          <div class="footer-trust-item">✓ Evidence-Based</div>
-          <div class="footer-trust-item">✓ MAT Services</div>
-          <div class="footer-trust-item">✓ Compassionate Care</div>
-        </div>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Get Help Now</h4>
-        <p style="color:rgba(255,255,255,.75);margin-bottom:1rem;font-size:.9rem">If you or a loved one is struggling with substance use, we're here to help.</p>
-        <a href="/contact/" class="btn btn-primary" style="width:100%;margin-bottom:1rem">Start Your Recovery</a>
-        
-        <div class="footer-emergency">
-          <strong>Crisis Support</strong>
-          <p style="margin:.5rem 0 0;font-size:.85rem;color:rgba(255,255,255,.8)">
-            988 Suicide & Crisis Lifeline<br/>
-            <a href="tel:988">Call 988</a>
-          </p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="footer-signature">
-      <p><strong>Desert Mountain Healing IOP</strong> — Albuquerque, New Mexico</p>
-      <p>Empowering individuals to reclaim their lives through compassionate, evidence-based addiction treatment.</p>
-      <div class="footer-legal">
-        <a href="/privacy/">Privacy</a>
-        <a href="/hipaa/">HIPAA</a>
-        <a href="/terms/">Terms</a>
-        <a href="/sitemap.xml">Sitemap</a>
-      </div>
-      <p style="margin-top:1.5rem;font-size:.8rem;color:rgba(255,255,255,.5)">
-        © 2025 Desert Mountain Healing IOP, LLC. All rights reserved.
-      </p>
-    </div>
-  </div>
-</footer>
+</main>
+
+<dmh-footer></dmh-footer>
+
+<script src="/components/dmh-components.js"></script>
 
 <script>
-// Mobile menu toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const siteNav = document.querySelector('.site-nav');
-
-if(menuToggle){
-  menuToggle.addEventListener('click', () => {
-    siteNav.classList.toggle('active');
-  });
-  
-  document.addEventListener('click', (e) => {
-    if(!e.target.closest('.site-nav') && !e.target.closest('.menu-toggle')){
-      siteNav.classList.remove('active');
-    }
-  });
-}
-
 // Reveal on scroll
 const reveals = document.querySelectorAll('.reveal');
 
