@@ -2,7 +2,7 @@
 <!-- =========================================================
      DMHIOP WEBSITE FRAMEWORK v4
      Desert Mountain Healing IOP
-     Illiana Craig Bio Page
+     Illiana Craig Bio Page - COMPONENT-BASED ARCHITECTURE
 ========================================================= -->
 
 <html lang="en">
@@ -15,6 +15,19 @@
 <meta content="Desert Mountain Healing IOP" name="author"/>
 <link href="https://dmhiop.com/illiana-craig/" rel="canonical"/>
 <meta content="#0d7485" name="theme-color"/>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Illiana Craig, LSAA - Primary Therapist | Desert Mountain Healing IOP"/>
+<meta property="og:description" content="Meet Illiana Craig, LSAA, Primary Therapist at Desert Mountain Healing IOP. UNM graduate specializing in addiction recovery, emotional wellness, and relapse prevention."/>
+<meta property="og:url" content="https://dmhiop.com/illiana-craig/"/>
+<meta property="og:type" content="profile"/>
+<meta property="og:image" content="https://dmhiop.com/__static/team/illiana-craig.jpg"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Illiana Craig, LSAA - Primary Therapist | Desert Mountain Healing IOP"/>
+<meta name="twitter:description" content="Meet Illiana Craig, LSAA, Primary Therapist at Desert Mountain Healing IOP. UNM graduate specializing in addiction recovery, emotional wellness, and relapse prevention."/>
+<meta name="twitter:image" content="https://dmhiop.com/__static/team/illiana-craig.jpg"/>
 
 <script type="application/ld+json">
 {
@@ -29,13 +42,21 @@
   "alumniOf": {
     "@type": "CollegeOrUniversity",
     "name": "University of New Mexico"
-  }
+  },
+  "knowsAbout": [
+    "Substance Use Disorders",
+    "Individual Counseling",
+    "Group Therapy",
+    "Relapse Prevention",
+    "Emotional Wellness"
+  ]
 }
 </script>
 
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Source+Sans+3:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap"/></noscript>
 
 <style>
     :root{
@@ -66,7 +87,7 @@
       margin:0;
       color:var(--ink);
       background:#fff;
-      font-family:"Source Sans 3",Arial,sans-serif;
+      font-family:"Open Sans",Arial,sans-serif;
       line-height:1.65;
       -webkit-font-smoothing:antialiased;
     }
@@ -129,92 +150,6 @@
       box-shadow:var(--shadow-sm);
     }
     .btn-warm{color:#fff;background:var(--gold);box-shadow:0 12px 28px rgba(239,139,34,.3)}
-    
-    .topbar{color:#fff;background:var(--teal-950);font-size:.9rem}
-    .topbar-inner{
-      min-height:42px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-    }
-    .topbar a{font-weight:700;text-decoration:none}
-    .topbar-actions{display:flex;align-items:center;gap:1rem}
-    
-    .site-header{
-      position:sticky;top:0;z-index:100;
-      background:rgba(255,255,255,.96);
-      border-bottom:1px solid rgba(6,55,67,.08);
-      backdrop-filter:blur(14px);
-    }
-    .nav-wrap{
-      min-height:72px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-    }
-    .brand img{height:auto;width:180px}
-    .menu-toggle{
-      min-width:46px;min-height:46px;
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding:0;
-      border:none;
-      background:none;
-      color:var(--teal-950);
-      font-size:1.55rem;
-      cursor:pointer;
-    }
-    .site-nav{
-      display:flex;
-      align-items:center;
-      gap:.75rem;
-    }
-    .site-nav>a{
-      padding:.65rem 0;
-      color:var(--teal-950);
-      font-weight:700;
-      font-size:.875rem;
-    }
-    .site-nav>a:hover{color:var(--teal-500)}
-    .nav-dropdown{position:relative}
-    .nav-dropdown-toggle{
-      min-height:44px;
-      display:flex;
-      width:100%;
-      align-items:center;
-      justify-content:space-between;
-      gap:.4rem;
-      padding:0;
-      border:none;
-      background:none;
-      color:var(--teal-950);
-      font-weight:700;
-      font-size:.875rem;
-      cursor:pointer;
-    }
-    .nav-dropdown-menu{
-      display:none;
-      grid-template-columns:1fr;
-      gap:0;
-      margin-top:12px;
-      padding:8px;
-      border:1px solid var(--line);
-      border-radius:16px;
-      background:#fff;
-      box-shadow:var(--shadow-md);
-    }
-    .nav-dropdown-menu a{
-      padding:.9rem 1rem;
-      border-radius:12px;
-      color:var(--muted);
-      font-weight:700;
-      font-size:.875rem;
-    }
-    .nav-dropdown-menu a:hover{background:var(--teal-050);color:var(--teal-700)}
-    .nav-dropdown-menu a.active{background:var(--teal-050);color:var(--teal-700)}
     
     /* Bio Hero */
     .bio-hero{
@@ -352,130 +287,10 @@
       flex-wrap:wrap;
     }
     
-    /* Footer */
-    footer{
-      padding:54px 0 28px;
-      color:rgba(255,255,255,.78);
-      background:var(--teal-950);
-    }
-    footer h3,footer h4{color:#fff}
-    footer a{text-decoration:none}
-    footer a:hover{color:#fff}
-    
-    .footer-sitemap{
-      margin-top:46px;
-      padding-top:34px;
-      border-top:1px solid rgba(255,255,255,.16);
-    }
-    .footer-sitemap-heading{margin-bottom:22px}
-    .footer-sitemap-heading h3{
-      margin:0;
-      font-size:1.4rem;
-    }
-    .footer-sitemap-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:30px;
-      padding:28px;
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:22px;
-      background:rgba(255,255,255,.055);
-    }
-    .footer-sitemap-grid h4{
-      margin:0 0 .8rem;
-      color:#86e6ef;
-      font-family:"Source Sans 3",Arial,sans-serif;
-      font-size:.9rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-    .footer-sitemap-grid a{
-      display:block;
-      margin:.48rem 0;
-      color:rgba(255,255,255,.82);
-    }
-    
-    .footer-privacy{
-      margin-top:32px;
-      padding-top:28px;
-      border-top:1px solid rgba(255,255,255,.16);
-    }
-    .footer-privacy h3{
-      margin-bottom:.6rem;
-      font-size:1.15rem;
-    }
-    .footer-privacy p{
-      max-width:980px;
-      margin:0;
-      color:rgba(255,255,255,.78);
-    }
-    .footer-privacy-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.7rem 1.15rem;
-      margin-top:1rem;
-    }
-    .footer-privacy-links a{
-      color:#86e6ef;
-      font-weight:700;
-    }
-    
-    .footer-trust{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:1rem;
-      margin-top:28px;
-    }
-    .footer-trust-item{
-      min-height:112px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:.75rem;
-      padding:1rem;
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:18px;
-      background:rgba(255,255,255,.045);
-      text-align:center;
-      font-weight:800;
-    }
-    
-    .footer-emergency{
-      margin-top:28px;
-      padding:20px 22px;
-      border-left:4px solid var(--gold);
-      border-radius:12px;
-      background:rgba(239,139,34,.09);
-    }
-    .footer-emergency strong{color:#fff}
-    .footer-emergency p{
-      margin:0;
-      color:rgba(255,255,255,.80);
-    }
-    
-    .footer-signature{
-      margin:30px 0 0;
-      color:#bceef3;
-      font-family:"Merriweather",Georgia,serif;
-      font-size:1.1rem;
-      text-align:center;
-    }
-    
-    .footer-legal{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:.5rem .9rem;
-      margin-top:.7rem;
-    }
-    .footer-legal a{color:rgba(255,255,255,.72)}
-    
     /* Responsive */
     @media(max-width:1080px){
       .bio-hero-inner{grid-template-columns:1fr;gap:40px}
       .bio-photo{height:400px}
-      .footer-sitemap-grid{grid-template-columns:repeat(2,1fr)}
-      .footer-trust{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:760px){
       .bio-hero{padding:60px 0}
@@ -484,111 +299,19 @@
       .prefooter-cta{padding:64px 0}
       .prefooter-actions{flex-direction:column}
       .prefooter-actions .btn{width:100%}
-      .footer-sitemap-grid{grid-template-columns:1fr;padding:22px}
-      .footer-trust{grid-template-columns:1fr}
-      .menu-toggle{display:flex}
-      .site-nav{
-        position:fixed;
-        top:0;
-        right:-100%;
-        width:min(340px,85vw);
-        height:100vh;
-        flex-direction:column;
-        align-items:stretch;
-        gap:0;
-        padding:28px 22px;
-        background:#fff;
-        box-shadow:var(--shadow-md);
-        transition:right .3s ease;
-        overflow-y:auto;
-      }
-      .site-nav.open{right:0}
-      .site-nav>a{padding:.85rem 0;border-bottom:1px solid var(--line)}
-      .nav-dropdown{border-bottom:1px solid var(--line)}
-      .nav-dropdown-menu{position:static;border:none;box-shadow:none;margin-top:0;padding:0 0 .85rem 1.2rem}
-      .nav-dropdown.open .nav-dropdown-menu{display:grid}
     }
-    
-    /* Desktop nav hover */
-    @media(min-width:901px){
-      .nav-wrap{min-height:88px;gap:.8rem}
-      .brand img{width:205px}
-      .site-nav{
-        position:static!important;
-        display:flex!important;
-        flex-direction:row!important;
-        gap:.8rem!important;
-        padding:0!important;
-        background:transparent!important;
-        box-shadow:none!important;
-      }
-      .site-nav a{font-size:.78rem}
-      .menu-toggle{display:none!important}
-      .nav-dropdown-menu{
-        position:absolute;
-        top:calc(100% + 10px);
-        left:0;
-        min-width:290px;
-      }
-      .nav-dropdown:hover .nav-dropdown-menu,
-      .nav-dropdown:focus-within .nav-dropdown-menu{
-        display:grid;
-      }
-    }
+
+    /* Reveal animation */
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.active{opacity:1;transform:translateY(0)}
 </style>
 
 </head>
 <body>
 
-<div class="topbar">
-<div class="container topbar-inner">
-<span>Hope. Healing. Recovery. Every Day.</span>
-<div class="topbar-actions">
-<a href="tel:+15052700840">Call (505) 270-0840</a>
-</div>
-</div>
-</div>
+<dmh-viop-promo></dmh-viop-promo>
 
-<header class="site-header">
-<div class="container nav-wrap">
-<a aria-label="Desert Mountain Healing IOP home" class="brand" href="/">
-<img alt="Desert Mountain Healing IOP" src="/dmh-logo (1).png"/>
-</a>
-<button aria-controls="siteNav" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle">☰</button>
-<nav aria-label="Main navigation" class="site-nav" id="siteNav">
-<a href="/">Home</a>
-<div class="nav-dropdown">
-<button aria-expanded="false" class="nav-dropdown-toggle" type="button">Treatment <span class="dropdown-arrow">▼</span></button>
-<div class="nav-dropdown-menu">
-<a href="/iop-benefits/">Intensive Outpatient Program</a>
-<a href="/reliable-substance-abuse-treatments/">Programs & Services</a>
-<a href="/services/">Additional Services</a>
-<a href="/mat/">Medication-Assisted Treatment</a>
-<a href="/medical-detox-assistance/">Medical Detox Assistance</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button aria-expanded="false" class="nav-dropdown-toggle" type="button">About Us <span class="dropdown-arrow">▼</span></button>
-<div class="nav-dropdown-menu">
-<a href="/team/">Our Team</a>
-<a href="/reviews/">Reviews</a>
-<a href="/blog/">Blog</a>
-<a href="/faq/">Frequently Asked Questions</a>
-<a href="/contact-us/">Contact Us</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button aria-expanded="false" class="nav-dropdown-toggle" type="button">Client Resources <span class="dropdown-arrow">▼</span></button>
-<div class="nav-dropdown-menu">
-<a href="/client-app/">Recovery Portal</a>
-<a href="/client-portal/">Client Login</a>
-<a href="https://myrecoverynm.org" rel="noopener external" target="_blank">Recovery NM</a>
-</div>
-</div>
-<a class="btn btn-warm" href="/insurance-verification/">Verify Insurance</a>
-</nav>
-</div>
-</header>
+<dmh-header-nav></dmh-header-nav>
 
 <main id="main-content">
 
@@ -625,7 +348,7 @@
 </section>
 
 <!-- Opening Quote -->
-<section class="section section-soft">
+<section class="section section-soft reveal">
 <div class="container bio-content">
 <blockquote>
 <p>"Recovery begins with hope, grows through compassion, and becomes lasting when people believe in themselves."</p>
@@ -634,7 +357,7 @@
 </section>
 
 <!-- Meet Illiana -->
-<section class="section">
+<section class="section reveal">
 <div class="container bio-content">
 <span class="eyebrow">Meet Illiana</span>
 <h2>Building Hope, Creating Change</h2>
@@ -646,7 +369,7 @@
 </section>
 
 <!-- Professional Background -->
-<section class="section section-gray">
+<section class="section section-gray reveal">
 <div class="container bio-content">
 <span class="eyebrow">Professional Background</span>
 <h2>Experience in Recovery & Behavioral Health</h2>
@@ -658,7 +381,7 @@
 </section>
 
 <!-- Education & Credentials -->
-<section class="section">
+<section class="section reveal">
 <div class="container bio-content">
 <span class="eyebrow">Education & Credentials</span>
 <h2>Academic Foundation & Professional Growth</h2>
@@ -679,7 +402,7 @@
 </section>
 
 <!-- Counseling Philosophy -->
-<section class="section section-soft">
+<section class="section section-soft reveal">
 <div class="container bio-content">
 <span class="eyebrow">Counseling Philosophy</span>
 <h2>Empowering Change Through Compassion</h2>
@@ -702,7 +425,7 @@
 </section>
 
 <!-- Areas of Focus -->
-<section class="section">
+<section class="section reveal">
 <div class="container bio-content">
 <span class="eyebrow">Areas of Focus</span>
 <h2>Clinical Specializations</h2>
@@ -722,7 +445,7 @@
 </section>
 
 <!-- Illiana's Role -->
-<section class="section section-gray">
+<section class="section section-gray reveal">
 <div class="container bio-content">
 <span class="eyebrow">Illiana's Role on Your Recovery Team</span>
 <h2>Primary Therapist & Recovery Partner</h2>
@@ -745,7 +468,7 @@
 </section>
 
 <!-- What Clients Can Expect -->
-<section class="section">
+<section class="section reveal">
 <div class="container bio-content">
 <span class="eyebrow">What Clients Can Expect</span>
 <h2>Working with Illiana</h2>
@@ -764,7 +487,7 @@
 </section>
 
 <!-- Why Illiana Chose Behavioral Health -->
-<section class="section section-soft">
+<section class="section section-soft reveal">
 <div class="container bio-content">
 <span class="eyebrow">Why Illiana Chose Behavioral Health</span>
 <h2>A Privilege to Help Others Heal</h2>
@@ -775,7 +498,7 @@
 </section>
 
 <!-- Therapeutic Approach -->
-<section class="section">
+<section class="section reveal">
 <div class="container bio-content">
 <span class="eyebrow">Therapeutic Approach</span>
 <h2>Practical Tools for Lasting Recovery</h2>
@@ -797,7 +520,7 @@
 </section>
 
 <!-- Personal Message -->
-<section class="section section-soft">
+<section class="section section-soft reveal">
 <div class="container bio-content">
 <span class="eyebrow">A Personal Message from Illiana</span>
 <h2>Your Future Can Be Brighter</h2>
@@ -817,7 +540,7 @@
 </section>
 
 <!-- Prefooter CTA -->
-<section class="prefooter-cta">
+<section class="prefooter-cta reveal">
 <div class="container">
 <span class="eyebrow">Ready to start your recovery journey?</span>
 <h2>Take the First Step Today</h2>
@@ -829,103 +552,24 @@
 </div>
 </section>
 
-<!-- Footer -->
-<footer>
-<div class="container">
-
-<div class="footer-sitemap">
-<div class="footer-sitemap-heading">
-<h3>Quick Navigation</h3>
-</div>
-<div class="footer-sitemap-grid">
-<div>
-<h4>Treatment</h4>
-<a href="/iop-benefits/">IOP Program</a>
-<a href="/reliable-substance-abuse-treatments/">Programs & Services</a>
-<a href="/mat/">MAT</a>
-<a href="/medical-detox-assistance/">Detox Assistance</a>
-</div>
-<div>
-<h4>About</h4>
-<a href="/team/">Our Team</a>
-<a href="/reviews/">Reviews</a>
-<a href="/faq/">FAQ</a>
-<a href="/blog/">Blog</a>
-</div>
-<div>
-<h4>Resources</h4>
-<a href="/insurance-verification/">Verify Insurance</a>
-<a href="/client-app/">Client Portal</a>
-<a href="/contact-us/">Contact Us</a>
-</div>
-<div>
-<h4>Contact</h4>
-<a href="tel:+15052700840">(505) 270-0840</a>
-<p style="margin-top:.5rem;font-size:.9rem">3301 Southern Blvd SE<br>Suite 105<br>Rio Rancho, NM 87124</p>
-</div>
-</div>
-</div>
-
-<div class="footer-privacy">
-<h3>Privacy & Compliance</h3>
-<p>Desert Mountain Healing IOP is committed to protecting your privacy and maintaining HIPAA compliance. All client information is confidential and secure.</p>
-<div class="footer-privacy-links">
-<a href="/privacy-policy/">Privacy Policy</a>
-<a href="/terms-of-service/">Terms of Service</a>
-<a href="/hipaa-notice/">HIPAA Notice</a>
-<a href="/accessibility/">Accessibility</a>
-</div>
-</div>
-
-<div class="footer-trust">
-<div class="footer-trust-item">🔒 HIPAA Compliant</div>
-<div class="footer-trust-item">✓ NM Licensed</div>
-<div class="footer-trust-item">✓ Evidence-Based</div>
-<div class="footer-trust-item">✓ Compassionate Care</div>
-</div>
-
-<div class="footer-emergency">
-<strong>24/7 Crisis Resources</strong>
-<p><strong>Suicide Prevention:</strong> <a href="tel:988" style="color:#fff;font-weight:700">988</a> | <strong>SAMHSA Helpline:</strong> <a href="tel:1-800-662-4357" style="color:#fff;font-weight:700">1-800-662-4357</a></p>
-</div>
-
-<div class="footer-signature">
-Desert Mountain Healing IOP · Licensed Outpatient Treatment · Rio Rancho, New Mexico
-</div>
-
-<div class="footer-legal">
-<span>© 2025 Desert Mountain Healing IOP, LLC</span>
-<a href="/privacy-policy/">Privacy</a>
-<a href="/terms-of-service/">Terms</a>
-<a href="/sitemap.xml">Sitemap</a>
-</div>
-
-</div>
-</footer>
-
 </main>
 
-<script>
-// Mobile menu toggle
-const menuToggle = document.getElementById('menuToggle');
-const siteNav = document.querySelector('.site-nav');
-if(menuToggle){
-  menuToggle.addEventListener('click', () => {
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !expanded);
-    siteNav.classList.toggle('open');
-  });
-}
+<dmh-footer></dmh-footer>
 
-// Dropdown toggles
-document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const dropdown = btn.parentElement;
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', !expanded);
-    dropdown.classList.toggle('open');
+<script src="/components/dmh-components.js"></script>
+
+<script>
+// Reveal animation on scroll
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
   });
-});
+}, { threshold: 0.1 });
+
+reveals.forEach(reveal => revealObserver.observe(reveal));
 </script>
 
 </body>
