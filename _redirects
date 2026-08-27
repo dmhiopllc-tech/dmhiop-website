@@ -1,97 +1,14 @@
 # Netlify Redirects for Desert Mountain Healing IOP
-# Canonical strategy: clean extensionless URLs, no trailing slash
+# Keep this file minimal so Netlify Pretty URLs can handle .html pages safely.
 
-# Force HTTPS and remove www
+# Force HTTPS
 http://dmhiop.com/*              https://dmhiop.com/:splat              301!
+
+# Remove www
 https://www.dmhiop.com/*         https://dmhiop.com/:splat              301!
 
-# Canonical page redirects: trailing slash and .html -> clean URL
-/medical-detox-assistance/                /medical-detox-assistance                 301!
-/medical-detox-assistance.html            /medical-detox-assistance                 301!
-
-/contact-us/                              /contact-us                               301!
-/contact-us.html                          /contact-us                               301!
-
-/faq/                                     /faq                                      301!
-/faq.html                                 /faq                                      301!
-
-/team/                                    /team                                     301!
-/team.html                                /team                                     301!
-
-/reliable-substance-abuse-treatments/     /reliable-substance-abuse-treatments      301!
-/reliable-substance-abuse-treatments.html /reliable-substance-abuse-treatments      301!
-
-/iop-benefits/                            /iop-benefits                             301!
-/iop-benefits.html                        /iop-benefits                             301!
-
-/mat/                                     /mat                                      301!
-/mat.html                                 /mat                                      301!
-
-/reviews/                                 /reviews                                  301!
-/reviews.html                             /reviews                                  301!
-
-/blog/                                    /blog                                     301!
-/blog.html                                /blog                                     301!
-
-/virtual-iop/                             /virtual-iop                              301!
-/virtual-iop.html                         /virtual-iop                              301!
-
-/individual-counseling/                   /individual-counseling                    301!
-/individual-counseling.html               /individual-counseling                    301!
-
-/case-management/                         /case-management                          301!
-/case-management.html                     /case-management                          301!
-
-/insurance-verification/                  /insurance-verification                   301!
-/insurance-verification.html              /insurance-verification                   301!
-
-/client-app/                              /client-app                               301!
-/client-app.html                          /client-app                               301!
-
-/sean-roberts/                            /sean-roberts                             301!
-/sean-roberts.html                        /sean-roberts                             301!
-
-/gary-gamboa/                             /gary-gamboa                              301!
-/gary-gamboa.html                         /gary-gamboa                              301!
-
-/bob-galligan/                            /bob-galligan                             301!
-/bob-galligan.html                        /bob-galligan                             301!
-
-/jennifer-barela/                         /jennifer-barela                          301!
-/jennifer-barela.html                     /jennifer-barela                          301!
-
-/regina-largent/                          /regina-largent                           301!
-/regina-largent.html                      /regina-largent                           301!
-
-/christina-blea/                          /christina-blea                           301!
-/christina-blea.html                      /christina-blea                           301!
-
-/alicia-chavez/                           /alicia-chavez                            301!
-/alicia-chavez.html                       /alicia-chavez                            301!
-
-/nicole-clay/                             /nicole-clay                              301!
-/nicole-clay.html                         /nicole-clay                              301!
-
-/michelle-martin/                         /michelle-martin                          301!
-/michelle-martin.html                     /michelle-martin                          301!
-
-/illiana-craig/                           /illiana-craig                            301!
-/illiana-craig.html                       /illiana-craig                            301!
-
-/tatiana-schnierow/                       /tatiana-schnierow                        301!
-/tatiana-schnierow.html                   /tatiana-schnierow                        301!
-
-/privacy-policy/                          /privacy-policy                           301!
-/privacy-policy.html                      /privacy-policy                           301!
-
-/terms-of-service/                        /terms-of-service                         301!
-/terms-of-service.html                    /terms-of-service                         301!
-
-/hipaa-notice/                            /hipaa-notice                             301!
-/hipaa-notice.html                        /hipaa-notice                             301!
-
 # Legacy service alias
-/reliable-substance-abuse-services        /reliable-substance-abuse-treatments      301!
+/reliable-substance-abuse-services       /reliable-substance-abuse-treatments      301!
 
-# Homepage
-/index.html                               /                                         301!
+# Homepage canonical
+/index.html                              /                                      301!
