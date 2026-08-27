@@ -4,23 +4,9 @@
 User-agent: *
 Allow: /
 
-# Allow all main public pages
-Allow: /virtual-iop
-Allow: /team/
-Allow: /iop-benefits/
-Allow: /reliable-substance-abuse-treatments/
-Allow: /mat/
-Allow: /medical-detox-assistance/
-Allow: /faq/
-Allow: /reviews/
-Allow: /contact-us/
-Allow: /blog/
-Allow: /client-app/
-Allow: /individual-counseling/
-Allow: /case-management/
-Allow: /insurance-verification/
-
-# Block client portal and admin pages from search engines
+# Private / administrative areas
+Disallow: /admin/
+Disallow: /timeclock/
 Disallow: /admin-portal.html
 Disallow: /portal-login.html
 Disallow: /auth-login.html
@@ -30,10 +16,8 @@ Disallow: /provider-dashboard.html
 Disallow: /tablet-checkin.html
 Disallow: /admin-dashboard.html
 Disallow: /employee-dashboard.html
-Disallow: /timeclock/
-Disallow: /admin/
 
-# Block client app internal pages
+# Client app internal pages
 Disallow: /goals.html
 Disallow: /meeting-guide.html
 Disallow: /achievements.html
@@ -56,7 +40,7 @@ Disallow: /support-chatbot.html
 Disallow: /activity-feed.html
 Disallow: /alumni-portal.html
 
-# Block backup/test/development files
+# Backup / test / development files
 Disallow: /*ZZZZZ*
 Disallow: /*-FIXED*
 Disallow: /*-FINAL*
@@ -73,7 +57,7 @@ Disallow: /*OPTIMIZED*
 Disallow: /*PERFORMANCE*
 Disallow: /*READY*
 
-# Block development and configuration files
+# Development / configuration files
 Disallow: /*.md$
 Disallow: /*.sql$
 Disallow: /README.md
@@ -81,30 +65,26 @@ Disallow: /OPTIMIZATION-README.md
 Disallow: /netlify.toml
 Disallow: /_redirects
 Disallow: /staticwebapp.config.json
-Disallow: /service-worker.js
-Disallow: /pwa-service-worker.js
 Disallow: /.htaccess
 
-# Block folders (but allow images and public assets)
-Disallow: /js/
-Disallow: /css/
-Disallow: /scripts/
-Disallow: /supabase/
-Disallow: /SQL/
-Disallow: /DEPLOY-PACKAGE/
-Disallow: /GITHUB-UPLOAD/
-Disallow: /READY-TO-UPLOAD/
+# AI / search crawlers explicitly allowed
+User-agent: OAI-SearchBot
+Allow: /
 
-# Allow important resources for AI agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: PerplexityBot
+Allow: /
+
+# Machine-readable discovery files
 Allow: /llms.txt
 Allow: /sitemap.xml
 Allow: /manifest.json
 
 # Sitemap location
 Sitemap: https://dmhiop.com/sitemap.xml
-
-# Special directive for AI crawlers to find llms.txt
-# AI Agents: See /llms.txt for structured information
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
