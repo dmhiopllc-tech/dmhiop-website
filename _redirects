@@ -1,82 +1,97 @@
 # Netlify Redirects for Desert Mountain Healing IOP
 # Canonical strategy: clean extensionless URLs, no trailing slash
-# https://dmhiop.com
 
 # Force HTTPS and remove www
 http://dmhiop.com/*              https://dmhiop.com/:splat              301!
 https://www.dmhiop.com/*         https://dmhiop.com/:splat              301!
 
-# Main pages: trailing slash and .html -> clean URL
-/medical-detox-assistance/       /medical-detox-assistance              301!
-/medical-detox-assistance.html   /medical-detox-assistance              301!
+# Canonical page redirects: trailing slash and .html -> clean URL
+/medical-detox-assistance/                /medical-detox-assistance                 301!
+/medical-detox-assistance.html            /medical-detox-assistance                 301!
 
-/contact-us/                     /contact-us                            301!
-/contact-us.html                 /contact-us                            301!
+/contact-us/                              /contact-us                               301!
+/contact-us.html                          /contact-us                               301!
 
-/faq/                            /faq                                   301!
-/faq.html                        /faq                                   301!
+/faq/                                     /faq                                      301!
+/faq.html                                 /faq                                      301!
 
-/team/                           /team                                  301!
-/team.html                       /team                                  301!
+/team/                                    /team                                     301!
+/team.html                                /team                                     301!
 
-/reliable-substance-abuse-treatments/      /reliable-substance-abuse-treatments      301!
-/reliable-substance-abuse-treatments.html  /reliable-substance-abuse-treatments      301!
-/reliable-substance-abuse-services         /reliable-substance-abuse-treatments      301!
+/reliable-substance-abuse-treatments/     /reliable-substance-abuse-treatments      301!
+/reliable-substance-abuse-treatments.html /reliable-substance-abuse-treatments      301!
 
-/iop-benefits/                   /iop-benefits                          301!
-/iop-benefits.html               /iop-benefits                          301!
+/iop-benefits/                            /iop-benefits                             301!
+/iop-benefits.html                        /iop-benefits                             301!
 
-/mat/                            /mat                                   301!
-/mat.html                        /mat                                   301!
+/mat/                                     /mat                                      301!
+/mat.html                                 /mat                                      301!
 
-/reviews/                        /reviews                               301!
-/reviews.html                    /reviews                               301!
+/reviews/                                 /reviews                                  301!
+/reviews.html                             /reviews                                  301!
 
-/blog/                           /blog                                  301!
-/blog.html                       /blog                                  301!
+/blog/                                    /blog                                     301!
+/blog.html                                /blog                                     301!
 
-/virtual-iop/                    /virtual-iop                           301!
-/virtual-iop.html                /virtual-iop                           301!
+/virtual-iop/                             /virtual-iop                              301!
+/virtual-iop.html                         /virtual-iop                              301!
 
-/individual-counseling/          /individual-counseling                 301!
-/individual-counseling.html      /individual-counseling                 301!
+/individual-counseling/                   /individual-counseling                    301!
+/individual-counseling.html               /individual-counseling                    301!
 
-/case-management/                /case-management                       301!
-/case-management.html            /case-management                       301!
+/case-management/                         /case-management                          301!
+/case-management.html                     /case-management                          301!
 
-/insurance-verification/         /insurance-verification                301!
-/insurance-verification.html     /insurance-verification                301!
+/insurance-verification/                  /insurance-verification                   301!
+/insurance-verification.html              /insurance-verification                   301!
 
-/client-app/                     /client-app                            301!
-/client-app.html                 /client-app                            301!
+/client-app/                              /client-app                               301!
+/client-app.html                          /client-app                               301!
 
-# Blog posts: trailing slash and .html -> clean URL
-/blog-first-week-iop/                    /blog-first-week-iop                    301!
-/blog-first-week-iop.html                /blog-first-week-iop                    301!
+/sean-roberts/                            /sean-roberts                             301!
+/sean-roberts.html                        /sean-roberts                             301!
 
-/blog-iop-vs-residential/                /blog-iop-vs-residential                301!
-/blog-iop-vs-residential.html            /blog-iop-vs-residential                301!
+/gary-gamboa/                             /gary-gamboa                              301!
+/gary-gamboa.html                         /gary-gamboa                              301!
 
-/blog-iop-cost-insurance/                /blog-iop-cost-insurance                301!
-/blog-iop-cost-insurance.html            /blog-iop-cost-insurance                301!
+/bob-galligan/                            /bob-galligan                             301!
+/bob-galligan.html                        /bob-galligan                             301!
 
-/blog-signs-need-iop/                    /blog-signs-need-iop                    301!
-/blog-signs-need-iop.html                /blog-signs-need-iop                    301!
+/jennifer-barela/                         /jennifer-barela                          301!
+/jennifer-barela.html                     /jennifer-barela                          301!
 
-/blog-evidence-based-therapies/          /blog-evidence-based-therapies          301!
-/blog-evidence-based-therapies.html      /blog-evidence-based-therapies          301!
+/regina-largent/                          /regina-largent                           301!
+/regina-largent.html                      /regina-largent                           301!
 
-/blog-balancing-work-family-iop/         /blog-balancing-work-family-iop         301!
-/blog-balancing-work-family-iop.html     /blog-balancing-work-family-iop         301!
+/christina-blea/                          /christina-blea                           301!
+/christina-blea.html                      /christina-blea                           301!
 
-/blog-dual-diagnosis-iop/                /blog-dual-diagnosis-iop                301!
-/blog-dual-diagnosis-iop.html            /blog-dual-diagnosis-iop                301!
+/alicia-chavez/                           /alicia-chavez                            301!
+/alicia-chavez.html                       /alicia-chavez                            301!
 
-/blog-life-after-iop/                    /blog-life-after-iop                    301!
-/blog-life-after-iop.html                /blog-life-after-iop                    301!
+/nicole-clay/                             /nicole-clay                              301!
+/nicole-clay.html                         /nicole-clay                              301!
 
-/blog-why-choose-dmh-iop/                /blog-why-choose-dmh-iop                301!
-/blog-why-choose-dmh-iop.html            /blog-why-choose-dmh-iop                301!
+/michelle-martin/                         /michelle-martin                          301!
+/michelle-martin.html                     /michelle-martin                          301!
+
+/illiana-craig/                           /illiana-craig                            301!
+/illiana-craig.html                       /illiana-craig                            301!
+
+/tatiana-schnierow/                       /tatiana-schnierow                        301!
+/tatiana-schnierow.html                   /tatiana-schnierow                        301!
+
+/privacy-policy/                          /privacy-policy                           301!
+/privacy-policy.html                      /privacy-policy                           301!
+
+/terms-of-service/                        /terms-of-service                         301!
+/terms-of-service.html                    /terms-of-service                         301!
+
+/hipaa-notice/                            /hipaa-notice                             301!
+/hipaa-notice.html                        /hipaa-notice                             301!
+
+# Legacy service alias
+/reliable-substance-abuse-services        /reliable-substance-abuse-treatments      301!
 
 # Homepage
-/index.html                       /                                      301!
+/index.html                               /                                         301!
