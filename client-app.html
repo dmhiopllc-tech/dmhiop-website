@@ -715,7 +715,7 @@
           <div class="built-by-us reveal">
             <h2>Built By People in Recovery,<br>For People in Recovery</h2>
             <p>Own Today wasn't outsourced to a tech company. It was <strong>designed, built, and refined by the Desert Mountain Healing team</strong>—people who understand recovery because they live it every day.</p>
-            <p>Our founders, Sean Roberts (37+ years sober) and Gary Gamboa (9+ years sober), personally oversaw every feature, ensuring the app addresses real recovery needs, not corporate profits.</p>
+            <p>Our founders, Sean Roberts (in recovery since 1987) and Gary Gamboa (in recovery since 2015), personally oversaw every feature, ensuring the app addresses real recovery needs, not corporate profits.</p>
             <p><strong>This is recovery technology built with intention, compassion, and real-world experience.</strong></p>
           </div>
 
@@ -865,30 +865,3 @@
 </body>
 </html>
 
-client-app-corrected.html
-HTML
-does this have the compontis with it  so the header and footer auto load
-
-Yes. The corrected file does still have your component system in it.
-
-Specifically, it includes:
-
-<!-- V4 VIOP Promo Banner Component -->
-<dmh-viop-promo></dmh-viop-promo>
-
-<!-- V4 Header Component -->
-<dmh-header-nav></dmh-header-nav>
-
-And near the bottom:
-
-<!-- V4 Footer Component -->
-<dmh-footer></dmh-footer>
-
-<!-- Component Loader -->
-<script src="/components/dmh-components.js"></script>
-
-So when you upload this page to dmhiop.com, /components/dmh-components.js should automatically load your existing promo banner, header/navigation, and footer, just like your other V4 pages.
-
-I did not hard-code a separate header or footer into the corrected page. It continues to use your centralized components, which is what we want—when you update the component later, this page will inherit the update automatically.
-
-So yes: the corrected file is set up to work with your current component system.
