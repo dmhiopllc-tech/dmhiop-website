@@ -87,7 +87,7 @@
       --shadow-lg:0 26px 70px rgba(18,56,66,.16);
       --radius:24px;
       --transition:all .3s ease;
-      
+
       /* App Colors */
       --app-amber:#D97706;
       --app-amber-light:#FBBF24;
@@ -135,7 +135,7 @@
       color:#fff;
       background:
         linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%),
-        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
+        url("https://raw\.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
       text-align:center;
       padding:120px 0 80px;
     }
@@ -147,13 +147,13 @@
       content:"";
       background:linear-gradient(to top,rgba(4,32,39,.65),transparent);
     }
-    
+
     .hero-app-content{
       position:relative;
       z-index:2;
       max-width:1100px;
     }
-    
+
     .app-badge{
       display:inline-block;
       padding:10px 22px;
@@ -167,7 +167,7 @@
       text-transform:uppercase;
       margin-bottom:2rem;
     }
-    
+
     .hero-app h1{
       color:#fff;
       font-size:clamp(3.5rem,7vw,6.5rem);
@@ -175,7 +175,7 @@
       margin-bottom:1.5rem;
       line-height:1;
     }
-    
+
     .hero-app-tagline{
       font-size:clamp(1.3rem,2.5vw,2rem);
       color:rgba(255,255,255,.9);
@@ -184,7 +184,7 @@
       margin:0 auto 3rem;
       line-height:1.4;
     }
-    
+
     .hero-app-cta{
       display:flex;
       gap:1.25rem;
@@ -236,7 +236,7 @@
       box-shadow:0 60px 140px rgba(0,0,0,.15);
       border:1px solid rgba(255,255,255,.6);
     }
-    
+
     /* Streak Badge */
     .streak-display{
       text-align:center;
@@ -493,7 +493,7 @@
       padding:100px 0;
       background:
         linear-gradient(rgba(6,55,67,.92),rgba(6,55,67,.95)),
-        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
+        url("https://raw\.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
       color:white;
       text-align:center;
     }
@@ -577,7 +577,7 @@
         <div class="app-badge reveal">EXCLUSIVE TO DMHIOP CLIENTS</div>
         <h1 class="reveal">Own Today<br>Recovery Portal</h1>
         <p class="hero-app-tagline reveal">Your lifelong recovery companion. 20+ powerful tools built by people in recovery, for people in recovery. Available 24/7 on every device.</p>
-        
+
         <div class="hero-app-cta reveal">
           <a href="/insurance-verification" class="btn btn-warm">Start Treatment & Get Access</a>
           <a href="/client-portal" class="btn btn-secondary">Client Login →</a>
@@ -685,7 +685,7 @@
       <div class="container">
         <h2 class="reveal">Available Everywhere You Are</h2>
         <p class="subtitle reveal">Own Today works seamlessly across all your devices. Start on your phone, continue on your laptop, access from anywhere.</p>
-        
+
         <div class="platform-grid">
           <div class="platform-card reveal">
             <div class="platform-icon">📱</div>
@@ -715,7 +715,7 @@
           <div class="built-by-us reveal">
             <h2>Built By People in Recovery,<br>For People in Recovery</h2>
             <p>Own Today wasn't outsourced to a tech company. It was <strong>designed, built, and refined by the Desert Mountain Healing team</strong>—people who understand recovery because they live it every day.</p>
-            <p>Our founders, Sean Roberts (37+ years sober) and Karla Wood (9+ years sober), personally oversaw every feature, ensuring the app addresses real recovery needs, not corporate profits.</p>
+            <p>Our founders, Sean Roberts (37+ years sober) and Gary Gamboa (9+ years sober), personally oversaw every feature, ensuring the app addresses real recovery needs, not corporate profits.</p>
             <p><strong>This is recovery technology built with intention, compassion, and real-world experience.</strong></p>
           </div>
 
@@ -864,3 +864,31 @@
 
 </body>
 </html>
+
+client-app-corrected.html
+HTML
+does this have the compontis with it  so the header and footer auto load
+
+Yes. The corrected file does still have your component system in it.
+
+Specifically, it includes:
+
+<!-- V4 VIOP Promo Banner Component -->
+<dmh-viop-promo></dmh-viop-promo>
+
+<!-- V4 Header Component -->
+<dmh-header-nav></dmh-header-nav>
+
+And near the bottom:
+
+<!-- V4 Footer Component -->
+<dmh-footer></dmh-footer>
+
+<!-- Component Loader -->
+<script src="/components/dmh-components.js"></script>
+
+So when you upload this page to dmhiop.com, /components/dmh-components.js should automatically load your existing promo banner, header/navigation, and footer, just like your other V4 pages.
+
+I did not hard-code a separate header or footer into the corrected page. It continues to use your centralized components, which is what we want—when you update the component later, this page will inherit the update automatically.
+
+So yes: the corrected file is set up to work with your current component system.
