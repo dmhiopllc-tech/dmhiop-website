@@ -1,6 +1,103 @@
 # Netlify Redirects for Desert Mountain Healing IOP
 # Canonical domain and legacy URL redirects
 
+# =====================================================
+# FORCE HTTPS
+# =====================================================
+
+http://dmhiop.com/* https://dmhiop.com/:splat 301!
+
+
+# =====================================================
+# REMOVE WWW
+# =====================================================
+
+https://www.dmhiop.com/* https://dmhiop.com/:splat 301!
+
+
+# =====================================================
+# HOMEPAGE
+# =====================================================
+
+/index.html / 301!
+
+
+# =====================================================
+# LEGACY SERVICE ALIAS
+# =====================================================
+
+/reliable-substance-abuse-services /reliable-substance-abuse-treatments 301!
+/reliable-substance-abuse-services.html /reliable-substance-abuse-treatments 301!
+
+
+# =====================================================
+# MAIN SERVICE PAGES
+# =====================================================
+
+/virtual-iop.html /virtual-iop 301!
+/iop-benefits.html /iop-benefits 301!
+/reliable-substance-abuse-treatments.html /reliable-substance-abuse-treatments 301!
+/mat.html /mat 301!
+/medical-detox-assistance.html /medical-detox-assistance 301!
+/individual-counseling.html /individual-counseling 301!
+/case-management.html /case-management 301!
+
+
+# =====================================================
+# MAIN WEBSITE PAGES
+# =====================================================
+
+/team.html /team 301!
+/reviews.html /reviews 301!
+/faq.html /faq 301!
+/blog.html /blog 301!
+/contact-us.html /contact-us 301!
+/insurance-verification.html /insurance-verification 301!
+/client-app.html /client-app 301!
+
+
+# =====================================================
+# STAFF PAGES
+# =====================================================
+
+/sean-roberts.html /sean-roberts 301!
+/gary-gamboa.html /gary-gamboa 301!
+/bob-galligan.html /bob-galligan 301!
+/jennifer-barela.html /jennifer-barela 301!
+/regina-largent.html /regina-largent 301!
+/christina-blea.html /christina-blea 301!
+/alicia-chavez.html /alicia-chavez 301!
+/nicole-clay.html /nicole-clay 301!
+/michelle-martin.html /michelle-martin 301!
+/illiana-craig.html /illiana-craig 301!
+/tatiana-schnierow.html /tatiana-schnierow 301!
+
+
+# =====================================================
+# LEGAL / PRIVACY PAGES
+# =====================================================
+
+/privacy-policy.html /privacy-policy 301!
+/terms-of-service.html /terms-of-service 301!
+/hipaa-notice.html /hipaa-notice 301!
+
+
+# =====================================================
+# OLD BLOG URLS
+# Content has been consolidated into the main blog page
+# =====================================================
+
+/blog-balancing-work-family-iop.html /blog 301!
+/blog-dual-diagnosis-iop.html /blog 301!
+/blog-evidence-based-therapies.html /blog 301!
+/blog-first-week-iop.html /blog 301!
+/blog-iop-cost-insurance.html /blog 301!
+/blog-iop-vs-residential.html /blog 301!
+/blog-life-after-iop.html /blog 301!
+/blog-signs-need-iop.html /blog 301!
+/blog-why-choose-dmh-iop.html /blog 301!# Netlify Redirects for Desert Mountain Healing IOP
+# Canonical domain and legacy URL redirects
+
 # Force HTTPS
 http://dmhiop.com/* https://dmhiop.com/:splat 301!
 
