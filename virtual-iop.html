@@ -330,6 +330,9 @@
     .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
     .card .icon{margin-left:0}
     .card p{color:var(--text)}
+    .card-link{color:inherit;text-decoration:none;display:block}
+    .card-link .learn-more{display:inline-block;margin-top:1rem;color:var(--teal-dark);font-weight:800}
+    .card-link:hover .learn-more{text-decoration:underline}
 
     .two-col-layout{
       display:grid;
@@ -647,36 +650,41 @@
         </div>
 
         <div class="difference-grid">
-          <article class="card reveal">
+          <a class="card card-link reveal" href="/reliable-substance-abuse-treatments" aria-label="Learn more about substance abuse treatment services">
             <div class="icon">👥</div>
             <h3>Group Therapy</h3>
             <p>Interactive virtual group sessions with peers in recovery, led by experienced counselors.</p>
-          </article>
-          <article class="card reveal">
+            <span class="learn-more">Learn More →</span>
+          </a>
+          <a class="card card-link reveal" href="/individual-counseling" aria-label="Learn more about individual counseling">
             <div class="icon">💬</div>
             <h3>Individual Counseling</h3>
             <p>Private one-on-one sessions to address personal goals, challenges, and treatment planning.</p>
-          </article>
-          <article class="card reveal">
+            <span class="learn-more">Learn More →</span>
+          </a>
+          <a class="card card-link reveal" href="/mat" aria-label="Learn more about medical and MAT support">
             <div class="icon">✚</div>
-            <h3>Medical Support</h3>
+            <h3>Medical &amp; MAT Support</h3>
             <p>Coordination with MAT providers and medical staff when clinically appropriate.</p>
-          </article>
+            <span class="learn-more">Learn More →</span>
+          </a>
           <article class="card reveal">
             <div class="icon">📚</div>
             <h3>Recovery Education</h3>
             <p>Evidence-based curriculum covering relapse prevention, coping skills, and wellness.</p>
           </article>
-          <article class="card reveal">
+          <a class="card card-link reveal" href="/client-app" aria-label="Learn more about the Own Today Recovery Portal">
             <div class="icon">📱</div>
             <h3>Recovery Portal Access</h3>
             <p>24/7 access to recovery tools, check-ins, journaling, and support between sessions.</p>
-          </article>
-          <article class="card reveal">
+            <span class="learn-more">Learn More →</span>
+          </a>
+          <a class="card card-link reveal" href="/case-management" aria-label="Learn more about case management">
             <div class="icon">🎯</div>
             <h3>Case Management</h3>
             <p>Support connecting to community resources, healthcare, and continuing care.</p>
-          </article>
+            <span class="learn-more">Learn More →</span>
+          </a>
         </div>
       </div>
     </section>
