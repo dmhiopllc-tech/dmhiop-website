@@ -662,11 +662,11 @@
     </section>
 
 
-    <!-- V4 Provider Spotlight -->
+    <!-- V4 Monthly Featured Provider Spotlight -->
     <section class="provider-section" aria-labelledby="provider-heading">
         <div class="provider-container provider-layout">
             <div class="provider-photo reveal">
-                <img
+                <img id="featured-provider-photo"
                     src="/__static/team/illiana-craig.jpg"
                     alt="Illiana Craig, LSAA, Primary Therapist at Desert Mountain Healing IOP"
                     loading="lazy"
@@ -675,14 +675,14 @@
             </div>
 
             <div class="provider-copy reveal">
-                <span class="provider-eyebrow">Meet one of our providers</span>
-                <h2 id="provider-heading">Meet Illiana Craig</h2>
-                <h3>Illiana Craig, LSAA — Primary Therapist</h3>
-                <p>Illiana provides individual counseling and group therapy with a compassionate, judgment-free approach. She helps clients build practical coping skills, confidence, and a strong foundation for long-term recovery.</p>
+                <span class="provider-eyebrow">Featured Provider of the Month</span>
+                <h2 id="provider-heading">Meet <span id="featured-provider-name">Illiana Craig</span></h2>
+                <h3 id="featured-provider-title">Illiana Craig, LSAA — Primary Therapist</h3>
+                <p id="featured-provider-bio">Illiana is dedicated to helping individuals overcome substance use disorders and build healthier lives. She earned her Associate Degree from UNM and is currently pursuing her Bachelor's degree.</p>
 
                 <div class="provider-actions">
-                    <a class="provider-btn" href="/team">Meet Our Providers →</a>
-                    <a class="provider-profile-link" href="/illiana-craig">Read Illiana's Bio</a>
+                    <a class="provider-btn" href="/team/">Meet Our Providers →</a>
+                    <a class="provider-profile-link" id="featured-provider-link" href="/illiana-craig/">Read Illiana's Bio</a>
                 </div>
             </div>
         </div>
@@ -784,6 +784,88 @@
         revealItems.forEach(function (item) { item.classList.add('visible'); });
       }
     });
+    </script>
+
+
+    <!-- Monthly Featured Provider Rotation
+         Uses the visitor's calendar month. The same provider appears for the entire month.
+         Rotation repeats automatically every 6 months. -->
+    <script>
+    (function () {
+        const providers = [
+        {
+                "name": "Illiana Craig",
+                "credentials": "LSAA",
+                "title": "Primary Therapist",
+                "photo": "/__static/team/illiana-craig.jpg",
+                "profile": "/illiana-craig/",
+                "bio": "Illiana is dedicated to helping individuals overcome substance use disorders and build healthier lives. She earned her Associate Degree from UNM and is currently pursuing her Bachelor's degree."
+        },
+        {
+                "name": "Regina Largent",
+                "credentials": "LSAA",
+                "title": "Primary Therapist",
+                "photo": "/__static/team/regina-largent.jpg",
+                "profile": "/regina-largent/",
+                "bio": "Regina is dedicated to helping individuals overcome substance use disorders through compassionate, evidence-based counseling and relapse prevention strategies."
+        },
+        {
+                "name": "Christina Blea",
+                "credentials": "LCSW",
+                "title": "Primary Therapist",
+                "photo": "/__static/team/christina-blea.jpeg",
+                "profile": "/christina-blea/",
+                "bio": "Christina specializes in trauma-informed care and helps clients heal from past experiences while building healthier coping strategies and stronger relationships."
+        },
+        {
+                "name": "Alicia Chavez",
+                "credentials": "LSAA",
+                "title": "Primary Therapist",
+                "photo": "/__static/team/alicia-chavez.png",
+                "profile": "/alicia-chavez/",
+                "bio": "Alicia creates a safe, judgment-free environment where clients can share their experiences and work toward recovery with compassionate support."
+        },
+        {
+                "name": "Nicole Clay",
+                "credentials": "LSAA",
+                "title": "Primary Therapist",
+                "photo": "/__static/team/nicole-clay.png",
+                "profile": "/nicole-clay/",
+                "bio": "Nicole believes every individual has the strength to create lasting change when provided with compassionate support and guidance."
+        },
+        {
+                "name": "Michelle Martin",
+                "credentials": "CPSW, CCSS, LSAA",
+                "title": "Primary Therapist & Certified Peer Support Specialist",
+                "photo": "/__static/team/michelle-martin.jpg",
+                "profile": "/michelle-martin/",
+                "bio": "Michelle brings the perspective of both a therapist and Certified Peer Support Worker, helping clients recognize their strengths and build sustainable recovery plans."
+        }
+];
+
+        // September 2026 is anchored to Illiana (index 0), then advances one provider each month.
+        const now = new Date();
+        const monthNumber = now.getFullYear() * 12 + now.getMonth();
+        const anchorMonth = 2026 * 12 + 8; // September 2026
+        const providerIndex = ((monthNumber - anchorMonth) % providers.length + providers.length) % providers.length;
+        const provider = providers[providerIndex];
+
+        const photo = document.getElementById('featured-provider-photo');
+        const name = document.getElementById('featured-provider-name');
+        const title = document.getElementById('featured-provider-title');
+        const bio = document.getElementById('featured-provider-bio');
+        const link = document.getElementById('featured-provider-link');
+
+        if (photo && name && title && bio && link) {
+            photo.src = provider.photo;
+            photo.alt = provider.name + ', ' + provider.credentials + ', ' + provider.title + ' at Desert Mountain Healing IOP';
+            name.textContent = provider.name;
+            title.textContent = provider.name + ', ' + provider.credentials + ' — ' + provider.title;
+            bio.textContent = provider.bio;
+            link.href = provider.profile;
+            link.textContent = 'Read ' + provider.name.split(' ')[0] + "'s Bio";
+        }
+    })();
     </script>
 
 </body>
