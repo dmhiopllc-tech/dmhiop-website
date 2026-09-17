@@ -77,6 +77,914 @@ display:flex;
 align-items:center;
 background:
 linear-gradient(90deg,rgba(6,55,67,.92) 0%,rgba(6,55,67,.75) 38%,rgba(6,55,67,.22) 68%,rgba(6,55,67,.05) 100%),
+url('/__static/images/hero/iop-hero.png') center center/cover no-repeat;
+color:white;
+}
+.hero::after{
+content:"";
+position:absolute;
+inset:auto 0 0;
+height:160px;
+background:linear-gradient(to top,rgba(0,0,0,.20),transparent);
+}
+.container{
+width:min(1400px,100%);
+margin:auto;
+padding:0 2rem;
+}
+.hero-inner{
+position:relative;
+z-index:2;
+padding:8rem 0 7rem;
+}
+.hero-copy{max-width:760px}
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:.55rem;
+padding:.55rem .95rem;
+border:1px solid rgba(255,255,255,.35);
+border-radius:999px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(12px);
+font-size:.8rem;
+text-transform:uppercase;
+letter-spacing:.12em;
+font-weight:800;
+margin-bottom:1.5rem;
+}
+.hero h1{
+font-family:'Merriweather',serif;
+font-size:clamp(2.8rem,5.5vw,5rem);
+line-height:1.08;
+letter-spacing:-.03em;
+margin-bottom:1.5rem;
+text-shadow:0 4px 24px rgba(0,0,0,.28);
+}
+.hero h1 span{
+color:var(--gold);
+}
+.hero-lead{
+font-size:clamp(1.08rem,1.6vw,1.25rem);
+color:rgba(255,255,255,.92);
+margin-bottom:2rem;
+line-height:1.6;
+}
+.hero-actions{
+display:flex;
+flex-wrap:wrap;
+gap:1rem;
+}
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:54px;
+padding:.95rem 1.5rem;
+border-radius:999px;
+font-weight:800;
+font-size:.98rem;
+transition:var(--transition);
+}
+.btn-warm{
+background:var(--gold);
+color:white;
+box-shadow:0 12px 28px rgba(239,139,34,.35);
+}
+.btn-warm:hover{
+background:var(--gold-dark);
+transform:translateY(-2px);
+}
+.btn-primary{
+background:var(--teal);
+color:white;
+box-shadow:0 12px 28px rgba(27,163,189,.35);
+}
+.btn-primary:hover{
+background:var(--teal-dark);
+transform:translateY(-2px);
+}
+.btn-secondary{
+background:rgba(255,255,255,.14);
+color:white;
+border:1px solid rgba(255,255,255,.42);
+backdrop-filter:blur(10px);
+}
+.btn-secondary:hover{
+background:white;
+color:var(--ink);
+}
+
+/\* ===== HERO CONTACT CARDS ===== \*/
+.hero-contact{
+position:absolute;
+right:2rem;
+top:50%;
+transform:translateY(-50%);
+display:grid;
+gap:1rem;
+width:280px;
+}
+.hero-contact-item{
+padding:1.2rem 1.3rem;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,.6);
+border-radius:20px;
+box-shadow:var(--shadow-lg);
+color:var(--ink);
+transition:var(--transition);
+}
+.hero-contact-item:hover{
+transform:translateY(-4px);
+box-shadow:0 30px 80px rgba(18,56,66,.22);
+}
+.hero-contact-item strong{
+display:block;
+color:var(--earth-dark);
+font-size:1.05rem;
+margin-bottom:.3rem;
+}
+.hero-contact-item small{
+display:block;
+color:var(--teal-dark);
+font-size:.92rem;
+font-weight:700;
+}
+.hero-contact-item a{
+color:var(--teal-dark);
+font-weight:700;
+}
+
+/\* ===== MAIN SECTIONS ===== \*/
+main{overflow:hidden}
+.section{padding:6.5rem 2rem}
+.section-soft{background:linear-gradient(180deg,var(--mist),white)}
+.section-sand{background:var(--sand)}
+.section-dark{
+background:linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
+color:white;
+}
+
+.section-head{
+max-width:900px;
+margin:0 auto 4rem;
+text-align:center;
+}
+.section-kicker{
+color:var(--teal-dark);
+text-transform:uppercase;
+letter-spacing:.12em;
+font-size:.82rem;
+font-weight:800;
+margin-bottom:.8rem;
+}
+h2{
+font-family:'Merriweather',serif;
+font-size:clamp(2.2rem,4vw,3.8rem);
+line-height:1.14;
+color:var(--earth-dark);
+margin-bottom:1.2rem;
+}
+.section-head p{
+color:var(--text);
+font-size:1.1rem;
+line-height:1.7;
+}
+
+/\* ===== SPLIT LAYOUTS ===== \*/
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:4.5rem;
+align-items:center;
+}
+.reveal{animation:fadeInUp .8s ease forwards}
+@keyframes fadeInUp{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+.reveal p{
+color:var(--text);
+font-size:1.05rem;
+margin-bottom:1rem;
+line-height:1.7;
+}
+.reveal h3{
+font-family:'Merriweather',serif;
+color:var(--earth-dark);
+font-size:1.8rem;
+margin:1.5rem 0 .8rem;
+}
+
+/\* ===== GLASS CARD ===== \*/
+.glass-card{
+padding:2.2rem;
+border-radius:var(--radius);
+background:rgba(255,255,255,.85);
+backdrop-filter:blur(16px);
+border:1px solid rgba(255,255,255,.6);
+box-shadow:var(--shadow-lg);
+}
+.glass-card h3{
+color:var(--earth-dark);
+font-size:1.6rem;
+margin-bottom:.8rem;
+}
+.glass-card p{
+color:var(--text);
+line-height:1.7;
+}
+
+/\* ===== QUOTE BLOCK ===== \*/
+.quote{
+padding:1.5rem 1.8rem;
+margin:1.5rem 0;
+border-left:4px solid var(--gold);
+border-radius:0 16px 16px 0;
+background:rgba(239,139,34,.08);
+color:var(--ink);
+font-style:italic;
+line-height:1.75;
+}
+
+/\* ===== BENEFIT CARDS ===== \*/
+.benefit-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:1.5rem;
+}
+.benefit-card{
+padding:2rem 1.8rem;
+border-radius:22px;
+background:white;
+border:1px solid var(--line);
+box-shadow:var(--shadow-sm);
+transition:var(--transition);
+}
+.benefit-card:hover{
+transform:translateY(-6px);
+box-shadow:var(--shadow-lg);
+}
+.benefit-icon{
+width:56px;
+height:56px;
+display:grid;
+place-items:center;
+border-radius:16px;
+background:linear-gradient(135deg,var(--teal-light),#e9f8fa);
+color:var(--teal-dark);
+font-size:1.5rem;
+margin-bottom:1.2rem;
+}
+.benefit-card h3{
+color:var(--earth-dark);
+font-size:1.3rem;
+margin-bottom:.7rem;
+}
+.benefit-card p{
+color:var(--text);
+font-size:.98rem;
+line-height:1.65;
+}
+
+/\* ===== COMPARISON TABLE ===== \*/
+.comparison-table{
+width:100%;
+border-collapse:separate;
+border-spacing:0;
+border-radius:var(--radius);
+overflow:hidden;
+box-shadow:var(--shadow-lg);
+}
+.comparison-table thead{
+background:linear-gradient(135deg,var(--teal-deep),var(--teal-dark));
+color:white;
+}
+.comparison-table th{
+padding:1.3rem 1.5rem;
+text-align:left;
+font-weight:800;
+font-size:1.05rem;
+}
+.comparison-table tbody tr{
+background:white;
+border-bottom:1px solid var(--line);
+}
+.comparison-table tbody tr:last-child{border-bottom:0}
+.comparison-table td{
+padding:1.2rem 1.5rem;
+color:var(--text);
+}
+.comparison-table td:first-child{
+font-weight:700;
+color:var(--ink);
+}
+.check-yes{
+color:var(--teal);
+font-weight:900;
+font-size:1.2rem;
+}
+.check-no{
+color:#ccc;
+font-weight:400;
+}
+
+/\* ===== SCHEDULE CARDS ===== \*/
+.schedule-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:2rem;
+}
+.schedule-card{
+padding:2.5rem;
+border-radius:var(--radius);
+background:white;
+border:2px solid var(--line);
+box-shadow:var(--shadow-sm);
+transition:var(--transition);
+}
+.schedule-card:hover{
+border-color:var(--teal);
+box-shadow:var(--shadow-lg);
+}
+.schedule-icon{
+font-size:2.5rem;
+margin-bottom:1rem;
+}
+.schedule-card h3{
+font-family:'Merriweather',serif;
+color:var(--earth-dark);
+font-size:1.8rem;
+margin-bottom:.8rem;
+}
+.schedule-card p{
+color:var(--text);
+margin-bottom:1.2rem;
+}
+.schedule-card ul{
+list-style:none;
+margin:0;
+}
+.schedule-card li{
+padding:.6rem 0;
+padding-left:1.8rem;
+position:relative;
+color:var(--text);
+}
+.schedule-card li::before{
+content:"✓";
+position:absolute;
+left:0;
+color:var(--teal);
+font-weight:900;
+}
+
+/\* ===== TEXT LINK ===== \*/
+.text-link{
+display:inline-flex;
+align-items:center;
+gap:.4rem;
+color:var(--teal-dark);
+font-weight:800;
+margin-top:1rem;
+transition:var(--transition);
+}
+.text-link:hover{
+color:var(--gold-dark);
+gap:.7rem;
+}
+
+/\* ===== PRE-FOOTER CTA ===== \*/
+.pre-footer-cta{
+padding:5.5rem 2rem;
+background:linear-gradient(135deg,var(--sand),white);
+}
+.cta-card{
+max-width:1100px;
+margin:auto;
+padding:4rem 3.5rem;
+text-align:center;
+border-radius:30px;
+background:white;
+border:1px solid var(--line);
+box-shadow:var(--shadow-lg);
+}
+.cta-card h2{
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+}
+.cta-card p{
+max-width:720px;
+margin:0 auto 2rem;
+color:var(--text);
+font-size:1.08rem;
+}
+.cta-actions{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:1rem;
+}
+
+/\* ===== RESPONSIVE ===== \*/
+@media(max-width:1080px){
+.hero-contact{
+position:static;
+transform:none;
+width:100%;
+max-width:600px;
+margin:3rem auto 0;
+grid-template-columns:repeat(2,1fr);
+}
+.split{grid-template-columns:1fr;gap:3rem}
+.benefit-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:900px){
+.schedule-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:760px){
+.hero{min-height:580px}
+.hero-inner{padding:5rem 0 4rem}
+.hero-contact{grid-template-columns:1fr}
+.section{padding:4.5rem 1.2rem}
+.benefit-grid{grid-template-columns:1fr}
+.comparison-table{font-size:.85rem}
+.comparison-table th,
+.comparison-table td{padding:.9rem .8rem}
+.cta-card{padding:2.5rem 1.5rem}
+}
+</style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@graph":[
+{
+"@type":"MedicalOrganization",
+"@id":"https://dmhiop.com/#organization",
+"name":"Desert Mountain Healing IOP",
+"url":"https://dmhiop.com/",
+"logo":"https://dmhiop.com/dmh-logo%20(1).png",
+"telephone":"+1-505-270-0840",
+"address":{
+"@type":"PostalAddress",
+"streetAddress":"3301 Southern Blvd SE, Suite 105",
+"addressLocality":"Rio Rancho",
+"addressRegion":"NM",
+"postalCode":"87124",
+"addressCountry":"US"
+}
+},
+{
+"@type":"MedicalTherapy",
+"@id":"https://dmhiop.com/iop-benefits#service",
+"name":"Intensive Outpatient Program (IOP)",
+"description":"Structured outpatient addiction treatment with morning and evening programs that allow clients to maintain work, family, and daily responsibilities while building lasting recovery.",
+"provider":{"@id":"https://dmhiop.com/#organization"},
+"areaServed":[
+{"@type":"City","name":"Rio Rancho"},
+{"@type":"City","name":"Albuquerque"}
+]
+},
+{
+"@type":"WebPage",
+"@id":"https://dmhiop.com/iop-benefits",
+"url":"https://dmhiop.com/iop-benefits",
+"name":"IOP Benefits: Structured Outpatient Addiction Treatment",
+"description":"Discover the benefits of Intensive Outpatient Program (IOP) treatment at Desert Mountain Healing IOP in Rio Rancho.",
+"provider":{"@id":"https://dmhiop.com/#organization"}
+},
+{
+"@type":"BreadcrumbList",
+"itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://dmhiop.com/"},
+{"@type":"ListItem","position":2,"name":"IOP Benefits","item":"https://dmhiop.com/iop-benefits"}
+]
+}
+]
+}
+</script>
+</head>
+
+<body>
+
+<!-- Virtual IOP Promo Banner -->
+<dmh-viop-promo></dmh-viop-promo>
+
+<!-- Header + Navigation Component -->
+<dmh-header-nav></dmh-header-nav>
+
+<section class="hero">
+<div class="container">
+<div class="hero-inner">
+<div class="hero-copy">
+<span class="eyebrow">Intensive Outpatient Program</span>
+<h1>Build Lasting Recovery While <span>Living Your Life</span></h1>
+<p class="hero-lead">Desert Mountain Healing IOP provides structured addiction treatment with morning and evening programs—so you can continue working, caring for family, and maintaining daily responsibilities while developing the skills, support, and foundation for long-term sobriety.</p>
+<div class="hero-actions">
+<a class='btn btn-warm' href='/insurance-verification'>Verify Insurance</a>
+<a class='btn btn-primary' href='/contact-us'>Talk With Our Team</a>
+<a class="btn btn-secondary" href="[tel:+15052700840](tel:+15052700840)">Call (505) 270-0840</a>
+</div>
+</div>
+
+<div class="hero-contact">
+<div class="hero-contact-item">
+<strong>Call Anytime</strong>
+<small><a href="[tel:+15052700840](tel:+15052700840)">(505) 270-0840</a></small>
+</div>
+<div class="hero-contact-item">
+<strong>Get Started</strong>
+<small><a href='/insurance-verification'>Verify Insurance</a></small>
+</div>
+<div class="hero-contact-item">
+<strong>Schedule Options</strong>
+<small>Morning & Evening Programs</small>
+</div>
+<div class="hero-contact-item">
+<strong>Location</strong>
+<small>Rio Rancho, NM</small>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<main>
+
+<section class="section section-soft">
+<div class="container split">
+<div class="reveal">
+<span class="eyebrow">Why IOP works</span>
+<h2>Recovery That Fits Into Your Life—Not the Other Way Around</h2>
+<p>Intensive Outpatient Programs are designed for people who need structured treatment but cannot pause their entire lives to attend residential rehab.</p>
+<p>IOP allows you to receive counseling, participate in group therapy, develop coping skills, and build a recovery plan—all while staying at home, continuing employment, caring for children, attending school, or managing other responsibilities.</p>
+<p>At Desert Mountain Healing IOP, we believe recovery should be accessible, practical, and built around real life. That's why we offer both morning and evening programs, so clients can find a schedule that works for their situation.</p>
+<div class="quote">"We created this program because we believe everyone deserves a chance at recovery—regardless of their work schedule, family obligations, or life circumstances. Treatment should meet people where they are, not force them to abandon everything to get help."</div>
+</div>
+
+<div class="glass-card reveal">
+<h3>Recovery begins with hope</h3>
+<p>Desert Mountain Healing IOP was founded by Sean Roberts and Gary Gamboa—two people in long-term recovery who wanted treatment to feel more compassionate, more practical, and more connected to real life.</p>
+<p>They built this program on the belief that <strong>lasting recovery comes from treating the whole person—not just the addiction.</strong></p>
+<p>Whether you're seeking help for the first time or returning after a relapse, you will be welcomed without judgment and supported every step of the way.</p>
+<p style="margin-bottom:0"><strong>Recovery begins with hope, grows through connection, and succeeds through compassionate care.</strong></p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-head">
+<p class="section-kicker">What makes IOP different</p>
+<h2>The Benefits of Intensive Outpatient Treatment</h2>
+<p>IOP provides structure, accountability, clinical support, and recovery education—while allowing you to remain connected to your life, family, and community.</p>
+</div>
+
+<div class="benefit-grid">
+<div class="benefit-card">
+<div class="benefit-icon">🏠</div>
+<h3>Stay Home, Stay Connected</h3>
+<p>You remain in your own home, surrounded by family and support systems, rather than being separated for weeks or months in residential treatment.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">💼</div>
+<h3>Continue Working or School</h3>
+<p>Morning and evening programs allow you to maintain employment, attend classes, or fulfill other daily obligations while receiving structured treatment.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">👨‍👩‍👧</div>
+<h3>Care for Your Family</h3>
+<p>IOP lets parents continue caring for children, partners maintain household responsibilities, and families stay together during treatment.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🎯</div>
+<h3>Structured Treatment Schedule</h3>
+<p>Regular group counseling, individual therapy, relapse prevention education, and recovery planning provide accountability and clinical support.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🤝</div>
+<h3>Peer Support & Connection</h3>
+<p>Group therapy creates meaningful connections with others in recovery, reducing isolation and building a healthy support network.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">💰</div>
+<h3>More Affordable Than Residential</h3>
+<p>Outpatient treatment is typically more cost-effective than residential programs, and many insurance plans provide coverage for IOP services.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🧠</div>
+<h3>Real-World Skill Building</h3>
+<p>You practice coping strategies, trigger management, and relapse prevention in your actual environment—where recovery happens.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🔄</div>
+<h3>Flexible Step-Down Approach</h3>
+<p>As you progress, treatment can step down from IOP to outpatient counseling, medication management, and continuing care—maintaining support as independence grows.</p>
+</div>
+
+<div class="benefit-card">
+<div class="benefit-icon">🌟</div>
+<h3>Whole-Person Care</h3>
+<p>Treatment addresses mental health, physical health, relationships, employment, housing, and other factors that impact long-term recovery.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section section-sand">
+<div class="container">
+<div class="section-head">
+<p class="section-kicker">IOP vs. Other Treatment Levels</p>
+<h2>Understanding Your Treatment Options</h2>
+<p>Every person's situation is different. The right level of care depends on medical needs, substance use history, withdrawal risk, home support, and personal circumstances.</p>
+</div>
+
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Treatment Feature</th>
+<th>Residential/Inpatient</th>
+<th>Intensive Outpatient (IOP)</th>
+<th>Standard Outpatient</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Live at Home</td>
+<td><span class="check-no">✗</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Continue Work/School</td>
+<td><span class="check-no">✗</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Stay With Family</td>
+<td><span class="check-no">✗</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Structured Daily Schedule</td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-no">✗</span></td>
+</tr>
+<tr>
+<td>Group Therapy</td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Individual Counseling</td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Relapse Prevention Education</td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓</span></td>
+</tr>
+<tr>
+<td>Medical Detox Available</td>
+<td><span class="check-yes">✓</span></td>
+<td><span class="check-yes">✓ (Outpatient)</span></td>
+<td><span class="check-no">✗</span></td>
+</tr>
+<tr>
+<td>Typical Cost Level</td>
+<td>Highest</td>
+<td>Moderate</td>
+<td>Lowest</td>
+</tr>
+<tr>
+<td>Best For</td>
+<td>High medical risk, unstable environment</td>
+<td>Stable home, need structure, can manage daily life</td>
+<td>Continuing care, stable recovery, lower intensity needs</td>
+</tr>
+</tbody>
+</table>
+
+<div class="quote" style="margin-top:2rem">
+<strong>Important:</strong> The right level of care is determined through clinical assessment. Our team will help you understand which option is safest and most appropriate for your situation.
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-head">
+<p class="section-kicker">Morning & Evening Options</p>
+<h2>Choose a Schedule That Works for Your Life</h2>
+<p>We understand that everyone's situation is different. That's why we offer both morning and evening IOP programs.</p>
+</div>
+
+<div class="schedule-grid">
+<div class="schedule-card">
+<div class="schedule-icon">🌅</div>
+<h3>Morning Program</h3>
+<p>Ideal for clients who work evenings, have afternoon commitments, or prefer daytime structure.</p>
+<ul>
+<li>Monday through Friday</li>
+<li>Morning group sessions</li>
+<li>Individual counseling as scheduled</li>
+<li>Leaves afternoons and evenings free</li>
+<li>Great for second-shift workers</li>
+</ul>
+</div>
+
+<div class="schedule-card">
+<div class="schedule-icon">🌆</div>
+<h3>Evening Program</h3>
+<p>Perfect for clients who work or attend school during the day and need treatment after hours.</p>
+<ul>
+<li>Monday through Friday</li>
+<li>Evening group sessions</li>
+<li>Individual counseling as scheduled</li>
+<li>Work or attend school during the day</li>
+<li>Great for first-shift workers and students</li>
+</ul>
+</div>
+</div>
+
+<div class="quote" style="margin-top:2rem">
+Both programs provide the same high-quality clinical care, group therapy, individual counseling, relapse prevention education, and recovery planning. The only difference is the time of day sessions are held.
+</div>
+</div>
+</section>
+
+<section class="section section-dark">
+<div class="container split">
+<div class="reveal">
+<span class="eyebrow" style="color:var(--gold)">What to expect</span>
+<h2 style="color:white">What Does IOP Treatment Include?</h2>
+<p style="color:rgba(255,255,255,.88)">Intensive Outpatient Programs at Desert Mountain Healing IOP combine clinical treatment, peer support, skill-building, and practical recovery planning.</p>
+<p style="color:rgba(255,255,255,.88)"><strong style="color:white">Group Counseling:</strong> Participate in structured group therapy sessions focused on recovery education, relapse prevention, coping skills, communication, accountability, and peer connection.</p>
+<p style="color:rgba(255,255,255,.88)"><strong style="color:white">Individual Therapy:</strong> Work one-on-one with a counselor to address personal triggers, mental health concerns, relationships, trauma, goals, and individualized treatment planning.</p>
+<p style="color:rgba(255,255,255,.88)"><strong style="color:white">Relapse Prevention:</strong> Learn to recognize warning signs, manage triggers, develop healthy coping strategies, and prepare for high-risk situations.</p>
+<p style="color:rgba(255,255,255,.88)"><strong style="color:white">Life Skills & Recovery Planning:</strong> Build practical skills for daily life, employment, relationships, communication, stress management, and long-term recovery.</p>
+</div>
+
+<div class="glass-card reveal">
+<h3>Beyond the Sessions</h3>
+<p>Treatment doesn't end when group is over. Clients have access to:</p>
+<div class="portal-highlight" style="margin:1.25rem 0 1.5rem;padding:1.35rem 1.5rem;border-radius:16px;background:#f1fbfc;border:1px solid #cdecef;">
+  <h4 style="margin:0 0 .5rem;color:#063743;">📱 Exclusive Recovery Portal</h4>
+  <p style="margin:0 0 1rem;">Desert Mountain Healing IOP clients receive access to our Recovery Portal, with tools designed to support recovery between treatment sessions.</p>
+  <a class="btn btn-primary" href="/client-app">Explore the Recovery Portal →</a>
+</div>
+<ul style="list-style:none;padding:0">
+<li style="padding:.5rem 0;padding-left:1.8rem;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Case management for practical needs</li>
+<li style="padding:.5rem 0;padding-left:1.8rem;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Medical support when appropriate</li>
+<li style="padding:.5rem 0;padding-left:1.8rem;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Exclusive Recovery Portal for daily engagement</li>
+<li style="padding:.5rem 0;padding-left:1.8rem;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Peer support and community connection</li>
+<li style="padding:.5rem 0;padding-left:1.8rem;position:relative"><span style="position:absolute;left:0;color:var(--gold);font-weight:900">✓</span> Continuing care and step-down planning</li>
+</ul>
+<p style="margin-top:1rem;margin-bottom:0"><strong>Recovery is about more than just attending sessions. It's about building a new life.</strong></p>
+</div>
+</div>
+</section>
+
+<section class="section section-soft">
+<div class="container split">
+<div class="reveal">
+<span class="eyebrow">Treatment that respects your dignity</span>
+<h2>Founded by People Who Understand Recovery</h2>
+<p>Desert Mountain Healing IOP was created by Sean Roberts and Gary Gamboa because they believed addiction treatment could be delivered with greater compassion, integrity, accountability, and hope.</p>
+<p>After experiencing recovery firsthand, they recognized that lasting recovery requires more than simply treating addiction. It requires hope, accountability, evidence-based care, and a treatment team that truly sees the person behind the diagnosis.</p>
+<p>That belief became the foundation of Desert Mountain Healing IOP.</p>
+<div class="quote">Today, every client who walks through our doors is treated as an individual—not a number. We believe recovery is possible for everyone, and our mission is to provide compassionate, evidence-based treatment that empowers people to rebuild their lives.</div>
+</div>
+
+<div class="glass-card reveal">
+<h3>You Will Be Welcomed Here</h3>
+<p>Whether you're seeking help for the first time or returning after a relapse, you will be welcomed without judgment.</p>
+<p>Our team understands the courage it takes to ask for help. We know that recovery isn't linear, that setbacks happen, and that what matters most is taking the next right step forward.</p>
+<p style="margin-bottom:0"><strong>Recovery begins with hope, grows through connection, and succeeds through compassionate care.</strong></p>
+</div>
+</div>
+</section>
+
+<section class="pre-footer-cta">
+<div class="cta-card">
+<p class="section-kicker">Take the first step</p>
+<h2>You Don't Have to Wait to Start Recovery</h2>
+<p>Speak with our team about IOP benefits, scheduling options, insurance verification, and how we can support you or someone you care about. Recovery is possible, and help is available today.</p>
+<div class="cta-actions">
+<a class='btn btn-warm' href='/insurance-verification'>Verify Insurance</a>
+<a class='btn btn-primary' href='/contact-us'>Contact Our Team</a>
+<a class="btn btn-secondary" href="[tel:+15052700840](tel:+15052700840)">Call (505) 270-0840</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer Component -->
+<dmh-footer></dmh-footer>
+
+<!-- Component Loader Script -->
+<script src="https://dmhiop.com/components/dmh-components.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>IOP Benefits: Structured Outpatient Addiction Treatment | DMHIOP</title>
+<meta content="Discover the benefits of Intensive Outpatient Program (IOP) treatment at Desert Mountain Healing IOP in Rio Rancho. Structured recovery support with morning and evening programs that let you maintain work, family, and daily responsibilities while building lasting sobriety." name="description"/>
+<meta content="IOP benefits, intensive outpatient program Rio Rancho, outpatient addiction treatment Albuquerque, IOP vs residential, flexible addiction treatment, structured outpatient recovery" name="keywords"/>
+<meta content="Desert Mountain Healing IOP" name="author"/>
+<link href="https://dmhiop.com/iop-benefits" rel="canonical"/>
+
+<meta content="IOP Benefits | Desert Mountain Healing IOP" property="og:title"/>
+<meta content="Structured outpatient addiction treatment with morning and evening programs. Continue work and family responsibilities while building lasting recovery." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://dmhiop.com/iop-benefits" property="og:url"/>
+<meta content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/iop-hero.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Desert Mountain Healing IOP" property="og:site_name"/>
+
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="IOP Benefits | Desert Mountain Healing IOP" name="twitter:title"/>
+<meta content="Structured outpatient addiction treatment with morning and evening programs serving Rio Rancho and Albuquerque." name="twitter:description"/>
+<meta content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/iop-hero.png" name="twitter:image"/>
+
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta content="index, follow" name="googlebot"/>
+<meta content="US-NM" name="geo.region"/>
+<meta content="Rio Rancho" name="geo.placename"/>
+<meta content="35.233154;-106.666221" name="geo.position"/>
+<meta content="35.233154, -106.666221" name="ICBM"/>
+
+<!-- Async font loading (performance optimization) -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+
+<style>
+:root{
+--teal-deep:#063743;
+--teal:#1ba3bd;
+--teal-dark:#117d91;
+--teal-light:#a7e3eb;
+--gold:#ef8b22;
+--gold-dark:#d4710a;
+--sand:#f3eadf;
+--sand-dark:#d8c4ae;
+--earth:#805d4f;
+--earth-dark:#563c34;
+--ink:#17323a;
+--text:#42565d;
+--white:#ffffff;
+--mist:#f5fafb;
+--line:rgba(23,50,58,.12);
+--shadow-sm:0 10px 30px rgba(18,56,66,.08);
+--shadow-lg:0 26px 70px rgba(18,56,66,.16);
+--radius:24px;
+--transition:all .3s ease;
+}
+
+\*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:'Open Sans',sans-serif;
+color:var(--ink);
+background:var(--white);
+line-height:1.65;
+overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/\* ===== HERO ===== \*/
+.hero{
+min-height:650px;
+position:relative;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,rgba(6,55,67,.92) 0%,rgba(6,55,67,.75) 38%,rgba(6,55,67,.22) 68%,rgba(6,55,67,.05) 100%),
 url('https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/iop-hero.png') center center/cover no-repeat;
 color:white;
 }
