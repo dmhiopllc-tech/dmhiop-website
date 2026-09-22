@@ -27,8 +27,6 @@
 <meta content="index, follow" name="googlebot"/>
 <meta content="US-NM" name="geo.region"/>
 <meta content="Rio Rancho" name="geo.placename"/>
-<meta content="35.233154;-106.666221" name="geo.position"/>
-<meta content="35.233154, -106.666221" name="ICBM"/>
 
 <!-- Async font loading (performance optimization) -->
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -328,6 +326,12 @@ h2{
     color:var(--text);
     font-weight:600;
 }
+.check-list a{
+    color:var(--teal-dark);
+    text-decoration:underline;
+    text-underline-offset:2px;
+}
+.check-list a:hover{color:var(--gold-dark)}
 .check-list li::before{
     content:"✓";
     position:absolute;
@@ -707,6 +711,63 @@ details p{
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this an inpatient detox program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Desert Mountain Healing IOP provides outpatient medical detox assistance for clients who are clinically appropriate for outpatient care. People who need around-the-clock monitoring or hospital-level treatment will be referred to a higher level of care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will medication be prescribed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medication may be used when clinically appropriate after medical evaluation. The specific medication, dose, duration, and monitoring plan depend on the client's individual needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I begin counseling or IOP during this process?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. When appropriate, counseling, case management, MAT, and structured outpatient services can begin as part of a coordinated treatment plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know whether outpatient detox assistance is safe for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A medical and clinical assessment is needed. Our team reviews current symptoms, medical history, substance use pattern, prior withdrawal experiences, available support, and other risk factors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does insurance cover medical detox assistance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coverage varies by plan, authorization requirements, deductibles, copayments, and medical necessity criteria. Our team can verify available benefits before services begin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I've tried detox before and relapsed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Relapse can occur during recovery, but it does not mean treatment has failed. You will be welcomed back without judgment. Our team will help you understand what happened, strengthen your recovery plan, and connect you with appropriate ongoing support."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -773,7 +834,7 @@ details p{
 <li>Medical evaluation and individualized planning</li>
 <li>Medication support when clinically appropriate</li>
 <li>Ongoing symptom and progress monitoring</li>
-<li>Coordination with counseling, MAT, IOP, and case management</li>
+<li>Coordination with <a href="/individual-counseling">counseling</a>, <a href="/mat">MAT</a>, <a href="/iop-benefits">IOP</a>, and <a href="/case-management">case management</a></li>
 <li>Referral to a higher level of care when necessary</li>
 </ul>
 <a class="text-link" href="/contact-us">Request a confidential assessment →</a>
@@ -917,25 +978,25 @@ details p{
 </div>
 
 <div class="continuum-grid reveal">
-<article class="continuum-card">
+<a class="continuum-card" href="/contact-us" aria-label="Contact Desert Mountain Healing IOP about medical detox assistance">
 <h3>Medical Detox Assistance</h3>
 <p>Initial evaluation, support, and monitoring for eligible clients.</p>
-</article>
+</a>
 
-<article class="continuum-card">
+<a class="continuum-card" href="/mat" aria-label="Learn about Medication-Assisted Treatment">
 <h3>Medication-Assisted Treatment</h3>
 <p>Ongoing medication support for opioid or alcohol use disorders when appropriate.</p>
-</article>
+</a>
 
-<article class="continuum-card">
+<a class="continuum-card" href="/iop-benefits" aria-label="Learn about Intensive Outpatient Program treatment">
 <h3>IOP & Counseling</h3>
 <p>Structured treatment focused on relapse prevention, coping skills, and behavior change.</p>
-</article>
+</a>
 
-<article class="continuum-card">
+<a class="continuum-card" href="/reliable-substance-abuse-treatments" aria-label="Learn about outpatient substance use treatment services">
 <h3>Outpatient Continuing Care</h3>
 <p>Longer-term support designed to help protect progress and strengthen recovery.</p>
-</article>
+</a>
 </div>
 </div>
 </section>
@@ -976,7 +1037,7 @@ details p{
 
 <details>
 <summary>What if I've tried detox before and relapsed?</summary>
-<p>Relapse is a common part of recovery for many people. You will be welcomed back without judgment. Our team will help you understand what happened, strengthen your recovery plan, and connect you with appropriate ongoing support.</p>
+<p>Relapse can occur during recovery, but it does not mean treatment has failed. You will be welcomed back without judgment. Our team will help you understand what happened, strengthen your recovery plan, and connect you with appropriate ongoing support.</p>
 </details>
 </div>
 </div>
