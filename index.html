@@ -33,9 +33,6 @@
   <!-- 🚀 PERFORMANCE: Preload critical hero image -->
   <link rel="preload" as="image" href="/__static/images/hero/sunrise-optimized.png" fetchpriority="high">
 
-  <!-- 🚀 PERFORMANCE: Preconnect to external domains -->
-  <link rel="preconnect" href="https://raw.githubusercontent.com">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -295,8 +292,7 @@
       padding:1rem 1.15rem;
       border:1px solid rgba(255,255,255,.2);
       border-radius:16px;
-      background:rgba(5,50,61,.52);
-      backdrop-filter:blur(9px);
+      background:rgba(5,50,61,.72);
     }
     .hero-contact-item strong{display:block}
     .hero-contact-item small{color:rgba(255,255,255,.78)}
@@ -722,8 +718,9 @@
         </div>
 
         <div class="portal-image reveal">
-          <img src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/recovery-portal-optimized.webp"
-             width="1200" height="800" alt="Desert Mountain Healing Recovery Portal displayed across desktop, laptop, tablet, and mobile devices">
+          <img src="/__static/images/hero/recovery-portal-optimized.webp"
+             width="1200" height="800" loading="lazy" decoding="async" fetchpriority="low"
+             alt="Desert Mountain Healing Recovery Portal displayed across desktop, laptop, tablet, and mobile devices">
         </div>
       </div>
     </section>
