@@ -1,36 +1,43 @@
-<!-- Virtual IOP Promotional Banner Component -->
-<a href="/virtual-iop" class="viop-promo-banner" id="viop-promo-banner"
+<!-- Virtual IOP Promotional Banner Component - Post Launch -->
+
+<a href="/virtual-iop"
+   class="viop-promo-banner"
    aria-label="Learn about Desert Mountain Healing Virtual IOP">
+
   <div class="viop-promo-inner">
 
-    <div class="viop-promo-text" id="viop-promo-text">
-      <span class="viop-promo-emoji">🎉</span>
-      <span><strong>NEW!</strong> Virtual IOP ✨ Launching Sept 16th</span>
+    <div class="viop-promo-text">
+      <span class="viop-promo-emoji" aria-hidden="true">🎉</span>
+      <span><strong>NEW!</strong> Virtual IOP Is Now Available</span>
     </div>
 
-    <div class="viop-promo-countdown" id="viop-mini-countdown">
-      <span>⏰ <span id="viop-days">--</span>d</span>
-      <span><span id="viop-hours">--</span>h</span>
-      <span><span id="viop-minutes">--</span>m</span>
+    <div class="viop-promo-live">
+      Now Enrolling • Morning &amp; Evening Options
     </div>
 
-    <span class="viop-promo-cta" id="viop-promo-cta">Learn More →</span>
+    <span class="viop-promo-cta">
+      Explore Virtual IOP →
+    </span>
 
   </div>
 </a>
 
 <style>
-/* Virtual IOP Promo Banner */
+/* ===== Virtual IOP Promo Banner ===== */
+
 .viop-promo-banner{
-  background:linear-gradient(135deg,#ef8b22,#d4710a);
-  color:#fff;
-  padding:1rem 1.5rem;
-  text-align:center;
+  display:block;
   position:relative;
   overflow:hidden;
-  box-shadow:0 2px 12px rgba(239,139,34,.25);
-  display:block;
+  padding:1rem 1.5rem;
+
+  color:#fff;
+  background:linear-gradient(135deg,#ef8b22,#d4710a);
+
+  text-align:center;
   text-decoration:none;
+
+  box-shadow:0 2px 12px rgba(239,139,34,.25);
   transition:transform .3s ease;
 }
 
@@ -38,6 +45,7 @@
   transform:translateY(-2px);
 }
 
+/* Subtle shine effect */
 .viop-promo-banner::before{
   content:"";
   position:absolute;
@@ -45,12 +53,14 @@
   left:-100%;
   width:100%;
   height:100%;
+
   background:linear-gradient(
     90deg,
     transparent,
     rgba(255,255,255,.15),
     transparent
   );
+
   animation:viop-shine 3s infinite;
 }
 
@@ -61,26 +71,30 @@
 }
 
 .viop-promo-inner{
+  position:relative;
+  z-index:1;
+
   max-width:1200px;
   margin:auto;
+
   display:flex;
   align-items:center;
   justify-content:center;
   gap:1rem;
   flex-wrap:wrap;
-  position:relative;
-  z-index:1;
 }
 
 .viop-promo-text{
   display:flex;
   align-items:center;
   gap:.5rem;
-  font-weight:700;
+
   font-size:.95rem;
+  font-weight:700;
 }
 
 .viop-promo-emoji{
+  display:inline-block;
   font-size:1.3rem;
   animation:viop-bounce 2s infinite;
 }
@@ -90,37 +104,38 @@
   50%{transform:translateY(-5px)}
 }
 
-.viop-promo-countdown{
-  display:flex;
-  gap:.6rem;
-  font-weight:800;
-  font-size:.9rem;
-}
-
 .viop-promo-live{
-  font-weight:800;
-  font-size:.9rem;
   color:#fff;
+  font-size:.9rem;
+  font-weight:800;
 }
 
 .viop-promo-cta{
   padding:.5rem 1.2rem;
-  background:#fff;
+
   color:#d4710a;
-  border-radius:999px;
-  font-weight:800;
-  font-size:.85rem;
-  transition:all .3s ease;
+  background:#fff;
+
   border:2px solid #fff;
+  border-radius:999px;
+
+  font-size:.85rem;
+  font-weight:800;
+
+  transition:all .3s ease;
 }
 
 .viop-promo-banner:hover .viop-promo-cta{
-  background:#d4710a;
   color:#fff;
+  background:#d4710a;
   transform:scale(1.05);
 }
 
+
+/* ===== Mobile ===== */
+
 @media(max-width:768px){
+
   .viop-promo-banner{
     padding:.8rem 1rem;
   }
@@ -134,97 +149,28 @@
     font-size:.85rem;
   }
 
-  .viop-promo-countdown,
   .viop-promo-live{
     font-size:.8rem;
-    gap:.4rem;
   }
 
   .viop-promo-cta{
-    font-size:.8rem;
     padding:.4rem 1rem;
+    font-size:.8rem;
   }
 }
-</style>
 
-<script>
-/* Virtual IOP Launch Countdown / Live Banner */
-(function(){
 
-  const launchDate =
-    new Date('2026-09-16T08:00:00-06:00').getTime();
+/* ===== Reduced Motion Accessibility ===== */
 
-  function updateViOPBanner(){
+@media(prefers-reduced-motion:reduce){
 
-    const now = new Date().getTime();
-    const distance = launchDate - now;
-
-    const textEl =
-      document.getElementById('viop-promo-text');
-
-    const countdownEl =
-      document.getElementById('viop-mini-countdown');
-
-    const ctaEl =
-      document.getElementById('viop-promo-cta');
-
-    /* ===== AFTER LAUNCH ===== */
-
-    if(distance <= 0){
-
-      if(textEl){
-        textEl.innerHTML =
-          '<span class="viop-promo-emoji">🎉</span>' +
-          '<span><strong>NEW!</strong> Virtual IOP Is Now Available</span>';
-      }
-
-      if(countdownEl){
-        countdownEl.className = 'viop-promo-live';
-        countdownEl.innerHTML =
-          'Now Enrolling • Morning & Evening Options';
-      }
-
-      if(ctaEl){
-        ctaEl.textContent = 'Explore Virtual IOP →';
-      }
-
-      return;
-    }
-
-    /* ===== BEFORE LAUNCH ===== */
-
-    const days =
-      Math.floor(distance / (1000 * 60 * 60 * 24));
-
-    const hours =
-      Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) /
-        (1000 * 60 * 60)
-      );
-
-    const minutes =
-      Math.floor(
-        (distance % (1000 * 60 * 60)) /
-        (1000 * 60)
-      );
-
-    const daysEl =
-      document.getElementById('viop-days');
-
-    const hoursEl =
-      document.getElementById('viop-hours');
-
-    const minutesEl =
-      document.getElementById('viop-minutes');
-
-    if(daysEl) daysEl.textContent = days;
-    if(hoursEl) hoursEl.textContent = hours;
-    if(minutesEl) minutesEl.textContent = minutes;
+  .viop-promo-banner,
+  .viop-promo-banner::before,
+  .viop-promo-emoji,
+  .viop-promo-cta{
+    animation:none;
+    transition:none;
   }
 
-  updateViOPBanner();
-
-  setInterval(updateViOPBanner,60000);
-
-})();
-</script>
+}
+</style>
