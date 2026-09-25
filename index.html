@@ -105,11 +105,13 @@
   }
   </script>
 
+  <!-- 🚀 PERFORMANCE: Reduced Google Font payload.
+       Merriweather: 700 for headings/logo.
+       Open Sans: 400 for body copy, 700 for emphasized/navigation text. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- 🚀 PERFORMANCE: Async font loading to prevent render blocking -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap"></noscript>
 
   <style>
     :root{
@@ -333,7 +335,7 @@
       border:7px solid var(--mist);border-radius:50%;
       color:#fff;background:linear-gradient(145deg,var(--teal),var(--teal-dark));
       box-shadow:0 8px 22px rgba(13,116,133,.22);
-      font-family:"Merriweather",serif;font-weight:900;
+      font-family:"Merriweather",serif;font-weight:700;
     }
     .journey-step:nth-child(7) .step-number,
     .journey-step:nth-child(8) .step-number{
