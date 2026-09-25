@@ -216,6 +216,32 @@
     }
     .btn-warm{color:#fff;background:var(--gold);box-shadow:0 12px 28px rgba(239,139,34,.3)}
 
+    /* ===== RESERVE SPACE FOR DYNAMIC COMPONENTS - PREVENT CLS ===== */
+    dmh-viop-promo,
+    dmh-header-nav{
+      display:block;
+    }
+
+    /* Desktop */
+    dmh-viop-promo{
+      min-height:78px;
+    }
+
+    dmh-header-nav{
+      min-height:148px;
+    }
+
+    /* Mobile */
+    @media(max-width:768px){
+      dmh-viop-promo{
+        min-height:145px;
+      }
+
+      dmh-header-nav{
+        min-height:118px;
+      }
+    }
+
     /* ===== HOMEPAGE-SPECIFIC STYLES (NO header/footer/promo - those come from components) ===== */
 
     /* ===== HERO ===== */
