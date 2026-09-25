@@ -221,7 +221,7 @@
       display:block;
     }
 
-    /* Desktop */
+    /* Desktop: match the rendered component footprints */
     dmh-viop-promo{
       height:58px;
     }
@@ -231,18 +231,19 @@
     }
 
     /*
-      Mobile:
-      The VIOP banner stacks into three rows and the navigation becomes
-      a vertical menu. Reserve their actual mobile footprint before the
-      components are fetched so the hero does not get pushed down.
+      Mobile CLS protection:
+      The post-launch VIOP banner renders as three stacked rows.
+      The V4 navigation also becomes a vertical menu while the topbar
+      remains above it. Reserve those rendered footprints before the
+      component fetches complete so the hero starts in the same place.
     */
     @media(max-width:768px){
       dmh-viop-promo{
-        height:105px;
+        height:124px;
       }
 
       dmh-header-nav{
-        height:205px;
+        height:270px;
       }
     }
 
