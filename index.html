@@ -224,21 +224,26 @@
 
     /* Desktop */
     dmh-viop-promo{
-      min-height:78px;
+      min-height:58px;
     }
 
     dmh-header-nav{
       min-height:148px;
     }
 
-    /* Mobile */
+    /*
+      Mobile:
+      The VIOP banner stacks into three rows and the navigation becomes
+      a vertical menu. Reserve their actual mobile footprint before the
+      components are fetched so the hero does not get pushed down.
+    */
     @media(max-width:768px){
       dmh-viop-promo{
-        min-height:145px;
+        min-height:105px;
       }
 
       dmh-header-nav{
-        min-height:118px;
+        min-height:205px;
       }
     }
 
