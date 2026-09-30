@@ -1,5 +1,5 @@
-# SEO Fix - Updated June 26, 2026
-# Netlify Configuration for dmhiop.com
+# Netlify Configuration for Desert Mountain Healing IOP
+# Redirects are managed separately in the _redirects file.
 
 [build]
   publish = "."
@@ -7,7 +7,11 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Headers for SEO and Security
+
+# =====================================================
+# SECURITY HEADERS
+# =====================================================
+
 [[headers]]
   for = "/*"
 
@@ -19,12 +23,17 @@
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
-# Cache control for static assets
+
+# =====================================================
+# STATIC ASSET CACHING
+# =====================================================
+
 [[headers]]
   for = "/images/*"
 
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
 
 [[headers]]
   for = "/favicons/*"
@@ -32,11 +41,13 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+
 [[headers]]
   for = "/*.css"
 
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
 
 [[headers]]
   for = "/*.js"
@@ -44,215 +55,13 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# HTML files should not be cached aggressively
+
+# =====================================================
+# HTML CACHING
+# =====================================================
+
 [[headers]]
   for = "/*.html"
 
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
-
-# Redirect rules
-[[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/medical-detox-assistance"
-  to = "/medical-detox-assistance.html"
-  status = 301
-
-[[redirects]]
-  from = "/medical-detox-assistance/"
-  to = "/medical-detox-assistance.html"
-  status = 301
-
-[[redirects]]
-  from = "/contact-us"
-  to = "/contact-us.html"
-  status = 301
-
-[[redirects]]
-  from = "/contact-us/"
-  to = "/contact-us.html"
-  status = 301
-
-[[redirects]]
-  from = "/faq"
-  to = "/faq.html"
-  status = 301
-
-[[redirects]]
-  from = "/faq/"
-  to = "/faq.html"
-  status = 301
-
-[[redirects]]
-  from = "/team"
-  to = "/team.html"
-  status = 301
-
-[[redirects]]
-  from = "/team/"
-  to = "/team.html"
-  status = 301
-
-[[redirects]]
-  from = "/reliable-substance-abuse-treatments"
-  to = "/reliable-substance-abuse-treatments.html"
-  status = 301
-
-[[redirects]]
-  from = "/reliable-substance-abuse-treatments/"
-  to = "/reliable-substance-abuse-treatments.html"
-  status = 301
-
-[[redirects]]
-  from = "/iop-benefits"
-  to = "/iop-benefits.html"
-  status = 301
-
-[[redirects]]
-  from = "/iop-benefits/"
-  to = "/iop-benefits.html"
-  status = 301
-
-[[redirects]]
-  from = "/mat"
-  to = "/mat.html"
-  status = 301
-
-[[redirects]]
-  from = "/mat/"
-  to = "/mat.html"
-  status = 301
-
-[[redirects]]
-  from = "/reviews"
-  to = "/reviews.html"
-  status = 301
-
-[[redirects]]
-  from = "/reviews/"
-  to = "/reviews.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog"
-  to = "/blog.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog/"
-  to = "/blog.html"
-  status = 301
-
-# Blog post redirects
-[[redirects]]
-  from = "/blog-first-week-iop"
-  to = "/blog-first-week-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-first-week-iop/"
-  to = "/blog-first-week-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-iop-vs-residential"
-  to = "/blog-iop-vs-residential.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-iop-vs-residential/"
-  to = "/blog-iop-vs-residential.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-iop-cost-insurance"
-  to = "/blog-iop-cost-insurance.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-iop-cost-insurance/"
-  to = "/blog-iop-cost-insurance.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-signs-need-iop"
-  to = "/blog-signs-need-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-signs-need-iop/"
-  to = "/blog-signs-need-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-evidence-based-therapies"
-  to = "/blog-evidence-based-therapies.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-evidence-based-therapies/"
-  to = "/blog-evidence-based-therapies.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-balancing-work-family-iop"
-  to = "/blog-balancing-work-family-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-balancing-work-family-iop/"
-  to = "/blog-balancing-work-family-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-dual-diagnosis-iop"
-  to = "/blog-dual-diagnosis-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-dual-diagnosis-iop/"
-  to = "/blog-dual-diagnosis-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-life-after-iop"
-  to = "/blog-life-after-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-life-after-iop/"
-  to = "/blog-life-after-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-why-choose-dmh-iop"
-  to = "/blog-why-choose-dmh-iop.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog-why-choose-dmh-iop/"
-  to = "/blog-why-choose-dmh-iop.html"
-  status = 301
-
-# Force HTTPS and remove www
-[[redirects]]
-  from = "http://dmhiop.com/*"
-  to = "https://dmhiop.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.dmhiop.com/*"
-  to = "https://dmhiop.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://www.dmhiop.com/*"
-  to = "https://dmhiop.com/:splat"
-  status = 301
-  force = true
