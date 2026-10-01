@@ -1,31 +1,43 @@
 /**
  * DMH Component Loader System
- * 
- * This script loads reusable components into your pages.
- * Update components once, all pages update automatically!
- * 
- * Usage: Add this script at the end of your <body> tag:
- * <script src="/components/dmh-components.js"></script>
+ * Performance-optimized version
+ *
+ * Critical above-the-fold components load immediately.
+ * Non-critical components load after the initial page render.
  */
 
-(function() {
+(function () {
   'use strict';
 
-  // Component configuration - using full absolute URLs
-  const SITE_URL = 'https://dmhiop.com';
+  // =====================================================
+  // COMPONENT CONFIGURATION
+  // Same-origin relative URLs avoid unnecessary absolute URLs
+  // =====================================================
+
   const components = {
-    'dmh-viop-promo': `${SITE_URL}/components/viop-promo-banner.html`,
-    'dmh-treatment-menu': `${SITE_URL}/components/v4-treatment-dropdown.html`,
-    'dmh-header-nav': `${SITE_URL}/components/v4-header-nav.html`,
-    'dmh-footer': `${SITE_URL}/components/v4-footer.html`,
-    'dmh-seo-virtual-statewide': `${SITE_URL}/components/seo-virtual-iop-statewide.html`,
-    'dmh-seo-inperson-metro': `${SITE_URL}/components/seo-in-person-iop-metro.html`
+    'dmh-viop-promo': '/components/viop-promo-banner.html',
+    'dmh-treatment-menu': '/components/v4-treatment-dropdown.html',
+    'dmh-header-nav': '/components/v4-header-nav.html',
+    'dmh-footer': '/components/v4-footer.html',
+    'dmh-seo-virtual-statewide': '/components/seo-virtual-iop-statewide.html',
+    'dmh-seo-inperson-metro': '/components/seo-in-person-iop-metro.html'
   };
 
-  /**
-   * Load a component from a URL and insert it into a placeholder
-   */
+  // Components needed above the fold.
+  const criticalComponents = new Set([
+    'dmh-viop-promo',
+    'dmh-header-nav'
+  ]);
+
+  // =====================================================
+  // COMPONENT LOADER
+  // =====================================================
+
   async function loadComponent(placeholder) {
+    if (!placeholder || !placeholder.isConnected) {
+      return;
+    }
+
     const componentName = placeholder.tagName.toLowerCase();
     const componentUrl = components[componentName];
 
@@ -35,105 +47,222 @@
     }
 
     try {
-      const response = await fetch(componentUrl);
+      const response = await fetch(componentUrl, {
+        credentials: 'same-origin'
+      });
+
       if (!response.ok) {
-        throw new Error(`Failed to load ${componentUrl}: ${response.status}`);
+        throw new Error(
+          `Failed to load ${componentUrl}: ${response.status}`
+        );
       }
 
       const html = await response.text();
-      
-      // Create a temporary container
+
+      // Parse component in a temporary container.
       const temp = document.createElement('div');
       temp.innerHTML = html;
 
-      // Extract EXECUTABLE scripts (NOT JSON-LD or other data scripts)
-      const scripts = temp.querySelectorAll('script');
+      // =====================================================
+      // EXECUTABLE SCRIPTS
+      // Keep JSON-LD and other non-executable scripts in HTML.
+      // =====================================================
+
       const executableScripts = [];
-      
-      scripts.forEach(script => {
+
+      temp.querySelectorAll('script').forEach(script => {
         const scriptType = script.getAttribute('type');
-        // Only execute scripts that are JavaScript (no type or type="text/javascript" or type="module")
-        if (!scriptType || scriptType === 'text/javascript' || scriptType === 'module') {
-          executableScripts.push(script.textContent);
-          script.remove(); // Remove from HTML
+
+        if (
+          !scriptType ||
+          scriptType === 'text/javascript' ||
+          scriptType === 'module'
+        ) {
+          executableScripts.push({
+            code: script.textContent,
+            type: scriptType
+          });
+
+          script.remove();
         }
-        // Leave JSON-LD and other data scripts in the HTML to be inserted
       });
 
-      // Extract styles
+      // =====================================================
+      // COMPONENT STYLES
+      // Add each component's CSS to <head> only once.
+      // =====================================================
+
       const styles = temp.querySelectorAll('style');
-      styles.forEach(style => {
-        if (!document.querySelector(`style[data-component="${componentName}"]`)) {
-          const newStyle = document.createElement('style');
-          newStyle.setAttribute('data-component', componentName);
-          newStyle.textContent = style.textContent;
-          document.head.appendChild(newStyle);
-        }
-        style.remove(); // Remove from HTML after copying to head
-      });
 
-      // Replace placeholder with component content
-      placeholder.outerHTML = temp.innerHTML;
+      if (
+        styles.length > 0 &&
+        !document.querySelector(
+          `style[data-component="${componentName}"]`
+        )
+      ) {
+        const newStyle = document.createElement('style');
+        newStyle.setAttribute('data-component', componentName);
 
-      // Execute only the executable scripts
-      if (executableScripts.length > 0) {
-        const scriptCode = executableScripts.join('\n');
-        const script = document.createElement('script');
-        script.textContent = scriptCode;
-        document.body.appendChild(script);
+        let combinedCSS = '';
+
+        styles.forEach(style => {
+          combinedCSS += `${style.textContent}\n`;
+        });
+
+        newStyle.textContent = combinedCSS;
+        document.head.appendChild(newStyle);
       }
 
+      styles.forEach(style => style.remove());
+
+      // =====================================================
+      // INSERT COMPONENT
+      // =====================================================
+
+      if (placeholder.isConnected) {
+        placeholder.outerHTML = temp.innerHTML;
+      }
+
+      // =====================================================
+      // EXECUTE COMPONENT JAVASCRIPT
+      // =====================================================
+
+      executableScripts.forEach(item => {
+        const script = document.createElement('script');
+
+        if (item.type === 'module') {
+          script.type = 'module';
+        }
+
+        script.textContent = item.code;
+        document.body.appendChild(script);
+      });
+
     } catch (error) {
-      console.error(`Error loading component ${componentName}:`, error);
-      placeholder.innerHTML = `<!-- Component ${componentName} failed to load: ${error.message} -->`;
+      console.error(
+        `Error loading component ${componentName}:`,
+        error
+      );
+
+      if (placeholder && placeholder.isConnected) {
+        placeholder.innerHTML =
+          `<!-- Component ${componentName} failed to load -->`;
+      }
     }
   }
 
-  /**
-   * Initialize component system when DOM is ready
-   */
-  function init() {
-    // Find all component placeholders by tag name
-    const componentNames = Object.keys(components);
+  // =====================================================
+  // FIND COMPONENT PLACEHOLDERS
+  // =====================================================
+
+  function getPlaceholders() {
     const placeholders = [];
-    
-    componentNames.forEach(name => {
+
+    Object.keys(components).forEach(name => {
       const elements = document.getElementsByTagName(name);
       placeholders.push(...Array.from(elements));
     });
-    
-    // Load each component
-    placeholders.forEach(placeholder => {
-      loadComponent(placeholder);
-    });
 
-    // Mark active navigation links based on current page
-    setTimeout(() => {
-      markActiveNavLinks();
-    }, 500);
+    return placeholders;
   }
 
-  /**
-   * Mark the current page's navigation link as active
-   */
+  // =====================================================
+  // LOAD CRITICAL COMPONENTS
+  // Banner + header load immediately.
+  // =====================================================
+
+  function loadCriticalComponents(placeholders) {
+    placeholders.forEach(placeholder => {
+      const componentName = placeholder.tagName.toLowerCase();
+
+      if (criticalComponents.has(componentName)) {
+        loadComponent(placeholder);
+      }
+    });
+  }
+
+  // =====================================================
+  // LOAD NON-CRITICAL COMPONENTS
+  // Footer and below-the-fold components wait until
+  // initial rendering has had a chance to complete.
+  // =====================================================
+
+  function loadDeferredComponents(placeholders) {
+    const loadDeferred = function () {
+      placeholders.forEach(placeholder => {
+        if (!placeholder.isConnected) {
+          return;
+        }
+
+        const componentName = placeholder.tagName.toLowerCase();
+
+        if (!criticalComponents.has(componentName)) {
+          loadComponent(placeholder);
+        }
+      });
+    };
+
+    // requestIdleCallback is ideal when available.
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(loadDeferred, {
+        timeout: 1500
+      });
+    } else {
+      // Fallback for browsers without requestIdleCallback.
+      window.setTimeout(loadDeferred, 500);
+    }
+  }
+
+  // =====================================================
+  // ACTIVE NAVIGATION
+  // =====================================================
+
   function markActiveNavLinks() {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('[data-route]');
-    
+
     navLinks.forEach(link => {
       const route = link.getAttribute('data-route');
-      if (currentPath === route || currentPath === route + '.html' || 
-          (currentPath === '/' && route === '/') ||
-          (currentPath.includes(route) && route !== '/')) {
+
+      if (!route) {
+        return;
+      }
+
+      if (
+        currentPath === route ||
+        currentPath === route + '.html' ||
+        (currentPath === '/' && route === '/') ||
+        (route !== '/' && currentPath.includes(route))
+      ) {
         link.classList.add('active');
         link.setAttribute('aria-current', 'page');
       }
     });
   }
 
-  // Initialize when DOM is ready
+  // =====================================================
+  // INITIALIZATION
+  // =====================================================
+
+  function init() {
+    const placeholders = getPlaceholders();
+
+    // Start only above-the-fold components immediately.
+    loadCriticalComponents(placeholders);
+
+    // Delay footer and other non-critical components.
+    loadDeferredComponents(placeholders);
+
+    // Mark active links after header has had time to load.
+    window.setTimeout(markActiveNavLinks, 750);
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener(
+      'DOMContentLoaded',
+      init,
+      { once: true }
+    );
   } else {
     init();
   }
