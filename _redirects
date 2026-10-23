@@ -9,13 +9,11 @@ http://dmhiop.com/* https://dmhiop.com/:splat 301!
 http://www.dmhiop.com/* https://dmhiop.com/:splat 301!
 https://www.dmhiop.com/* https://dmhiop.com/:splat 301!
 
-
 # =====================================================
 # HOMEPAGE
 # =====================================================
 
 /index.html / 301!
-
 
 # =====================================================
 # LEGACY SERVICE ALIAS
@@ -23,7 +21,6 @@ https://www.dmhiop.com/* https://dmhiop.com/:splat 301!
 
 /reliable-substance-abuse-services /reliable-substance-abuse-treatments 301!
 /reliable-substance-abuse-services.html /reliable-substance-abuse-treatments 301!
-
 
 # =====================================================
 # MAIN SERVICE PAGES
@@ -37,7 +34,6 @@ https://www.dmhiop.com/* https://dmhiop.com/:splat 301!
 /individual-counseling.html /individual-counseling 301!
 /case-management.html /case-management 301!
 
-
 # =====================================================
 # MAIN WEBSITE PAGES
 # =====================================================
@@ -49,7 +45,6 @@ https://www.dmhiop.com/* https://dmhiop.com/:splat 301!
 /contact-us.html /contact-us 301!
 /insurance-verification.html /insurance-verification 301!
 /client-app.html /client-app 301!
-
 
 # =====================================================
 # STAFF PAGES
@@ -67,7 +62,6 @@ https://www.dmhiop.com/* https://dmhiop.com/:splat 301!
 /illiana-craig.html /illiana-craig 301!
 /tatiana-schnierow.html /tatiana-schnierow 301!
 
-
 # =====================================================
 # LEGAL / PRIVACY PAGES
 # =====================================================
@@ -76,6 +70,10 @@ https://www.dmhiop.com/* https://dmhiop.com/:splat 301!
 /terms-of-service.html /terms-of-service 301!
 /hipaa-notice.html /hipaa-notice 301!
 
+# Old Terms and SMS links now point to the consolidated Terms page
+/terms /terms-of-service 301!
+/sms-terms /terms-of-service 301!
+/sms-terms.html /terms-of-service 301!
 
 # =====================================================
 # OLD BLOG URLS
