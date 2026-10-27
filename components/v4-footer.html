@@ -1,158 +1,45 @@
 <!-- V4 FOOTER - MASTER VERSION -->
 <!-- Update this file once and all pages update automatically -->
 <style>
-footer {
-  background: linear-gradient(135deg, #063743 0%, #0a4f5e 100%);
-  color: #fff;
-  padding: 3rem 0 1rem;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.footer-sitemap {
-  margin-bottom: 2rem;
-}
-
-.footer-sitemap h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #ef8b22;
-  border-bottom: 2px solid #ef8b22;
-  padding-bottom: 0.5rem;
-}
-
-.sitemap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-}
-
-.sitemap-section strong {
-  display: block;
-  color: #1ba3bd;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.sitemap-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sitemap-section li {
-  margin-bottom: 0.4rem;
-}
-
-.sitemap-section a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.sitemap-section a:hover {
-  color: #ef8b22;
-}
-
-.footer-trust {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255,255,255,0.2);
-}
-
-.trust-badges {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.trust-badge {
-  background: rgba(239,139,34,0.2);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  border: 1px solid rgba(239,139,34,0.4);
-}
-
-.footer-legal {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.footer-legal a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.footer-legal a:hover {
-  text-decoration: underline;
-}
-
-.footer-emergency {
-  background: rgba(211,47,47,0.2);
-  border: 2px solid #d32f2f;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.footer-emergency p {
-  margin: 0.3rem 0;
-}
-
-.footer-emergency strong {
-  color: #ef8b22;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-}
-
+footer { background: linear-gradient(135deg, #063743 0%, #0a4f5e 100%); color: #fff; padding: 3rem 0 1rem; }
+.footer-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.footer-sitemap { margin-bottom: 2rem; }
+.footer-sitemap h2 { font-size: 1.5rem; margin-bottom: 1.5rem; color: #ef8b22; border-bottom: 2px solid #ef8b22; padding-bottom: 0.5rem; }
+.sitemap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+.sitemap-section strong { display: block; color: #1ba3bd; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.sitemap-section ul { list-style: none; padding: 0; }
+.sitemap-section li { margin-bottom: 0.4rem; }
+.sitemap-section a { color: #fff; text-decoration: none; transition: color 0.2s; }
+.sitemap-section a:hover { color: #ef8b22; }
+.footer-trust { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2); }
+.trust-badges { display: flex; gap: 1rem; flex-wrap: wrap; }
+.trust-badge { background: rgba(239,139,34,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(239,139,34,0.4); }
+.footer-legal { display: flex; gap: 1rem; flex-wrap: wrap; }
+.footer-legal a { color: #fff; text-decoration: none; font-size: 0.9rem; }
+.footer-legal a:hover { text-decoration: underline; }
+.footer-emergency { background: rgba(211,47,47,0.2); border: 2px solid #d32f2f; border-radius: 8px; padding: 1rem; text-align: center; margin-bottom: 2rem; }
+.footer-emergency p { margin: 0.3rem 0; }
+.footer-emergency strong { color: #ef8b22; }
+.footer-bottom { text-align: center; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+.footer-sms { margin: 0 0 2rem; padding: 1.35rem 1.5rem; border: 1px solid rgba(255,255,255,.28); border-radius: 12px; background: rgba(255,255,255,.08); }
+.footer-sms h2 { color: #ef8b22; font-size: 1.35rem; margin: 0 0 .6rem; }
+.footer-sms p { margin: .45rem 0; line-height: 1.65; }
+.footer-sms a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.footer-sms a:hover, .footer-sms a:focus-visible { color: #ffca86; }
+.footer-sms-links { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-top: .65rem; }
 @media (max-width: 768px) {
-  .sitemap-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .footer-trust {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .trust-badges {
-    width: 100%;
-  }
-  
-  .footer-legal {
-    width: 100%;
-    flex-direction: column;
-  }
+  .sitemap-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .footer-trust { flex-direction: column; align-items: flex-start; }
+  .trust-badges { width: 100%; }
+  .footer-legal { width: 100%; flex-direction: column; }
 }
 </style>
-
 <footer>
   <div class="footer-container">
-    
     <!-- Sitemap Directory -->
     <div class="footer-sitemap">
       <h2>Complete Site Directory</h2>
       <div class="sitemap-grid">
-        
         <!-- Treatment Programs -->
         <div class="sitemap-section">
           <strong>Treatment Programs</strong>
@@ -164,7 +51,6 @@ footer {
             <li><a href='/reliable-substance-abuse-treatments'>All Services</a></li>
           </ul>
         </div>
-
         <!-- Insurance -->
         <div class="sitemap-section">
           <strong>Insurance</strong>
@@ -177,7 +63,6 @@ footer {
             <li><a href='/medicaid'>Medicaid</a></li>
           </ul>
         </div>
-
         <!-- About Us -->
         <div class="sitemap-section">
           <strong>About Us</strong>
@@ -188,7 +73,6 @@ footer {
             <li><a href='/blog'>Recovery Blog</a></li>
           </ul>
         </div>
-
         <!-- Client Resources -->
         <div class="sitemap-section">
           <strong>Client Resources</strong>
@@ -198,7 +82,6 @@ footer {
             <li><a href="https://myrecoverynm.org" target="_blank" rel="noopener">Recovery NM Scholarships</a></li>
           </ul>
         </div>
-
         <!-- Service Area - UPDATED for statewide Virtual IOP -->
         <div class="sitemap-section">
           <strong>Service Area</strong>
@@ -209,10 +92,19 @@ footer {
             <li><a href='/virtual-iop'>All of New Mexico</a></li>
           </ul>
         </div>
-
       </div>
     </div>
-
+    <!-- Public instructions for visitors who initiate a text conversation -->
+    <section class="footer-sms" aria-labelledby="footer-sms-title">
+      <h2 id="footer-sms-title">Text Our Team</h2>
+      <p>Text <a href="sms:+15052700840">(505) 270-0840</a> with general questions about our services, appointments, or intake. Our staff respond with individual, one-to-one conversational messages related to your inquiry. We do not send SMS marketing campaigns.</p>
+      <p>By texting Desert Mountain Healing IOP LLC at (505) 270-0840, you agree to receive conversational replies related to your inquiry. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for assistance.</p>
+      <p>Please do not send private medical or treatment information through ordinary text messaging.</p>
+      <div class="footer-sms-links">
+        <a href="https://dmhiop.com/privacy-policy">Privacy Policy</a>
+        <a href="https://dmhiop.com/terms-of-service">SMS Terms &amp; Conditions</a>
+      </div>
+    </section>
     <!-- Trust Badges & Legal Links -->
     <div class="footer-trust">
       <div class="trust-badges">
@@ -227,18 +119,15 @@ footer {
         <a href='/hipaa-notice'>HIPAA Notice</a>
       </div>
     </div>
-
     <!-- Emergency Crisis Support -->
     <div class="footer-emergency">
       <p><strong>Crisis Support Available 24/7</strong></p>
-      <p>If you or someone you know is in crisis, call <strong>988</strong> (Suicide & Crisis Lifeline) or <strong>911</strong> for immediate help.</p>
+      <p>If you or someone you know is in crisis, call <strong>988</strong> (Suicide &amp; Crisis Lifeline) or <strong>911</strong> for immediate help.</p>
     </div>
-
     <!-- Copyright -->
     <div class="footer-bottom">
       <p>© 2026 Desert Mountain Healing IOP, LLC. All rights reserved.</p>
-      <p>In-Person IOP: Rio Rancho & Albuquerque Metro • Virtual IOP: Serving All of New Mexico</p>
+      <p>In-Person IOP: Rio Rancho &amp; Albuquerque Metro • Virtual IOP: Serving All of New Mexico</p>
     </div>
-
   </div>
 </footer>
