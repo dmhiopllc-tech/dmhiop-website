@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Management Services | Personalized Support | Desert Mountain Healing IOP</title>
+    <title>Addiction Recovery Case Management in Rio Rancho, NM | DMHIOP</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Professional case management services at Desert Mountain Healing IOP in Rio Rancho. Personalized support, resource coordination, and advocacy for your recovery journey.">
-    <meta name="keywords" content="case management, IOP case management, recovery support, Rio Rancho, Albuquerque, New Mexico, treatment coordination, resource assistance">
+    <meta name="description" content="Recovery case management in Rio Rancho, NM. Desert Mountain Healing IOP helps clients coordinate care, find community resources, and plan next steps in recovery.">
     <meta name="author" content="Desert Mountain Healing IOP">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://dmhiop.com/case-management">
     <meta name="theme-color" content="#1ba3bd">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Case Management Services | Desert Mountain Healing IOP">
-    <meta property="og:description" content="Get personalized case management support for your recovery journey. Comprehensive coordination of care, resources, and advocacy.">
+    <meta property="og:title" content="Recovery Case Management in Rio Rancho | DMHIOP">
+    <meta property="og:description" content="Explore addiction recovery case management in Rio Rancho, including care coordination, community referrals, and practical support for IOP clients.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dmhiop.com/case-management">
     <meta property="og:image" content="https://dmhiop.com/__static/images/og/dmh-iop-og-image.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Case Management Services | Desert Mountain Healing IOP">
-    <meta name="twitter:description" content="Personalized case management support for your recovery journey">
+    <meta name="twitter:title" content="Recovery Case Management in Rio Rancho | DMHIOP">
+    <meta name="twitter:description" content="Care coordination and community resource support for addiction recovery in Rio Rancho, NM">
     <meta name="twitter:image" content="https://dmhiop.com/__static/images/og/dmh-iop-og-image.png">
 
     <!-- Favicon -->
@@ -37,9 +36,12 @@
     
     <!-- Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
+      "@type": "MedicalOrganization",
+      "@id": "https://dmhiop.com/#organization",
       "name": "Desert Mountain Healing IOP",
       "url": "https://dmhiop.com/",
       "telephone": "+15052700840",
@@ -50,15 +52,61 @@
         "addressRegion": "NM",
         "postalCode": "87124",
         "addressCountry": "US"
-      },
-      "availableService": {
-        "@type": "MedicalProcedure",
-        "name": "Case Management Services",
-        "description": "Professional case management for IOP clients including care coordination, resource assistance, and recovery advocacy"
       }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://dmhiop.com/case-management#service",
+      "name": "Addiction Recovery Case Management",
+      "description": "Care coordination, community resource referrals, and practical recovery support for clients participating in treatment.",
+      "provider": {
+        "@id": "https://dmhiop.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rio Rancho"
+        },
+        {
+          "@type": "City",
+          "name": "Albuquerque"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://dmhiop.com/case-management#webpage",
+      "url": "https://dmhiop.com/case-management",
+      "name": "Addiction Recovery Case Management in Rio Rancho, NM",
+      "about": {
+        "@id": "https://dmhiop.com/case-management#service"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://dmhiop.com/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dmhiop.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case Management",
+          "item": "https://dmhiop.com/case-management"
+        }
+      ]
     }
+  ]
+}
     </script>
-    
+
     <style>
         :root{
           --teal-deep:#063743;
@@ -111,7 +159,7 @@
           position:relative;
           background:
             linear-gradient(90deg,rgba(4,32,39,.92) 0%,rgba(4,32,39,.75) 45%,rgba(4,32,39,.22) 78%,rgba(4,32,39,.05) 100%),
-            url('https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png') center center / cover no-repeat;
+            url('/__static/images/hero/sunrise.png') center center / cover no-repeat;
           color:white;
           padding:6rem 2rem;
           text-align:center;
@@ -168,7 +216,7 @@
         }
         .intro-questions{
           display:grid;
-          grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+          grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));
           gap:1.5rem;
           margin-top:3rem;
         }
@@ -201,7 +249,7 @@
         }
         .benefits-grid{
           display:grid;
-          grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+          grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
           gap:2.5rem;
         }
         .benefit-card{
@@ -244,7 +292,7 @@
         }
         .who-grid{
           display:grid;
-          grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+          grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));
           gap:2rem;
           max-width:1100px;
           margin:0 auto;
@@ -281,7 +329,7 @@
         }
         .steps-grid{
           display:grid;
-          grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+          grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
           gap:2.5rem;
           max-width:1100px;
           margin:0 auto;
@@ -406,8 +454,8 @@
 <dmh-header-nav></dmh-header-nav>
 
     <section class="hero">
-        <h1>🤝 Case Management Services</h1>
-        <p>Your dedicated advocate for navigating recovery, coordinating care, and accessing the resources you need to succeed</p>
+        <h1>🤝 Addiction Recovery Case Management in Rio Rancho</h1>
+        <p>Personalized support for coordinating care, navigating community resources, and addressing practical barriers to recovery in Rio Rancho and the Albuquerque area.</p>
     </section>
 
     <main>
@@ -415,13 +463,13 @@
         <section class="intro reveal">
             <h2>Your Personal Recovery Navigator</h2>
             <p class="intro-text">
-                Recovery is a journey that often requires more than just treatment—it requires support in navigating complex systems, coordinating care, and accessing vital resources. Our professional case managers serve as your dedicated advocate, helping you overcome barriers and connect with the services you need to build a stable, healthy life.
+                Recovery is a journey that often requires more than just treatment—it requires support in navigating complex systems, coordinating care, and accessing vital resources. Our team helps clients identify barriers, coordinate referrals, and navigate community resources as part of a personalized recovery plan.
             </p>
 
             <div class="intro-questions">
                 <div class="question-card">
                     <h4>Need help coordinating care?</h4>
-                    <p>We connect you with medical providers, specialists, and community resources.</p>
+                    <p>We help coordinate referrals to healthcare providers and community resources.</p>
                 </div>
                 <div class="question-card">
                     <h4>Struggling with housing or employment?</h4>
@@ -429,11 +477,11 @@
                 </div>
                 <div class="question-card">
                     <h4>Overwhelmed by the system?</h4>
-                    <p>We advocate for you and help navigate insurance, benefits, and services.</p>
+                    <p>We help you understand options and navigate insurance, benefits, and service referrals.</p>
                 </div>
                 <div class="question-card">
                     <h4>Want ongoing support?</h4>
-                    <p>We stay with you throughout your recovery journey, adjusting as your needs change.</p>
+                    <p>We help review changing needs and coordinate next steps as part of your treatment plan.</p>
                 </div>
             </div>
         </section>
@@ -445,37 +493,37 @@
                 <div class="benefit-card reveal">
                     <div class="benefit-icon">🗺️</div>
                     <h3>Personalized Care Planning</h3>
-                    <p>We develop an individualized plan tailored to your unique needs, goals, and circumstances—addressing not just treatment, but all aspects of your recovery and well-being.</p>
+                    <p>We work with you to identify practical needs, priorities, and goals that complement your clinical treatment plan.</p>
                 </div>
 
                 <div class="benefit-card reveal">
                     <div class="benefit-icon">🔗</div>
                     <h3>Resource Coordination</h3>
-                    <p>Connect with housing assistance, employment services, transportation, childcare, legal aid, and other community resources that support your recovery and stability.</p>
+                    <p>Explore referrals to housing, employment, transportation, childcare, legal aid, and other community resources based on availability and eligibility.</p>
                 </div>
 
                 <div class="benefit-card reveal">
                     <div class="benefit-icon">🏥</div>
                     <h3>Healthcare Navigation</h3>
-                    <p>Coordinate with medical providers, specialists, pharmacies, and insurance companies to ensure you receive comprehensive, integrated care without confusion or gaps.</p>
+                    <p>Get help communicating with healthcare providers and navigating referrals, appointments, and insurance questions when appropriate.</p>
                 </div>
 
                 <div class="benefit-card reveal">
                     <div class="benefit-icon">📋</div>
                     <h3>Benefits Assistance</h3>
-                    <p>Get help applying for Medicaid, disability benefits, food assistance (SNAP), and other programs you may be eligible for to support your basic needs during recovery.</p>
+                    <p>Receive guidance on locating application resources for Medicaid, SNAP, and other assistance programs for which you may qualify.</p>
                 </div>
 
                 <div class="benefit-card reveal">
                     <div class="benefit-icon">🛡️</div>
                     <h3>Crisis Support</h3>
-                    <p>Access immediate guidance and resources during difficult moments, including connections to crisis services, emergency housing, and urgent care coordination.</p>
+                    <p>Identify appropriate crisis resources and referrals when urgent needs arise. For immediate danger, call 911; for a mental health crisis, call or text 988.</p>
                 </div>
 
                 <div class="benefit-card reveal">
                     <div class="benefit-icon">📞</div>
                     <h3>Ongoing Advocacy</h3>
-                    <p>We speak up for your needs, rights, and preferences when dealing with systems, providers, or agencies—ensuring your voice is heard and respected.</p>
+                    <p>We support you in communicating your needs and preferences with providers and community agencies, with appropriate consent.</p>
                 </div>
             </div>
         </section>
@@ -487,19 +535,19 @@
                 <div class="who-card reveal">
                     <div class="who-card-icon">👥</div>
                     <h3>Current IOP Clients</h3>
-                    <p>Receive comprehensive support while actively participating in our Intensive Outpatient Program to maximize your treatment outcomes and life stability.</p>
+                    <p>Coordinate referrals and practical supports while participating in our Intensive Outpatient Program (IOP).</p>
                 </div>
 
                 <div class="who-card reveal">
                     <div class="who-card-icon">🌱</div>
                     <h3>Transitioning Clients</h3>
-                    <p>Get continued support when stepping down from IOP to outpatient care or transitioning to other levels of service—ensuring continuity of care.</p>
+                    <p>Plan referrals and next steps when transitioning from IOP to outpatient care or another level of service.</p>
                 </div>
 
                 <div class="who-card reveal">
                     <div class="who-card-icon">🏠</div>
                     <h3>Clients with Complex Needs</h3>
-                    <p>Those facing multiple challenges like housing instability, co-occurring disorders, legal issues, or family concerns benefit from coordinated, wraparound support.</p>
+                    <p>Clients managing housing instability, co-occurring concerns, legal requirements, or family needs may benefit from coordinated referrals.</p>
                 </div>
             </div>
         </section>
@@ -511,25 +559,25 @@
                 <div class="step-card reveal">
                     <div class="step-number">1</div>
                     <h3>Initial Assessment</h3>
-                    <p>We meet with you to understand your situation, identify your needs, and discuss your goals for recovery and life stability.</p>
+                    <p>We discuss your current needs, barriers, and goals in the context of your recovery plan.</p>
                 </div>
 
                 <div class="step-card reveal">
                     <div class="step-number">2</div>
                     <h3>Create Your Plan</h3>
-                    <p>Together, we develop a personalized action plan outlining services, resources, referrals, and steps to achieve your goals.</p>
+                    <p>Together, we identify priorities and outline appropriate resources, referrals, and next steps.</p>
                 </div>
 
                 <div class="step-card reveal">
                     <div class="step-number">3</div>
                     <h3>Connect & Coordinate</h3>
-                    <p>We facilitate connections with providers and services, coordinate appointments, and help you navigate systems and paperwork.</p>
+                    <p>We help identify relevant providers and community services, coordinate referrals, and navigate paperwork when appropriate.</p>
                 </div>
 
                 <div class="step-card reveal">
                     <div class="step-number">4</div>
                     <h3>Ongoing Support</h3>
-                    <p>Regular check-ins, plan adjustments, crisis support, and advocacy continue throughout your journey—ensuring you're never alone.</p>
+                    <p>As appropriate during treatment, we review progress, update referrals, and help coordinate additional support.</p>
                 </div>
             </div>
         </section>
@@ -537,7 +585,7 @@
         <!-- Final CTA -->
         <section class="final-cta reveal">
             <h2>You Don't Have to Navigate This Alone</h2>
-            <p>Our case managers are here to guide, support, and advocate for you every step of the way. Let us help you access the resources and services you need to build a strong foundation for lasting recovery.</p>
+            <p>Our team can help you identify practical needs, coordinate referrals, and connect with community resources as part of your recovery plan. Contact us to learn how case management fits into treatment.</p>
             <div class="cta-buttons">
                 <a href="/insurance-verification" class="btn-primary">Verify Insurance Coverage</a>
                 <a href="tel:+15052700840" class="btn-secondary">Call (505) 270-0840</a>
