@@ -9,23 +9,23 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Addiction Treatment Services in Rio Rancho & Albuquerque | DMHIOP</title>
-<meta content="Explore coordinated outpatient addiction treatment at Desert Mountain Healing IOP in Rio Rancho, including IOP, medication-assisted treatment, outpatient medical detox assistance, counseling, case management, peer support, and an exclusive client app." name="description"/>
-<meta content="addiction treatment services Rio Rancho, Albuquerque IOP, medication assisted treatment New Mexico, outpatient medical detox assistance, substance abuse counseling, case management, recovery app" name="keywords"/>
+<title>Outpatient Addiction Treatment in Rio Rancho, NM | DMHIOP</title>
+<meta content="Explore outpatient addiction treatment in Rio Rancho, NM. Desert Mountain Healing IOP offers group therapy, individual counseling, case management and recovery support for adults." name="description"/>
+<meta content="outpatient addiction treatment Rio Rancho, intensive outpatient program Albuquerque, substance use counseling New Mexico, recovery case management" name="keywords"/>
 <meta content="Desert Mountain Healing IOP" name="author"/>
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <link href="https://dmhiop.com/reliable-substance-abuse-treatments" rel="canonical"/>
 <meta content="Addiction Treatment Services | Desert Mountain Healing IOP" property="og:title"/>
-<meta content="IOP, MAT, outpatient medical detox assistance, counseling, case management, recovery support, and an exclusive app for DMHIOP clients." property="og:description"/>
+<meta content="Explore intensive outpatient treatment, counseling, case management and recovery support in Rio Rancho, serving the Albuquerque area." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://dmhiop.com/reliable-substance-abuse-treatments" property="og:url"/>
-<meta content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png" property="og:image"/>
+<meta content="https://dmhiop.com/__static/images/hero/sunrise.png" property="og:image"/>
 <meta content="en_US" property="og:locale"/>
 <meta content="Desert Mountain Healing IOP" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Addiction Treatment Services | Desert Mountain Healing IOP" name="twitter:title"/>
 <meta content="Explore coordinated outpatient addiction treatment and recovery support serving Rio Rancho and Albuquerque." name="twitter:description"/>
-<meta content="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png" name="twitter:image"/>
+<meta content="https://dmhiop.com/__static/images/hero/sunrise.png" name="twitter:image"/>
 <meta content="US-NM" name="geo.region"/>
 <meta content="Rio Rancho" name="geo.placename"/>
 <meta content="#0d7485" name="theme-color"/>
@@ -34,7 +34,7 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "MedicalBusiness",
         "@id": "https://dmhiop.com/#organization",
         "name": "Desert Mountain Healing IOP",
         "url": "https://dmhiop.com/",
@@ -42,7 +42,8 @@
           "@type": "ImageObject",
           "url": "https://dmhiop.com/dmh-logo%20(1).png"
         },
-        "description": "Evidence-based intensive outpatient substance use treatment in Rio Rancho, New Mexico, serving the Albuquerque area.",
+        "description": "Outpatient substance use treatment, counseling and recovery support for adults in Rio Rancho, New Mexico, serving the Albuquerque area.",
+        "address": {"@type":"PostalAddress","streetAddress":"3301 Southern Blvd SE, Suite 105","addressLocality":"Rio Rancho","addressRegion":"NM","postalCode":"87124","addressCountry":"US"},
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+1-505-270-0840",
@@ -58,12 +59,13 @@
       {
         "@type": "Service",
         "@id": "https://dmhiop.com/reliable-substance-abuse-treatments#service",
-        "name": "Outpatient Addiction Treatment Services",
+        "name": "Outpatient Addiction Treatment and Recovery Services in Rio Rancho",
+        "description": "Intensive outpatient substance use treatment, group and individual counseling, relapse prevention, case management and recovery support for adults.",
         "serviceType": [
           "Intensive Outpatient Program",
-          "Medication-Assisted Treatment",
-          "Outpatient Medical Detox Assistance",
           "Substance Use Counseling",
+          "Group Therapy",
+          "Relapse Prevention",
           "Case Management"
         ],
         "provider": {"@id": "https://dmhiop.com/#organization"},
@@ -72,7 +74,8 @@
           {"@type": "City", "name": "Albuquerque"}
         ],
         "url": "https://dmhiop.com/reliable-substance-abuse-treatments"
-      }
+      },
+      {"@type":"WebPage","@id":"https://dmhiop.com/reliable-substance-abuse-treatments#webpage","url":"https://dmhiop.com/reliable-substance-abuse-treatments","name":"Outpatient Addiction Treatment in Rio Rancho, NM","about":{"@id":"https://dmhiop.com/reliable-substance-abuse-treatments#service"}}
     ]
   }
   </script>
@@ -186,7 +189,7 @@
       color:#fff;
       background:
         linear-gradient(90deg,rgba(4,32,39,.88) 0%,rgba(4,32,39,.65) 45%,rgba(4,32,39,.15) 78%,rgba(4,32,39,.25) 100%),
-        url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center center / cover no-repeat;
+        url("https://dmhiop.com/__static/images/hero/sunrise.png") center center / cover no-repeat;
     }
     .hero::after{
       position:absolute;inset:auto 0 0;height:170px;z-index:-1;content:"";
@@ -414,6 +417,8 @@
     .insurance-box h2,.insurance-box p{color:#fff}
     .insurance-actions{display:flex;flex-direction:column;gap:12px}
 
+    .skip-link{position:absolute;left:-9999px;top:0;padding:12px;background:#fff;color:#063743;z-index:9999}
+    .skip-link:focus{left:12px;top:12px}
     .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
     .reveal.visible{opacity:1;transform:none}
 
@@ -432,7 +437,7 @@
         min-height:760px;
         background:
           linear-gradient(180deg,rgba(4,32,39,.86) 0%,rgba(4,32,39,.65) 58%,rgba(4,32,39,.45) 100%),
-          url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") 62% center / cover no-repeat;
+          url("https://dmhiop.com/__static/images/hero/sunrise.png") 62% center / cover no-repeat;
       }
       .hero-inner{min-height:760px;padding-top:48px}
       .hero-actions{flex-direction:column}
@@ -460,7 +465,7 @@
   text-align:center;
   background:
     linear-gradient(rgba(6,55,67,.90),rgba(6,55,67,.94)),
-    url("https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/sunrise.png") center 55% / cover no-repeat;
+    url("https://dmhiop.com/__static/images/hero/sunrise.png") center 55% / cover no-repeat;
 }
 .prefooter-cta h2{color:#fff}
 .prefooter-cta p{
@@ -485,6 +490,7 @@
 
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- Virtual IOP Promo Banner -->
 <dmh-viop-promo></dmh-viop-promo>
@@ -501,8 +507,8 @@
   <div class="container hero-inner">
     <div class="hero-copy">
       <span class="eyebrow">Founded on dignity, compassion, and respect</span>
-      <h1>Comprehensive Care <span>Built Around Your Life</span></h1>
-      <p class="hero-lead">Coordinated outpatient treatment for adults in Rio Rancho and Albuquerque—including IOP, medication-assisted treatment, outpatient medical detox assistance, counseling, case management, and ongoing recovery support.</p>
+      <h1>Outpatient Addiction Treatment <span>Built Around Your Life</span></h1>
+      <p class="hero-lead">Compassionate substance use treatment for adults in Rio Rancho and the Albuquerque area, including intensive outpatient programming, individual counseling, group therapy, case management, relapse prevention, and ongoing recovery support.</p>
       <div class="hero-actions">
         <a class="btn btn-warm" href="/insurance-verification">Verify Insurance &amp; Get Started</a>
         <a class="btn btn-primary" href="/contact-us">Talk With Our Team</a>
@@ -510,7 +516,7 @@
       </div>
       <div class="hero-trust">
         <span>Morning & evening IOP</span>
-        <span>Medical & clinical coordination</span>
+        <span>Clinical care & referrals</span>
         <span>Evidence-based, compassionate care</span>
       </div>
     </div>
@@ -580,13 +586,13 @@
   <div class="container">
     <div class="section-heading reveal">
       <span class="eyebrow">Core treatment services</span>
-      <h2>Care for Every Stage of Recovery</h2>
+      <h2>Outpatient Substance Use Treatment and Recovery Services</h2>
       <p>Our team helps each client identify the combination of services that best supports their needs and recovery goals.</p>
     </div>
 
     <article class="service-showcase reveal">
       <div class="service-visual">
-        <img alt="Adults participating in supportive IOP group therapy" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/iop-group-session.png"/>
+        <img loading="lazy" decoding="async" alt="Adults participating in supportive IOP group therapy" src="/__static/images/iop-group-session.png"/>
         <div class="service-number">01</div>
       </div>
       <div class="service-content">
@@ -606,41 +612,41 @@
 
     <article class="service-showcase reverse reveal">
       <div class="service-visual">
-        <img alt="Medication-assisted treatment at Desert Mountain Healing IOP" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/hero/mat-hero.png"/>
+        <img loading="lazy" decoding="async" alt="Medication-assisted treatment at Desert Mountain Healing IOP" src="/__static/images/hero/mat-hero.png"/>
         <div class="service-number">02</div>
       </div>
       <div class="service-content">
-        <h3>Medication-Assisted Treatment</h3>
-        <p>When clinically appropriate, medication may be combined with counseling, IOP, case management, and ongoing recovery support for opioid or alcohol use disorders.</p>
-        <p>Our approach connects medical care with behavioral health treatment so clients receive support for both the physical and emotional parts of recovery.</p>
+        <h3>Medication-Assisted Treatment (MAT)</h3>
+        <p>Medication-assisted treatment may be part of an individualized recovery plan for opioid or alcohol use disorders. Please contact our team to confirm current medical-provider availability before planning on this service.</p>
+        <p>Our team can discuss treatment options and, when appropriate, help coordinate referrals for medication-related care.</p>
         <ul>
-          <li>Nurse Practitioner oversight</li>
-          <li>Medication management & monitoring</li>
-          <li>Integrated with IOP and counseling</li>
+          <li>Medical-provider availability must be confirmed</li>
+          <li>Coordination with appropriate medical providers</li>
+          <li>Behavioral health counseling and recovery support</li>
           <li>Individualized treatment plans</li>
           <li>Long-term recovery support</li>
         </ul>
-        <a class="text-link" href="/mat">Learn about MAT</a>
+        <a class="text-link" href="/contact-us">Ask about MAT availability</a>
       </div>
     </article>
 
     <article class="service-showcase reveal">
       <div class="service-visual">
-        <img alt="Outpatient medical detox assistance and clinical support" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/detox-consultation.png"/>
+        <img loading="lazy" decoding="async" alt="Outpatient medical detox assistance and clinical support" src="/__static/images/detox-consultation.png"/>
         <div class="service-number">03</div>
       </div>
       <div class="service-content">
         <h3>Outpatient Medical Detox Assistance</h3>
-        <p>Nurse Practitioner assessment and outpatient medical support may help clinically appropriate clients manage withdrawal symptoms while beginning counseling and recovery services.</p>
-        <p>Suitability for outpatient detox assistance is based on an individualized medical and clinical assessment.</p>
+        <p>Withdrawal can require medical supervision. Contact our team to discuss your needs and confirm whether outpatient medical detox assistance is currently available or whether a referral is appropriate.</p>
+        <p>The appropriate level of withdrawal care depends on an individualized medical assessment; outpatient support is not suitable for everyone.</p>
         <ul>
-          <li>Medical assessment and monitoring</li>
-          <li>Symptom management support</li>
+          <li>Discussion of appropriate medical evaluation</li>
+          <li>Referral coordination when needed</li>
           <li>Concurrent counseling services</li>
-          <li>Safe, supervised care</li>
+          <li>Individualized care planning</li>
           <li>Transition planning to ongoing treatment</li>
         </ul>
-        <a class="text-link" href="/medical-detox-assistance">Learn about detox assistance</a>
+        <a class="text-link" href="/contact-us">Ask about detox assistance</a>
       </div>
     </article>
   </div>
@@ -733,14 +739,14 @@
     <div class="section-heading reveal">
       <span class="eyebrow">The DMHIOP difference</span>
       <h2>Care Designed Around the Whole Person</h2>
-      <p>Our program combines clinical treatment, medical support, practical assistance, and everyday recovery tools in one coordinated setting.</p>
+      <p>Our program combines counseling, group treatment, practical assistance, and everyday recovery tools, with medical referrals and coordination when needed.</p>
     </div>
 
     <div class="difference-grid reveal">
       <div class="card">
         <div class="icon">✓</div>
         <h3>Coordinated Care</h3>
-        <p>Medical and behavioral health services are organized around one individualized treatment plan.</p>
+        <p>Clinical care and relevant outside medical services can be coordinated around an individualized treatment plan.</p>
       </div>
       <div class="card">
         <div class="icon">✓</div>
@@ -774,12 +780,12 @@
 <section class="section section-soft">
   <div class="container split-reverse">
     <div class="reveal">
-      <img alt="Welcoming front desk at Desert Mountain Healing IOP" src="https://raw.githubusercontent.com/dmhiopllc-tech/dmhiop-website/main/__static/images/frount-desk.png" style="width:100%;height:500px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-md)"/>
+      <img loading="lazy" decoding="async" alt="Welcoming front desk at Desert Mountain Healing IOP" src="/__static/images/frount-desk.png" style="width:100%;height:500px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-md)"/>
     </div>
     <div class="reveal">
       <span class="eyebrow">A real place for real recovery</span>
       <h2>See Where Treatment Happens</h2>
-      <p>Our Rio Rancho facility is designed to feel professional, comfortable, and welcoming. Clients have space for group discussion, education, individual support, medical care, and practical recovery planning.</p>
+      <p>Our Rio Rancho facility is designed to feel professional, comfortable, and welcoming. Clients have space for group discussion, education, individual support, and practical recovery planning.</p>
       <p>These are real images from Desert Mountain Healing IOP—not generic stock photos—so prospective clients and families can see the environment before taking the next step.</p>
       <a class="text-link" href="/contact-us">Schedule a conversation with our team</a>
     </div>
@@ -825,7 +831,7 @@
 <dmh-footer></dmh-footer>
 
 <!-- Component Loader Script -->
-<script src="https://dmhiop.com/components/dmh-components.js"></script>
+<script src="/components/dmh-components.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
